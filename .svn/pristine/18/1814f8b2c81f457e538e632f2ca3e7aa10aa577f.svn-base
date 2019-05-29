@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>模拟模式</title>
+    <meta name="keywords" content="模拟模式" />
+    <meta name="description" content="模拟模式" />
+    <meta name="viewport" content="width=device-width,intial-scale=1.0,maximum=1.0,minimum=1.0,user-scalable=no" />
+    <include file="public@header" />
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/person.css?2019.5.17" />
+    <script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+</head>
+<style>
+    body,
+    .imitate-body {
+        background-color: #459973;
+        padding-bottom:2.5rem;
+    }
+</style>
+
+<body>
+    <div class="mui-content imitate-body">
+        <img class="imitate-bg" src="__TMPL__/public/assets/images/imitate-simulate_bg.png" />
+        <div class="imitate-title">快速体验<span>免费度假还能赚</span>的美好生活</div>
+        <div class="imitate-flow">
+            <img class="imitate-flow-title" src="__TMPL__/public/assets/images/imitate-flow_title.png" />
+            <div class="imitate-flow-cnt">
+                <div class="imitate-flow-step">
+                    <img src="__TMPL__/public/assets/images/imitate-simulate_icon.png" />
+                    <span>进入模拟模式</span>
+                </div>
+                <div class="imitate-left-line"></div>
+                <div class="imitate-flow-step">
+                    <img src="__TMPL__/public/assets/images/imitate-money_icon.png" />
+                    <span>领5万模拟消费金</span>
+                </div>
+                <div class="imitate-right-line"></div>
+                <div class="imitate-flow-step">
+                    <img src="__TMPL__/public/assets/images/imitate-plan_icon.png" />
+                    <span>使用消费金参与计划</span>
+                </div>
+            </div>
+        </div>
+        <div class="imitate-tips">
+                说明：模拟模式下，仅供会员快速体验虔心荟度假俱乐部相关权益与服务，所有相关账户余额、分享计划收益、会员权益等均不予兑现。
+        </div>
+        <div class="imitate-nav">
+           <div class="imitate-left-nav">
+                邀请好友一起体验
+           </div>
+           <div class="imitate-right-nav">
+                进入模拟模式
+           </div>
+        </div>
+        <!-- 弹窗 -->
+        <div class="mask"></div>
+        <div class="imitate-pop">
+            <div class="imitate-success">
+                模拟模式进入成功
+                <p class="newtips">
+                    
+                </p>
+            </div>
+            <div class="imitate-pop-nav">
+                <span onclick="javascript:window.location.href='/member?pattern=1'">
+                    查看账户
+                </span>
+                <span class="imitate-pop-nav-right" onclick="javascript:window.location.href='/project?project=MZJBQKj3NmPolKOv8qbj&pattern=1'">
+                    参与计划
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="__TMPL__/public/assets/js/jquery.md5.js"></script>
+    <script>
+     $(document).ready(function(){
+         var action='pattern';
+         var sign=$.md5(action+1+randomstr+time);
+         var token="<?php echo session('token');?>";
+         $('.imitate-right-nav').click(function(){
+          // alert(11);
+           if (token){
+               $.ajax({
+                   url: "<?php echo $http.config('newinterfaceurl')?>/"+action,
+                   type: 'POST',
+                   dataType: 'json',
+                   headers: { token:token},
+                   data: {  pattern:1,from:from,time:time,action:action,sign:sign },
+                   success: function (data) {
+                       if (data.code === '9201') {
+                           if ("<?php echo cmf_is_wechat(); ?>") {
+                               window.location.href = "/login?again=1&back=<?php echo urlencode(GetAllURL());?>";
+                           } else {
+                               window.location.href = "/login?again=1&back=<?php echo urlencode(GetAllURL());?>";
+                           }
+                       }
+                        if (data.code==1){
+                            // if (data.newuser==1){
+                            //     $('.newtips').html('恭喜您，50000.00消费金已到账');
+                            // }
+                            $('.mask,.imitate-pop').show();
+                        } 
+                   }
+               })
+           } else{
+
+           }
+
+
+       })
+     });
+    $('.imitate-left-nav').click(function () {
+        var saction = 'shareinfo';
+        var url="<?php echo  GetAllURL();?>";
+        var ssign = $.md5(saction  + pattern + randomstr +'moni' + time+url);
+        $.ajax({
+            url:"<?php echo $http.config('newinterfaceurl')?>/shareinfo",
+            dataType:'json',
+            type:'get',
+            data: {
+                pattern: pattern,
+                share: 'moni',
+                from: from,
+                time: time,
+                action: saction,
+                sign: ssign,
+                url:url
+            },
+            success:function(res){
+                var resdata=res.param;
+                console.log(res);
+                wx.config({
+                    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                    appId:resdata.appid, // 必填，公众号的唯一标识
+                    timestamp: resdata.timestamp, // 必填，生成签名的时间戳
+                    nonceStr: resdata.noncestr, // 必填，生成签名的随机串
+                    signature: resdata.sign,// 必填，签名
+                    jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'] // 必填，需要使用的JS接口列表
+                });
+                wx.ready(function(){
+                    wx.onMenuShareTimeline({
+                        title: res.data.E_Name, // 分享标题
+                        link: res.data.E_Url+'&incode='+"{$Think.get.incode}", // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                        imgUrl: res.data.E_Img, // 分享图标
+                        success: function () {
+                            // 用户点击了分享后执行的回调函数
+                        },
+                    })
+                    wx.onMenuShareAppMessage({
+                        title: res.data.E_Name, // 分享标题
+                        desc: '', // 分享描述
+                        link: res.data.E_Url+'&incode='+"{$Think.get.incode}", // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                        imgUrl:res.data.E_Img, // 分享图标
+                        type: '', // 分享类型,music、video或link，不填默认为link
+                        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                        success: function () {
+                            // 用户点击了分享后执行的回调函数
+                        }
+                    });
+                    // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+                });
+                wx.error(function(res){
+                    console.log(res)
+                    // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+                });
+            }
+        })
+    })
+    </script>
+</body>
+
+</html>

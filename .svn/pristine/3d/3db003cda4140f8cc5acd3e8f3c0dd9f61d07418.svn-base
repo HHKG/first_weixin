@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>现金余额-虔心荟</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="__TMPL__/public/assets/css/mui.min.css" rel="stylesheet"  />
+    <link href="__TMPL__/public/assets/css/cash.css" rel="stylesheet"  />
+    <link href="__TMPL__/public/assets/css/youxian_pay.css?1-20-2" rel="stylesheet"  />
+    <script src="__TMPL__/public/assets/js/mui.min.js"></script>
+    <script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+
+</head>
+<style type="text/css">
+    .mui-popup-button{
+        color:#F68752;
+    }
+</style>
+<body>
+<script type="text/javascript">
+    mui.init()
+</script>
+<div class="mui-content">
+
+    <div class="cash_header">
+        <div>
+            <span class="cash_header_span1">现金余额</span>
+            <span class="cash_header_span2" onclick="javascript:window.location.href='/balance'">收支明细</span>
+        </div>
+        <div>
+            <span class="cash_header_span3">0.00</span>
+        </div>
+    </div>
+    <div class="cash_btn">
+
+            <button class="withdraw_btn"  onclick="javascript:window.location.href='/withdrawal'">提现</button>
+
+    </div>
+    <div class="credit_card" >
+
+        </div>
+    </div>
+
+</div>
+</body>
+<script>
+    $(function () {
+
+        $.ajax({
+            url: "<?php echo config('interfaceurl')?>/getcash",
+            type: 'POST',
+            dataType: 'jsonp',
+            data: {token:"<?php echo session('token');?>"},
+            success: function (data) {
+                //console.log(data)
+                if (data.code == 1) {
+                    $('.cash_header_span3').html(data.cash);
+                    $('.withdraw_btn').attr('onclick',"javascript:window.location.href='/withdrawal'");
+                    var bank='';
+                    if (data.bank!=1){
+                        bank+=' <div class="credit_card_img">';
+                        bank+=' <img src="__TMPL__/public/assets/images/card_icon.png"/>';
+                        bank+=' <span>绑定银行卡</span>';
+                        bank+='</div>';
+                        bank+=' <div>';
+                        bank+=' <img src="__TMPL__/public/assets/images/right_arrow_icon.png" class="right_icon"/>';
+                        bank+='</div>';
+                        $('.credit_card').html(bank);
+                        $('.credit_card').attr('onclick',"javascript:window.location.href='/bindback?name="+data.username+"'");
+                        $('.withdraw_btn').attr('onclick',"   mui.alert('请先实绑定银行卡','提示', function() {" +
+                            "                        window.location.href='/bindback?name=" +data.username +"'});");
+                    }else{
+                        $('.credit_card').remove(bank);
+                    }
+
+                }else{
+                    mui.alert('请先实名认证','提示', function() {
+                        window.location.href='/authentication';
+                    });
+
+
+                }
+            }
+        })
+    })
+</script>
+</html>

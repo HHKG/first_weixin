@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="keywords" content="<?php echo $keywords;?>">
+    <meta name="description" content="<?php echo $description;?>">
+    <title>返利方案-虔心荟</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <include file="public@header"/>
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/app.css" />
+    <link href="__TMPL__/public/assets/css/person.css?1-21-1" rel="stylesheet"  />
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/youxian.css?1-21-2" />
+</head>
+
+<body>
+<script type="text/javascript">
+    mui.init()
+</script>
+<include file="public@pattern" />
+<div class="mui-content" style="background:#EFEFF4;">
+    <!--头部-->
+    <div class="case_page case_rebate_header">
+        <p class="case_page_p">加入分享计划流程</p>
+        <div>
+            <p>选择方案</p>
+            <img src="__TMPL__/public/assets/images/right_arrow_icon.png" />
+            <p>支付费用</p>
+            <img src="__TMPL__/public/assets/images/right_arrow_icon.png" />
+            <p>签订合同</p>
+            <img src="__TMPL__/public/assets/images/right_arrow_icon.png" />
+            <p>坐享返利</p>
+        </div>
+    </div>
+    <div class="plans">
+
+    </div>
+</div>
+</body>
+
+</html>
+<script>
+    $(function () {
+        var action='plan';
+        var code= "<?php echo $project;?>";
+        var sign=$.md5(action+code+pattern+randomstr+time);
+        var data={pattern:pattern,from:from,code:code,time:time,action:action, sign:sign};
+        $.ajax({
+            type: 'get',
+            url : "<?php echo $http.config('newinterfaceurl')?>/plan",
+            dataType: "json",
+            data: data,
+            success:function(data){
+                var str='';
+                if (data.code=1){
+                    $.each(data.data,function (k,v) {
+                        console.log(v)
+                        str+='  <div class="case_one">';
+                        str+='   <div class="case_block">';
+                        str+=' <div class="rebate_header">';
+                        str+=' <p class="case_rebate_p" style="font-size: 1.8rem;"> '+ v.E_Title+'</p>';
+                        str+='    </div>';
+                        str+='  <div class="plan_datail">';
+                        str+='   <div class="plan_datail_block">';
+                        str+='    <div>';
+                        str+='    <span class="plan_datail_span">'+ v.money+'</span>';
+                        str+=' <span>元</span>';
+                        str+='  </div>';
+                        str+='    <div>';
+                        str+= '  <span>参与费</span>';
+                        str+=  ' </div>';
+                        str+=  ' </div>';
+                        str+=  '<div class="plan_datail_block">';
+                        str+=  ' <div>';
+                        str+=  '    <span class="plan_datail_span">'+ v.E_Cycle+'</span>';
+                        str+=  '   <span>年</span>';
+                        str+='  </div>';
+                        str+='    <div>';
+                        str+='     <span>返利期限</span>';
+                        str+=  ' </div>';
+                        str+=  ' </div>';
+                        str+=  '  <div class="plan_datail_block">';
+                        str+=  '  <div>';
+                        str+=  '  <span class="plan_datail_span">'+ v.E_Scale+'%</span>';
+                        str+='  </div>';
+                        str+='    <div>';
+                        str+=  '  <span>预估每年返现</span>';
+                        str+='  </div>';
+                        str+='  </div>';
+                        str+='   <div class="plan_datail_block">';
+                        str+='    <div>';
+                        str+=' <span class="plan_datail_span">'+ v.E_Coupon+'%</span>';
+                        str+='  </div>';
+                        str+='    <div>';
+                        str+=  '  <span>每年返住房券</span>';
+                        str+='  </div>';
+                        str+='  </div>';
+                        str+='  </div>';
+                        str+=' <div class="key_news_block case_news_block">';
+                        str+=' <div class="key_p_block ">';
+                        str+='    <p class="key_block_p1 ">返利权益</p>';
+                        str+='  <p class="key_block_p2">'+ v.E_ScaleShow+'</p>';
+                        str+='  </div>'
+                        str+=   ' <div class="key_p_block ">';
+                        str+=   ' <p class="key_block_p1">其他权益</p>';
+                        str+=   ' <p class="key_block_p2 ">'+ v.E_Introduction +'</p>';
+                        str+='  </div>';
+                        str+='  </div>';
+                        str+=   '   <div class="rebate_footer">';
+                        str+=   '  <div>';
+                        str+=   '<p>'+ v.Purchased+'人加入/剩余'+ v.Surplus+'人</p>';
+                        str+=   '  <button onclick="javascript:window.location.href=\'/car?plan='+v.E_Code+'\'">立即加入</button>';
+                        str+='  </div>';
+                        str+='  </div>';
+                        str+='  </div>';
+                        str+='  </div>';
+
+                    })
+                    $('.plans').html(str);
+
+                }else{
+                    alert(data.msg);
+                }
+            },
+            error: function(e){
+                // //console.log(e)
+                // return false;
+            }
+        })
+
+
+    })
+</script>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="<?php echo $keywords;?>">
+    <meta name="description" content="<?php echo $description;?>">
+    <title>充值升级-虔心荟</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <include file="public@header" />
+    <link href="__TMPL__/public/assets/css/person.css?3-18" rel="stylesheet" />
+    <link href="__TMPL__/public/assets/css/youxian_pay.css?3-18" rel="stylesheet" />
+</head>
+<style>
+    input::-webkit-input-placeholder {
+        color: #fff;
+    }
+</style>
+<body>
+<script type="text/javascript">
+    mui.init()
+</script>
+<div class="mui-content">
+    <div class="update_header">
+        <img src="__TMPL__/public/assets/images/gold_member_icon.png" />
+        <p>还需充值 <span class="nearmoney"></span>元成为<span class="gadename"></span></p>
+    </div>
+    <div class="update_middle">
+        <p>充值金额</p>
+        <div>
+            <span>￥</span>
+            <input type="number" id="recharge_money" name="money" value="" placeholder="0.00" />
+        </div>
+    </div>
+    <!--引用订单页面的支付方式模块-->
+    <div>
+        <h5 class="mui-content-padded order_choice">选择支付方式</h5>
+        <ul class="mui-table-view mui-table-view-radio">
+            <li paytype="1" class="mui-table-view-cell order_means mui-selected">
+                <div class="order_pay_way">
+                    <img src="__TMPL__/public/assets/images/wechat_icon.png" />
+                    <a class="mui-navigate-right order_pay_text">
+                        微信支付
+                    </a>
+                </div>
+
+            </li>
+            <!--<li paytype="2" class="mui-table-view-cell mui-selected">-->
+            <!--<div class="order_pay_way">-->
+            <!--<img src="__TMPL__/public/assets/images/alipy_icon.png">-->
+            <!--<a class="mui-navigate-right order_pay_text">-->
+            <!--支付宝支付-->
+            <!--</a>-->
+            <!--</div>-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <!--复制绑定银行卡页面的按钮-->
+    <div class="bind_btn updat_btn">
+        <button onclick="charge()" id="update_btn">确认支付</button>
+    </div>
+</div>
+</body>
+
+</html>
+<script>
+    $('#recharge_money').click(function () {
+        $('#recharge_money').attr('placeholder', '');
+    });
+    $('#recharge_money').on('input propertychange', function () {
+        $('#recharge_money').val($('#recharge_money').val().replace(/^(\-)*(\d+)\.(\d\d).*$/, '$1$2.$3').replace(/^0+(?=\d)/, ''));
+    });
+
+
+    $(function () {
+        $("#update_btn").css('opacity', '0.5');
+        $("#update_btn").attr('disabled', true);
+        $('#recharge_money').on('input propertychange', function () {
+            var result1 = $('#recharge_money').val();
+            if (result1 !== '') {
+                $("#update_btn").css('opacity', '1');
+                $("#update_btn").attr('disabled', false);
+            } else {
+                $("#update_btn").css('opacity', '0.5');
+                $("#update_btn").attr('disabled', true);
+            }
+        });
+        // mui.max=90;
+        $.ajax({
+            url: "<?php echo config('interfaceurl')?>/gradeinfo",
+            type: 'POST',
+            dataType: 'jsonp',
+            data: {
+                grade: "<?php echo $grade;?>",
+
+                token: "<?php echo session('token');?>"
+            },
+            xhrFields: { withCredentials: true },
+            success: function (data) {
+                ////console.log(data);
+                if (data.code == 1) {
+                    $('.nearmoney').html(data.grade.nearmoney);
+                    $('.gadename').html(data.grade.E_Name);
+                }
+
+            }
+        })
+    })
+
+    function charge() {
+
+        $(this).attr('disabled', true);
+        var money = $("input[name='money']").val();
+        var paytype = $(".mui-selected").attr('paytype');
+        ////console.log(money);
+
+        if (paytype == 1) {
+            $.ajax({
+                url: "<?php echo config('interfaceurl')?>/Recharge",
+                type: 'POST',
+                dataType: 'jsonp',
+                data: { price: parseFloat(money), token: "<?php echo session('token');?>" },
+                success: function (data) {
+                    ////console.log(data);
+                    if (data.code == 1) {
+                        WeixinJSBridge.invoke(
+                            'getBrandWCPayRequest',
+                            data.info,
+                            function (res) {
+                                if (res.err_msg == 'get_brand_wcpay_request:ok') {
+                                    $.ajax({
+                                        type: 'GET',
+                                        url: "<?php echo config('interfaceurl')?>/getpaystate",
+                                        dataType: 'jsonp',
+                                        xhrFields: { withCredentials: true },
+                                        data: { sn: data.sn },
+                                        success: function (datas) {
+                                            if (datas.code = 1) {
+                                                mui.toast('支付成功！');
+                                                // mui.toast('http://www.iqianclub.com/qxh/public/index.php/?token='+token);
+                                                window.location.href = '/rechargesuccess?sn=' + data.sn;
+                                            } else {
+                                                mui.toast('支付失败！');
+                                                $(this).attr('disabled', false);
+                                            }
+                                        }
+                                    })
+                                } else {
+                                    //mui.toast('启动微信支付失败, 请检查你的支付参数. 详细错误为: ' + res.err_msg);
+                                    //history.go(-1);
+                                }
+                            }
+                        );
+
+                    } else {
+                        mui.toast(data.msg);
+                        $(this).attr('disabled', false);
+                    }
+                }
+            })
+        }
+
+    }
+</script>

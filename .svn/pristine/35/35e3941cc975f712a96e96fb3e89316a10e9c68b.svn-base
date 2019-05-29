@@ -1,0 +1,108 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <!--<li class="active"><a href="javascript:;">所有新闻</a></li>-->
+        <!--<li><a href="{:url('AdminNew/add')}">添加新闻</a></li>-->
+    </ul>
+    <form class="well form-inline margin-top-20" method="post" action="{:url('Member/index')}">
+        注册时间:
+        <input type="text" class="form-control js-bootstrap-date" name="start_time"
+               value="{$start_time|default=''}"
+               style="width: 140px;" autocomplete="off">-
+        <input type="text" class="form-control js-bootstrap-date" name="end_time"
+               value="{$end_time|default=''}"
+               style="width: 140px;" autocomplete="off"> &nbsp; &nbsp;
+        用户昵称:
+        <input type="text" class="form-control" name="keyword" style="width: 200px;"
+               value="{$key|default=''}" placeholder="请输入昵称">
+        真实姓名:
+        <input type="text" class="form-control" name="name" style="width: 200px;"
+               value="{$name|default=''}" placeholder="请输入真实姓名">
+        手机号:
+        <input type="text" class="form-control" name="mobile" style="width: 200px;"
+               value="{$mobile|default=''}" placeholder="请输入手机号">
+        卡号:
+        <input type="text" class="form-control" name="card" style="width: 200px;"
+               value="{$card|default=''}" placeholder="请输入卡号">
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('Member/index')}">清空</a>
+    </form>
+    <form class="js-ajax-form" action="" method="post">
+        <table class="table table-hover table-bordered table-list">
+            <thead>
+            <tr>
+
+                <th >编号</th>
+                <th >头像</th>
+                <th>手机号</th>
+                <th >昵称</th>
+                <th >性别</th>
+                <th >真实姓名</th>
+                <?php if(session('ADMIN_ID')==1):?>
+                <th >身份证号码</th>
+                <?php endif;?>
+                <th >卡号</th>
+                <th >注册时间</th>
+                <th >操作</th>
+            </tr>
+            </thead>
+            <foreach name="list" item="vo">
+                <tr>
+
+                    <td><b>{$vo.E_UserID}</b></td>
+                    <td>
+                        <notempty name="vo.E_HeadImg">
+                            <a href="javascript:parent.imagePreviewDialog('{:cmf_get_image_preview_url($vo.E_HeadImg)}');">
+                                <i class="fa fa-photo fa-fw"></i>
+                            </a>
+                            <else/>
+                            <i class="fa fa-close fa-fw"></i>
+                        </notempty>
+                    </td>
+                    <td><b>{:HandleMobile($vo.E_Mobile)}</b></td>
+                    <td>{$vo.E_Name}</td>
+                    <td>
+                        <notempty name="vo.E_Sex">
+                            {$vo.E_Sex}
+                        </notempty>
+                       </td>
+                    <td>{$vo.E_TrueName}</td>
+                    <?php if(session('ADMIN_ID')==1):?>
+                    <td>{$vo.E_IdentityCard}</td>
+                    <?php endif;?>
+                    <td>{$vo.E_CardNo}</td>
+
+                    <td>
+                        <notempty name="vo.E_CreateDate">
+                            {$vo['E_CreateDate']}
+                        </notempty>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm js-articles-copy " href="{:url('plan/index',['user'=>$vo.E_UserID])}">查看购买计划</a>
+                        <a class="btn btn-primary btn-sm js-articles-copy " href="{:url('Member/rage',['user'=>$vo.E_UserID])}">消费金充值</a>
+                        <!--<a class="btn btn-primary btn-sm js-articles-copy " href="{:url('Member/index')}">账单</a>-->
+                        <!--<a class="btn btn-primary btn-sm js-articles-copy " href="{:url('Member/index')}">结算</a>-->
+                        <!--<a class="btn btn-primary btn-sm js-articles-copy " href="{:url('Member/index')}">充值</a>-->
+                        <!--<a class="btn btn-primary btn-sm js-articles-copy " href="{:url('Member/consumption',['user'=>$vo.E_UserID])}">消费金明细</a>-->
+                        <!--<a class="btn btn-primary btn-sm js-articles-copy " href="{:url('Member/balance',['user'=>$vo.E_UserID])}">余额明细</a>-->
+                    </td>
+                </tr>
+            </foreach>
+        </table>
+
+        <ul class="pagination">{$page|default=''}</ul>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script>
+
+    function reloadPage(win) {
+        win.location.reload();
+    }
+
+
+</script>
+</body>
+</html>

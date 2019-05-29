@@ -1,0 +1,404 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>会员中心-虔心荟</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <include file="public@header" />
+
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/app.css?3-30" />
+    <!--person页面的样式-->
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/person.css?4-11-12" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/youxian.css?4-10-3" />
+    <!--统计 -->
+</head>
+
+<body>
+<include file="public@nav" />
+<div class="mui-content" style="background:#EFEFF4;">
+    <div>
+        <button onclick="checkPattern()">体验用户</button>
+    </div>
+    <div id="person_center" class="mui-control-content mui-active">
+        <!--头部-->
+        <div class="header_car">
+            <div class="header_img_block">
+                <div class="jiaobiao">
+                    <img src="__TMPL__/public/assets/images/jiaobiao.png" width="100%" />
+                </div>
+                <div class="head_sculpture">
+                    <img class="head_img" src="__TMPL__/public/assets/images/touxiang.png" />
+                </div>
+                <div class="card_nickname">
+                    <p class="nick_name"></p>
+                    <p class="phone_num"></p>
+                </div>
+                <div class="card_number">
+                    <p class="card_val"></p>
+                    <p class="qian_val">虔心值</p>
+                </div>
+                <div class="card-num">
+
+                </div>
+            </div>
+        </div>
+        <!--颈部-->
+        <div class="person_neck">
+            <div>
+                <img class="grade" src="__TMPL__/public/assets/images/gold_member.png" style="height:3rem;" />
+            </div>
+            <div onclick="javascript:window.location.href='/recharge'">
+                <a class="recharge" href="">
+                    <p class="update">充值(升级会员)</p>
+                </a>
+                <img src="__TMPL__/public/assets/images/right_arrow.png" style="height:1.2rem;" />
+            </div>
+        </div>
+        <!--宫格(cell)-->
+        <div class="person_cell">
+            <div onclick="javascript:window.location.href='/project?project=MZJBQKj3NmPolKOv8qbj'">
+                <img src="__TMPL__/public/assets/images/yellow_icon4.png" class="person_cell_img" />
+                <p>参与新计划</p>
+            </div>
+            <div onclick="javascript:window.location.href='#quanyi'">
+                <img src="__TMPL__/public/assets/images/yellow_icon2.png" class="person_cell_img" />
+                <p>会员权益</p>
+            </div>
+            <div onclick="javascript:window.location.href='/myorder'">
+                <img src="__TMPL__/public/assets/images/yellow_icon3.png" class="person_cell_img" />
+                <p>我的订单</p>
+            </div>
+        </div>
+
+        <!--虔心荟banner-->
+        <div class="banner_block" onclick="javascript:window.location.href='/project?project=MZJBQKj3NmPolKOv8qbj'">
+            <img src="__TMPL__/public/assets/images/middle_banner_brown.png" class="banner_img" />
+        </div>
+        <!--我的钱包-->
+        <div class="person_wallet">
+            <div class="person_wallet_footer">
+                <div class="person_wallet_num">
+                    <p class="p_number Consumption">0.00</p>
+                    <p class="p_text">累计充值(元)</p>
+                </div>
+                <div onclick="javascript:window.location.href='/cash'" class="person_wallet_num">
+                    <p class="p_number card_val">0.00</p>
+                    <p class="p_text">余额(元)</p>
+                </div>
+                <div onclick="javascript:window.location.href='/consumption'" class="person_wallet_num">
+                    <p class="p_number Consumption">0.00</p>
+                    <p class="p_text">消费金(元)</p>
+                </div>
+                <div class="person_wallet_num person_wallet_num-account">
+                    <img src="__TMPL__/public/assets/images/account_icon.png" style="width:2rem;height:2rem;" />
+                    <p class="p_text">我的账户</p>
+                </div>
+            </div>
+        </div>
+        <!--我的消费返现收入-->
+        <div class="person_wallet">
+            <div class="member-plan-title">
+                <div>
+                    <img src="__TMPL__/public/assets/images/orange_line.png" class="member-plan-line" />
+                    <img src="__TMPL__/public/assets/images/title_icon2.png" class="person_wallet_img" />
+                    <span class="member-plan-title-txt">我的消费返现收入</span>
+                </div>
+            </div>
+            <div class="money_datail">
+                <div onclick="javascript:window.location.href='/rebate'">
+                    <p class="p_datail_number NowBillPrice">0.00</p>
+                    <p class="p_datail_text">本月返现(元)</p>
+                </div>
+                <div onclick="javascript:window.location.href='/rebate'">
+                    <p class="p_datail_number nextbill">0.00</p>
+                    <p class="p_datail_text">下月预估收益(元)</p>
+                </div>
+                <div onclick="javascript:window.location.href='/rebate'">
+                    <p class="p_datail_number NoBillPrice">0.00</p>
+                    <p class="p_datail_text">待结算返现(元)</p>
+                </div>
+            </div>
+            <div class="money_datail_footer">
+                <p class="add_up">累计返现(元)：</p>
+                <p class="p_datail_number HasSettlementPrice">0.00</p>
+            </div>
+        </div>
+
+        <!--我已参与的计划-->
+        <div class="member-plan">
+            <div class="member-plan-title" onclick="javascript:window.location.href='/myplan'">
+                <div>
+                    <img src="__TMPL__/public/assets/images/orange_line.png" class="member-plan-line" />
+                    <img src="__TMPL__/public/assets/images/membetitle_icon2.png" class="person_wallet_img" />
+                    <span class="member-plan-title-txt">我已参与的计划</span>
+                </div>
+                <img src="__TMPL__/public/assets/images/member_right_arrow.png" class="member-plan-right-img" />
+            </div>
+            <div class="member-plan-cnt">
+
+            </div>
+        </div>
+
+
+
+        <!--我的住房券-->
+        <div class="home_coupom">
+            <div class="member-plan-title">
+                <div>
+                    <img src="__TMPL__/public/assets/images/orange_line.png" class="member-plan-line" />
+                    <img src="__TMPL__/public/assets/images/title_icon3.png" class="person_wallet_img" />
+                    <span class="member-plan-title-txt">我的住房券</span>
+                </div>
+                <!-- <img src="__TMPL__/public/assets/images/member_right_arrow.png" class="member-plan-right-img" /> -->
+            </div>
+            <!--第一张-->
+            <div class="coupons">
+
+            </div>
+        </div>
+        <!--会员权益-->
+        <div class="legal_layout" id="quanyi">
+            <div class="my_money">
+                <img src="__TMPL__/public/assets/images/orange_line.png" />
+                <img src="__TMPL__/public/assets/images/title_icon4.png" class="person_wallet_img" />
+                <span>会员权益</span>
+            </div>
+            <div class="legal_cell">
+                <div>
+                    <img src="__TMPL__/public/assets/images/quanyi1.png" class="person_cell_img" />
+                    <p>购买虔心分享计划权益</p>
+                </div>
+                <div>
+                    <img src="__TMPL__/public/assets/images/quanyi2.png" class="person_cell_img" />
+                    <p>订房折扣</p>
+                </div>
+                <div>
+                    <img src="__TMPL__/public/assets/images/quanyi3.png" class="person_cell_img" />
+                    <p>商城购物折扣</p>
+                </div>
+                <div>
+                    <img src="__TMPL__/public/assets/images/quanyi4.png" class="person_cell_img" />
+                    <p>订房优先</p>
+                </div>
+                <div>
+                    <img src="__TMPL__/public/assets/images/quanyi5.png" class="person_cell_img" />
+                    <p>现金消费返虔币</p>
+                </div>
+                <div>
+                    <img src="__TMPL__/public/assets/images/quanyi6.png" class="person_cell_img" />
+                    <p>会员大礼包</p>
+                </div>
+                <div>
+                    <img src="__TMPL__/public/assets/images/quanyi7.png" class="person_cell_img" />
+                    <p>权益持续更新</p>
+                </div>
+            </div>
+            <!--弹窗-->
+            <div class="mask"></div>
+            <div class="pop_up">
+                <div class="pop_up-cnt">
+                    <h3 class="pop_up-cnt-h">参与虔心分享计划权益</h3>
+                    <div class="pop_up-cnt-logo">
+                        <img id="logo-img" src="__TMPL__/public/assets/images/quanyi1.png" />
+                    </div>
+                    <div class="pop_up-cnt-txt">
+                        <ul>
+                            <li id="li-1">虔心分享计划购买权益，只对虔友开放，非虔友不能购买。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pop_up-btn">
+                    <img src="__TMPL__/public/assets/images/close_gray_icon.png?3-15-1" />
+                </div>
+            </div>
+        </div>
+        <!--<div class="index-btn" onclick="javasrcpit:window.location.href='logout'">-->
+        <!--退出登录-->
+        <!--</div>-->
+    </div>
+</div>
+</body>
+<script src="__TMPL__/public/assets/js/jquery.md5.js"></script>
+
+<script>
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+    $(document).ready(function () {
+        //每4为数字加一个空格
+
+
+        $('.legal_cell>div').click(function () {
+            var index = $(this).index();
+            if (index == '0') {
+                $('.mask').show();
+                $('.pop_up').show();
+            } else if (index == '1') {
+                $('.pop_up-cnt-h').html('订房折扣');
+                $('#li-1').html('购买虔心分享计划后，每年可享受计划利润返现，返现比例详见具体项目权益表。');
+                $("#logo-img").attr("src", "__TMPL__/public/assets/images/quanyi2.png");
+                $('.mask').show();
+                $('.pop_up').show();
+
+            }
+            else if (index == '2') {
+                $('.pop_up-cnt-h').html('商城购物折扣');
+                $('#li-1').html('订购虔心荟合作的度假酒店，享受虔友专属折扣。');
+                $('#li-1').append('<li>虔心荟度假俱乐部保障专属折扣比主流订房平台官方认可价格低。</li>');
+                $('#li-1').append('<li>虔友级别越高，享受折扣越多。</li>')
+                $("#logo-img").attr("src", "__TMPL__/public/assets/images/quanyi3.png");
+                $('.mask').show();
+                $('.pop_up').show();
+            }
+            else if (index == '3') {
+                $('.pop_up-cnt-h').html('订房优先');
+                $('#li-1').html('虔友，可通过虔心荟贵宾通道，优先预订虔心荟合作的度假酒店。');
+                $("#logo-img").attr("src", "__TMPL__/public/assets/images/quanyi4.png");
+                $('.mask').show();
+                $('.pop_up').show();
+            }
+            else if (index == '4') {
+                $('.pop_up-cnt-h').html('现金消费返虔币');
+                $('#li-1').html('虔友通过商城购物，根据实际现金消费金额获得虔币，现金消费1元，相应获得1虔币，如此类推。');
+                $('#li-1').append('<li>虔币具有时效性，自产生日起，到第2年年底内有效，到期后自动清零。</li>');
+                $("#logo-img").attr("src", "__TMPL__/public/assets/images/quanyi5.png");
+                $('.mask').show();
+                $('.pop_up').show();
+            }
+            else if (index == '5') {
+                $('.pop_up-cnt-h').html('会员大礼包');
+                $('#li-1').html('虔友生日当月，将获得生日礼物，生日当天入住，免费升级房间，获得其他一份大礼包。');
+                $("#logo-img").attr("src", "__TMPL__/public/assets/images/quanyi6.png");
+                $('.mask').show();
+                $('.pop_up').show();
+            }
+        });
+        $('.mask').click(function () {
+            $('.mask').hide();
+            $('.pop_up').hide();
+        });
+        $('.pop_up-btn').click(function () {
+            $('.mask').hide();
+            $('.pop_up').hide();
+        })
+    })
+
+    $(function () {
+        //console.log(Pattern);
+        var action = 'member';
+        var sign = $.md5(action+pattern + randomstr + time);
+
+        $.ajax({
+            url: "<?php echo config('interfaceurl')?>/member",
+            type: 'POST',
+            dataType: 'json',
+            headers: { token: "<?php echo session('token');?>" },
+            data: { pattern:pattern,from: from, time: time, action: action, sign: sign },
+            success: function (data) {
+                console.log(data);
+                if (data.code === '9201') {
+                    if ("<?php echo cmf_is_wechat(); ?>") {
+                        window.location.href = "/login?again=1&back=<?php echo urlencode(GetAllURL());?>";
+                    } else {
+                        window.location.href = "/login?again=1&back=<?php echo urlencode(GetAllURL());?>";
+                    }
+                }
+                if (data.code == 1) {
+                    if (data.info.E_IsInvestor == 2) {
+                        $('.nick_name').html(data.info.E_TrueName);
+                        $('.jiaobiao').attr('onclick', "javascript:window.location.href='/certificate'");;
+                    } else {
+                        $('.nick_name').html(data.info.E_Name);
+                        $('.jiaobiao').attr('onclick', "   mui.alert('请先实名认证','提示', function() {" +
+                            "                        window.location.href='/authentication'});");
+                    }
+                    $('.card-num').html(data.info.E_CardNo);
+                    $('.card-num').text($('.card-num').text().replace(/\s/g, '').replace(/(.{4})/g, '$1 '));
+                    $('.phone_num').html(data.info.E_Mobile);
+                    $('.card_val').html(data.info.Amout);
+                    $('.head_img').attr('src', data.info.E_HeadImg);
+                    $('.recharge').attr('href', '/recharge/rank/' + data.info.Amout);
+
+                    var grade = data.info.E_Grade;
+                    var grades =<?php echo json_encode(config('Grade'));?>;
+                    $('.grade').attr('src', grades[grade]);
+                    $('.balance').html(data.info.Balance);
+                    $('.Consumption').html(data.info.Consumption);
+                    $('.NowBillPrice').html(data.info.NowBillPrice);
+                    $('.nextbill').html(data.info.nextbill);
+                    $('.NoBillPrice').html(data.info.NoBillPrice);
+                    $('.HasSettlementPrice').html(data.info.HasSettlementPrice);
+                    var coupon = '';
+                    if (data.coupons.length > 0) {
+                        $.each(data.coupons, function (k, v) {
+                            coupon += '<div class="coupom_layout">';
+                            coupon += ' <div class="coupom_news">';
+                            coupon += ' <p class="coupom_news_num"> ￥' + v.E_Price + '</p>';
+                            coupon += '<p class="coupom_news_header">' + v.E_ProjectName + '</p>';
+                            coupon += ' <p class="coupom_news_time">有效期至' + v.E_LastDate + '</p>';
+                            coupon += ' <p class="coupom_news_ma">券码：' + v.E_SN + '</p>';
+                            coupon += ' </div></div>';
+                        })
+                    } else {
+                        coupon += '<div class="null-coupons">';
+                        coupon += '<img src="__TMPL__/public/assets/images/zhufanquan_icon.png" class="null-coupons-img"/><p class="null-coupons-p">暂无住房券</p>';
+                        coupon += '</div>';
+                    }
+                    $('.coupons').html(coupon);
+                } else {
+                    mui.toast(data.msg)
+                }
+            }
+        })
+        var maction = 'myproject';
+        var msign = $.md5(maction + 1+ pattern+ randomstr + time);
+        $.ajax({
+            type: 'POST',
+            url: "<?php echo config('interfaceurl');?>/myproject",
+            dataType: 'json',
+            headers: { token: "<?php echo session('token');?>" },
+            data: { pattern:pattern,limit: 1, from: from, time: time, action: maction, sign: msign },
+            success: function (data) {
+                //console.log(data);
+                if (data.code == '1') {
+                    //console.log(data.data);
+                    var str = '';
+                    if (data.data.length > 0) {
+
+                        $.each(data.data, function (k, v) {
+
+                            str += '<img src="__TMPL__/public/assets/images/img.png" class="member-plan-cnt-img"/>';
+                            str += '<div class="member-plan-cnt-block">';
+                            str += '<span class="member-plan-cnt-txt1">' + v.E_ProjectName + '·' + v.E_ProjectName + '</span>';
+                            str += '<span class="member-plan-cnt-txt2">参与金额：￥' + v.E_OrderPrice + '</span>';
+                            str += ' <span class="member-plan-cnt-txt2">参与日期：' + v.jointime + '</span>';
+                            str += ' </div>'
+
+                        })
+                    } else {
+                        str += '<div class="null-coupons">';
+                        str += ' <img src="__TMPL__/public/assets/images/plan_icon.png" class="null-coupons-img"/><div class="join-plan-txt"><p class="null-coupons-p">暂无计划<span class="join-plan" onclick="javascript:window.location.href=\'/project?project=MZJBQKj3NmPolKOv8qbj\'">立即参与分享计划 >></span></p><div>';
+                        str += '</div>';
+                    }
+                    $('.member-plan-cnt').html(str);
+                }
+            }
+        })
+    })
+    function checkPattern() {
+        window.location.href=window.location.href+'?Pattern=1';
+        // console.log(window.location.href);
+    }
+    function price(price) {
+        price = parseFloat(price);
+        return price.toLocaleString('zh-Hans-CN', {
+            style: 'currency',
+            currency: 'CNY'
+        })
+    }
+</script>
+
+</html>

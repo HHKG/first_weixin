@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="<?php echo $keywords;?>">
+    <meta name="description" content="<?php echo $description;?>">
+    <title>首页-虔心荟</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <include file="public@header" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/app.css?3-20" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/youxian.css?3-20" />
+    <link href="__TMPL__/public/assets/css/person.css?3-20-1" rel="stylesheet" />
+
+</head>
+<style type="text/css">
+    body {
+        background: #FCE8C5;
+    }
+
+    .mui-backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 998;
+        background-color: rgba(0, 0, 0, .3);
+    }
+</style>
+
+<body>
+    <nav class="mui-bar mui-bar-tab index_nav">
+        <a class="index">
+            <img src="__TMPL__/public/assets/images/shouye_icon_seleted.png" />
+            <span>首页</span>
+        </a>
+        <a class="index" href="/club">
+            <img src="__TMPL__/public/assets/images/julebu_icon.png" />
+            <span>俱乐部</span>
+        </a>
+        <a class="index" href="/member">
+            <img src="__TMPL__/public/assets/images/huiyuan_icon.png" />
+            <span>会员中心</span>
+        </a>
+    </nav>
+    <div class="mui-content" style="background:#FCE8C5 ;margin-bottom:1.5rem;">
+        <div id="index" class="mui-control-content mui-active ">
+            <div id="slider" class="mui-slider">
+                <div class="mui-slider-group mui-slider-loop">
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="__TMPL__/public/assets/images/banner2.png">
+                        </a>
+                    </div>
+                    <!-- 第一张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="__TMPL__/public/assets/images/banner1.png">
+                        </a>
+                    </div>
+                    <!-- 第二张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="__TMPL__/public/assets/images/banner2.png">
+                        </a>
+                    </div>
+                    <!-- 第三张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="__TMPL__/public/assets/images/tai_guo1.png">
+                        </a>
+                    </div>
+                    <!-- 第四张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="__TMPL__/public/assets/images/tai_guo2.png">
+                        </a>
+                    </div>
+
+                    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="__TMPL__/public/assets/images/banner1.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="mui-slider-indicator">
+                    <div class="mui-indicator mui-active"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                </div>
+            </div>
+
+            <!--加入虔心荟-->
+            <div class="club-bottom">
+                <div class="club-bottom-h">
+                    <img src="__TMPL__/public/assets/images/club_title3.png" width="100%" height="100%" />
+                </div>
+                <div class="club-bottom-plan">
+                    <div>
+                        <img src="__TMPL__/public/assets/images/club_process_photo.png" width="100%" height="100%" />
+                    </div>
+                    <div class="club-bottom-line">
+                        <img src="__TMPL__/public/assets/images/club_huanguan_line .png" width="100%" height="100%" />
+                    </div>
+                    <div class="club-bottom-word">
+                        <img src="__TMPL__/public/assets/images/club_key_word_icon.png" width="100%" height="100%" />
+                    </div>
+                </div>
+            </div>
+
+
+            <!--banner-->
+            <div class="banner_index">
+                <img src="__TMPL__/public/assets/images/middle_banner_green.png">
+            </div>
+            <!--分享计划-->
+            <div class="big_block ">
+                <a class="project_info" href="">
+                    <!--分享计划头部-->
+                    <div class="plan_header">
+                        <img src="__TMPL__/public/assets/images/title2.png" width="100%" height="100%" />
+                    </div>
+                    <!--分享计划内容-->
+                    <div class="index_plan_contnet">
+                        <div class="img_header">
+
+                        </div>
+                        <div class="detail-inner">
+                            <p class="project-title">四闲山房 | 加入虔心荟，让免费度假成为可能！首期体验会籍，限量1000名</p>
+                        </div>
+                        <div class="plan_datail">
+                            <div class="plan_datail_block">
+                                <div>
+                                    <span class="plan_datail_span plan_price">--</span>
+                                    <span>元</span>
+                                </div>
+                                <div>
+                                    <span>参与费</span>
+                                </div>
+                            </div>
+                            <div class="plan_datail_block">
+                                <div>
+                                    <span class="plan_datail_span paln_cycle">--</span>
+                                    <span>年</span>
+                                </div>
+                                <div>
+                                    <span>返利期限</span>
+                                </div>
+                            </div>
+                            <div class="plan_datail_block">
+                                <div>
+                                    <span class="plan_datail_span plan_scale">--</span>
+                                </div>
+                                <div>
+                                    <span>预估每年返现</span>
+                                </div>
+                            </div>
+                            <div class="plan_datail_block">
+                                <div>
+                                    <span class="plan_datail_span plan_coupon">--</span>
+                                </div>
+                                <div>
+                                    <span>每年返住房券</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan_describe ">
+                            <p class="Digest">隐匿竹海，静谧清幽，体验四闲之乐。位于江西龙南“虔心小镇”内，依山而建，林中别墅。纯生态度假，纯田园风光，返璞归真，给您最纯粹的享受。 </p>
+                        </div>
+                        <!--项目介绍-->
+                        <div class="big_block project">
+                            <div class="plan_type">
+                                <div>
+                                    <img src="__TMPL__/public/assets/images/small_icon1.png" />
+                                </div>
+                                <div class="plan_type_text">
+                                    <p>项目规模：23独立栋别墅，30间客房</p>
+                                </div>
+                            </div>
+                            <div class="plan_type">
+                                <div>
+                                    <img src="__TMPL__/public/assets/images/small_icon2.png" />
+                                </div>
+                                <div class="plan_type_text">
+                                    <p>项目优势：客源稳定，入住率高</p>
+                                </div>
+                            </div>
+                            <div class="plan_type">
+                                <div>
+                                    <img src="__TMPL__/public/assets/images/small_icon3.png" />
+                                </div>
+                                <div class="plan_type_text">
+                                    <p>景区特色：1万亩有机茶园万棵红豆杉半山环绕</p>
+                                </div>
+                            </div>
+                            <div class="plan_type">
+                                <div>
+                                    <img src="__TMPL__/public/assets/images/small_icon4.png" />
+                                </div>
+                                <div class="plan_type_text">
+                                    <p>别墅风格：茶旅文化，古风浓郁</p>
+                                </div>
+                            </div>
+                            <div class="plan_type">
+                                <div>
+                                    <img src="__TMPL__/public/assets/images/small_icon5.png" />
+                                </div>
+                                <div class="plan_type_text">
+                                    <p>别墅景观：半山望茶园，竹海星空</p>
+                                </div>
+                            </div>
+                            <div class="plan_type">
+                                <div>
+                                    <img src="__TMPL__/public/assets/images/small_icon6.png" />
+                                </div>
+                                <div class="plan_type_text">
+                                    <p>别墅配套：山泉无边泳池360︒景观台</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--进度-->
+                        <div class="big_progress_block">
+                            <div class="progress_inside">
+                                <div class="buy_num">
+                                    <p class="buy_num_p1 buy_person">--</p>
+                                    <p class="buy_num_p2">已购人数</p>
+                                </div>
+                                <div class="buy_num">
+                                    <p class="buy_num_p1 has_person">--</p>
+                                    <p class="buy_num_p2">仅剩名额</p>
+                                </div>
+                                <div class="buy_num">
+                                    <p class="buy_num_p1 plan_last">--</p>
+                                    <p class="buy_num_p2">剩余天数</p>
+                                </div>
+
+                            </div>
+                            <div id="progress" class="mui-text-center">
+                                <p class="mui-progressbar mui-progressbar-in" data-progress="20"
+                                    style="height:0.8rem;border-radius: 1.5rem;"><span
+                                        style="background:#E4C165;"></span>
+                                </p>
+                            </div>
+                            <div class="rebate_footer">
+                                <div class="join_btn">
+                                    <button>立即加入</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!--六大理由-->
+            <div class="six_reason_block">
+                <div class="six_reason_title">
+                    <img src="__TMPL__/public/assets/images/title1.png" width="100%" height="100%" />
+                </div>
+                <div class="six_reason_content">
+                    <div class="six_reason_layout">
+                        <div>
+                            <img src="__TMPL__/public/assets/images/reason1.png" />
+                            <h4>门槛低</h4>
+                            <p>万元入会</p>
+                            <p>专业团队管理</p>
+                        </div>
+                        <div>
+                            <img src="__TMPL__/public/assets/images/reason2.png" />
+                            <h4>担保机制</h4>
+                            <p>虔心共享方案</p>
+                            <p>完善担保机制</p>
+                        </div>
+                        <div>
+                            <img src="__TMPL__/public/assets/images/reason3.png" />
+                            <h4>权益多元化</h4>
+                            <p>尊享多重福利</p>
+                            <p>持续现金返利</p>
+                        </div>
+                        <div>
+                            <img src="__TMPL__/public/assets/images/reason4.png" />
+                            <h4>客源充足</h4>
+                            <p>联合OTA平台</p>
+                            <p>做返利的坚实后盾</p>
+                        </div>
+                        <div>
+                            <img src="__TMPL__/public/assets/images/reason5.png" />
+                            <h4>文旅支持</h4>
+                            <p>国家政策支持</p>
+                            <p>奠定文旅发展基础</p>
+                        </div>
+                        <div>
+                            <img src="__TMPL__/public/assets/images/reason6.png" />
+                            <h4>高端人脉</h4>
+                            <p>结识高端人士</p>
+                            <p>开拓人脉视野</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--会员说-->
+            <div class="big_block">
+                <!--会员说头部-->
+                <div class="member_header">
+                    <img src="__TMPL__/public/assets/images/title3.png" width="100%" height="100%" />
+                </div>
+                <!--轮播功能-->
+                <div id="slider" class="mui-slider slider_bottom indicator_middle">
+                    <div class="mui-slider-group mui-slider-loop">
+                        <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <a href="#">
+                                <img src="__TMPL__/public/assets/images/member_said_boss.png">
+                            </a>
+                        </div>
+                        <!-- 第一张 -->
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="__TMPL__/public/assets/images/member_said.png">
+                            </a>
+                        </div>
+                        <!-- 第二张 -->
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="__TMPL__/public/assets/images/member_said_mom.png">
+                            </a>
+                        </div>
+                        <!-- 第三张 -->
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="__TMPL__/public/assets/images/member_said_oba.png">
+                            </a>
+                        </div>
+                        <!-- 第四张 -->
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="__TMPL__/public/assets/images/member_said_boss.png">
+                            </a>
+                        </div>
+                        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <a href="#">
+                                <img src="__TMPL__/public/assets/images/member_said.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mui-slider-indicator">
+                        <div class="mui-indicator mui-active"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                    </div>
+                </div>
+            </div>
+            <!--分享计划预告-->
+            <div class="big_block">
+                <!--预告头部-->
+                <div class="member_header">
+                    <img src="__TMPL__/public/assets/images/title4.png" width="100%" height="100%" />
+                </div>
+                <!--近期分享计划预告-->
+                <div class="index-foreshow">
+                    <div class="index-foreshow-cnt">
+                        <img src="__TMPL__/public/assets/images/plan1.png" class="index-foreshow-img" />
+                        <p class="index-foreshow-txt">竹隐山居别墅群</p>
+                        <div class="index-foreshow-position">
+                            <div>
+                                <img src="__TMPL__/public/assets/images/position_icon.png"
+                                    class="index-foreshow-position-img1" />
+                                <span class="index-foreshow-position-name">江西赣州</span>
+                            </div>
+                            <div>
+                                <img src="__TMPL__/public/assets/images/time_icon.png"
+                                    class="index-foreshow-position-img2" />
+                                <span class="index-foreshow-position-name">上线时间待公布</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index-foreshow-cnt">
+                        <img src="__TMPL__/public/assets/images/plan2.png" class="index-foreshow-img" />
+                        <p class="index-foreshow-txt">静心湖别墅群</p>
+                        <div class="index-foreshow-position">
+                            <div>
+                                <img src="__TMPL__/public/assets/images/position_icon.png"
+                                    class="index-foreshow-position-img1" />
+                                <span class="index-foreshow-position-name">江西赣州</span>
+                            </div>
+                            <div>
+                                <img src="__TMPL__/public/assets/images/time_icon.png"
+                                    class="index-foreshow-position-img2" />
+                                <span class="index-foreshow-position-name">上线时间待公布</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index-foreshow-cnt">
+                        <img src="__TMPL__/public/assets/images/plan3.png" class="index-foreshow-img" />
+                        <p class="index-foreshow-txt">万亩有机茶园（珍稀红豆杉伴生）</p>
+                        <div class="index-foreshow-position">
+                            <div>
+                                <img src="__TMPL__/public/assets/images/position_icon.png"
+                                    class="index-foreshow-position-img1" />
+                                <span class="index-foreshow-position-name">江西赣州</span>
+                            </div>
+                            <div>
+                                <img src="__TMPL__/public/assets/images/time_icon.png"
+                                    class="index-foreshow-position-img2" />
+                                <span class="index-foreshow-position-name">上线时间待公布</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index-foreshow-cnt">
+                        <img src="__TMPL__/public/assets/images/plan4.png?2-15" class="index-foreshow-img" />
+                        <p class="index-foreshow-txt">泰国苏梅岛珊瑚湾海边度假别墅群</p>
+                        <div class="index-foreshow-position">
+                            <div>
+                                <img src="__TMPL__/public/assets/images/position_icon.png"
+                                    class="index-foreshow-position-img1" />
+                                <span class="index-foreshow-position-name">泰国 </span>
+                            </div>
+                            <div>
+                                <img src="__TMPL__/public/assets/images/time_icon.png"
+                                    class="index-foreshow-position-img2" />
+                                <span class="index-foreshow-position-name">上线时间待公布</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index-foreshow-cnt">
+                        <img src="__TMPL__/public/assets/images/plan5.png?2-15" class="index-foreshow-img" />
+                        <p class="index-foreshow-txt">泰国苏梅岛卡普拉山庄园度假别墅</p>
+                        <div class="index-foreshow-position">
+                            <div>
+                                <img src="__TMPL__/public/assets/images/position_icon.png"
+                                    class="index-foreshow-position-img1" />
+                                <span class="index-foreshow-position-name">泰国 </span>
+                            </div>
+                            <div>
+                                <img src="__TMPL__/public/assets/images/time_icon.png"
+                                    class="index-foreshow-position-img2" />
+                                <span class="index-foreshow-position-name">上线时间待公布</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 战略合作伙伴 -->
+            <div class="partner">
+                <div class="six_reason_title" style="margin: 1rem 0rem!important;">
+                    <img src="__TMPL__/public/assets/images/title5.png" width="100%" height="100%" />
+                </div>
+                <div class="partner-layout">
+                    <div class="partner-img">
+                    <img src="__TMPL__/public/assets/images/parner_1.jpg" width="100%"/>
+                    </div>
+                    <div class="partner-img">
+                        <img src="__TMPL__/public/assets/images/parner_2.png"  width="100%"/>
+                    </div>
+                    <div class="partner-img">
+                        <img src="__TMPL__/public/assets/images/parner_3.png"  width="100%"/>
+                    </div>
+                    <div class="partner-img">
+                        <img src="__TMPL__/public/assets/images/parner_4.png"  width="100%"/>
+                    </div>
+                    <div class="partner-img">
+                        <img src="__TMPL__/public/assets/images/parner_5.png"  width="100%"/>
+                    </div>
+                    <div class="partner-img">
+                        <img src="__TMPL__/public/assets/images/parner_6.png"  width="100%"/>
+                    </div>
+
+                </div>
+            
+            </div>
+            <!-- 全球运营中心 -->
+             <div class="partner">
+                <div class="six_reason_title title6-img">
+                    <img src="__TMPL__/public/assets/images/title6.png" width="100%" height="100%" />
+                </div>
+                <div class="bottom_banner">
+                    <img src="__TMPL__/public/assets/images/bottom_banner.jpg" width="100%"/>
+                </div>
+                <div class="kefu-phone">
+                    官方客服：400-990-8830
+                </div>
+             </div>
+
+
+
+
+        </div>
+    </div>
+</body>
+<script>
+    $(function () {
+        $.ajax({
+            url: "<?php echo config('interfaceurl')?>/nav",
+            type: 'GET',
+            dataType: 'jsonp',
+            data: {
+                type: 3,
+                select: 'index'
+            },
+
+            success: function (data) {
+                console.log(data);
+                if (data.code == 1) {
+                    if (data.nav.length > 0) {
+                        var str = '';
+                        $.each(data.nav, function (k, v) {
+                            str += ' <a class="index '
+                            if (v.select == 1) {
+                                str += 'active "><img src="' + v.icon + '" /> <span>' + v.name + '</span></a>';
+                            } else {
+                                str += '"><img src="' + v.icon + '" /> <span>' + v.name + '</span></a>';
+                            }
+                        })
+                        console.log(str);
+                    }
+
+
+                }
+
+            }
+        })
+        $.ajax({
+            url: "<?php echo config('interfaceurl')?>/project",
+            type: 'GET',
+            dataType: 'jsonp',
+            // data:{ type:2,
+            //     number:mobile},
+            // xhrFields:{withCredentials:true},
+            success: function (data) {
+                console.log(data);
+                if (data.code == 1) {
+                    $('.img_header').html('<img  src="' + data.projects.E_HeaderImg + '" width="100%" height="100%"  />');
+                    $('.project-title').html(data.projects.E_Name);
+                    $('.plan_price').html(data.projects.E_Money);
+                    $('.paln_cycle').html(data.projects.E_Cycle);
+                    $('.plan_scale').html(data.projects.E_Scale + '%');
+                    $('.plan_coupon').html(data.projects.E_Coupon + '%');
+                    $('.Digest').html(data.projects.E_Digest);
+                    $('.buy_person').html(data.projects.Purchased);
+                    $('.has_person').html(data.projects.Surplus);
+                    $('.plan_last').html(data.projects.lastday);
+                    $('.project_info').attr('href', '/project?project=' + data.projects.E_Code);
+                    $('.member').attr('href', 'member');
+                    $('.club').attr('href', 'club');
+                    mui(mui('#progress')).progressbar().setProgress(data.projects.proportion);
+                }
+
+            }
+        })
+    })
+</script>
+<script>
+
+    mui(mui('#progress')).progressbar().setProgress(100);
+    var gallery = mui('.mui-slider');
+    gallery.slider({
+        interval: 3000
+    });
+</script>
+
+
+</html>

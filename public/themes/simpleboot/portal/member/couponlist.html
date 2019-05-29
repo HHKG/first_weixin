@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>住房券列表</title>
+    <meta name="keywords" content="住房券" />
+    <meta name="description" content="住房券" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <include file="public@header" />
+    <link href="__TMPL__/public/assets/css/person.css?2019-5-17" rel="stylesheet" />
+</head>
+<style>
+html,.couponlist-body,body{
+  background-color:#fff;
+}
+</style>
+<body>
+    <div class="mui-content couponlist-body">
+        <div class="couponlist-cnt">
+           
+        </div>
+    </div>
+    <script>
+         $(function () {
+        console.log($.data(mydata));
+        var action = 'member';
+        var sign = $.md5(action+pattern + randomstr + time);
+
+        $.ajax({
+            url: "<?php echo $http.config('newinterfaceurl')?>/member",
+            type: 'POST',
+            dataType: 'json',
+            headers: { token: "<?php echo session('token');?>" },
+            data: { pattern:pattern,from: from, time: time, action: action, sign: sign },
+            success: function (data) {
+                console.log(data);
+                if (data.code === '9201') {
+                    if ("<?php echo cmf_is_wechat(); ?>") {
+                        window.location.href = "/login?again=1&back=<?php echo urlencode(GetAllURL());?>";
+                    } else {
+                        window.location.href = "/login?again=1&back=<?php echo urlencode(GetAllURL());?>";
+                    }
+                }
+                if (data.code == 1) {
+
+                    if (data.info.E_IsInvestor == 2) {
+                        $('.nick_name').html(data.info.E_TrueName);
+                        $('.jiaobiao').attr('onclick', "javascript:window.location.href='/certificate'");;
+                    } else {
+                        $('.nick_name').html(data.info.E_Name);
+                        $('.jiaobiao').attr('onclick', "   mui.alert('请先实名认证','提示', function() {" +
+                            "                        window.location.href='/authentication'});");
+                    }
+                    $('.card-num').html(data.info.E_CardNo);
+                    $('.card-num').text($('.card-num').text().replace(/\s/g, '').replace(/(.{4})/g, '$1 '));
+                    $('.phone_num').html(data.info.E_Mobile);
+                    $('.card_val').html(data.info.Amout);
+                    $('.head_img').attr('src', data.info.E_HeadImg);
+                    $('.recharge').attr('href', '/recharge/rank/' + data.info.Amout);
+
+                    $('.invate').attr('onclick', "javascript:window.location.href='/myinvite?incode="+ data.incode+"'");
+                    $('.imitate').attr('onclick', "javascript:window.location.href='/imitate?incode="+ data.incode+"'");
+
+                    var grade = data.info.E_Grade;
+                    var grades =<?php echo json_encode(config('Grade'));?>;
+                    $('.grade').attr('src', grades[grade]);
+                    $('.balance').html(data.info.Balance);
+                    $('.Consumption').html(data.info.Consumption);
+                    $('.NowBillPrice').html(data.info.NowBillPrice);
+                    $('.nextbill').html(data.info.nextbill);
+                    $('.NoBillPrice').html(data.info.NoBillPrice);
+                    $('.HasSettlementPrice').html(data.info.HasSettlementPrice);
+                    var coupon = '';
+                    if (data.coupons.length > 0) {
+                        $.each(data.coupons, function (k, v) {
+                            coupon += '<div class="coupom_layout">';
+                            coupon += '<div class="coupom_logo">';
+                            coupon += '<img src="__TMPL__/public/assets/images/sxsf_photo.png"/>'; 
+                            coupon += '<p>' + v.E_ProjectName + '</p>';
+                            coupon += '</div>';
+                            coupon += ' <div class="coupom_news">';
+                            coupon += ' <p class="coupom_news_num"> ￥' + v.E_Price + '</p>';
+                            coupon += ' <p class="coupom_news_time">有效期：' + v.E_CreateTime + '</p>';
+                            coupon += ' <p class="coupom_news_ma">券码：' + v.E_SN + '</p>';
+                            coupon += ' <div class="coupom_range">全球通用住房券</div>';
+                            coupon += ' </div></div>';
+                        })
+                    } else {
+                        coupon += '<div class="null-coupons null-couponlist">';
+                        coupon += '<img src="__TMPL__/public/assets/images/zhufanquan_icon.png" class="null-coupons-img"/><p class="null-coupons-p">暂无住房券<span class="join-plan" onclick="javascript:window.location.href=\'/project?project=MZJBQKj3NmPolKOv8qbj\'">立即参与分享计划 >></span></p>';
+                        coupon += '</div>';
+                    }
+                    $('.couponlist-cnt').html(coupon);
+                } else {
+                    mui.toast(data.msg)
+                }
+            }
+        })
+        var maction = 'myproject';
+        var msign = $.md5(maction + 1+ pattern+ randomstr + time);
+        $.ajax({
+            type: 'POST',
+            url: "<?php echo $http.config('newinterfaceurl');?>/myproject",
+            dataType: 'json',
+            headers: { token: "<?php echo session('token');?>" },
+            data: { pattern:pattern,limit: 1, from: from, time: time, action: maction, sign: msign },
+            success: function (data) {
+                if (data.code == '1') {
+                    var str = '';
+                    if (data.data.length > 0) {
+                        $.each(data.data, function (k, v) {
+                            str += '<img src="__TMPL__/public/assets/images/img.png" class="member-plan-cnt-img"/>';
+                            str += '<div class="member-plan-cnt-block">';
+                            str += '<span class="member-plan-cnt-txt1">' + v.E_ProjectName + '·' + v.E_PlanName + '</span>';
+                            str += '<span class="member-plan-cnt-txt2">参与金额：￥' + v.E_OrderPrice + '</span>';
+                            str += ' <span class="member-plan-cnt-txt2">参与日期：' + v.jointime + '</span>';
+                            str += ' </div>'
+                        })
+                    } else {
+                        str += '<div class="null-coupons">';
+                        str += ' <img src="__TMPL__/public/assets/images/plan_icon.png" class="null-coupons-img"/><div class="join-plan-txt"><p class="null-coupons-p">暂无计划<span class="join-plan" onclick="javascript:window.location.href=\'/project?project=MZJBQKj3NmPolKOv8qbj\'">立即参与分享计划 >></span></p><div>';
+                        str += '</div>';
+                    }
+                    $('.member-plan-cnt').html(str);
+                }
+            }
+        })
+    })
+    function checkPattern() {
+        var search=location.search;
+        if (search==''){
+            window.location.href=window.location.href+'?Pattern=1';
+        }else{
+            window.location.href=window.location.href+'&Pattern=1';
+        }
+    }
+    function price(price) {
+        price = parseFloat(price);
+        return price.toLocaleString('zh-Hans-CN', {
+            style: 'currency',
+            currency: 'CNY'
+        })
+    }
+    </script>
+</body>
+
+</html>

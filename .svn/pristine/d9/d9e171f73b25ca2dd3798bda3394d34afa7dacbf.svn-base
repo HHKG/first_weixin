@@ -1,0 +1,35 @@
+.mui-slider-indicator .mui-active.mui-indicator{
+	width:2rem;
+	height:0.3rem;
+	border-radius: 10px;
+	background:#ECC36A;
+}
+.indicator_middle{
+	padding-bottom:1.5rem;
+}
+.mui-slider-indicator .mui-indicator{
+	width: 1rem;
+	height: 0.3rem;
+	border-radius: 10px;
+}
+.index_nav{
+	display: flex;justify-content: space-around;align-items: center;
+}
+.index{
+	display:flex;align-items:flex-end;justify-content:center;background-image:url(../images/shouye_icon_seleted.png) ;background-size:22%;height:5.5rem;width:33.3%;background-repeat: no-repeat;background-position-x: 50%;background-position-y: 20%;
+}
+.index span{
+	font-size: 1.4rem;color:#496966;
+}
+.club{
+	display:flex;align-items:flex-end;justify-content:center;background-image:url(../images/julebu_icon.png) ;background-size:22%;height:5.5rem;width:33.3%;background-repeat: no-repeat;background-position-x: 50%;background-position-y: 20%;
+}
+.club span{
+	font-size: 1.4rem;color:#333;
+}
+.person{
+	display:flex;align-items:flex-end;justify-content:center;background-image:url(../images/huiyuan_icon.png) ;background-size:22%;height:5.5rem;width:33.3%;background-repeat: no-repeat;background-position-x: 50%;background-position-y: 20%;
+}
+.person span{
+	font-size: 1.4rem;color:#333;
+}

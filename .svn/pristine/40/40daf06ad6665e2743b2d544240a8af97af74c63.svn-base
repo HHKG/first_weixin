@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="<?php echo $keywords;?>">
+    <meta name="description" content="<?php echo $description;?>">
+    <title>注册成功-虔心荟</title>
+
+    <include file="public@header"/>
+    <link href="__TMPL__/public/assets/css/success.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/youxian_pay.css?1-20-2" rel="stylesheet"  />
+</head>
+<style type="text/css">
+    html body {
+        background: #fff;
+    }
+
+    .mui-content {
+        background: #fff;
+    }
+
+    input[type=color],
+    input[type=date],
+    input[type=datetime-local],
+    input[type=datetime],
+    input[type=email],
+    input[type=month],
+    input[type=number],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    input[type=time],
+    input[type=url],
+    input[type=week],
+    select,
+    textarea {
+        padding: 10px 0px;
+    }
+
+    .mui-btn-block {
+        margin-top: 3rem;
+        font-size: 2rem;
+        color: #fff;
+        height: 5rem;
+        background: #f0753a;
+        border-radius: 1rem;
+    }
+</style>
+<body>
+
+<script type="text/javascript">
+    mui.init()
+</script>
+<div class="mui-content">
+    <div class="register_progress">
+        <div class="progress_line_block">
+            <div class="progress_line"></div>
+            <div class="progress_line"></div>
+        </div>
+        <div class="progress_block">
+            <div style="">
+                <img src="__TMPL__/public/assets/images/small_check_icon.png" width="60%" />
+                <p>填写手机</p>
+            </div>
+            <div>
+                <img src="__TMPL__/public/assets/images/small_check_icon.png" width="60%" />
+                <p>填写资料</p>
+            </div>
+            <div>
+                <img src="__TMPL__/public/assets/images/small_check_icon.png" width="60%" />
+                <p>注册成功</p>
+            </div>
+        </div>
+    </div>
+    <div class="success_tip">
+        <img src="__TMPL__/public/assets/images/member_photo.png" />
+        <p class="success_tip_p1" style="color:#999;">恭喜你注册成功</p>
+        <p class="success_tip_p2" style="color:#999;">成为第<?php echo $count;?>位会员</p>
+    </div>
+    <div class="success_btn">
+        <button class="success_plan" onclick="javascript:window.location.href='/project?project=MZJBQKj3NmPolKOv8qbj'">立即参与计划</button>
+        <button class="success_center" onclick="javascript:window.location.href='/member'">会员中心</button>
+    </div>
+</div>
+
+<script>
+    // $(function () {
+    //     var backurl="<?php echo $back;?>"
+    //     console.log(backurl);
+    //     if (backurl!='' || backurl!=undefined){
+    //         setTimeout(function () {
+    //             window.location.href=backurl;
+    //         },300)
+    //     }
+    // })
+</script>
+</body>
+</html>

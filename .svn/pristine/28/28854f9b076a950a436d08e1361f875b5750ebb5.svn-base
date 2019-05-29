@@ -1,0 +1,283 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:51:"themes/admin_simpleboot/admin\project\add_plan.html";i:1551924767;s:65:"D:\code\qxh\qxh\public\themes\admin_simpleboot\public\header.html";i:1535858920;}*/ ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- HTML5 shim for IE8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+
+    <link href="/themes/admin_simpleboot/public/assets/themes/<?php echo cmf_get_admin_style(); ?>/bootstrap.min.css" rel="stylesheet">
+    <link href="/themes/admin_simpleboot/public/assets/simpleboot3/css/simplebootadmin.css" rel="stylesheet">
+    <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        form .input-order {
+            margin-bottom: 0px;
+            padding: 0 2px;
+            width: 42px;
+            font-size: 12px;
+        }
+
+        form .input-order:focus {
+            outline: none;
+        }
+
+        .table-actions {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 0px;
+        }
+
+        .table-list {
+            margin-bottom: 0px;
+        }
+
+        .form-required {
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        //全局变量
+        var GV = {
+            ROOT: "/",
+            WEB_ROOT: "/",
+            JS_ROOT: "static/js/",
+            APP: '<?php echo \think\Request::instance()->module(); ?>'/*当前应用名*/
+        };
+    </script>
+    <script src="/themes/admin_simpleboot/public/assets/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/js/wind.js"></script>
+    <script src="/themes/admin_simpleboot/public/assets/js/bootstrap.min.js"></script>
+    <script>
+        Wind.css('artDialog');
+        Wind.css('layer');
+        $(function () {
+            $("[data-toggle='tooltip']").tooltip({
+                container:'body',
+                html:true,
+            });
+            $("li.dropdown").hover(function () {
+                $(this).addClass("open");
+            }, function () {
+                $(this).removeClass("open");
+            });
+        });
+    </script>
+    <?php if(APP_DEBUG): ?>
+        <style>
+            #think_page_trace_open {
+                z-index: 9999;
+            }
+        </style>
+    <?php endif; ?>
+<style type="text/css">
+    .pic-list li {
+        margin-bottom: 5px;
+
+    }
+
+    .col-md-9 {
+        width: 70%;
+    }
+
+    .col-md-3 {
+        width: 30%;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="<?php echo url('Project/index'); ?>">项目列表</a></li>
+        <li class="active"><a >添加方案</a></li>
+    </ul>
+    <form action="<?php echo url('Project/add_plan_post'); ?>" method="post" class="form-horizontal js-ajax-form margin-top-20">
+        <div class="row">
+            <div class="col-md-9">
+                <table class="table table-bordered">
+                    <tr>
+                        <th width="100">方案名称<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" name="E_Title" type="text" style=";" required value="<?php echo '';?>"
+                                   placeholder="请填入方案名称"/>
+                            <input type="hidden" name="E_ProjectCode" value="<?php echo $project_code;?>">
+                            <input type="hidden" name="E_Code" value="<?php echo $plan_code;?>">
+                            <input type="hidden" name="E_ProjectName" value="<?php echo $project_name;?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>是否默认方案<span class="form-required">*</span></th>
+                        <td>
+                            <select name="E_Status">
+                                <option value="1">是</option>
+                                <option value="2" selected>否</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>状态<span class="form-required">*</span></th>
+                        <td>
+                            <select name="E_Status">
+                                <option value="1">可购买</option>
+                                <option value="2">不可购买</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>周期<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_Cycle" value=""
+                                   onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="周期">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>返券周期<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_CouponCycle" value=""
+                                   onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="返券周期（月份）">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>账单周期<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_BillCycle" value=""
+                                   onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="账单周期">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>结算周期<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_SettlementCycle" value=""
+                                   onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="结算周期">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>方案价值<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_Value" value=""
+                                   onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="方案价值">
+                            <span>单位是分</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>参与费<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_Money" value=""
+                                   onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="入籍会费">
+                            <span>单位是分</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>每人可参与份数<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_CanBuy"
+                                   onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="可购买份数">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>参与总人数<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_Total"
+                                   onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="入籍总人数">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>参与初始人数<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_AreadyWeights"
+                                   onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="入籍初始人数">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>返利比例（每月）<span class="form-required">*</span></th>
+                        <td>
+                            <!--<input class="form-control" type="text" required name="E_Scale"-->
+                                   <!--onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="返利比例">-->
+                            <a class="btn btn-warning" href="javascript:parent.openIframeDialog('<?php echo url('Project/scale',array('plan'=>$plan_code,'project'=>$project_code)); ?>','新增返现比例',{width:'600px',height:'800px'})">新增返现比例</a>
+                            <span>单位是‰</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>返利比例（每年）<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="number" required name="E_Scale"
+                                    placeholder="返利比例">
+                            <span>单位是%</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>返券比例<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="number" required name="E_Coupon"
+                                   placeholder="返券比例">
+                            <span>单位是%</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>返利权益 <span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_ScaleShow" placeholder="返利权益">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>其他权益说明<span class="form-required">*</span></th>
+                        <td>
+                            <textarea name="E_Introduction" id="" cols="175" rows="10"></textarea>
+                            <!--<script type="text/plain" id="content" name="E_Introduction"></script>-->
+                        </td>
+                    </tr>
+                </table>
+                <?php 
+    \think\Hook::listen('portal_admin_article_edit_view_main',$temp5c81cade8b67b,null,false);
+ ?>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary js-ajax-submit"><?php echo lang('ADD'); ?></button>
+                        <a class="btn btn-default" href="<?php echo url('Project/index'); ?>"><?php echo lang('BACK'); ?></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="/static/js/admin.js"></script>
+<script type="text/javascript">
+    //编辑器路径定义
+    var editorURL = GV.WEB_ROOT;
+</script>
+<script type="text/javascript" src="/static/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="/static/js/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript">
+
+
+    $(function () {
+
+        editorcontent = new baidu.editor.ui.Editor();
+        editorcontent.render('content');
+        try {
+            editorcontent.sync();
+        } catch (err) {
+        }
+
+        $('.btn-cancel-thumbnail').click(function () {
+            $('#thumbnail-preview').attr('src', '/themes/admin_simpleboot/public/assets/images/default-thumbnail.png');
+            $('#thumbnail').val('');
+        });
+
+    });
+</script>
+</body>
+</html>

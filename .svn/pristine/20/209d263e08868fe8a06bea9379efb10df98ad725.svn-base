@@ -1,0 +1,4010 @@
+---------------------------------------------------------------
+[ 2018-11-26T16:27:50+08:00 ] 0.0.0.0 GET /speed/ul/login
+[ info ] localhost:84/speed/ul/login [运行时间：0.185000s][吞吐率：5.41req/s] [内存消耗：2,406.06kb] [文件加载：64]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.010000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'ul',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '6253f07e-f863-40e5-a773-bd3996655761',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\UlController->Login[ D:\code\qxh\app\speed\controller\UlController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.051000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.049000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.004000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:28:00+08:00 ] 0.0.0.0 GET /speed/ul/login?mobile=13112316334
+[ info ] localhost:84/speed/ul/login?mobile=13112316334 [运行时间：0.039000s][吞吐率：25.64req/s] [内存消耗：2,668.40kb] [文件加载：66]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'ul',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'a0f1dfaa-bbb4-4c07-8217-5416307d97e6',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13112316334',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\UlController->Login[ D:\code\qxh\app\speed\controller\UlController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:28:18+08:00 ] 0.0.0.0 GET /speed/ul/login?mobile=13112316334&type=1
+[ info ] localhost:84/speed/ul/login?mobile=13112316334&type=1 [运行时间：0.035000s][吞吐率：28.57req/s] [内存消耗：2,668.66kb] [文件加载：66]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'ul',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '6a78506e-b013-4823-96fe-ebeb29b21cc2',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13112316334',
+  'type' => '1',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\UlController->Login[ D:\code\qxh\app\speed\controller\UlController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:28:22+08:00 ] 0.0.0.0 GET /speed/ul/login?mobile=13112316334&type=3
+[ info ] localhost:84/speed/ul/login?mobile=13112316334&type=3 [运行时间：0.035000s][吞吐率：28.57req/s] [内存消耗：2,668.66kb] [文件加载：66]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'ul',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'ad8460a5-45d8-4297-8913-0d200a097628',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13112316334',
+  'type' => '3',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\UlController->Login[ D:\code\qxh\app\speed\controller\UlController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:28:25+08:00 ] 0.0.0.0 GET /speed/ul/login?mobile=13112316334&type=4
+[ info ] localhost:84/speed/ul/login?mobile=13112316334&type=4 [运行时间：0.036000s][吞吐率：27.78req/s] [内存消耗：2,668.66kb] [文件加载：66]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'ul',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '5a562981-62e8-4a30-b6ea-077fffd8ba31',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13112316334',
+  'type' => '4',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\UlController->Login[ D:\code\qxh\app\speed\controller\UlController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:28:33+08:00 ] 0.0.0.0 GET /speed/ul/login?mobile=13112316334&type=2
+[ info ] localhost:84/speed/ul/login?mobile=13112316334&type=2 [运行时间：0.035000s][吞吐率：28.57req/s] [内存消耗：2,668.66kb] [文件加载：66]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'ul',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '7da5534f-c9e7-48fd-9b57-1a81948c32fd',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13112316334',
+  'type' => '2',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\UlController->Login[ D:\code\qxh\app\speed\controller\UlController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:28:40+08:00 ] 0.0.0.0 GET /speed/ul/login?mobile=13112316334&type=2&pwd=123456
+[ info ] localhost:84/speed/ul/login?mobile=13112316334&type=2&pwd=123456 [运行时间：0.046000s][吞吐率：21.74req/s] [内存消耗：2,736.70kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'ul',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'fb410dfa-49fb-45b0-9f3a-ce6e19e5d3a8',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13112316334',
+  'type' => '2',
+  'pwd' => '123456',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\UlController->Login[ D:\code\qxh\app\speed\controller\UlController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_member` WHERE  `E_Mobile` = '13112316334' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:30:52+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.036000s][吞吐率：27.78req/s] [内存消耗：1,517.64kb] [文件加载：54]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'ac497441-34d0-44bc-a76f-82dadde92c3e',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.003000s ]
+[ info ] [ LOG ] INIT File
+[ error ] [64]'goto' to undefined label 'end'[D:\code\qxh\app\speed\controller\MemberController.php:87]
+---------------------------------------------------------------
+[ 2018-11-26T16:31:38+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.049000s][吞吐率：20.41req/s] [内存消耗：2,480.35kb] [文件加载：70]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'b40b9cc3-247d-47ae-90c9-89f17bc8cc38',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: HTTP_REFERER[D:\code\qxh\simplewind\cmf\controller\ApiController.php:52]
+---------------------------------------------------------------
+[ 2018-11-26T16:32:33+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.033000s][吞吐率：30.30req/s] [内存消耗：2,408.86kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '7524ba10-096a-43e5-bb69-1d6246e650ec',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:33:06+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.048000s][吞吐率：20.83req/s] [内存消耗：2,409.48kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.006000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'e38d1e54-6a46-428e-a60a-9a8957488b4c',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:34:11+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.035000s][吞吐率：28.57req/s] [内存消耗：2,409.42kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '9556e3e2-c459-430d-91cb-2249f84de836',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:35:28+08:00 ] 0.0.0.0 GET /speed/ul/login?mobile=13112316334&type=2&pwd=123456
+[ info ] localhost:84/speed/ul/login?mobile=13112316334&type=2&pwd=123456 [运行时间：0.050000s][吞吐率：20.00req/s] [内存消耗：2,737.52kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'ul',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'qxhusername=346dnhh5jhj9gx%2BeC%2Bzem6LBxwmSbXKp9poEB66tHXlZotzG; PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '1f454a76-f857-44f7-ac09-8397f09b05ce',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13112316334',
+  'type' => '2',
+  'pwd' => '123456',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\UlController->Login[ D:\code\qxh\app\speed\controller\UlController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_member` WHERE  `E_Mobile` = '13112316334' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:35:32+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.033000s][吞吐率：30.30req/s] [内存消耗：2,409.42kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'd20e7946-f23e-4c77-9f0f-69f92fdd279e',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:35:41+08:00 ] 0.0.0.0 GET /speed/ul/login?mobile=13112316334&type=2&pwd=123456
+[ info ] localhost:84/speed/ul/login?mobile=13112316334&type=2&pwd=123456 [运行时间：0.048000s][吞吐率：20.83req/s] [内存消耗：2,737.67kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'ul',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'qxhusername=d4a8eooi5%2BZMfQ6SXJBsclWp3xIFZFx7Yv9zwT1yTS9O%2BRko; PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'dea50b65-7981-46a4-92ab-2ec5e0f1feaf',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13112316334',
+  'type' => '2',
+  'pwd' => '123456',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\UlController->Login[ D:\code\qxh\app\speed\controller\UlController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_member` WHERE  `E_Mobile` = '13112316334' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:36:28+08:00 ] 0.0.0.0 GET /speed/ul/login?mobile=13112316334&type=2&pwd=123456
+[ info ] localhost:84/speed/ul/login?mobile=13112316334&type=2&pwd=123456 [运行时间：0.044000s][吞吐率：22.73req/s] [内存消耗：2,737.92kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'ul',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'qxhusername=09ebXt6NozuM%2BcMHltPrBA%2F73Dk1t2FjepyHh4aReUPZM1MZ; PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'e05555ee-f556-4cf0-afd7-f53c0f455c55',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13112316334',
+  'type' => '2',
+  'pwd' => '123456',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\UlController->Login[ D:\code\qxh\app\speed\controller\UlController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_member` WHERE  `E_Mobile` = '13112316334' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:38:09+08:00 ] 0.0.0.0 GET /speed/ul/login?mobile=13112316334&type=2&pwd=123456
+[ info ] localhost:84/speed/ul/login?mobile=13112316334&type=2&pwd=123456 [运行时间：0.053000s][吞吐率：18.87req/s] [内存消耗：2,737.95kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'ul',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'qxhusername=3a04POfEIXtEA%2BgAn%2BVPPh7Ihmh5ltRC6KkwbtejfeUGDXN8; PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '2ee69247-b7b9-474d-9807-5b468544d98f',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13112316334',
+  'type' => '2',
+  'pwd' => '123456',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\UlController->Login[ D:\code\qxh\app\speed\controller\UlController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_member` WHERE  `E_Mobile` = '13112316334' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:39:03+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.033000s][吞吐率：30.30req/s] [内存消耗：2,409.48kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '0c924490-1f04-47a5-b1b1-fb2aa1496035',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:41:15+08:00 ] 0.0.0.0 GET /speed/ul/login?mobile=13112316334&type=2&pwd=123456
+[ info ] localhost:84/speed/ul/login?mobile=13112316334&type=2&pwd=123456 [运行时间：0.055000s][吞吐率：18.18req/s] [内存消耗：2,737.95kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'ul',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'qxhusername=b96deH9wN6yl3DX64y5%2BXfaHrOLxOAgdippnBR2zulZvGwwe; PHPSESSID=2gnng7f3ppint4nffkb5ul0k95',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '4c8b13a8-b015-46ac-9a35-af5dbb3ccf45',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13112316334',
+  'type' => '2',
+  'pwd' => '123456',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\UlController->Login[ D:\code\qxh\app\speed\controller\UlController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_member` WHERE  `E_Mobile` = '13112316334' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:41:20+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.043000s][吞吐率：23.26req/s] [内存消耗：2,409.52kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95; qxhusername=818aESNzNNdnda%2BLYL0XkRsd5K8FlUcsdXCVcK4UAS1UAiQc',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '4c8cc033-3f9e-4361-8b76-388eb0c94b11',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:42:16+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.052000s][吞吐率：19.23req/s] [内存消耗：2,409.64kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95; qxhusername=818aESNzNNdnda%2BLYL0XkRsd5K8FlUcsdXCVcK4UAS1UAiQc',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '351edd0f-c662-49c8-b495-54ea7f65f4cd',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:42:52+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.035000s][吞吐率：28.57req/s] [内存消耗：2,409.81kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95; qxhusername=818aESNzNNdnda%2BLYL0XkRsd5K8FlUcsdXCVcK4UAS1UAiQc',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'c9e5cc19-511e-4105-aece-1355e25ee35b',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:43:08+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.040000s][吞吐率：25.00req/s] [内存消耗：2,409.60kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=2gnng7f3ppint4nffkb5ul0k95; qxhusername=818aESNzNNdnda%2BLYL0XkRsd5K8FlUcsdXCVcK4UAS1UAiQc',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'f66f2ab9-2c79-499c-ac13-896310734c15',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:43:48+08:00 ] 0.0.0.0 GET /speed/ul/logout
+[ info ] localhost:84/speed/ul/logout [运行时间：0.053000s][吞吐率：18.87req/s] [内存消耗：2,448.57kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'ul',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'qxhusername=b96deH9wN6yl3DX64y5%2BXfaHrOLxOAgdippnBR2zulZvGwwe; PHPSESSID=2gnng7f3ppint4nffkb5ul0k95; qxhusername=818aESNzNNdnda%2BLYL0XkRsd5K8FlUcsdXCVcK4UAS1UAiQc',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'c7bd6da5-c440-4241-a4df-d7fa3e49abbb',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\UlController->logout[ D:\code\qxh\app\speed\controller\UlController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:44:21+08:00 ] 0.0.0.0 GET /speed/ul/login?mobile=13112316334&type=2&pwd=123456
+[ info ] localhost:84/speed/ul/login?mobile=13112316334&type=2&pwd=123456 [运行时间：0.045000s][吞吐率：22.22req/s] [内存消耗：2,737.98kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'ul',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'qxhusername=b96deH9wN6yl3DX64y5%2BXfaHrOLxOAgdippnBR2zulZvGwwe; PHPSESSID=2gnng7f3ppint4nffkb5ul0k95; qxhusername=818aESNzNNdnda%2BLYL0XkRsd5K8FlUcsdXCVcK4UAS1UAiQc',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '0c6b4f3b-4bcf-438d-9b10-eba968a946b3',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13112316334',
+  'type' => '2',
+  'pwd' => '123456',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\UlController->Login[ D:\code\qxh\app\speed\controller\UlController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_member` WHERE  `E_Mobile` = '13112316334' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:44:45+08:00 ] 0.0.0.0 GET /speed/ul/login?mobile=13112316334&type=2&pwd=123456
+[ info ] localhost:84/speed/ul/login?mobile=13112316334&type=2&pwd=123456 [运行时间：0.051000s][吞吐率：19.61req/s] [内存消耗：2,737.36kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'ul',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '8b14376e-6823-4176-a46b-3fe5f76f14f3',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13112316334',
+  'type' => '2',
+  'pwd' => '123456',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\UlController->Login[ D:\code\qxh\app\speed\controller\UlController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_member` WHERE  `E_Mobile` = '13112316334' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:45:10+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.042000s][吞吐率：23.81req/s] [内存消耗：2,409.60kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '4de015f2-22b0-40c6-84ad-7591644c318f',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:46:50+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.041000s][吞吐率：24.39req/s] [内存消耗：2,409.84kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'e40fbf75-e91c-4003-b339-868500b18851',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:48:56+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.043000s][吞吐率：23.26req/s] [内存消耗：2,409.84kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'ac379f05-c912-452f-91b9-5ed176e38fa3',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:49:31+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.038000s][吞吐率：26.32req/s] [内存消耗：2,408.89kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'e01c538a-da16-4ab7-8c29-7304b92ae83f',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:49:35+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.037000s][吞吐率：27.03req/s] [内存消耗：2,408.89kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '3c399511-9056-470f-8f27-50f889ffc5f1',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:49:53+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.049000s][吞吐率：20.41req/s] [内存消耗：2,409.32kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '6f612270-64f1-4602-b13e-ac47684cf482',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:50:22+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.044000s][吞吐率：22.73req/s] [内存消耗：2,409.60kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'caf54191-d89a-4747-9cef-96b3e4cc8e7a',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:50:43+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.034000s][吞吐率：29.41req/s] [内存消耗：2,409.73kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'd387aceb-e8dc-4c09-b0c4-09cb3c0a502a',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:51:45+08:00 ] 0.0.0.0 GET /speed/member
+[ info ] localhost:84/speed/member [运行时间：0.043000s][吞吐率：23.26req/s] [内存消耗：2,477.02kb] [文件加载：71]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'b907146f-57d8-4fa2-a92a-fed2804a4546',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:52:09+08:00 ] 0.0.0.0 GET /speed/member/getmember
+[ info ] localhost:84/speed/member/getmember [运行时间：0.070000s][吞吐率：14.29req/s] [内存消耗：2,761.34kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'getmember',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'cbb1f8f0-eb55-4e3d-9870-eb1695ebf198',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->getmember[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.003000s ]
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'qxh.qxh_order' doesn't exist[D:\code\qxh\simplewind\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2018-11-26T16:53:15+08:00 ] 0.0.0.0 GET /speed/member/getmember
+[ info ] localhost:84/speed/member/getmember [运行时间：0.055000s][吞吐率：18.18req/s] [内存消耗：2,761.13kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'getmember',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '5cca823c-29f2-495b-870e-1e527f93abdf',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->getmember[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.003000s ]
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'qxh.qxh_e__is_identity_card' doesn't exist[D:\code\qxh\simplewind\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2018-11-26T16:53:46+08:00 ] 0.0.0.0 GET /speed/member/getmember
+[ info ] localhost:84/speed/member/getmember [运行时间：0.054000s][吞吐率：18.52req/s] [内存消耗：2,760.73kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'getmember',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '0c75c941-b779-42f5-92bd-20bffe24184b',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->getmember[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.004000s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'f.id' in 'field list'[D:\code\qxh\simplewind\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2018-11-26T16:54:58+08:00 ] 0.0.0.0 GET /speed/member/getmember
+[ info ] localhost:84/speed/member/getmember [运行时间：0.073000s][吞吐率：13.70req/s] [内存消耗：2,761.09kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'getmember',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '985ec7ad-b54c-4f22-b976-de3129420fc7',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->getmember[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.008000s ]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'E_UserCode' in where clause is ambiguous[D:\code\qxh\simplewind\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2018-11-26T16:56:50+08:00 ] 0.0.0.0 GET /speed/member/getmember
+[ info ] localhost:84/speed/member/getmember [运行时间：0.061000s][吞吐率：16.39req/s] [内存消耗：2,761.09kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'getmember',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '83626dc5-a783-4ee7-9d28-a0d5e965faff',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->getmember[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.003000s ]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'E_UserCode' in where clause is ambiguous[D:\code\qxh\simplewind\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2018-11-26T16:57:14+08:00 ] 0.0.0.0 GET /speed/member/getmember
+[ info ] localhost:84/speed/member/getmember [运行时间：0.060000s][吞吐率：16.67req/s] [内存消耗：2,761.34kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'getmember',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '6de52cf4-e3c8-4f3b-a698-f6d9e12c5abb',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->getmember[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.003000s ]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'E_UserCode' in where clause is ambiguous[D:\code\qxh\simplewind\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2018-11-26T16:57:45+08:00 ] 0.0.0.0 GET /speed/member/getmember
+[ info ] localhost:84/speed/member/getmember [运行时间：0.056000s][吞吐率：17.86req/s] [内存消耗：2,761.66kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'getmember',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '186076de-abb2-4bec-811b-c2d30033012d',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->getmember[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.003000s ]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'E_UserCode' in where clause is ambiguous[D:\code\qxh\simplewind\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2018-11-26T16:58:01+08:00 ] 0.0.0.0 GET /speed/member/getmember
+[ info ] localhost:84/speed/member/getmember [运行时间：0.050000s][吞吐率：20.00req/s] [内存消耗：2,702.51kb] [文件加载：68]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'getmember',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'f215259a-018a-456f-b1eb-27ef4f140498',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->getmember[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-11-26T16:58:57+08:00 ] 0.0.0.0 GET /speed/member/getmember
+[ info ] localhost:84/speed/member/getmember [运行时间：0.055000s][吞吐率：18.18req/s] [内存消耗：2,761.36kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'getmember',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '42ef5afc-4597-4295-bb22-f74bf19987fe',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->getmember[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.003000s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.E_PointsAmount' in 'on clause'[D:\code\qxh\simplewind\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2018-11-26T17:01:37+08:00 ] 0.0.0.0 GET /speed/member/getmember
+[ info ] localhost:84/speed/member/getmember [运行时间：0.055000s][吞吐率：18.18req/s] [内存消耗：2,702.74kb] [文件加载：68]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'getmember',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '3b8c133e-8aa4-4f56-b738-0134631bfd88',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->getmember[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT a.E_Name,a.E_HeadImg,a.E_Email,a.E_IsInvestor,a.E_IsIdentityCard,count(b.E_Money) as coupon,d.E_Points,d.E_Balance,e.E_Name as grade,count(f.id) as iswx FROM `qxh_member` `a` LEFT JOIN `qxh_member_coupon` `b` ON `a`.`E_UserCode`=`b`.`E_UserCode` LEFT JOIN `qxh_member_wallet` `d` ON `a`.`E_UserCode`=`d`.`E_UserCode` LEFT JOIN `qxh_member_grade` `e` ON d.E_PointsAmount>e.E_Min and d.E_PointsAmount<e.E_Max LEFT JOIN `qxh_member_other_login` `f` ON `a`.`E_UserCode`=f.E_UserCode and f.E_Type='wx' WHERE  `a`.`E_UserCode` = 'fdsaf46' LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:01:55+08:00 ] 0.0.0.0 GET /speed/member/getmember
+[ info ] localhost:84/speed/member/getmember [运行时间：0.048000s][吞吐率：20.83req/s] [内存消耗：2,702.51kb] [文件加载：68]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'getmember',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '33e1edf2-5aed-4570-b738-fcaa234bdf89',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->getmember[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT a.E_Name,a.E_HeadImg,a.E_Email,a.E_IsInvestor,a.E_IsIdentityCard,count(b.E_Money) as coupon,d.E_Points,d.E_Balance,e.E_Name as grade,count(f.id) as iswx FROM `qxh_member` `a` LEFT JOIN `qxh_member_coupon` `b` ON `a`.`E_UserCode`=`b`.`E_UserCode` LEFT JOIN `qxh_member_wallet` `d` ON `a`.`E_UserCode`=`d`.`E_UserCode` LEFT JOIN `qxh_member_grade` `e` ON d.E_PointsAmount>e.E_Min and d.E_PointsAmount<e.E_Max LEFT JOIN `qxh_member_other_login` `f` ON `a`.`E_UserCode`=f.E_UserCode and f.E_Type='wx' WHERE  `a`.`E_UserCode` = 'fdsaf46' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:03:52+08:00 ] 0.0.0.0 GET /speed/member/getinfo
+[ info ] localhost:84/speed/member/getinfo [运行时间：0.056000s][吞吐率：17.86req/s] [内存消耗：2,694.23kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'getinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '3c2ab629-3723-4905-a53a-f94b5878a948',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->getinfo[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `E_Mobile`,`E_Name`,`E_HeadImg`,`E_IsInvestor`,`E_IsIdentityCard`,`E_Email` FROM `qxh_member` WHERE  `E_UserCode` = 'fdsaf46' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:04:19+08:00 ] 0.0.0.0 GET /speed/member/updateName
+[ info ] localhost:84/speed/member/updateName [运行时间：0.044000s][吞吐率：22.73req/s] [内存消耗：2,415.80kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updateName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '59d2f062-5346-4604-87ad-00383d7088d3',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updateName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:04:38+08:00 ] 0.0.0.0 GET /speed/member/updateName?name=%E6%B5%8B%E8%AF%95
+[ info ] localhost:84/speed/member/updateName?name=%E6%B5%8B%E8%AF%95 [运行时间：0.051000s][吞吐率：19.61req/s] [内存消耗：2,740.42kb] [文件加载：73]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updateName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '3dac9b96-1c53-45b9-80c2-e6e23a68829e',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => '测试',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updateName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [0]method not exist:think\db\Query->save[D:\code\qxh\simplewind\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2018-11-26T17:07:34+08:00 ] 0.0.0.0 GET /speed/member/updateName?name=%E6%B5%8B%E8%AF%95
+[ info ] localhost:84/speed/member/updateName?name=%E6%B5%8B%E8%AF%95 [运行时间：0.061000s][吞吐率：16.39req/s] [内存消耗：2,740.38kb] [文件加载：73]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updateName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '1a479bab-383c-4b56-9325-baa39e74ee90',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => '测试',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updateName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [0]method not exist:think\db\Query->save[D:\code\qxh\simplewind\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2018-11-26T17:09:18+08:00 ] 0.0.0.0 GET /speed/member/updateName?name=%E6%B5%8B%E8%AF%95
+[ info ] localhost:84/speed/member/updateName?name=%E6%B5%8B%E8%AF%95 [运行时间：0.044000s][吞吐率：22.73req/s] [内存消耗：2,697.40kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updateName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '5a2f5c5d-9432-42c5-9645-46122ceb8f97',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => '测试',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updateName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.004000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:11:08+08:00 ] 0.0.0.0 GET /speed/member/updateName?name=%E6%B5%8B%E8%AF%95
+[ info ] localhost:84/speed/member/updateName?name=%E6%B5%8B%E8%AF%95 [运行时间：0.049000s][吞吐率：20.41req/s] [内存消耗：2,740.34kb] [文件加载：73]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updateName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '9950d6e2-051c-4e85-906c-62cfb7234316',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => '测试',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updateName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [0]method not exist:think\db\Query->save[D:\code\qxh\simplewind\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2018-11-26T17:11:40+08:00 ] 0.0.0.0 GET /speed/member/updateName?name=%E6%B5%8B%E8%AF%95
+[ info ] localhost:84/speed/member/updateName?name=%E6%B5%8B%E8%AF%95 [运行时间：0.042000s][吞吐率：23.81req/s] [内存消耗：2,740.68kb] [文件加载：73]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updateName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'eeedbaf9-9f7c-4b1e-891a-7b5721b1115a',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => '测试',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updateName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [0]method not exist:think\db\Query->isUpdate[D:\code\qxh\simplewind\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2018-11-26T17:18:58+08:00 ] 0.0.0.0 GET /speed/member/updateName?name=%E6%B5%8B%E8%AF%95
+[ info ] localhost:84/speed/member/updateName?name=%E6%B5%8B%E8%AF%95 [运行时间：0.046000s][吞吐率：21.74req/s] [内存消耗：2,740.98kb] [文件加载：73]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updateName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '25b79756-ad8a-4e81-8ef9-99c62ae52609',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => '测试',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updateName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [0]method not exist:think\db\Query->save[D:\code\qxh\simplewind\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2018-11-26T17:34:58+08:00 ] 0.0.0.0 GET /speed/member/updateName?name=%E6%B5%8B%E8%AF%95
+[ info ] localhost:84/speed/member/updateName?name=%E6%B5%8B%E8%AF%95 [运行时间：0.091000s][吞吐率：10.99req/s] [内存消耗：2,741.30kb] [文件加载：73]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.008000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updateName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'bbe66acb-711f-48e8-b927-725fc804218e',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => '测试',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updateName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [0]method not exist:think\db\Query->save[D:\code\qxh\simplewind\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2018-11-26T17:35:57+08:00 ] 0.0.0.0 GET /speed/member/updateName?name=%E6%B5%8B%E8%AF%95
+[ info ] localhost:84/speed/member/updateName?name=%E6%B5%8B%E8%AF%95 [运行时间：0.049000s][吞吐率：20.41req/s] [内存消耗：2,689.18kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updateName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'd94f5895-a797-49f6-8520-557845700046',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => '测试',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updateName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] UPDATE `qxh_member`  SET `E_Name`='测试'  WHERE  `E_UserCode` = 'fdsaf46' [ RunTime:0.010000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:36:35+08:00 ] 0.0.0.0 GET /speed/member/updateName?name=%E6%B5%8B%E8%AF%95
+[ info ] localhost:84/speed/member/updateName?name=%E6%B5%8B%E8%AF%95 [运行时间：0.044000s][吞吐率：22.73req/s] [内存消耗：2,748.82kb] [文件加载：74]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updateName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '71c56537-d752-45c0-b7de-6a67bc0851ad',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => '测试',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updateName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [2]Missing argument 1 for think\db\Query::where()[D:\code\qxh\simplewind\thinkphp\library\think\db\Query.php:995]
+---------------------------------------------------------------
+[ 2018-11-26T17:36:43+08:00 ] 0.0.0.0 GET /speed/member/updateName?name=%E6%B5%8B%E8%AF%95
+[ info ] localhost:84/speed/member/updateName?name=%E6%B5%8B%E8%AF%95 [运行时间：0.047000s][吞吐率：21.28req/s] [内存消耗：2,688.87kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updateName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '73b5066e-44e2-43f6-bfc9-41acf680de84',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => '测试',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updateName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] UPDATE `qxh_member`  SET `E_Name`='测试'  WHERE  `E_UserCode` = 'fdsaf46' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:36:58+08:00 ] 0.0.0.0 GET /speed/member/updateName?name=%E6%B5%8B%E8%AF%951
+[ info ] localhost:84/speed/member/updateName?name=%E6%B5%8B%E8%AF%951 [运行时间：0.055000s][吞吐率：18.18req/s] [内存消耗：2,688.91kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updateName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'a53b186d-e859-44bc-a54f-be63175daed1',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => '测试1',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updateName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] UPDATE `qxh_member`  SET `E_Name`='测试1'  WHERE  `E_UserCode` = 'fdsaf46' [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:37:06+08:00 ] 0.0.0.0 GET /speed/member/updateName?name=%E6%B5%8B%E8%AF%95
+[ info ] localhost:84/speed/member/updateName?name=%E6%B5%8B%E8%AF%95 [运行时间：0.055000s][吞吐率：18.18req/s] [内存消耗：2,688.90kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updateName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'b5cf79b9-dbac-4909-a66a-6564986bc0e9',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => '测试',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updateName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] UPDATE `qxh_member`  SET `E_Name`='测试'  WHERE  `E_UserCode` = 'fdsaf46' [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:39:03+08:00 ] 0.0.0.0 GET /speed/member/updatePWD
+[ info ] localhost:84/speed/member/updatePWD [运行时间：0.035000s][吞吐率：28.57req/s] [内存消耗：2,416.00kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updatePWD',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'cebf6015-c1e6-4966-b9d4-d691a8822d8f',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updatePWD[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:39:12+08:00 ] 0.0.0.0 GET /speed/member/updatePWD?oldname=
+[ info ] localhost:84/speed/member/updatePWD?oldname= [运行时间：0.038000s][吞吐率：26.32req/s] [内存消耗：2,416.35kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updatePWD',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '85544252-4ea1-4adc-bfe0-6207679d7b88',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'oldname' => '',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updatePWD[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:39:17+08:00 ] 0.0.0.0 GET /speed/member/updatePWD?oldname=123456
+[ info ] localhost:84/speed/member/updatePWD?oldname=123456 [运行时间：0.042000s][吞吐率：23.81req/s] [内存消耗：2,416.22kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updatePWD',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '215b8349-608b-44d0-817c-c70fafefa159',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'oldname' => '123456',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updatePWD[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:39:25+08:00 ] 0.0.0.0 GET /speed/member/updatePWD?oldpwd=123456
+[ info ] localhost:84/speed/member/updatePWD?oldpwd=123456 [运行时间：0.049000s][吞吐率：20.41req/s] [内存消耗：2,750.17kb] [文件加载：73]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updatePWD',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '9f3c1fd0-64fd-4f3e-b0b9-2ff86e99fb08',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'oldpwd' => '123456',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updatePWD[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `E_PWDMD5` FROM `qxh_member` WHERE  `E_UserCode` = 'fdsaf46' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [0]method not exist:think\db\Query->save[D:\code\qxh\simplewind\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2018-11-26T17:46:45+08:00 ] 0.0.0.0 GET /speed/member/updatePWD?oldpwd=123456
+[ info ] localhost:84/speed/member/updatePWD?oldpwd=123456 [运行时间：0.102000s][吞吐率：9.80req/s] [内存消耗：2,750.32kb] [文件加载：73]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updatePWD',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'ff8c5427-1ff9-44bf-9684-08440fe061dd',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'oldpwd' => '123456',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updatePWD[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `E_PWDMD5` FROM `qxh_member` WHERE  `E_UserCode` = 'fdsaf46' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [0]method not exist:think\db\Query->save[D:\code\qxh\simplewind\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2018-11-26T17:50:16+08:00 ] 0.0.0.0 GET /speed/member/updatePWD?oldpwd=123456
+[ info ] localhost:84/speed/member/updatePWD?oldpwd=123456 [运行时间：0.075000s][吞吐率：13.33req/s] [内存消耗：2,416.65kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updatePWD',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '8e3e48e1-f0dc-4b93-8b46-ec0a26ecd056',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'oldpwd' => '123456',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updatePWD[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:50:33+08:00 ] 0.0.0.0 GET /speed/member/updatePWD?oldpwd=123456&newpwd=456789
+[ info ] localhost:84/speed/member/updatePWD?oldpwd=123456&newpwd=456789 [运行时间：0.066000s][吞吐率：15.15req/s] [内存消耗：2,416.79kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updatePWD',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '2919f008-1ac9-4b3a-8fbb-d971a4725bf5',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'oldpwd' => '123456',
+  'newpwd' => '456789',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.006000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updatePWD[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.004000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:50:44+08:00 ] 0.0.0.0 GET /speed/member/updatePWD?oldpwd=123456&newpwd=456789&againpwd=123456
+[ info ] localhost:84/speed/member/updatePWD?oldpwd=123456&newpwd=456789&againpwd=123456 [运行时间：0.044000s][吞吐率：22.73req/s] [内存消耗：2,417.06kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updatePWD',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'faf3c9e7-4f6a-489b-aa27-be0e3cece6b7',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'oldpwd' => '123456',
+  'newpwd' => '456789',
+  'againpwd' => '123456',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updatePWD[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:50:53+08:00 ] 0.0.0.0 GET /speed/member/updatePWD?oldpwd=123456&newpwd=456789&againpwd=456789
+[ info ] localhost:84/speed/member/updatePWD?oldpwd=123456&newpwd=456789&againpwd=456789 [运行时间：0.078000s][吞吐率：12.82req/s] [内存消耗：2,750.94kb] [文件加载：73]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updatePWD',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '57779134-9550-4406-9a4e-011d262a29c8',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'oldpwd' => '123456',
+  'newpwd' => '456789',
+  'againpwd' => '456789',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.002000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updatePWD[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `E_PWDMD5` FROM `qxh_member` WHERE  `E_UserCode` = 'fdsaf46' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [0]method not exist:think\db\Query->save[D:\code\qxh\simplewind\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2018-11-26T17:51:16+08:00 ] 0.0.0.0 GET /speed/member/updatePWD?oldpwd=123456&newpwd=456789&againpwd=456789
+[ info ] localhost:84/speed/member/updatePWD?oldpwd=123456&newpwd=456789&againpwd=456789 [运行时间：0.046000s][吞吐率：21.74req/s] [内存消耗：2,690.47kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updatePWD',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'c8ed330e-28b8-4fb2-8b98-d200f835cf4f',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'oldpwd' => '123456',
+  'newpwd' => '456789',
+  'againpwd' => '456789',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updatePWD[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `E_PWDMD5` FROM `qxh_member` WHERE  `E_UserCode` = 'fdsaf46' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `qxh_member`  SET `E_PWDMD5`='e35cf7b66449df565f93c607d5a81d09'  WHERE  `E_UserCode` = 'fdsaf46' [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:51:25+08:00 ] 0.0.0.0 GET /speed/member/updatePWD?oldpwd=123456&newpwd=456789&againpwd=456789
+[ info ] localhost:84/speed/member/updatePWD?oldpwd=123456&newpwd=456789&againpwd=456789 [运行时间：0.073000s][吞吐率：13.70req/s] [内存消耗：2,688.59kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updatePWD',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '32697477-1903-4c04-97bb-f3665edb1082',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'oldpwd' => '123456',
+  'newpwd' => '456789',
+  'againpwd' => '456789',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updatePWD[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `E_PWDMD5` FROM `qxh_member` WHERE  `E_UserCode` = 'fdsaf46' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:52:27+08:00 ] 0.0.0.0 GET /speed/member/updatePWD?oldpwd=456789&newpwd=456789&againpwd=456789
+[ info ] localhost:84/speed/member/updatePWD?oldpwd=456789&newpwd=456789&againpwd=456789 [运行时间：0.053000s][吞吐率：18.87req/s] [内存消耗：2,690.44kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updatePWD',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '347b254f-c8f4-426b-b7da-b2ee655392e9',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'oldpwd' => '456789',
+  'newpwd' => '456789',
+  'againpwd' => '456789',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updatePWD[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `E_PWDMD5` FROM `qxh_member` WHERE  `E_UserCode` = 'fdsaf46' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `qxh_member`  SET `E_PWDMD5`='e35cf7b66449df565f93c607d5a81d09'  WHERE  `E_UserCode` = 'fdsaf46' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:55:02+08:00 ] 0.0.0.0 GET /speed/member/updatePWD?oldpwd=456789&newpwd=456789&againpwd=456789
+[ info ] localhost:84/speed/member/updatePWD?oldpwd=456789&newpwd=456789&againpwd=456789 [运行时间：0.042000s][吞吐率：23.81req/s] [内存消耗：2,417.30kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updatePWD',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '7b9aa9b3-4085-478b-a7f7-0f63af13b47f',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'oldpwd' => '456789',
+  'newpwd' => '456789',
+  'againpwd' => '456789',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updatePWD[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:55:12+08:00 ] 0.0.0.0 GET /speed/member/updatePWD?oldpwd=456789&newpwd=123456&againpwd=123456
+[ info ] localhost:84/speed/member/updatePWD?oldpwd=456789&newpwd=123456&againpwd=123456 [运行时间：0.053000s][吞吐率：18.87req/s] [内存消耗：2,690.80kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'updatePWD',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '23d87d49-1ab4-4360-b6d5-21f646a47c46',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'oldpwd' => '456789',
+  'newpwd' => '123456',
+  'againpwd' => '123456',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->updatePWD[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_member` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `E_PWDMD5` FROM `qxh_member` WHERE  `E_UserCode` = 'fdsaf46' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `qxh_member`  SET `E_PWDMD5`='e10adc3949ba59abbe56e057f20f883e'  WHERE  `E_UserCode` = 'fdsaf46' [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:55:19+08:00 ] 0.0.0.0 GET /speed/member/realName
+[ info ] localhost:84/speed/member/realName [运行时间：0.040000s][吞吐率：25.00req/s] [内存消耗：2,416.44kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'realName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '1d793bb1-da6e-49db-a4c0-5af97144e726',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->realName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-26T17:58:30+08:00 ] 0.0.0.0 GET /speed/member/realName?name=huangtianzhen
+[ info ] localhost:84/speed/member/realName?name=huangtianzhen [运行时间：0.052000s][吞吐率：19.23req/s] [内存消耗：2,487.99kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'realName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'c506fc2d-a81c-46cc-a806-a5bb923dbb7a',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'huangtianzhen',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->realName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]preg_match(): Compilation failed: PCRE does not support \L, \l, \N{name}, \U, or \u at offset 3[D:\code\qxh\app\speed\controller\MemberController.php:169]
+---------------------------------------------------------------
+[ 2018-11-26T17:59:45+08:00 ] 0.0.0.0 GET /speed/member/realName?name=huangtianzhen
+[ info ] localhost:84/speed/member/realName?name=huangtianzhen [运行时间：0.046000s][吞吐率：21.74req/s] [内存消耗：2,487.99kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'realName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '8edb3198-846c-4e67-a62a-e41510c21558',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'huangtianzhen',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->realName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]preg_match(): Compilation failed: PCRE does not support \L, \l, \N{name}, \U, or \u at offset 3[D:\code\qxh\app\speed\controller\MemberController.php:169]
+---------------------------------------------------------------
+[ 2018-11-26T18:00:05+08:00 ] 0.0.0.0 GET /speed/member/realName?name=huangtianzhen
+[ info ] localhost:84/speed/member/realName?name=huangtianzhen [运行时间：0.048000s][吞吐率：20.83req/s] [内存消耗：2,487.98kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'realName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'e86c5563-9f13-463e-b8d6-4f181361a688',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'huangtianzhen',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->realName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]preg_match(): Compilation failed: PCRE does not support \L, \l, \N{name}, \U, or \u at offset 3[D:\code\qxh\app\speed\controller\MemberController.php:169]
+---------------------------------------------------------------
+[ 2018-11-26T18:00:48+08:00 ] 0.0.0.0 GET /speed/member/realName?name=huangtianzhen
+[ info ] localhost:84/speed/member/realName?name=huangtianzhen [运行时间：0.050000s][吞吐率：20.00req/s] [内存消耗：2,487.99kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'realName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '3faf084b-210b-4dda-b991-e9f4df3ba485',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'huangtianzhen',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->realName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [2]preg_match(): Compilation failed: PCRE does not support \L, \l, \N{name}, \U, or \u at offset 3[D:\code\qxh\app\speed\controller\MemberController.php:169]
+---------------------------------------------------------------
+[ 2018-11-26T18:00:50+08:00 ] 0.0.0.0 GET /speed/member/realName?name=huangtianzhen
+[ info ] localhost:84/speed/member/realName?name=huangtianzhen [运行时间：0.041000s][吞吐率：24.39req/s] [内存消耗：2,487.99kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'speed',
+    1 => 'member',
+    2 => 'realName',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=nahb9vi8p4ubmo36n6d13ka5b0; qxhusername=b8a7agDjhpuyymt8ULwTVAtotTtt7GhUe7kGtOY8pArhqMH%2B',
+  'host' => 'localhost:84',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '502c87c0-be06-4a9a-8ce6-d5209465038a',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'huangtianzhen',
+)
+[ info ] [ LANG ] D:\code\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/speed\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\public/../app/portal\lang\zh-cn\home.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\HomeLangBehavior @home_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\speed\controller\MemberController->realName[ D:\code\qxh\app\speed\controller\MemberController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]preg_match(): Compilation failed: PCRE does not support \L, \l, \N{name}, \U, or \u at offset 3[D:\code\qxh\app\speed\controller\MemberController.php:169]

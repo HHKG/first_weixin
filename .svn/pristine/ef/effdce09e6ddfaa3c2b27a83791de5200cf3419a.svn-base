@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <include file="public@header" />
+    <title>现金明细-虔心荟</title>
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/consume_datail.css?1-20-1" />
+    <link href="__TMPL__/public/assets/css/youxian_pay.css?1-20-2" rel="stylesheet" />
+    <link href="__TMPL__/public/assets/css/null_page.css?1-20-2" rel="stylesheet" />
+    <!--统计 -->
+	<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?0b4f18f629a5a8177aab940c3f165a6c";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+    </script>
+</head>
+<style>
+    body {
+        background: #fff;
+    }
+</style>
+
+<body>
+    <div class="mui-content">
+        <div class="consume_list">
+
+
+        </div>
+    </div>
+</body>
+
+
+<script>
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+    $(function () {
+        //console.log('fdasfsda');
+
+        var action='getbalance';
+
+        var sign=$.md5(action+pattern+randomstr+time);
+        $.ajax({
+            url: "<?php echo config('interfaceurl')?>/getbalance",
+            type: 'POST',
+            dataType: 'json',
+            headers: { token: "<?php echo session('token');?>" },
+            data: {  pattern:pattern,from:from,time:time,action:action,sign:sign },
+            success: function (data) {
+                //console.log(data)
+                if (data.code == 1) {
+                    var balance = '';
+                    if (data.balance.length > 0) {
+
+                        $.each(data.balance, function (k, v) {
+                            balance += ' <div class="jian_consume_list_block">';
+                            balance += ' <div>';
+                            balance += '<span class="consume_list_span1">';
+                            if (v.E_Type == 1) {
+                                balance += '返现结算（系统自动）';
+                            } else if (v.E_Type == 2) {
+                                balance += '认购计划支付';
+                            } else {
+                                balance += '现金余额提现';
+                            }
+                            balance += ' </span>';
+                            balance += ' <span class="consume_list_span2">' + v.createtime + '</span>';
+                            balance += ' </div>';
+                            balance += ' <div>';
+                            balance += '  <span class="consume_list_span3">';
+                            if (v.E_State == 1) {
+                                balance += '+';
+                            } else {
+                                balance += '-';
+                            }
+                            balance += + v.E_Money + '</span>';
+                            balance += '  </div>';
+                            balance += '  </div>';
+
+                        })
+
+                    } else {
+                        balance += ' <div class="banben-gb">';
+                        balance += '<div class="banben-gb-img"></div><div class="banben-cnt-tips"><p>暂无相关记录</p></div>';
+                        balance += ' </div>';
+                    }
+                    $('.consume_list').html(balance);
+                }
+            }
+        })
+    })
+
+    function price(price) {
+        return price.toLocaleString('zh-Hans-CN', {
+            style: 'currency',
+            currency: 'CNY'
+        })
+    }
+</script>
+
+</html>

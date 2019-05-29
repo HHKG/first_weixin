@@ -1,0 +1,135 @@
+<include file="public@header"/>
+<style type="text/css">
+    .pic-list li {
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="{:url('Coupon/type_index')}">优惠券列表</a></li>
+        <li class="active"><a href="">修改优惠券</a></li>
+    </ul>
+    <form action="{:url('Coupon/edit_post')}" method="post" class="form-horizontal js-ajax-form margin-top-20">
+        <div class="row">
+            <div class="col-md-9">
+                <table class="table table-bordered">
+                    <tr>
+                        <th width="100">分类名称<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" name="E_Name"
+                                  required value="<?php echo $coupon['E_Name'];?>" placeholder="请输入分类名称"/>
+                            <input type="hidden" name="id" value="<?php echo $coupon['id'];?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">发送方式<span class="form-required">*</span></th>
+                        <td>
+                            <select name="E_SendType" >
+                                <option value="register" <?php echo $coupon['E_SendType']=='register'?'selected':'';?>>注册券</option>
+                                <option value="activity" <?php echo $coupon['E_SendType']=='activity'?'selected':'';?>>活动券</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">优惠券类型<span class="form-required">*</span></th>
+                        <td>
+                            <select name="E_Type" id="">
+                            <?php foreach($type as $v):?>
+                                <option value="<?php echo $v['id'];?>" <?php echo $coupon['E_Type']==$v['id']?'selected':'';?>><?php echo $v['E_Name'];?></option>
+                            <?php endforeach;?>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">是否能叠加<span class="form-required">*</span></th>
+                        <td>
+
+                            <input class="" type="radio" name="E_IsSuperposition" value="1" <?php echo $coupon['E_IsSuperposition']==1?'checked':'';?>/>可以叠加使用
+                            <input class="" type="radio" name="E_IsSuperposition" value="2"  <?php echo $coupon['E_IsSuperposition']==2?'checked':'';?>/>不可以叠加使用
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">优惠券金额<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" name="E_Money"
+                                   onkeyup="value=value.replace(/[^\d]/g,'')"    required value="<?php echo $coupon['E_Money'];?>" placeholder="请输入优惠券金额(单位为分)"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">可使用金额<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" name="E_CanUseMoney"
+                                   onkeyup="value=value.replace(/[^\d]/g,'')"    required value="<?php echo $coupon['E_CanUseMoney'];?>" placeholder="请输入可使用金额(单位为分)"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">总数量<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" name="E_Amount"
+                                   onkeyup="value=value.replace(/[^\d]/g,'')"    required value="<?php echo $coupon['E_Amount'];?>" placeholder="总数量"/>
+                        </td>
+                    </tr>
+                    <tr>
+                    <th width="100">发放时间<span class="form-required">*</span></th>
+                    <td>
+                        <input class="form-control js-bootstrap-date" type="text" name="E_SendStartTime" readonly
+                               required value="<?php echo date('Y-m-d',$coupon['E_SendStartTime']);?>" placeholder="发放时间"/>
+                    </td>
+                </tr>
+                    <tr>
+                        <th width="100">发送结束时间<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control js-bootstrap-date" type="text" name="E_SendEndTime" readonly
+                                   required value="<?php echo date('Y-m-d',$coupon['E_SendEndTime']);?>" placeholder="发送结束时间"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">有效时间<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" name="E_LastDay"
+                                   onkeyup="value=value.replace(/[^\d]/g,'')"    required value="<?php echo $coupon['E_LastDay'];?>" placeholder="有效时间"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">缩略图<span class="form-required">*</span></th>
+                        <td>
+                            <div style="text-align: center;">
+                                <input type="hidden" name="E_CouponImg" id="thumbnail" value="<?php echo  $coupon['E_CouponImg'];?>">
+                                <a href="javascript:uploadOneImage('图片上传','#thumbnail','coupon');">
+                                    <img src="<?php echo  '/upload/'.$coupon['E_CouponImg'];?>"
+                                         id="thumbnail-preview"
+                                         width="135" style="cursor: pointer"/>
+                                </a>
+                                <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片">
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+                <hook name="portal_admin_new_edit_view_main"/>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+                        <a class="btn btn-default" href="{:url('index')}">{:lang('BACK')}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <table class="table table-bordered">
+
+                </table>
+
+                <hook name="portal_admin_new_edit_view_right_sidebar"/>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="__STATIC__/js/admin.js"></script>
+
+<script type="text/javascript" src="__STATIC__/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__STATIC__/js/ueditor/ueditor.all.min.js"></script>
+
+</body>
+</html>

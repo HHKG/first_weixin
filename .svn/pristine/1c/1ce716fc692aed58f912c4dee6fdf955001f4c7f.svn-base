@@ -1,0 +1,78 @@
+<include file="public@header"/>
+<style type="text/css">
+    .pic-list li {
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="{:url('Project/type_index')}">项目类型列表</a></li>
+        <li class="active"><a href="{:url('Project/type_add')}">添加类型</a></li>
+    </ul>
+    <form action="{:url('Project/add_Type_Post')}" method="post" class="form-horizontal js-ajax-form margin-top-20">
+        <div class="row">
+            <div class="col-md-9">
+                <table class="table table-bordered">
+                    <tr>
+                        <th width="100">类型名称<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" style=";" required value="" name="E_Name"
+                                   placeholder="请填入类型名称" onclick=""
+                                   />
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">类型描述<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" style=";"  value="" name="E_Description"
+                                   placeholder="请填入类型描述 "
+                            />
+
+                        </td>
+                    </tr>
+
+
+                </table>
+                <hook name="portal_admin_article_edit_view_main"/>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+                        <a class="btn btn-default" href="{:url('Project/index')}">{:lang('BACK')}</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="__STATIC__/js/admin.js"></script>
+<script type="text/javascript">
+    //编辑器路径定义
+    var editorURL = GV.WEB_ROOT;
+</script>
+<script type="text/javascript" src="__STATIC__/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__STATIC__/js/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        editorcontent = new baidu.editor.ui.Editor();
+        editorcontent.render('content');
+        try {
+            editorcontent.sync();
+        } catch (err) {
+        }
+
+        $('.btn-cancel-thumbnail').click(function () {
+            $('#thumbnail-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+            $('#thumbnail').val('');
+        });
+
+    });
+
+
+</script>
+</body>
+</html>

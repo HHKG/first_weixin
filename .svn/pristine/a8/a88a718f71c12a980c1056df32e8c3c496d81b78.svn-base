@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <include file="public@header" />
+    <title>返利记录-虔心荟</title>
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/consume_datail.css?3-18" />
+    <link href="__TMPL__/public/assets/css/youxian_pay.css?3-18" rel="stylesheet" />
+    <link href="__TMPL__/public/assets/css/null_page.css?3-18" rel="stylesheet" />
+    <link href="__TMPL__/public/assets/css/record.css?3-18" rel="stylesheet" />
+</head>
+<style>
+    html body {
+        background: #fff;
+    }
+
+    .rebate-body {
+        background: #fff;
+    }
+
+    .rebate-title {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .rebate-title-border {
+        border: 1px solid #F06B4B;
+        display: flex;
+        border-radius: 0.4rem;
+        height: 3rem;
+    }
+
+    .rebate-money {
+        text-align: center;
+        line-height: 3rem;
+        width: 11rem;
+        color: #F06B4B;
+        font-size: 1.6rem;
+    }
+
+    .rebate-active {
+        color: #fff;
+        background: #F06B4B;
+    }
+</style>
+
+<body>
+<include file="public@pattern" />
+    <div class="mui-content rebate-body">
+        <!-- title切换 -->
+        <div class="rebate-title">
+            <div class="rebate-title-border">
+                <div class="rebate-money rebate-active">返现</div>
+                <div class="rebate-money" onclick="getdata('coupon')">返住房券</div>
+            </div>
+        </div>
+        <div class="consume_list">
+
+
+        </div>
+    </div>
+</body>
+<script>
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+    $(function () {
+        getdata('plan');
+    })
+    function getdata(type) {
+
+        var action='rebate';
+        var sign=$.md5(action+pattern+randomstr+time+type);
+        $.ajax({
+            url: "<?php echo config('interfaceurl')?>/rebate",
+            type: 'POST',
+            dataType: 'json',
+            headers:{token:"<?php echo session('token');?>" },
+            data: {  pattern:pattern,from:from,time:time,action:action,sign:sign,type:type },
+            success: function (data) {
+                console.log(data);
+                if (data.code === '9201') {
+                    if ("<?php echo cmf_is_wechat(); ?>") {
+                        window.location.href = "/login?again=1&back=<?php echo urlencode(GetAllURL());?>";
+                    } else {
+                        window.location.href = "/login?again=1&back=<?php echo urlencode(GetAllURL());?>";
+                    }
+
+
+                }
+                if (data.code == 1) {
+                    var bill = '';
+                    if (type == 'plan') {
+                        if (data.bills.length > 0) {
+                            if (type == 'plan') {
+                                $.each(data.bills, function (k, v) {
+
+                                    bill += '<div class="case_name">';
+                                    bill += ' <div class="case_name_header">';
+                                    bill += '<div class="case_name_money">'
+                                    bill += ' <span class="case_name_num">￥' + v.E_BillPrice + '</span>';
+                                    bill += ' <span class="case_name_money-btn">现金</span>';
+                                    bill += '</div>'
+                                    bill += '<div>';
+                                    if (v.E_State == 1) {
+                                        bill += '<span class="balance_wei">未结算</span>';
+                                    } else {
+                                        bill += '<span class="balance_yi">已结算</span>';
+                                    }
+                                    bill += ' </div>';
+                                    bill += '</div>';
+                                    bill += '<div class="case-title">';
+                                    bill += ' <span class="case_name_plan">' + v.E_ProjectName + '-' + v.E_PlanName + '</span>';
+                                    bill += '<span>' + '(' + v.E_Periids + '/' + v.E_SumPeriods + ')</span>'
+                                    bill += '</div>'
+
+                                    bill += '  <div class="case_name_datail">';
+                                    bill += ' <div class="case_name_join">';
+                                    bill += '  <span>参与费：<span class="f-color">' + v.E_PlanPrice + '/份</span></span>';
+                                    bill += '  <span>账单日：<span class="f-color">' + v.E_BillDate + '-' + v.E_BillDay + '</span></span>';
+                                    bill += ' </div>';
+                                    bill += '<div class="case_name_join">';
+                                    bill += ' <span>返现率：<span class="f-color">' + v.E_Scale + '‰</span></span>';
+                                    bill += ' <span>结算日：<span class="f-color">' + v.E_SettlementDate + '-' + v.E_SettlementDay + '</span></span>';
+                                    bill += ' </div>';
+                                    bill += ' </div>';
+                                    bill += ' </div>';
+                                })
+                            }
+                        } else {
+                            bill += ' <div class="banben-gb">';
+                            bill += '<div class="banben-gb-img"></div><div class="banben-cnt-tips"><p>暂无相关记录</p></div><div class="num_rebate-btn"><button onclick="javascript:window.location.href=\'/project?project=MZJBQKj3NmPolKOv8qbj\'">立即参与分享计划</button></div>';
+                            bill += '</div>';
+                        }
+                    }
+                    if (type == 'coupon') {
+                        if (data.coupon.length > 0) {
+                            $.each(data.coupon, function (k, v) {
+                                bill += '<div class="case_name">';
+                                bill += ' <div class="case_name_header">';
+                                // bill += ' <span class="case_name_plan">' + v.E_ProjectName + '-' + v.E_PlanName + '(' + v.E_Periids + '/' + v.E_SumPeriods + ')</span>';
+                                bill += '<div class="case_name_money">';
+                                bill += ' <span class="case_name_num">￥' + v.E_Money + '</span>';
+                                bill += ' <span class="case_name_money-btn">住房券</span>';
+                                bill += '</div>';
+                                bill += '<div>';
+                                bill += '<span class="balance_yi">已结算</span>';
+                                bill += ' </div>';
+                                bill += '</div>';
+                                bill += '<div class="case-title">';
+                                bill += ' <span class="case_name_plan">' + v.E_ProjectName + '-' + v.E_PlanName + '</span>';
+                                bill += '<span>' + '(' + v.E_Periods + '/' + v.E_SumPeriods + ')</span>'
+                                bill += '</div>'
+                                bill += '  <div class="case_name_datail">';
+                                bill += ' <div class="case_name_join">';
+                                bill += '  <span>参与费：<span class="f-color">' +  v.E_PlanPrice + '/份</span></span>';
+                                bill += '  <span>账单日：<span class="f-color">' + v.E_CouponTime + '</span></span>';
+                                bill += ' </div>';
+                                bill += '<div class="case_name_join">';
+                                bill += ' <span>住房返券：<span class="f-color">' + v.E_Scale + '%</span></span>';
+                                bill += ' <span>结算日：<span class="f-color">' + v.E_CouponTime + '</span></span>';
+                                bill += ' </div>';
+                                bill += ' </div>';
+                                bill += ' </div>';
+                            })
+                        } else {
+                            bill += ' <div class="banben-gb">';
+                            bill += '<div class="banben-gb-img"></div><div class="banben-cnt-tips"><p>暂无相关记录</p></div><div class="num_rebate-btn"><button onclick="javascript:window.location.href=\'/project?project=MZJBQKj3NmPolKOv8qbj\'">立即参与分享计划</button></div>';
+                            bill += '</div>';
+                        }
+                    }
+
+                    $('.consume_list').html(bill);
+                }
+            }
+        })
+    }
+    function price(price) {
+        return price.toLocaleString('zh-Hans-CN', {
+            style: 'currency',
+            currency: 'CNY'
+        })
+    }
+    //  title切换
+    $('.rebate-money').eq(0).click(function () {
+        getdata('plan');
+        $('.rebate-money').eq(0).addClass('rebate-active');
+        $('.rebate-money').eq(1).removeClass('rebate-active');
+        $('.case_name').show();
+    });
+    $('.rebate-money').eq(1).click(function () {
+        getdata('coupon');
+        $('.rebate-money').eq(1).addClass('rebate-active');
+        $('.rebate-money').eq(0).removeClass('rebate-active');
+        $('.case_name').hide();
+    });
+</script>
+
+</html>

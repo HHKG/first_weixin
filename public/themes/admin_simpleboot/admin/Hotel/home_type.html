@@ -1,0 +1,36 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">类型列表</a></li>
+        <li><a href="{:url('Hotel/home_type_add')}">增加类型</a></li>
+    </ul>
+
+    <form class="js-ajax-form" action="" method="post">
+
+        <table class="table table-hover table-bordered table-list">
+            <thead>
+            <tr>
+                <th >ID</th>
+                <th>房型名称</th>
+                <th >操作</th>
+            </tr>
+            </thead>
+           <?php foreach($list as $vo):?>
+                <tr>
+                    <td><b>{$vo.id}</b></td>
+                    <td><b>{$vo.E_Name}</b></td>
+                    <td>
+                        <a href="{:url('Hotel/home_type_edit',array('id'=>$vo['id']))}">{:lang('EDIT')}</a>
+                        <a href="{:url('Hotel/home_type_delete',array('id'=>$vo['id']))}" class="js-ajax-delete">{:lang('DELETE')}</a>
+                    </td>
+                </tr>
+            <?php endforeach;?>
+        </table>
+        <ul class="pagination">{$page|default=''}</ul>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="">
+
+</head>
+
+<body class="body-white">
+
+
+<div class="container tc-main">
+    <input type="button"    onclick="myorder()" value="我的订单">
+</div>
+</body>
+</html>
+
+
+<script src="__TMPL__/public/assets/js/jquery-1.10.2.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+
+
+    var token="<?php echo cookie('token');?>"
+$(function () {
+    $.ajax({
+        type: 'GET',
+        url : 'http://www.iqianclub.com/interface/public/index.php/speed/order/myorders',
+        dataType: 'jsonp',
+        xhrFields:{withCredentials:true},
+        data:{token:token},
+        success:function(data){
+
+            console.log(data);
+            var str='';
+            if (data.code=1){
+                $.each(data.data.data,function (k,v) {
+                    console.log(v);
+                    str+='数量:'+v.E_BuyNum+'<br>';
+                    str+='价格:'+v.E_Money+'</span><br>';
+                    str+='项目名称:'+v.E_Name+'<br>';
+                    str+='订单号:'+v.E_OrderSn+'</span><br>';
+                    str+='支付价格:'+v.E_PayPrice+'<br>';
+                    str+='状态:'+v.E_PayState+'</span><br>';
+                    str+='时间:'+v.E_Paytime+'</span><br>';
+                    str+='方案code:'+v.E_PlanCode+'</span><br>';
+                    str+='方案名称:'+v.E_PlanName+'</span><br><br><br><br><br><br>';
+
+
+                })
+                $(".tc-main").html(str);
+            }
+        },
+        error: function(e){
+            // console.log(e)
+            // return false;
+        }
+    })
+})
+    function myorder() {
+
+    }
+
+
+</script>

@@ -1,0 +1,57 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="{:url('config/index')}">配置列表</a></li>
+        <li class="active"><a>编辑</a></li>
+    </ul>
+    <form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('config/DataSave')}">
+
+        <div class="form-group">
+            <label for="input-url" class="col-sm-2 control-label">名称<span class="form-required">*</span></label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-url" name="txtname" value="<?php echo $find['E_Name'];?>">
+                <input type="hidden" name='txttype' id="txttype"  value="<?php echo $find['E_Type'];?>" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="input-status" class="col-sm-2 control-label">是否启用</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control" name="txtstate" id="input-status">
+                    <?php $selected=$find['E_State']==1?"":"selected";;?>
+
+                    <option value="1"  <?php $selected;?> >启用</option>
+                    <option value="0" <?php $selected;?> >禁用</option>
+                </select>
+            </div>
+        </div>
+
+        <?php foreach($cons as $key=>$v):?>
+        <div class="form-group">
+            <label for="input-url" class="col-sm-2 control-label"><?php echo $v['name']; ?><span class="form-required">*</span></label>
+            <div class="col-md-6 col-sm-10">
+                <input type="hidden" name='pay_type[<?php echo $key; ?>]'   value="<?php echo $v['itype']; ?>" />
+                <input type="hidden" name='pay_key[<?php echo $key; ?>]'   value="<?php echo $key; ?>" />
+                <input type="hidden" name='pay_text[<?php echo $key; ?>]'   value="<?php echo  $v['text']; ?>" />
+                <?php if($v['itype']==0):?>
+                <input type="text" class="form-control"  name="pay_val[<?php echo $key; ?>]" value="<?php echo $v['val']; ?>">
+                <?php endif; ?>
+                <?php if($v['itype']==1):?>
+                <input type="file" class="form-control"  name="pay_val[<?php echo $key; ?>]" value="<?php echo $v['val']; ?>">
+                <?php endif; ?>
+                <p class="help-block"><span id="url-vars"></span> <?php echo $v['text']; ?></p>
+            </div>
+        </div>
+        <?php endforeach;?>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('SAVE')}</button>
+                <!--<a class="btn btn-default" href="{:url('config/DataSave')}">{:lang('SAVE')}</a>-->
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

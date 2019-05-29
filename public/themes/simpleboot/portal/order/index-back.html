@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="">
+
+</head>
+
+<body class="body-white">
+
+
+<div class="container tc-main">
+
+    <input type="button"    onclick="wx()" value="支付">
+</div>
+</body>
+</html>
+
+
+<script src="__TMPL__/public/assets/js/jquery-1.10.2.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    var code="<?php echo $code;?>"
+    var token="<?php echo cookie('token');?>"
+    $(function () {
+
+
+        $.ajax({
+            type: 'GET',
+            url : 'http://www.iqianclub.com/interface/public/index.php/speed/order/car',
+            // url : 'http://localhost:82/speed/order/car',
+            dataType: 'jsonp',
+            xhrFields:{withCredentials:true},
+            data:{token:token,code:code},
+            success:function(data){
+
+                console.log(data);
+                var str='';
+                if (data.code=1){
+                    str+='名称:'+data.plan_info.E_Title+'<br>';
+                    str+='价格:<span class="price">'+data.plan_info.E_Money+'</span><br>';
+                    str+='数量：<span class="num">1</span><input type="button"    onclick="add()" value="增加"><br>';
+                    str+= '<input type="button"    onclick="wx()" value="支付"><br>';
+                    str+= '<input type="hidden" id="code"   name="code" value="'+data.plan_info.E_Code+'"><br>';
+                    str+= '<input type="hidden" id="max"   name="max" value="'+data.plan_info.E_CanBuy+'"><br>';
+                    $(".tc-main").html(str);
+                }
+            },
+            error: function(e){
+                // console.log(e)
+                // return false;
+            }
+        })
+
+    })
+    function add() {
+        var code=$("#code").val();
+        var max=$("#max").val();
+        var num=parseInt($('.num').html());
+        num=num+1
+        if (max<num){
+            alert('超额了')
+        }
+        // alert( num);return ;
+        $.ajax({
+            type: 'GET',
+            url : 'http://www.iqianclub.com/interface/public/index.php/speed/order/ChangePrice',
+            // url : 'http://localhost:82/speed/order/ChangePrice',
+            dataType: 'jsonp',
+            xhrFields:{withCredentials:true},
+            data:{code:code,token:token,num:num},
+            success:function(data){
+
+                console.log(data);
+                var str='';
+                if (data.code=1){
+                    $('.num').html(num);
+                    $('.price').html(data.price);
+                }
+            },
+            error: function(e){
+                // console.log(e)
+                // return false;
+            }
+        })
+
+    }
+
+    function wx() {
+        var code=$("#code").val();
+        var num=parseInt($('.num').html());
+        var price=parseInt($('.price').html());
+        $.ajax({
+            type: 'GET',
+            url : 'http://www.iqianclub.com/interface/public/index.php/speed/order/createorder.html',
+            // url : 'http://localhost:82/speed/order/Order.html',
+            dataType: 'jsonp',
+            xhrFields:{withCredentials:true},
+            data:{pcode:code,token:token,num:num,paytype:'weixin',price:price},
+            success:function(data){
+                // console.log(data);return;
+                WeixinJSBridge.invoke(
+                    'getBrandWCPayRequest',
+                    data.info,
+                    function(res){
+                        if (res.err_msg == 'get_brand_wcpay_request:ok') {
+                            $.ajax({
+                                type: 'GET',
+                                url : 'http://www.iqianclub.com/interface/public/index.php/speed/pay/getpaystate.html',
+                                dataType: 'jsonp',
+                                xhrFields:{withCredentials:true},
+                                data:{sn:data.sn},
+                                success:function(datas){
+                                    if (datas.code=1){
+                                        if(datas.state==2){
+                                            alert('支付成功！');
+                                            // alert('http://www.iqianclub.com/qxh/public/index.php/?token='+token);
+                                            window.location.href='http://www.iqianclub.com/qxh/public/index.php/paysuccess/'+data.sn;
+                                        }else{
+                                            alert('支付失败！');
+                                        }
+
+                                    }
+                                }})
+
+                        } else {
+
+                            //alert('启动微信支付失败, 请检查你的支付参数. 详细错误为: ' + res.err_msg);
+                            //history.go(-1);
+                        }
+                    }
+                );
+            },
+            error: function(e){
+                // console.log(e)
+                // return false;
+            }
+        })
+    }
+
+</script>

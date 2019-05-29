@@ -1,0 +1,56 @@
+<html style="font-size: 54.8px;">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0;" name="viewport">
+    <title>qianclub</title>
+    <link href="__TMPL__/public/assets/css/index.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/app_index.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+    <div class="main cash" style="height: 731px;">
+        <div class="van-nav-bar van-hairline--bottom" style="z-index: 1;">
+            <div class="van-nav-bar__left"><i class="van-icon van-icon-arrow-left van-nav-bar__arrow"><!----><!----></i>
+                <!----></div>
+            <div class="van-ellipsis van-nav-bar__title">返现记录</div>
+            <div class="van-nav-bar__right"><!----></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            url:'http://t3.iqianclub.com/rebate',
+            type:'GET',
+            dataType:'jsonp',
+            data:{token:"<?php echo session('tokens');?>"},
+            success:function (data) {
+                //console.log(data);
+                if (data.code==1){
+                    var list='';
+                    $.each(data.orders,function (k,v) {
+                        list=list+'   <div class="myorderlist"><table> <tr> <td>订单编号:'+ v.E_OrderSn+'</td> <td>';
+                        if (v.E_PayState==2) {
+                            list=list+' 已支付</td> </tr> </table>';
+                        }else{
+                            list=list+' 未支付</td> </tr> </table>';
+                        }
+                        list=list+ '<div class="myorderlist_content"><img src="'+ v.E_HeaderImg+'"> <span><p></p> <p>'+v.E_Name+'</p> <p>￥'+ v.E_Money+'</p></span></div>';
+                        list=list+  ' <table> <tr> <td>方案份数:</td> <td>'+ v.E_BuyNum+'份</td> </tr> <tr> <td>订单金额:</td> <td>￥'+ v.E_Money+'</td> </tr> <tr> <td>下单时间:</td> <td>'+v.E_Paytime+'</td> </tr>';
+                        if (v.E_PayState!=2) {
+                            list = list + '<tr><td></td> <td><button class="yellow" data='+v.E_Data +' >立即付款</button></td></tr> </table></div>'
+                        }
+                        // //console.log(list);
+                    })
+                    $('.list').append(list);
+                }
+            }
+        })
+
+    })
+
+</script>

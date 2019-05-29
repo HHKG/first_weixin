@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>返利算一算-虔心荟</title>
+	<meta name="keywords" content="<?php echo $keywords;?>">
+	<meta name="description" content="<?php echo $description;?>">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="__TMPL__/public/assets/css/mui.min.css?2-27" rel="stylesheet" />
+	<link href="__TMPL__/public/assets/css/person.css?2-27" rel="stylesheet" />
+	<link href="__TMPL__/public/assets/css/data_once.css?2-27" rel="stylesheet" />
+	<script src="__TMPL__/public/assets/js/jquery.min.js?2-27" type="text/javascript" charset="utf-8"></script>
+	<script src="__TMPL__/public/assets/js/jquery.select.js?2-27"></script>
+</head>
+<style>
+	body {
+		background: #FCE8C5;
+	}
+</style>
+
+<body>
+	<script src="__TMPL__/public/assets/js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+	</script>
+	<div class="mui-content cnt-body">
+		<!--标题-->
+		<div class="calculator-title" style="position: relative;">
+			<span id="project_name">四闲山房别墅</span>
+		</div>
+		<!--参与计划-->
+		<div class="calculator-join">
+			<div class="calculator-join-title">
+				<img src="__TMPL__/public/assets/images/cal_join_title_left.png" />
+				<div>
+					<p>参与计划
+						<p class="calculator-join-money">1</p>
+						<p>万</p>
+					</p>
+				</div>
+				<img src="__TMPL__/public/assets/images/cal_join_title_right.png" />
+			</div>
+			<div class="calculator-rebate">
+				<div class="calculator-rebate-scale">
+					<img src="__TMPL__/public/assets/images/cal_join_icon1.png" />
+					<span style="white-space: nowrap;">预估年返利<span id="rebate_money">8%</span></span>
+				</div>
+				<div class="calculator-rebate-scale">
+					<img src="__TMPL__/public/assets/images/cal_join_icon2.png" />
+					<span style="white-space: nowrap;">固定年返券<span id="rebate_conpom">12%</span></span>
+				</div>
+				<div class="calculator-rebate-scale">
+					<img src="__TMPL__/public/assets/images/cal_join_icon3.png" />
+					<span style="white-space: nowrap;">持续<span class="rebate-time">30</span>年</span>
+				</div>
+			</div>
+		</div>
+		<!--返利时间和算法-->
+		<div class="calculator-rebate-time" style="width:100%;overflow: hidden;">
+			<!-- 滑动条年份 -->
+			<div class="cal-jiaobiao" style="display: none;">
+				<img src="__TMPL__/public/assets/images/cal-jiaobiao.png" style="width:2.8rem;" />
+			</div>
+
+		</div>
+		<div class="cal-update cal-slide">
+			<!-- 会员升级模板 -->
+		</div>
+
+		<!--弹窗-->
+		<div class="mask"></div>
+		<div class="cal-select">
+			<!--1-->
+			<div class="block_height">
+				<div class="block_one">
+					<p class="cal-rebate-scale">您想参与计划金额</p>
+				</div>
+				<div class="block_select">
+					<select class="select" name="state" data-value="2">
+						<option value="0">1万</option>
+						<option value="1">5万</option>
+						<option value="2">10万</option>
+						<option value="3">20万</option>
+					</select>
+					<div class="allow_dowm">
+						<img src="__TMPL__/public/assets/images/drop_down_icon.png" />
+					</div>
+				</div>
+			</div>
+			<!--2-->
+			<div class="block_height">
+				<div class="block_one">
+					<p class="cal-rebate-scale">预估每年返现比例</p>
+				</div>
+				<div class="block_select">
+					<select class="select" name="state" data-value="1">
+						<option value="0">6%</option>
+						<option value="1">8%</option>
+						<option value="2">10%</option>
+					</select>
+					<div class="allow_dowm">
+						<img src="__TMPL__/public/assets/images/drop_down_icon.png" />
+					</div>
+				</div>
+			</div>
+			<!--3-->
+			<div class="block_height">
+				<div class="block_one">
+					<p class="cal-rebate-scale">固定每年返券比例</p>
+				</div>
+				<div class="cal-rebate-conpom">
+					12%
+				</div>
+			</div>
+			<div class="cal-btn">
+				<button id="submit">马上测算</button>
+			</div>
+		</div>
+	</div>
+	<nav class="cal-nav">
+		<p class="cal-nav-p">选择其他方案算一算</p>
+	</nav>
+	<script>
+		// 等级数据
+		grade_data = {
+			"1": { "id": '1', "name": '白银会员', "img_grade": '__TMPL__/public/assets/images/cal_silver_member_icon.png' },
+			"2": { "id": '2', "name": '铂金会员', "img_grade": '__TMPL__/public/assets/images/cal_gold_member_icon.png' },
+			"3": { "id": '3', "name": '钻石会员', "img_grade": '__TMPL__/public/assets/images/cal_pink_diamond_icon.png' },
+			"4": { "id": '4', "name": '黑金会员', "img_grade": '__TMPL__/public/assets/images/cal_black_gold_icon.png' },
+			"5": { "id": '5', "name": '黑钻会员', "img_grade": '__TMPL__/public/assets/images/cal_black_diamond_icon.png' }
+		};
+		//计算返利年份列表方案
+		count_year_list = { "y30": [1, 5, 10, 15, 30], "y10": [1, 5, 10] };
+		//plan_name   返利计划名称
+		//  a 即将购买的金额  1000000  单位分
+		//  b 返现的比列
+		//  c 返券比例
+		// d 返利期限   30年
+		function count_fl(plan_name, a, b, c, d) {
+			//显示 计划名称  
+			$('#project_name').html(plan_name);
+			// 填入 返利返券信息 
+			//格式化显示
+			$('.calculator-join-money').html(a / 1000000);
+			$('#rebate_money').html(parseFloat(b * 100) + '%');
+			$('#rebate_conpom').html(parseFloat(c * 100) + '%');
+			$('.rebate-time').html(d);
+			// 循环返钱年份HTML内容
+			var year_HTML = '';
+			for (var i = 0; i < count_year_list["y" + d].length; i++) {
+				//当前年份数
+				prent_year = count_year_list["y" + d][i];
+				//计算返现多少钱
+				rebate_money = a * b * prent_year;
+				//计算房劵
+				rebate_conpom = a * c * prent_year;
+				//计算总价值
+				all_num = rebate_money + rebate_conpom
+				//拼HTML内容
+				year_HTML += '<div class="cal-slide">';
+				year_HTML += '<div class="calculator-rebate-time-one">';
+				year_HTML += '<div class="calculator-rebate-time-year">';
+				year_HTML += '<span class="calculator-year-num">' + prent_year + '</span>';
+				year_HTML += '<span class="calculator-year-txt">第&nbsp;&nbsp;&nbsp;&nbsp;年</span>';
+				year_HTML += '</div>';
+				year_HTML += '<div class="calculator-rebate-cash">';
+				year_HTML += '<span class="calculator-cash-num">' + rebate_money / 100 + '</span>';
+				year_HTML += '<img src="__TMPL__/public/assets/images/cal_xianjin_icon.png" class="calculator-cash-img" />';
+				year_HTML += '</div>';
+				year_HTML += '<div class="calculator-jia">';
+				year_HTML += '<img src="__TMPL__/public/assets/images/cal_jia.png" />';
+				year_HTML += '</div>';
+				year_HTML += '<div class="calculator-rebate-cash">';
+				year_HTML += '<span class="calculator-cash-num">' + rebate_conpom / 100 + '</span>';
+				year_HTML += '<img src="__TMPL__/public/assets/images/cal_zhufangquan_icon.png" class="calculator-cash-img" />';
+				year_HTML += '</div>';
+				year_HTML += '<div class="calculator-jia">';
+				year_HTML += '<img src="__TMPL__/public/assets/images/cal_deng.png" />';
+				year_HTML += '</div>';
+				year_HTML += '<div class="calculator-rebate-cash">';
+				year_HTML += '<span class="calculator-cash-num">' + all_num / 100 + '</span>';
+				year_HTML += '<img src="__TMPL__/public/assets/images/cal_chuqianguan_icon.png" class="cal_chuqianguan" />';
+				year_HTML += '</div>';
+				year_HTML += '</div>';
+				year_HTML += '</div>';
+				year_HTML += '</div>';
+				year_HTML += '</div>';
+			}
+			$('.calculator-rebate-time').html(year_HTML);
+			// 生成 会员升级内容 
+			get_grade_data(a);
+		}
+		// 动画 
+		function make_animate(target) {
+			target_div = $("." + target);
+			target_div.css("height", "0rem");
+			for (var i = 0; i < target_div.length; i++) {
+
+				(function (i) {
+					//console.log($(document).height());
+					target_div.eq(i).show();
+					setTimeout(function () {
+						target_div.eq(i).css("height", "auto"); get_docH()
+						target_div.eq(i).animate({ margin: '0.8rem 0rem 0rem 4%' }, 200);
+					}, i * 800);
+					//console.log(i);
+				})(i)
+			}
+		}
+		// 升级 模块内容 
+		// a  用户当前等级代码
+		// b  用户升级到等级代码    
+		// 返回 升级内容HTML
+		function grade_up(a, b) {
+			var grade_html = "";
+			grade_html += '<div class="calculator-join-title"><img src="__TMPL__/public/assets/images/cal_join_title_left.png" /><div><p>会员升级</p></div><img src="__TMPL__/public/assets/images/cal_join_title_right.png" /></div>';
+			grade_html += '<div class="cal-join-cnt">';
+			grade_html += '<div class="cal-join-cnt-left">';
+			grade_html += '<img src="' + grade_data[a].img_grade + '" class="cal-join-cnt-left-img" />';
+			grade_html += '<div class="cal-update-name"><p id="sliver">' + grade_data[a].name + '</p></div></div>';
+			grade_html += '<div class="cal-join-cnt-middle">';
+			grade_html += '<img src="__TMPL__/public/assets/images/cal_jiantou_right.png" class="cal-join-cnt-middle-img" /></div>';
+			grade_html += '<div class="cal-join-cnt-right">';
+			grade_html += '<div class="cal-join-cnt-right-inside"><img src="' + grade_data[b].img_grade + '" class="cal-join-cnt-left-img" />';
+			grade_html += '<div class="cal-update-name"><p id="glod">' + grade_data[b].name + '</p></div></div></div></div>';
+			return grade_html;
+		}
+		function get_grade_data(plan_money) {
+			// 接口单位:分
+			var data = '';
+			$.ajax({
+				type: 'GET',
+				data: { plan_money: plan_money, token: "<?php echo session('token');?>" },
+				dataType: 'jsonp',
+				url: "<?php echo config('interfaceurl')?>/reckonandreckon",
+				success: function (e) {
+					if (e.grade) {
+						$('.cal-update').html(grade_up(e.mygrade, e.grade.id));
+					}
+				}
+			});
+		}
+		//获取可视区域的高度和内容区域的高度
+		function get_docH() {
+			//可视区域
+			seeH = $(window).height();
+			//文档内容高度
+			docH = $(document).height();
+			////console.log(docH);
+			//文档内容高度减去可视区域的高度
+			intercept = docH - seeH;
+			if (intercept > 0) {
+				$('html, body').animate({
+					scrollTop: $('.cal-update').offset().top
+				}, 1000);
+			}
+		}
+		//最终获获利层增加一个图标
+		function add_img() {
+			$('.calculator-rebate-time-one').last().addClass('cal-position');
+			// $('.cal-jiaobiao').show();
+			$('.calculator-rebate-time-one').last().append("<div class='cal-jiaobiao'><img src='__TMPL__/public/assets/images/cal-jiaobiao.png' style='width:2rem;' /></div>");
+		}
+		$(document).ready(function () {
+			//会员是否升级
+			is_gradeup = false;
+			$('select.select').select();
+			// 购买的计划份额 单位 分
+			plan_money = 10000000;
+			// get_data(data);
+			// 获取用户自身的等级
+			count_fl("四闲山房", plan_money, 0.08, 0.1, 30);
+			add_img();
+			make_animate("cal-slide");
+			//购买方案改变时，控制固定返券比例
+			$('.select_text').eq(0).on('DOMNodeInserted', function () {
+				var plan_money = parseInt($('.cur').eq(0).text());
+				if (plan_money == 1) {
+					$('.cal-rebate-conpom').text('10%');
+				} else if (plan_money == 5) {
+					$('.cal-rebate-conpom').text('11%');
+				}
+				else if (plan_money == 10) {
+					$('.cal-rebate-conpom').text('12%');
+				}
+				else if (plan_money == 20) {
+					$('.cal-rebate-conpom').text('13%');
+				}
+			});
+			//执行滚动条滑动到底部
+
+			//用户提交 购买方案
+			$('#submit').click(function () {
+				$('.mask').hide();
+
+				$('.cal-select').hide();
+				var plan_money = parseInt($('.cur').eq(0).text());
+				var rebate_money = parseFloat($('.cur').eq(1).text());
+				var rebate_conpom = parseFloat($('.cal-rebate-conpom').text());
+				count_fl("四闲山房", plan_money * 1000000, rebate_money / 100, rebate_conpom / 100, 30);
+				add_img();
+				make_animate("cal-slide");
+				//执行滚动条滑动到底部
+			});
+			// 点击换一个方案算一算按钮点击事件
+			$('.cal-nav').click(function () {
+				$('.mask').show();
+				$('.cal-btn').show();
+				$('.cal-select').show();
+
+
+				$(".cal-slide").css('margin-left', '100%');
+			});
+		});
+	</script>
+</body>
+
+</html>

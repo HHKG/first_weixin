@@ -1,0 +1,95 @@
+.d_header {
+	display: flex;
+	height: 8rem;
+	background: #fff;
+	align-items: center;
+	padding: 0 1.5rem;
+}
+
+.d_header div {
+	margin-left:1.5rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.d_img {
+	width: 3rem;
+	height: 2rem;
+}
+
+.d_header div span {
+	color: #333!important;
+	font-size: 1.5rem;
+	line-height: 3rem;
+}
+
+.d_middle {
+	width: 100%;
+	background: #fff;
+	margin: 1.5rem 0rem;
+}
+
+.enter_d {
+	margin: 6rem auto;
+	width: 92%;
+}
+
+.enter_d button {
+	border: hidden;
+	background: #F58650;
+	height: 5rem;
+	width: 100%;
+	font-size: 1.8rem;
+	color: #fff;
+	border-radius: 0.6rem;
+}
+.enter_d button:active{
+	background:#F58650;
+}
+.d_num {
+
+	padding: 2.5rem 1.5rem;
+}
+
+.d_num span {
+	font-size: 1.5rem;
+	color: #666666;
+}
+
+.d_input {
+	display: flex;
+	align-items: center;
+	margin-left:1.5rem;
+	height:6rem;
+	line-height: normal;
+}
+
+.d_input span {
+	font-size: 3rem;
+}
+
+.d_input input {
+	border: hidden;
+	height:5rem;
+	font-size: 4rem;
+	line-height: 5rem;
+	margin: 0;
+	padding: 0;
+}
+/*提现到银行卡页面样式*/
+	.draw_header{
+		margin:1.5rem;height:1.5rem;
+	}
+	.draw_header p{
+		font-size:1.5rem;line-height: 1.5rem;
+	}
+	.bank{
+		color:#333333;font-weight: bold;
+	}
+	.useable{
+		border-top:1px solid #EFEFF4;margin:0rem 2rem;height:4rem;background:#fff;
+	}
+	.useable p{
+		font-size: 1.5rem;line-height:1.5rem;margin:1rem 0rem;height:2rem;
+	}
+	

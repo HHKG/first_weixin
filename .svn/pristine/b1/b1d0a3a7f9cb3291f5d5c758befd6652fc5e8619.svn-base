@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>提现-虔心荟</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="__TMPL__/public/assets/css/mui.min.css?2-11" rel="stylesheet" />
+    <link href="__TMPL__/public/assets/css/withdraw_cash.css" rel="stylesheet" />
+    <link href="__TMPL__/public/assets/css/youxian_pay.css?2-11" rel="stylesheet" />
+</head>
+<style>
+        input::-webkit-input-placeholder {
+            color: #333333;
+        }
+    </style>
+<body>
+       
+    <script src="__TMPL__/public/assets/js/mui.min.js?2-11"></script>
+    <script src="__TMPL__/public/assets/js/jquery.min.js?2-11"></script>
+    <script type="text/javascript">
+        mui.init()
+    </script>
+    <div class="mui-content">
+        <div class="d_header">
+            <div>
+                <img src="__TMPL__/public/assets/images/card_icon.png" class="d_img" />
+            </div>
+            <div>
+                <span style="color:#333333;font-weight: bold;" class="bank_name"></span>
+                <span class="card_no"></span>
+            </div>
+        </div>
+        <div class="d_middle">
+            <div class="d_num">
+                <span>提现金额</span>
+            </div>
+            <div class="d_input">
+                <span>￥</span>
+                <input type="number"  value="" name="money" id="recharge_money" placeholder="0.00" />
+                <input type="hidden" value="" o class="user" name="user" />
+            </div>
+            <div class="d_num">
+                <span style="font-size: 1.5rem;">可用余额：<span class="money">0.00</span>元</span>
+            </div>
+        </div>
+        <div class="enter_d">
+            <button onclick="withdrawal()" disabled="disabled" id="enter_d_btn">确认提现</button>
+            <div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+   $('#recharge_money').click(function () {
+        $('#recharge_money').attr('placeholder', '');
+    });
+    $('#recharge_money').on('input propertychange', function () {
+        $('#recharge_money').val($('#recharge_money').val().replace(/^(\-)*(\d+)\.(\d\d).*$/, '$1$2.$3').replace(/^0+(?=\d)/, ''));
+        // $('#recharge_money').attr()
+    });
+    $(function () {
+        $('#enter_d_btn').css('opacity','0.5');
+        $.ajax({
+            url: "<?php echo config('interfaceurl')?>/getwithdrawal",
+            type: 'POST',
+            dataType: 'jsonp',
+            data: { token: "<?php echo session('token');?>" },
+            success: function (data) {
+                //console.log(data)
+                if (data.code == 1) {
+                    $('.money').html(data.data.E_Balance);
+                    $('.bank_name').html(data.data.E_BankName);
+                    $('.card_no').html(data.data.E_Card);
+                    $('.user').val(data.data.E_UserName);
+                } else {
+                    mui.toast(data.msg);
+                }
+            }
+        })
+    })
+    function withdrawal() {
+        var hasmoney = $('.money').html();
+        var bank = $('.bank_name').html();
+        var cardno = $('.card_no').html();
+        var money = $("input[name='money']").val();
+        var user = $("input[name='user']").val();
+        if (money > parseFloat(hasmoney)) {
+            mui.toast('提现金额超过可用余额'); return;
+        }
+        if (0<user &&user < 50) {
+            mui.toast('提现不能少于50元'); return;
+            $('#enter_d_btn').css('opacity','1');
+         $('#enter_d_btn').attr('disabled',false);
+        }
+        // 加一个disabled,判断val为空时，不能点击
+
+
+
+
+        $.ajax({
+            url: "<?php echo config('interfaceurl')?>/insertwithdrawal",
+            type: 'POST',
+            dataType: 'jsonp',
+            data: {
+                money: money,
+                cardno: cardno,
+                bank: bank,
+                user: user,
+                token: "<?php echo session('token');?>"
+            },
+            success: function (data) {
+
+                if (data.code == 1) {
+                    window.location.href = '/cash';
+                } else {
+                    mui.toast(data.msg);
+                }
+            }
+        })
+    }
+</script>

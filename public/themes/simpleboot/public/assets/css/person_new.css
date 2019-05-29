@@ -1,0 +1,21 @@
+.index_nav{
+	display: flex;justify-content: space-around;align-items: center;
+}
+.index{
+	display:flex;align-items:flex-end;justify-content:center;background-image:url(../images/shouye_icon.png) ;background-size:20%;height:5rem;width:33.3%;background-repeat: no-repeat;background-position-x: 50%;background-position-y: 25%;
+}
+.index span{
+	font-size: 1.4rem;color:#333;
+}
+.club{
+	display:flex;align-items:flex-end;justify-content:center;background-image:url(../images/julebu_icon.png) ;background-size:20%;height:5rem;width:33.3%;background-repeat: no-repeat;background-position-x: 50%;background-position-y: 25%;
+}
+.club span{
+	font-size: 1.4rem;color:#333;
+}
+.person{
+	display:flex;align-items:flex-end;justify-content:center;background-image:url(../images/huiyuan_icon_seleted.png) ;background-size:20%;height:5rem;width:33.3%;background-repeat: no-repeat;background-position-x: 50%;background-position-y: 25%;
+}
+.person span{
+	font-size: 1.4rem;color:#496966;
+}

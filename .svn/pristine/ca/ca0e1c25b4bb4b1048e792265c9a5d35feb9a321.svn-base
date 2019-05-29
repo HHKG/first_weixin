@@ -1,0 +1,289 @@
+<include file="public@header"/>
+<style type="text/css">
+    .pic-list li {
+        margin-bottom: 5px;
+
+    }
+
+    .col-md-9 {
+        width: 70%;
+    }
+
+    .col-md-3 {
+        width: 30%;
+    }
+</style>
+<script type="text/html" id="photos-item-tpl">
+    <li id="saved-image{id}">
+        <input id="photo-{id}" type="hidden" name="photo_urls[]" value="{filepath}">
+        <input class="form-control" id="photo-{id}-name" type="text" name="photo_names[]" value="{name}"
+               style="width: 200px;" title="图片名称">
+        <img id="photo-{id}-preview" src="{url}" style="height:36px;width: 36px;"
+             onclick="imagePreviewDialog(this.src);">
+        <a href="javascript:uploadOneImage('图片上传','#photo-{id}','project');">替换</a>
+        <a href="javascript:(function(){$('#saved-image{id}').remove();})();">移除</a>
+    </li>
+</script>
+<script type="text/html" id="files-item-tpl">
+    <li id="saved-file{id}">
+        <input id="file-{id}" type="hidden" name="file_urls[]" value="{filepath}">
+        <input class="form-control" id="file-{id}-name" type="text" name="file_names[]" value="{name}"
+               style="width: 200px;" title="文件名称">
+        <a id="file-{id}-preview" href="{preview_url}" target="_blank">下载</a>
+        <a href="javascript:uploadOne('文件上传','#file-{id}','file');">替换</a>
+        <a href="javascript:(function(){$('#saved-file{id}').remove();})();">移除</a>
+    </li>
+</script>
+<script type="text/html" id="open_files-item-tpl">
+    <li id="saved-open_files{id}">
+        <input id="open_files-{id}" type="hidden" name="file_urls[]" value="{filepath}">
+        <input class="form-control" id="open_files-{id}-name" type="text" name="open_files_names[]" value="{name}"
+               style="width: 200px;" title="文件名称">
+        <a id="open_files-{id}-preview" href="{preview_url}" target="_blank">下载</a>
+        <a href="javascript:uploadOne('文件上传','#open_files-{id}','file');">替换</a>
+        <a href="javascript:(function(){$('#saved-open_files{id}').remove();})();">移除</a>
+    </li>
+</script>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="{:url('Project/index')}">计划列表</a></li>
+        <li class="active"><a href="{:url('Project/add')}">添加计划</a></li>
+    </ul>
+    <form action="{:url('Project/addPost')}" method="post" class="form-horizontal js-ajax-form margin-top-20">
+        <div class="row">
+            <ul class="col-md-9">
+                <table class="table table-bordered">
+                    <tr>
+                        <th width="100">计划名称<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" name="E_Name" type="text" style=";" required value=""
+                                   placeholder="请填入计划名称"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">计划简称<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" name="E_Abbreviation" type="text" style=";" required value=""
+                                   placeholder="请填入计划名称"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">首页显示<span class="form-required">*</span></th>
+                        <td>
+                            <input type="radio" name="E_IsShow" value="0" checked>否
+                            <input type="radio" name="E_IsShow" value="1">否
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">计划类型<span class="form-required">*</span></th>
+                        <td>
+                            <select name="E_Type">
+                                <option value="0">请选择计划类别</option>
+                                <?php foreach($type as $v):?>
+                                <option value="<?php echo $v['id'];?>"><?php echo $v['E_Name'];?></option>
+                                <?php endforeach;?>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>计划状态<span class="form-required">*</span></th>
+                        <td>
+                            <select name="E_Status">
+                                <option value="1">待上线</option>
+                                <option value="2">未上线</option>
+                                <option value="3">认购中</option>
+                                <option value="4">已结束</option>
+                            </select>
+                            <input class="form-control" type="text" required name="E_StatusInfo" value="" placeholder="状态说明">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>认购结束时间<span class="form-required">*</span></th>
+                        <td>
+                            <input type="text" class="form-control js-bootstrap-date" name="E_EndTime"
+                                   value=""
+                                   style="width: 140px;" autocomplete="off" placeholder="认购结束时间">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>位置<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_Region" value=""
+                                   placeholder="位置">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>地址<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_Address" value=""
+                                   placeholder="请输入地址">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>计划品牌<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_Brand" value=""
+                                   placeholder="请输入计划品牌">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>计划标签<span class="form-required">*</span></th>
+                        <td>
+                            <div>
+                                 <div style="text-align: center;white-space:nowrap;float: left;height: 34px;">
+                                     <input type="hidden" name="tagimg[]" id="tagimg" value="">
+                                     <a href="javascript:uploadOneImage('图片上传','#tagimg','project');">
+                                         <img src="__TMPL__/public/assets/images/default-thumbnail.png" id="tagimg-preview" style="height: 34px;"/>
+                                     </a>
+                                 </div>
+                                <input class="form-control" type="text" required name="tagname[]" placeholder="标签名称" style="width: 20%;float: left;">
+                                <input class="form-control" type="text" required name="tag[]" placeholder="标签内容" style="width: 50%;">
+                            </div>
+                            <button type="button" onclick="addtag(this)">增加标签</button>
+                            <button type="button" onclick="deltag(this)">删除最后的标签</button>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th>计划情况<span class="form-required">*</span></th>
+                        <td>
+                           <input class="form-control" type="text" required name="E_Situation" placeholder="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>计划特色</th>
+                        <td>
+                            <input class="form-control" type="text" name="E_Characteristic" maxlength="150" value=""
+                                   placeholder="计划特色">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>计划的简介<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_Digest" required  maxlength="200" value=""
+                                   placeholder="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>计划的介绍<span class="form-required">*</span></th>
+                        <td>
+                            <script type="text/plain" id="content" name="E_Introduction"></script>
+
+                        </td>
+                    </tr>
+
+                </table>
+                <hook name="portal_admin_article_edit_view_main"/>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+                        <a class="btn btn-default" href="{:url('Project/index')}">{:lang('BACK')}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <table class="table table-bordered">
+
+                    <tr>
+                        <th><b>主图片<span class="form-required">*</span></b></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="text-align: center;">
+                                <input type="hidden" name="E_HeaderImg" id="thumbnail" value="">
+                                <a href="javascript:uploadOneImage('图片上传','#thumbnail','project');">
+                                    <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                         id="thumbnail-preview"
+                                         width="135" style="cursor: pointer"/>
+                                </a>
+                                <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片">
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <hook name="portal_admin_article_edit_view_right_sidebar"/>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="__STATIC__/js/admin.js"></script>
+<script type="text/javascript">
+    //编辑器路径定义
+    var editorURL = GV.WEB_ROOT;
+</script>
+<script type="text/javascript" src="__STATIC__/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__STATIC__/js/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript">
+    function addtag(obj) {
+        var x=100;
+        var y=1;
+        var num=parseInt(Math.random()*(x-y+1)+y);
+        var str='';
+        str+='<div>';
+        str+='<div style="text-align: center;white-space:nowrap;float: left;height: 34px;">';
+        str+='<input type="hidden" name="tagimg[]" id="tagimg'+num+'" value=""> ';
+        str+='<a href="javascript:uploadOneImage(\'图片上传\',\'#tagimg'+ num +'\',\'project\');">  ';
+        str+='<img src="__TMPL__/public/assets/images/default-thumbnail.png" id="tagimg'+ num +'-preview" style="height: 34px;"/>  ';
+        str+='</a> ';
+        str+=' </div>';
+        str+='  <input class="form-control" type="text" required name="tagname[]" placeholder="标签名称" style="width: 20%;float: left;">';
+        str+='  <input class="form-control" type="text" required name="tag[]" placeholder="标签内容" style="width: 50%;"> ';
+        str+='  </div> ';
+       $(obj).before().before(str)
+    }
+    function deltag(obj) {
+        console.log($(obj).prev().prev()[0].remove());
+        // alert(1);
+        // $(obj).before(' <div> <input class="form-control" type="text" required name="tag[]" placeholder=""></div>')
+    }
+
+    $(function () {
+
+        editorcontent = new baidu.editor.ui.Editor();
+        editorcontent.render('content');
+        try {
+            editorcontent.sync();
+        } catch (err) {
+        }
+
+        $('.btn-cancel-thumbnail').click(function () {
+            $('#thumbnail-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+            $('#thumbnail').val('');
+        });
+        $('.btn-cancel-tagimg').click(function () {
+            $('#tagimg-preview1').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+            $('#tagimg').val('');
+        });
+
+    });
+
+    function doSelectType() {
+        var Id = $('#js-categories-id-input').val();
+        openIframeLayer("{:url('Project/select')}?id=" + Id, '请选择类型', {
+            area: ['700px', '400px'],
+            btn: ['确定', '取消'],
+            yes: function (index, layero) {
+                //do something
+
+                var iframeWin = window[layero.find('iframe')[0]['name']];
+                var selectedCategories = iframeWin.confirm();
+                if (selectedCategories.selectedCategoriesId.length == 0) {
+                    layer.msg('请选择类型');
+                    return;
+                }
+                $('#js-categories-id-input').val(selectedCategories.selectedCategoriesId.join(','));
+                $('#js-categories-name-input').val(selectedCategories.selectedCategoriesName.join(' '));
+                //console.log(layer.getFrameIndex(index));
+                layer.close(index); //如果设定了yes回调，需进行手工关闭
+            }
+        });
+    }
+</script>
+</body>
+</html>

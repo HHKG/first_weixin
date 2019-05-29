@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>参与分享计划免费度假攻略</title>
+    <meta name="description" content="参与分享计划免费度假攻略-虔心荟" />
+    <meta name="Keywords" content="参与分享计划免费度假攻略-虔心荟" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="__TMPL__/public/assets/css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/person.css" />
+    <script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+    <script src="__TMPL__/public/assets/js/holiday.js"></script>
+</head>
+<style>
+    body {
+        background-color: #FFE0A1;
+    }
+</style>
+
+<body>
+    <script src="__TMPL__/public/assets/js/mui.min.js"></script>
+    <script type="text/javascript">
+        mui.init()
+    </script>
+    <div class="mui-content free-body">
+        <div class="pay-myself">
+            <img src="__TMPL__/public/assets/images/cost_holiday_title.png" class="free-h-img1" />
+            <img src="__TMPL__/public/assets/images/cost_holiday_flow.png" class="free-h-img2" />
+            <div class="free-sanjiao">
+                <div class="free-small-sanjiao"></div>
+            </div>
+            <div class="free-h-txt">
+                净值减少，没有保值和升值
+            </div>
+        </div>
+
+        <div class="pay-myself free-position">
+            <img src="__TMPL__/public/assets/images/free_holiday2.png" class="free-h-img1" />
+            <img src="__TMPL__/public/assets/images/free_holiday_flow.png" class="free-h-img3" />
+            <img src="__TMPL__/public/assets/images/free_holiday_flow2.png" class="free-h-img3" />
+            <img src="__TMPL__/public/assets/images/free_holiday_map.png" class="free-h-img2" />
+            <div class="free-explain">
+                <img src="__TMPL__/public/assets/images/link.png" />
+            </div>
+            <div class="free-sanjiao">
+                <div class="free-small-sanjiao"></div>
+            </div>
+            <div class="free-h-txt">
+                <p> 免费度假，迈向旅享人</p>
+                <p>收获快乐与财富</p>
+            </div>
+            <!-- 弹窗 -->
+            <div class="mask"></div>
+            <div class="free-pop">
+                <div class="free-pop-title">
+                    什么是分享计划
+                </div>
+                <div class="free-pop-cnt">
+                    <p>
+                        虔心分享计划是虔心荟特别策划的会员专属权益，即通过甄选全球优质别墅/酒店，与之建立联盟合作关系，赋予会员独一无二的消费特权。
+                    </p>
+                    <p>
+                        会员可通过参与计划成为别墅/酒店合伙人，与别墅/酒店分利润，最大限度地实现会籍保值、升值、长赢。
+                    </p>
+                    <p>
+                        目的就是让您用最少的支出，收获最多的快乐与财富！
+                    </p>
+                </div>
+                <div class="booking-pop-cansel free-btn-color">确定</div>
+                <div>
+                </div>
+            </div>
+        </div>
+        <!-- 立即参与计划 -->
+        <div class="free-plan">
+            立即参与分享计划
+        </div>
+    </div>
+</body>
+
+</html>

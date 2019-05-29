@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="">
+
+</head>
+
+<body class="body-white">
+
+
+<div class="container tc-main">
+
+</div>
+</body>
+</html>
+
+
+<script src="__TMPL__/public/assets/js/jquery-1.10.2.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+
+    var code="<?php echo $code;?>"
+    var token="<?php echo isset($token)?$token : '';?>"
+    $(function () {
+
+        $.ajax({
+            type: 'GET',
+            url : 'http://www.iqianclub.com/interface/public/index.php/speed/project/getProjectInfo',
+            dataType: 'jsonp',
+            xhrFields:{withCredentials:true},
+            data:{code:code},
+            success:function(data){
+
+                console.log(data);
+                var str='';
+                if (data.code=1){
+                    $.each(data.project_plan,function (k,v) {
+                        console.log(v);
+                        str+= '<input type="button"    onclick="buy(\''+v.E_Code+'\')" value="'+ v.E_Title+'"><br>';
+
+                    })
+                    $(".tc-main").html(str);
+                }else{
+                    alert(data.msg);
+                }
+            },
+            error: function(e){
+                // console.log(e)
+                // return false;
+            }
+        })
+
+
+    })
+
+    function buy(plan) {
+        if (token==''){
+            alert('请先登录');
+            window.location.href='http://www.iqianclub.com/qxh/public/index.php/login?url=/qxh/public/index.php/detail/'+code;
+        }else{
+            window.location.href='http://www.iqianclub.com/qxh/public/index.php/order/'+plan;
+
+        }
+    }
+
+</script>

@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的计划-虔心荟</title>
+    <meta name="keywords" content="<?php echo $keywords;?>">
+    <meta name="description" content="<?php echo $description;?>">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="__TMPL__/public/assets/css/mui.min.css" rel="stylesheet" />
+    <link href="__TMPL__/public/assets/css/person.css?3-18" rel="stylesheet" />
+    <link href="__TMPL__/public/assets/css/null_page.css?1-20-2" rel="stylesheet" />
+    <!--统计 -->
+	<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?0b4f18f629a5a8177aab940c3f165a6c";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+    </script>
+</head>
+<style>
+    html body {
+        background: #fff;
+    }
+
+    h4 {
+        padding: 0;
+        line-height: 2rem;
+        margin-left: 1.5rem;
+        color: #333;
+        font-size: 1.7rem;
+        height: 2rem;
+        white-space: nowrap;
+    }
+</style>
+
+<body>
+    <script src="__TMPL__/public/assets/js/mui.min.js"></script>
+    <script type="text/javascript">
+        mui.init()
+    </script>
+    <div class="mui-content myplan-body">
+    </div>
+</body>
+
+</html>
+<script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            type: 'POST',
+            url: "<?php echo config('interfaceurl');?>/myproject",
+            dataType: 'jsonp',
+            data: { 'token': "<?php echo session('token');?>" },
+            success: function (data) {
+                //console.log(data);
+                if (data.code === '9201') {
+                    if ("<?php echo cmf_is_wechat(); ?>") {
+                        window.location.href = "/login?again=1&back=<?php echo urlencode(GetAllURL());?>";
+                    } else {
+                        window.location.href = "/login?again=1&back=<?php echo urlencode(GetAllURL());?>";
+                    }
+                }
+                if (data.code == '1') {
+                    //console.log(data.data);
+                    var str = '';
+                    if (data.data.length > 0) {
+
+                        $.each(data.data, function (k, v) {
+                            str += ' <div class="myplan-cnt">';
+                            str += '  <div class="myplan-title">';
+                            str += ' <h4>' + v.E_ProjectName + '·' + v.E_PlanName + '</h4>';
+                            str += '</div>';
+                            str += '<div class="myplan-middle">'
+                            str += '   <div class="myplan-rebate">';
+                            str += '    <div style="width:6rem;" class="myplan-rebate-cnt">';
+                            str += ' <img src="' + v.url + '" style="width:100%;height:100%;" />';
+                            str += '   </div>';
+                            str += '   <div class="myplan-rebate-cnt">';
+                            str += '   <span class="myplan-rebate-num">' + v.scale + '%</span>';
+                            str += '  <span class="myplan-rebate-txt">预估每年返现</span>';
+                            str += '   </div>';
+                            str += '    <div class="myplan-rebate-cnt">';
+                            str += '   <span class="myplan-rebate-num">' + v.couponscale + '%</span>';
+                            str += '   <span class="myplan-rebate-txt">每年返住房券</span>';
+                            str += '   </div>';
+                            str += '  <div style="border-left:1px solid #eeeeee;height:3rem;">';
+                            str += '   </div>';
+                            str += '   <div class="myplan-rebate-cnt">';
+                            str += ' <span class="myplan-rebate-num">' + v.E_Cycle + '<span class="myplan-rebate-year">年</span></span>';
+                            str += '   <span class="myplan-rebate-txt">返利期限</span>';
+                            str += '  </div>';
+                            str += '  </div>';
+                            str += '       <div class="myplan-join">';
+                            str += ' <div>';
+                            str += ' <div>';
+                            str += '  <span class="myplan-join-free">参与费：</span>';
+                            str += '   <span class="myplan-join-num">' + v.E_OrderPrice + '/份</span>';
+                            str += ' </div>';
+                            str += ' <div>';
+                            str += '   <span class="myplan-join-free">参与份数：</span>';
+                            str += '   <span class="myplan-join-num">' + v.E_BuyNum + '份</span>';
+                            str += '  </div>';
+                            str += '  </div>';
+                            str += '  <div>';
+                            str += '  <div>';
+                            str += '   <span class="myplan-join-free">参与金额：</span>';
+                            str += '  <span class="myplan-join-num">' + v.E_Price + '</span>';
+                            str += '   </div>';
+                            str += '   <div>';
+                            str += '   <span class="myplan-join-free">参与日期：</span>';
+                            str += '    <span class="myplan-join-num">' + v.jointime + '</span>';
+                            str += '      </div>';
+                            str += '      </div>';
+                            str += '      </div>';
+                            str += '     <div class="myplan-rebate-money">';
+                            str += '   <div class="myplan-rebate-money-title">';
+                            str += '  返现：';
+                            str += '  </div>';
+                            str += '   <div class="myplan-rebate-day">';
+                            str += '    <p class="myplan-rebate-day-p1">账单日</p>';
+                            str += '  <div>';
+                            str += '<p class="myplan-rebate-day-p2">每月' + v.E_BillDay + '日</p>';
+                            str += ' <p class="myplan-rebate-day-p3">(下次出账时间：' + '' + v.nextbilldate + ')</p >';
+                            str += '   </div>';
+                            str += '   </div>';
+                            str += '  <div class="myplan-rebate-day">';
+                            str += ' <p class="myplan-rebate-day-p1">结算周期</p>';
+                            str += '  <p class="myplan-rebate-day-p2">' + v.E_SettlementCycle + '个月</p>';
+                            str += '  </div>';
+                            str += '  </div>';
+                            str += '  <div class="myplan-rebate-money">';
+                            str += '   <div class="myplan-rebate-money-title">';
+                            str += '   返住房券：';
+                            str += ' </div>';
+                            str += ' <div class="myplan-rebate-day">';
+                            str += ' <p class="myplan-rebate-day-p1">账单日</p>';
+                            str += ' <div>';
+                            str += '  <p class="myplan-rebate-day-p2">每年' + v.coupontime + '</p>';
+                            str += ' <p class="myplan-rebate-day-p3">(下次发放时间：' + '' + v.nexcoupontime + ')</p >';
+                            str += '  </div>';
+                            str += '  </div>';
+                            str += '  <div class="myplan-rebate-day">';
+                            str += '    <p class="myplan-rebate-day-p1">结算周期</p>';
+                            str += '   <p class="myplan-rebate-day-p2">' + v.E_CouponCycle + '个月</p>';
+                            str += '  </div>';
+                            str += '</div>';
+                            str += '  </div>';
+                            str += '  <div class="myplan-btn">';
+                            // str+='  <div class="myplan-btn1">';
+                            // str+='   下载协议';
+                            // str+='   </div>';
+                            str += '   <div class="myplan-btn2" onclick="javascript:window.location.href=\'/rebate\'">';
+                            str += '    查看返利';
+                            str += '  </div>';
+                            str += '  </div>';
+                            str += '  </div>';
+                        })
+                    } else {
+                        str += ' <div class="banben-gb">';
+                        str += '<div class="banben-gb-img"></div><div class="banben-cnt-tips"><p>暂无相关记录</p></div><div class="num_rebate-btn"><button onclick="javascript:window.location.href=\'/project?project=MZJBQKj3NmPolKOv8qbj\'">立即参与分享计划</button></div>';
+                        str += '</div>';
+                    }
+                    $('.mui-content').html(str);
+                }
+            }
+        })
+    })
+</script>

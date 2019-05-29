@@ -1,0 +1,41 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">问题列表</a></li>
+        <li><a href="{:url('question/add')}">添加问题</a></li>
+    </ul>
+
+    <form class="js-ajax-form" action="" method="post">
+
+        <table class="table table-hover table-bordered table-list">
+            <thead>
+            <tr>
+                <th>问题名称</th>
+                <th>答案1</th>
+                <th>答案2</th>
+                <th>答案3</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <?php foreach($question as $vo):?>
+            <tr>
+                <td><?php echo $vo['E_Title'];?></td>
+                <?php foreach(unserialize($vo['E_Answer']) as $v):?>
+                <td><?php echo $v;?></td>
+                <?php endforeach;?>
+                <td>
+                    <a href="{:url('question/edit',array('id'=>$vo['id']))}">{:lang('EDIT')}</a>
+                    <a href="{:url('question/delete',array('id'=>$vo['id']))}" class="js-ajax-delete">{:lang('DELETE')}</a>
+                </td>
+            </tr>
+            <?php endforeach;?>
+        </table>
+
+        <ul class="pagination">{$page|default=''}</ul>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

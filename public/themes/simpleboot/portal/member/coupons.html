@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <include file="public@header" />
+    <title>邀请好友免费领￥500元住房券</title>
+    <meta name="keywords" content="我的邀请" />
+    <meta name="description" content=我的邀请 />
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/mui.min.css?2019.5.11" />
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/person.css?2019.5.17-1" />
+    <script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+    <script src="__TMPL__/public/assets/js/jquery.md5.js"></script>
+</head>
+<style>
+    body,
+    .coupons-body {
+        background-color: #136E65;
+        padding-bottom: 1rem;
+    }
+</style>
+
+<body>
+<div class="mui-content coupons-body">
+    <div class="coupons-bg">
+        <img class="coupons-title" src="__TMPL__/public/assets/images/invitation_title.png" />
+        <div class="coupons-card">
+            <img class="coupons-card-img" src="__TMPL__/public/assets/images/coupons-card_bg.png" />
+            <div class="coupons-card-cnt">
+                <img class="coupons-cnt-img" src="" />
+                <p class="coupons-cnt-p1"></p>
+                <p class="coupons-cnt-p2" onclick="javascript:window.location.href='/holiday'">了解更多度假地 >></p>
+            </div>
+        </div>
+        <div class="coupons-join-num">
+            <span>0</span>
+            <span>1</span>
+            <span>3</span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="coupons-join-people">活动累计参与人数</div>
+        <div class="coupons-active-time">
+        </div>
+        <button class="coupons-btn" onclick="share()">立即邀请好友拿住房券</button>
+    </div>
+    <div class="coupons-flow">
+        <div class="imitate-flow">
+            <div class="imitate-flow-cnt">
+                <div class="imitate-flow-step">
+                    <img src="__TMPL__/public/assets/images/share_icon.png" />
+                    <span>分享活动给好友</span>
+                </div>
+                <div class="imitate-left-line"></div>
+                <div class="imitate-flow-step">
+                    <img src="__TMPL__/public/assets/images/join_plan_icon.png" />
+                    <span>好友参与分享计划</span>
+                </div>
+                <div class="imitate-right-line"></div>
+                <div class="imitate-flow-step">
+                    <img src="__TMPL__/public/assets/images/housing_tiket_icon.png" />
+                    <span>住房券到账</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="coupons-invite-list">
+        <div class="coupons-list-title">
+            <span class="coupons-title-txt">邀请排行榜<span>(仅显示前10名)</span></span><span class="coupons-myinvite-txt"
+                                                                                    onclick="javascript:window.location.href='/myinvite'">我的邀请 ></span>
+        </div>
+        <div class="coupons-list-cnt-data">
+
+        </div>
+    </div>
+    <div class="coupons-rule">
+        <img src="__TMPL__/public/assets/images/activity_rule_title.png" />
+        <div>
+            <P> 1.活动期间，每邀请一位好友参与虔心荟分享计划，您即可得<span>500</span>元住房券（可累计，奖励无上限）。</P>
+            <P>2.本活动最终解释权归虔心荟所有，如有疑问，请咨询客服：<a href="tel:400-990-8830">400-990-8830</a>。</P>
+            <p>3.我的全球通用住房券可在会员中心查看</p>
+        </div>
+    </div>
+</div>
+<div class="mask"></div>
+<div class="share-guider">
+    <img src="__TMPL__/public/assets/images/share_friend_layer.png" style="width:92%;"/>
+        <!-- 请点击右上方菜单进行分享 -->
+        <div class="share-guider-konw">知道啦</div>
+</div>
+<script>
+    var myobj={};
+    $(document).ready(function () {
+        $('.coupons-btn').click(function(){
+               $('.mask,.share-guider').show();
+            })
+            $('.mask,.share-guider').click(function(){
+                $('.mask,.share-guider').hide();
+            })
+        var maction = 'activity';
+        var msign = $.md5(maction + '1' + pattern + randomstr + time);
+        var token = "<?php echo session('token');?>";
+        // if (!token){
+        //     if (comfirm('未登录')){
+        //         if ("<?php echo cmf_is_wechat(); ?>") {
+        //             window.location.href = "/login?again=1&back=<?php echo urlencode(GetAllURL());?>";
+        //         } else {
+        //             window.location.href = "/login?again=1&back=<?php echo urlencode(GetAllURL());?>";
+        //         }
+        //     }
+        // }
+        $.ajax({
+            url: "<?php echo config('interfaceurl')?>/activity",
+            type: 'POST',
+            dataType: 'json',
+           //  headers: { token: "<?php echo session('token');?>" },
+            data: {
+                pattern: pattern,
+                activity: 1,
+                from: from,
+                time: time,
+                action: maction,
+                sign: msign,
+            },
+            success: function (data) {
+                console.log(data);
+                if (data.code == 1) {
+                    $('.coupons-active-time').text('(' + '活动时间：' + data.activity.start + '-' + data.activity.end + ')');
+                    $('.coupons-cnt-img').attr('src', data.activity.E_Img);
+                    $('.coupons-cnt-p1').text(data.activity.E_Explain);
+                    if (data.ranking) {
+                        var ranking = '';
+                        $.each(data.ranking, function (k, v) {
+                            ranking += '<div class="coupons-list-cnt">';
+                            ranking += ' <img class="coupons-touxiang" src="'+ v.img+'" />'
+                            ranking += '<div class="coupons-list-txt">'
+                            ranking += '<span class="coupons-nickname">'+ v.name +'</span>'
+                            ranking += ' <span class="coupons-content">'+v.comment+'</span>'
+                            ranking += '</div>'
+                            ranking += ' <div class="coupons-invite-num">共邀请'+ v.num+'位好友</div>'
+                            ranking += ' </div>'
+                        })
+                    }
+                    $('.coupons-list-cnt-data').html(ranking);
+                    $('.coupons-list-cnt').eq(0).prepend('<img class="coupons-first-prize" src="__TMPL__/public/assets/images/first_prize.png" />');
+                    $('.coupons-list-cnt').eq(1).prepend('<img class="coupons-first-prize" src="__TMPL__/public/assets/images/second_prize.png" />');
+                    $('.coupons-list-cnt').eq(2).prepend('<img class="coupons-first-prize" src="__TMPL__/public/assets/images/third_prize.png" />');
+                    var arry=[],
+                        num1,
+                        num2;
+                    for(var i=0;i<data.activity.E_Join.toString().length;i++){
+                        arry.push(data.activity.E_Join.toString()[i]);
+                        num1=arry[i];
+                        num2=arry[i-1];
+                    }
+                    for(var j=0;j<$('.coupons-join-num>span').length;j++){
+                        $('.coupons-join-num>span').eq($('.coupons-join-num>span').length-1).text(num1);
+                        $('.coupons-join-num>span').eq($('.coupons-join-num>span').length-2).text(num2);
+                    }
+                    $.data(myobj,'incode',data.incode);
+                    console.log($.data(myobj,'incode'));
+                }
+            }
+        })
+    })
+    function share() {
+
+        var saction = 'shareinfo';
+        var url="<?php echo  GetAllURL();?>";
+        var ssign = $.md5(saction  + pattern + randomstr +'1' + time+url);
+        $.ajax({
+            url:"<?php echo $http.config('newinterfaceurl')?>/shareinfo",
+            dataType:'json',
+            type:'get',
+            data: {
+                pattern: pattern,
+                share: 1,
+                from: from,
+                time: time,
+                action: saction,
+                sign: ssign,
+                url:url
+            },
+            success:function(res){
+                var resdata=res.param;
+                console.log(res);
+                wx.config({
+                    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                    appId:resdata.appid, // 必填，公众号的唯一标识
+                    timestamp: resdata.timestamp, // 必填，生成签名的时间戳
+                    nonceStr: resdata.noncestr, // 必填，生成签名的随机串
+                    signature: resdata.sign,// 必填，签名
+                    jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'] // 必填，需要使用的JS接口列表
+                });
+                wx.ready(function(){
+                    wx.onMenuShareTimeline({
+                        title: res.data.E_Name, // 分享标题
+                        link: res.data.E_Url+'&incode='+$.data(myobj,'incode'), // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                        imgUrl: res.data.E_Img, // 分享图标
+                        success: function () {
+                            // 用户点击了分享后执行的回调函数
+                        },
+                    })
+                    wx.onMenuShareAppMessage({
+                        title: res.data.E_Name, // 分享标题
+                        desc: '', // 分享描述
+                        link: res.data.E_Url+'&incode='+$.data(myobj,'incode'), // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                        imgUrl:res.data.E_Img, // 分享图标
+                        type: '', // 分享类型,music、video或link，不填默认为link
+                        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                        success: function () {
+                            // 用户点击了分享后执行的回调函数
+                        }
+                    });
+                    // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+                });
+                wx.error(function(res){
+                    console.log(res)
+                    // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+                });
+            }
+        })
+    }
+</script>
+</body>
+
+</html>

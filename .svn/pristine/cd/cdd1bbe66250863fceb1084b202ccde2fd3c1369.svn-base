@@ -1,0 +1,72 @@
+<?php
+// +----------------------------------------------------------------------
+// | ThinkCMF [ WE CAN DO IT MORE SIMPLE ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2013-2018 http://www.thinkcmf.com All rights reserved.
+// +----------------------------------------------------------------------
+// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+// +----------------------------------------------------------------------
+// | Author: 老猫 <thinkcmf@126.com>
+// +----------------------------------------------------------------------
+namespace app\portal\controller;
+
+use cmf\controller\HomeBaseController;
+use think\Db;
+
+class IndexController extends HomeBaseController
+{
+    public function _initialize()
+    {
+        parent::_initialize();
+
+    }
+    public function index()
+    {
+//        $time=time();
+//        $time1=decoct(time());
+//        dump($time);
+//        dump($time1);
+
+//        $this->assign('description', '首页');
+//        $this->assign('keywords', '虔心荟');
+//        $this->assign('title', '首页-虔心荟');
+//       // $route = $route ? $route : '';
+//        ob_start();
+//        ob_implicit_flush();
+//        view();
+//        $content = ob_get_clean();
+//
+//
+//        file_put_contents(APP_PATH . '/1.html', $content);
+//        dump($content);die;
+//        echo $content;
+       // $this->creathtml('1');
+//        dump($this->sendmobilecode('13112316334',1));
+//        dump($this->getConfiginfo('MobileSms'));
+//        dump(rand(0000,9999));
+//dump(1111);die;
+//        $top_slide=Db::name('slide_item')->where(['slide_id'=>1,'status'=>1])->field('image,url,target,description')->order('list_order asc')->select();
+////        dump($top_slide->toArray());die;
+//        $mem_slide=Db::name('slide_item')->where(['slide_id'=>2,'status'=>1])->field('image,url,target,description')->order('list_order asc')->select();
+//        $this->assign('top_slide', $top_slide);
+//        $this->assign('mem_slide', $mem_slide);
+        $this->assign('description', '首页');
+        $this->assign('keywords', '虔心荟');
+        $this->assign('title', '首页-虔心荟');
+        return $this->fetch();
+    }
+
+    public function text(){
+        dump(strtotime(date('Ymd')));
+        dump(date('d',time()));
+        dump(time());
+//        dump($this->checkedmobilecode('13112316334','5606'));
+
+        $login=new LoginController();
+//        $login->welogincallback();
+
+        $login->checklogin();
+
+    }
+
+}

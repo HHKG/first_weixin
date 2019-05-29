@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <include file="public@header" />
+    <title>我的邀请</title>
+    <meta name="keywords" content="我的邀请" />
+    <meta name="description" content=我的邀请 />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/mui.min.css?2019.5.11" />
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/person.css?2019.5.11" />
+    <script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+    <script src="__TMPL__/public/assets/js/jquery.md5.js"></script>
+</head>
+<style>
+    body,
+    .myinvite-body {
+        background-color: #FAFAFA;
+    }
+</style>
+
+<body>
+    <div class="mui-content myinvite-body">
+        <!-- 有数据状态 -->
+        <div class="myinvite-block">
+            <div class="myinvite-all">共<span></span>位</div>
+            <div class="myinvite-cnt-list-data">
+
+            </div>
+        </div>
+        <!-- 无数据状态 -->
+        <dsiv class="myinvite-none">
+            <div class="myinvite-noneDate">
+                <img src="__TMPL__/public/assets/images/zhanweitu.png" />
+                <span>暂无好友参与活动，快快邀请好友哦~</span>
+            </div>
+        </dsiv>
+
+        <!-- 邀请好友按钮 -->
+        <div class="myinvite-btn">
+            立即邀请好友领500元住房券
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var maction = 'myinvitemember';
+            var msign = $.md5(maction + randomstr + time);
+            var token = "<?php echo session('token');?>";
+            $.ajax({
+                url: "<?php echo config('interfaceurl')?>/myinvitemember",
+                type: 'POST',
+                dataType: 'json',
+                headers: { token: "<?php echo session('token');?>" },
+                data: {
+                    from: from,
+                    time: time,
+                    action: maction,
+                    sign: msign,
+                    token: token
+                },
+                success: function (data) {
+                    if (data.invites.length > 0) {
+                        console.log(data);
+                        console.log(data.count);
+                        $('.myinvite-all>span').text(data.count);
+                        var invite = '';
+                        $.each(data.invites, function (k, v) {
+                            invite += '<div class="myinvite-cnt-list">'
+                            invite += '<div class="myinvite-person-cnt">'
+                            invite += ' <img class="myinvite-person-logo" src="' + v.E_HeadImg + '" />'
+                            invite += '<span class="myinvite-person-name">' + v.E_Name + '</span>'
+                            invite += '</div>'
+                            invite += '<span class="myinvite-plan-status">' + v.join + '</span>'
+                            invite += ' </div>';
+                        })
+                    } else {
+                        $('.myinvite-none').show();
+                        $('.myinvite-block').hide();
+                    }
+                    $('.myinvite-cnt-list-data').html(invite);
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

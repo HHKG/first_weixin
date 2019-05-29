@@ -1,0 +1,42 @@
+		.register_progress{
+			position: relative;
+		}
+		.progress_line_block{
+			display: flex;justify-content: center;margin: 4rem auto 0rem;
+		}
+		.progress_line{
+			border-top:3px solid #FF8150;width:40%;
+		}
+		.progress_block{
+			display: flex;justify-content:space-between;align-items: center;top:-1.2rem;left:2rem;width:92%;position: absolute;
+		}
+		.progress_block div{
+			display: flex;flex-direction: column;
+			align-items: center;
+		}
+		.progress_block p{
+			font-size: 1.2rem;
+			line-height: 2rem;
+			text-align: center;
+		}
+		.success_tip{
+			display: flex;flex-direction: column;justify-content: center;align-items: center;
+		}
+		.success_tip img{
+			width:9rem;height:10rem;margin-top:15rem;
+		}
+		.success_tip_p1{
+			font-size: 2rem;font-weight: bold;color:  #333333 ;line-height: 4rem;font-family: 'SourceHanSerifCN-Heavy';margin-top:1.5rem;
+		}
+		.success_tip_p2{
+			font-size: 1.5rem;font-weight: bold;color: #999;font-family: 'SourceHanSerifCN-Heavy';
+		}
+		.success_btn{
+			display: flex;justify-content: space-between;margin-top:4rem;padding:0rem 1.5rem;
+		}
+		.success_plan{
+			width:45%;height:4.5rem;border:0;background:#F68A56;border-radius: 70px;color:#fff;font-size: 1.7rem;
+		}
+		.success_center{
+			width:45%;height:4.5rem;border-radius: 70px;border:1px solid #F68A56;font-size: 1.7rem;color:#F68A56;
+		}

@@ -1,0 +1,86 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <!--<li class="active"><a href="javascript:;">所有新闻</a></li>-->
+        <!--<li><a href="{:url('AdminNew/add')}">添加新闻</a></li>-->
+    </ul>
+    <form class="well form-inline margin-top-20" method="post" action="{:url('asset/withdrawal')}">
+        创建时间:
+        <input type="text" class="form-control js-bootstrap-date" name="start_time"
+               value="{$start_time|default=''}"
+               style="width: 140px;" autocomplete="off">-
+        <input type="text" class="form-control js-bootstrap-date" name="end_time"
+               value="{$end_time|default=''}"
+               style="width: 140px;" autocomplete="off"> &nbsp; &nbsp;
+        用户编号:
+        <input type="text" class="form-control" name="userid" style="width: 200px;"
+               value="{$userid|default=''}" placeholder="请输入订单号">
+
+
+        用户名称:
+        <input type="text" class="form-control" name="name" style="width: 200px;"
+               value="{$name|default=''}" placeholder="请输入真实姓名">
+        状态:
+        <select name="status" >
+            <option value="0">请选择</option>
+            <option value="1" {$status==1?'selected':''}>提现中</option>
+            <option value="2" {$status==2?'selected':''}>成功</option>
+            <option value="3" {$status==3?'selected':''}>失败</option>
+        </select>
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('asset/withdrawal')}">清空</a>
+    </form>
+    <form class="js-ajax-form" action="" method="post">
+        <table class="table table-hover table-bordered table-list">
+            <thead>
+            <tr>
+
+                <th >用户编号</th>
+                <th >用户名称</th>
+                <th >卡号</th>
+                <th >开户行</th>
+                <th >提现金额</th>
+                <th >状态</th>
+                <th >创建时间</th>
+                <th >操作</th>
+            </tr>
+            </thead>
+            <foreach name="list" item="vo">
+                <tr>
+                    <td>{$vo.E_UserID}</td>
+                    <td>{$vo.E_UserName}</td>
+                    <td>{$vo.E_Card}</td>
+                    <td>{$vo.E_BankName}</td>
+                    <td>{$vo.E_Money}</td>
+                    <td>
+                        <?php if($vo['E_State'] == 1)
+                                    { echo '提现中';}
+                                    elseif($vo['E_Grade'] == 2) { echo '成功';}
+                                    elseif($vo['E_Grade'] == 3) { echo '失败';}
+                        ?>
+                    </td>
+                    <td>{$vo.E_CreateDate|date="Y-m-d",###}</td>
+                    <td>  <?php if($vo['E_State'] == 1):?>
+
+                    <?php endif; ?>
+                    </td>
+                </tr>
+            </foreach>
+        </table>
+
+        <ul class="pagination">{$page|default=''}</ul>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script>
+
+    function reloadPage(win) {
+        win.location.reload();
+    }
+
+
+</script>
+</body>
+</html>

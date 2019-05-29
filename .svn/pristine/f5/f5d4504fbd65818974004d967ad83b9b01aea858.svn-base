@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="keywords" content="<?php echo $keywords;?>">
+    <meta name="description" content="<?php echo $description;?>">
+    <title>注册会员-虔心荟</title>
+    <include file="public@header" />
+
+    <link href="__TMPL__/public/assets/css/person.css?2-18" rel="stylesheet">
+</head>
+<style type="text/css">
+    html body {
+        background: #fff;
+    }
+    .mui-content {
+        background: #fff;
+    }
+    input[type=color],
+    input[type=date],
+    input[type=datetime-local],
+    input[type=datetime],
+    input[type=email],
+    input[type=month],
+    input[type=number],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    input[type=time],
+    input[type=url],
+    input[type=week],
+    select,
+    textarea {
+        padding: 10px 0px;
+    }
+
+    .mui-btn-block {
+        margin-top: 3rem;
+        font-size: 2rem;
+        color: #fff;
+        height: 5rem;
+        background: #f0753a;
+        border-radius: 1rem;
+        opacity: 0.5;
+    }
+
+    .register_progress {
+        position: relative;
+        height: 5rem;
+    }
+</style>
+
+<body>
+
+    <script type="text/javascript">
+        mui.init()
+    </script>
+    <div class="mui-content">
+        <div class="register_progress">
+            <div class="progress_line_block">
+                <div class="progress_line"></div>
+                <div class="progress_line"></div>
+            </div>
+            <div class="progress_block">
+                <div>
+                    <img src="__TMPL__/public/assets/images/small_check_icon.png" width="45%" />
+                    <p>填写手机</p>
+                </div>
+                <div>
+                    <img src="__TMPL__/public/assets/images/small_check_gray_icon.png" width="45%" />
+                    <p>填写资料</p>
+                </div>
+                <div>
+                    <img src="__TMPL__/public/assets/images/small_check_gray_icon.png" width="45%" />
+                    <p>注册成功</p>
+                </div>
+            </div>
+        </div>
+        <div class="code-login">
+            <p>填写手机号</p>
+        </div>
+        <div class="phone_number">
+            <input type="number" name="value" oninput="if(value.length>11)value=value.slice(0,11)" placeholder="请输入手机号码"
+                id="code-8" />
+        </div>
+        <div class="code_number">
+            <input type="number" name="code" oninput="if(value.length>4)value=value.slice(0,4)" placeholder="请输入验证码"
+                maxlength="4" id="code-12" />
+            <div class="get_code">
+                <input type="button" value="获取验证码" id="btn"></input>
+            </div>
+        </div>
+        <div class="login_btn">
+            <button type="button" class="mui-btn-block" onclick="return Land()">下一步</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var reg = /^1[3456789]\d{9}$/;
+        var regcode = /^(\d{4})$/;
+        var mobile = document.getElementById('code-8');
+        var oCode = document.getElementById('code-12');
+        var wait = 60;
+
+        $(function () {
+            var $inputwrapper = $('.code_number');
+            $('#code-12,#code-8').on('input propertychange', function () {
+                var result1 = $('#code-12').val();
+                var result2 = $('#code-8').val();
+                if (result1 !== '' && result2 !== '') {
+                    $(".mui-btn-block").css('opacity', '1');
+                } else {
+                    $(".mui-btn-block").css('opacity', '0.5');
+                }
+            });
+        })
+        function time(o) {
+            if (wait == 0) {
+                o.removeAttribute("disabled"); //不能再触发
+                o.style.cssText = "border:1px solid #3a8782;background:#fff;color:#3a8782;"
+                o.value = "重发验证码";
+                wait = 60;
+            } else {
+
+                o.setAttribute("disabled", true);
+                o.style.cssText = "border:hidden;background:#999;color:#EBEBEB;"
+                o.value = "" + wait + "s";
+                wait--;
+                setTimeout(function () {
+                    time(o)
+                },
+                    1000)
+            }
+        }
+        document.getElementById("btn").onclick = function () {
+            var _this = this;
+            if (mobile.value == '') {
+                mui.toast('请输入手机号');
+            } else {
+                if (!reg.exec(mobile.value)) {
+                    mui.toast('手机号格式不正确');
+
+                    document.getElementById("btn").addEventListener('tap', function () {
+
+                    });
+                    return;
+                } else {
+                    $.ajax({
+                        url: "<?php echo config('interfaceurl')?>/sendcode",
+                        type: 'GET',
+                        dataType: 'jsonp',
+                        data: {
+                            type: "<?php echo $type;?>",
+                            number: parseInt(mobile.value)
+                        },
+                        success: function (data) {
+                            if (data.code == 1) {
+                                mui.toast('短信验证码已发送');
+                                time(_this);
+                            } else if (data.code == -2) {
+                                mui.toast(data.msg);
+                                window.location.href = "/login?mobile=" + mobile.value + "&openid=<?php echo $openid;?>&back=<?php echo urlencode($back);?>";
+                            } else if (data.code == -3) {
+                                mui.alert(data.msg, '提示');
+                            } else {
+                                mui.toast(data.msg);
+                            }
+
+                        }
+                    })
+                }
+            }
+        }
+
+        function Land() {
+            if (oCode == "" || mobile == "") {
+                return;
+            }
+            if (oCode.value == null || oCode == "" || !regcode.exec(oCode.value)) {
+                mui.toast('短信验证码不正确');
+                return;
+            }
+            if (mobile == null || mobile == "" || !reg.exec(mobile.value)) {
+                mui.toast('手机号格式不正确');
+                return;
+            }
+            $.ajax({
+                url: "<?php echo config('interfaceurl')?>/inspectcode",
+                type: 'GET',
+                dataType: 'jsonp',
+                data: {
+                    code: parseInt(oCode.value),
+                    mobile: parseInt(mobile.value)
+                },
+                success: function (data) {
+
+                    if (data.code == 1) {
+
+                        mui.toast(data.msg);
+                        window.location.href = "/data?pen=<?php echo $openid;?>&back=<?php echo urlencode($back);?>&mobile=" + mobile.value + "&mcode=" + oCode.value;
+                        return true;
+                    } else {
+                        mui.toast(data.msg);
+                        return false;
+                    }
+
+                }
+            })
+        };
+    </script>
+
+</body>
+
+</html>

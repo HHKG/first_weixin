@@ -1,0 +1,38 @@
+<nav class="mui-bar mui-bar-tab index_nav">
+    <a class="index" href="index">
+      <empty name="index" >
+          <img src="__TMPL__/public/assets/images/shouye_icon.png?4-12" />
+          <span>首页</span>
+          <else />
+          <img src="__TMPL__/public/assets/images/shouye_icon_seleted.png" />
+          <span class="nav-active">首页</span>
+          </empty>
+    </a>
+    <a class="index" href="/holiday">
+        <empty name="holiday">
+            <img src="__TMPL__/public/assets/images/dujiadi_icon.png?4-12" />
+            <span>度假地</span>
+            <else />
+            <img src="__TMPL__/public/assets/images/dujiadi_selected_icon.png?4-8" />
+            <span class="nav-active">度假地</span>
+        </empty>
+    </a>
+    <a class="index" href="/club">
+        <empty name="club">
+            <img src="__TMPL__/public/assets/images/julebu_icon.png?4-12" />
+            <span>俱乐部</span>
+            <else />
+            <img src="__TMPL__/public/assets/images/julebu_icon_seleted.png" />
+            <span class="nav-active">俱乐部</span>
+        </empty>
+    </a>
+    <a class="index" href="/member">
+        <empty name="member">
+            <img src="__TMPL__/public/assets/images/huiyuan_icon.png?4-12" />
+            <span>会员中心</span>
+            <else />
+            <img src="__TMPL__/public/assets/images/huiyuan_icon_seleted.png" />
+            <span class="nav-active">会员中心</span>
+        </empty>
+    </a>
+</nav>

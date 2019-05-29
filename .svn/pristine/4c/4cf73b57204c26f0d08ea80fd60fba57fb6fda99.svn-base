@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>度假地</title>
+    <meta name="description" content="度假地-虔心荟" />
+    <meta name="Keywords" content="度假地-虔心荟" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="__TMPL__/public/assets/css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/person.css" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/app.css?3-27" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/youxian.css?3-25-1" />
+    <script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+    <script src="__TMPL__/public/assets/js/holiday.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .holiday-body,
+    body {
+        background: #fff;
+    }
+</style>
+
+<body>
+    <script src="__TMPL__/public/assets/js/mui.min.js"></script>
+    <script type="text/javascript">
+        mui.init()
+    </script>
+<include file="public@nav" />
+    <div class="mui-content holiday-body">
+        <div class="holiday-h">
+            <span class=" title holiday-active">度假地</span>
+            <span class="line"></span>
+            <span class="title">主题</span>
+        </div>
+        <!-- 度假地 -->
+        <div class="holiday">
+            <!-- banner -->
+            <div class="holiday-banner">
+                <image src='__TMPL__/public/assets/images/plan_banner.png' class="holiday-banner-img"></image>
+            </div>
+            <!-- 地区房源 -->
+            <div class="area">
+                <!-- 地区名字 -->
+                <div class="area-name">
+                    <div class="area-name-cnt area-name-cnt-active">热门</div>
+                    <div class="area-name-cnt">国内</div>
+                    <div class="area-name-cnt">泰国</div>
+                    <div class="area-name-cnt">日本</div>
+                    <div class="area-name-cnt">韩国</div>
+                    <div class="area-name-cnt">新加坡</div>
+                    <div class="area-name-cnt">马来西亚</div>
+                    <div class="area-name-cnt">朝鲜</div>
+                </div>
+                <!-- 地区房源 -->
+                <div class="area-cnt" onclick="javascript:window.location.href='/scenery'">
+                    <div class="area-cnt-name">
+                        <image src='__TMPL__/public/assets/images/place1.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <span class="area-cnt-txt1"></span>
+                            <span class="area-cnt-txt2">赣州</span>
+                            <span class="area-cnt-txt3">21个房源</span>
+                        </div>
+                    </div>
+
+                    <div class="area-cnt-name">
+                        <image src='__TMPL__/public/assets/images/place2.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <span class="area-cnt-txt1"></span>
+                            <span class="area-cnt-txt2">苏梅岛</span>
+                            <!-- <span class="area-cnt-txt3">21个房源</span> -->
+                        </div>
+                    </div>
+
+                    <div class="area-cnt-name">
+                        <image src='__TMPL__/public/assets/images/place3.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <span class="area-cnt-txt1"></span>
+                            <span class="area-cnt-txt2">普吉岛</span>
+                            <!-- <span class="area-cnt-txt3">21个房源</span> -->
+                        </div>
+                    </div>
+
+                    <div class="area-cnt-name" onclick="">
+                        <image src='__TMPL__/public/assets/images/place4.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <span class="area-cnt-txt1"></span>
+                            <span class="area-cnt-txt2">从化</span>
+                            <span class="area-cnt-txt3">98个房源</span>
+                        </div>
+                    </div>
+
+
+                    <div class="area-cnt-name">
+                        <image src='__TMPL__/public/assets/images/place5.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <span class="area-cnt-txt1"></span>
+                            <span class="area-cnt-txt2">佛山</span>
+                            <span class="area-cnt-txt3">10个房源</span>
+                        </div>
+                    </div>
+
+                    <div class="area-cnt-name">
+                        <image src='__TMPL__/public/assets/images/place6.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <span class="area-cnt-txt1"></span>
+                            <span class="area-cnt-txt2">惠州</span>
+                            <span class="area-cnt-txt3">10个房源</span>
+                        </div>
+                    </div>
+
+                    <div class="area-cnt-name">
+                        <image src='__TMPL__/public/assets/images/place7.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <span class="area-cnt-txt1"></span>
+                            <span class="area-cnt-txt2">深圳</span>
+                            <span class="area-cnt-txt3">5个房源</span>
+                        </div>
+                    </div>
+
+                    <div class="area-cnt-name">
+                        <image src='__TMPL__/public/assets/images/place8.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <span class="area-cnt-txt1"></span>
+                            <div class="theme-area-cnt-txt2">
+                                <span>更多房源</span>
+                                <span>敬请期待</span>
+                            </div>
+                            <span class="area-cnt-txt3">10个房源</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- banner -->
+            <div class="holiday-banner" style="margin-top:2rem">
+                <image src='__TMPL__/public/assets/images/service_banner.png' class="holiday-banner-img"></image>
+            </div>
+            <!-- 六大保障 -->
+            <!-- <div class="holiday-ensure">
+                <div class="holiday-ensure-h">
+                    6大保障会员出行
+                </div>
+                <div class="holiday-ensure-cnt">
+                    <div>
+                        <image src='__TMPL__/public/assets/images/member_icon1.png' class="holiday-ensure-img"></image>
+                        <span class="holiday-ensure-txt1">订单赔差</span>
+                        <span class="holiday-ensure-txt2">双倍差价赔偿</span>
+                    </div>
+                    <div>
+                        <image src='__TMPL__/public/assets/images/member_icon2.png' class="holiday-ensure-img"></image>
+                        <span class="holiday-ensure-txt1">有房保障</span>
+                        <span class="holiday-ensure-txt2">无房赔首晚房费</span>
+                    </div>
+                    <div>
+                        <image src='__TMPL__/public/assets/images/member_icon3.png' class="holiday-ensure-img"></image>
+                        <span class="holiday-ensure-txt1">订单赔差</span>
+                        <span class="holiday-ensure-txt2">双倍差价赔偿</span>
+                    </div>
+                    <div>
+                        <image src='__TMPL__/public/assets/images/member_icon4.png' class="holiday-ensure-img"></image>
+                        <span class="holiday-ensure-txt1">订单赔差</span>
+                        <span class="holiday-ensure-txt2">双倍差价赔偿</span>
+                    </div>
+                    <div>
+                        <image src='__TMPL__/public/assets/images/member_icon5.png' class="holiday-ensure-img"></image>
+                        <span class="holiday-ensure-txt1">订单赔差</span>
+                        <span class="holiday-ensure-txt2">双倍差价赔偿</span>
+                    </div>
+                    <div>
+                        <image src='__TMPL__/public/assets/images/member_icon1.png' class="holiday-ensure-img"></image>
+                        <span class="holiday-ensure-txt1">订单赔差</span>
+                        <span class="holiday-ensure-txt2">双倍差价赔偿</span>
+                    </div>
+                    <div>
+                        <image src='__TMPL__/public/assets/images/member_icon2.png' class="holiday-ensure-img"></image>
+                        <span class="holiday-ensure-txt1">订单赔差</span>
+                        <span class="holiday-ensure-txt2">双倍差价赔偿</span>
+                    </div>
+                    <div>
+                        <image src='__TMPL__/public/assets/images/member_icon3.png' class="holiday-ensure-img"></image>
+                        <span class="holiday-ensure-txt1">订单赔差</span>
+                        <span class="holiday-ensure-txt2">双倍差价赔偿</span>
+                    </div>
+
+
+                </div>
+
+            </div> -->
+            <!-- 精彩评价 -->
+            <div class="holiday-ensure">
+                <div class="holiday-ensure-h">
+                    精彩评价
+                </div>
+                <!-- 轮播 -->
+                <div class="mui-slider holiday-slider" style="margin-top:1rem;">
+                    <div class="mui-slider-group mui-slider-loop">
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <div class="evaluate">
+                                <img src="__TMPL__/public/assets/images/profile_photo.png" alt="用户头像"
+                                    class="evaluate-img">
+                                <p class="evaluate-txt1">李大大</p>
+                                <p class="evaluate-txt2">公众号用户留言</p>
+                                <div class="evaluate-address">
+                                    <img src="__TMPL__/public/assets/images/local_icon.png" alt="地标"
+                                        class="evaluate-address-img">
+                                    <p class="evaluate-txt3">四线山房别墅 | 国内 · 赣州</p>
+                                </div>
+                                <div class="evaluate-words">
+                                    <img src="__TMPL__/public/assets/images/comma_icon.png" />
+                                    <p>
+                                        特别舒适的一次度假.
+                                        别墅面积巨大，视野特别的好，面对大海。很大的绿色草地院子，然后一直延伸到沙滩。管家服务也很贴心，有管家买菜做饭都很方便。也可以叫管家做饭，是收费的。整体体验不错。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mui-slider-item">
+                            <div class="evaluate">
+                                <img src="__TMPL__/public/assets/images/profile_photo.png" alt="用户头像"
+                                    class="evaluate-img">
+                                <p class="evaluate-txt1">李大大</p>
+                                <p class="evaluate-txt2">公众号用户留言</p>
+                                <div class="evaluate-address">
+                                    <img src="__TMPL__/public/assets/images/local_icon.png" alt="地标"
+                                        class="evaluate-address-img">
+                                    <p class="evaluate-txt3">四线山房别墅 | 国内 · 赣州</p>
+                                </div>
+                                <div class="evaluate-words">
+                                    <img src="__TMPL__/public/assets/images/comma_icon.png" />
+                                    <p>
+                                        特别舒适的一次度假.
+                                        别墅面积巨大，视野特别的好，面对大海。很大的绿色草地院子，然后一直延伸到沙滩。管家服务也很贴心，有管家买菜做饭都很方便。也可以叫管家做饭，是收费的。整体体验不错。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mui-slider-item">
+                            <div class="evaluate">
+                                <img src="__TMPL__/public/assets/images/profile_photo.png" alt="用户头像"
+                                    class="evaluate-img">
+                                <p class="evaluate-txt1">李大大</p>
+                                <p class="evaluate-txt2">公众号用户留言</p>
+                                <div class="evaluate-address">
+                                    <img src="__TMPL__/public/assets/images/local_icon.png" alt="地标"
+                                        class="evaluate-address-img">
+                                    <p class="evaluate-txt3">四线山房别墅 | 国内 · 赣州</p>
+                                </div>
+                                <div class="evaluate-words">
+                                    <img src="__TMPL__/public/assets/images/comma_icon.png" />
+                                    <p>
+                                        特别舒适的一次度假.
+                                        别墅面积巨大，视野特别的好，面对大海。很大的绿色草地院子，然后一直延伸到沙滩。管家服务也很贴心，有管家买菜做饭都很方便。也可以叫管家做饭，是收费的。整体体验不错。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mui-slider-item">
+                            <div class="evaluate">
+                                <img src="__TMPL__/public/assets/images/profile_photo.png" alt="用户头像"
+                                    class="evaluate-img">
+                                <p class="evaluate-txt1">李大大</p>
+                                <p class="evaluate-txt2">公众号用户留言</p>
+                                <div class="evaluate-address">
+                                    <img src="__TMPL__/public/assets/images/local_icon.png" alt="地标"
+                                        class="evaluate-address-img">
+                                    <p class="evaluate-txt3">四线山房别墅 | 国内 · 赣州</p>
+                                </div>
+                                <div class="evaluate-words">
+                                    <img src="__TMPL__/public/assets/images/comma_icon.png" />
+                                    <p>
+                                        特别舒适的一次度假.
+                                        别墅面积巨大，视野特别的好，面对大海。很大的绿色草地院子，然后一直延伸到沙滩。管家服务也很贴心，有管家买菜做饭都很方便。也可以叫管家做饭，是收费的。整体体验不错。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mui-slider-item">
+                            <div class="evaluate">
+                                <img src="__TMPL__/public/assets/images/profile_photo.png" alt="用户头像"
+                                    class="evaluate-img">
+                                <p class="evaluate-txt1">李大大</p>
+                                <p class="evaluate-txt2">公众号用户留言</p>
+                                <div class="evaluate-address">
+                                    <img src="__TMPL__/public/assets/images/local_icon.png" alt="地标"
+                                        class="evaluate-address-img">
+                                    <p class="evaluate-txt3">四线山房别墅 | 国内 · 赣州</p>
+                                </div>
+                                <div class="evaluate-words">
+                                    <img src="__TMPL__/public/assets/images/comma_icon.png" />
+                                    <p>
+                                        特别舒适的一次度假.
+                                        别墅面积巨大，视野特别的好，面对大海。很大的绿色草地院子，然后一直延伸到沙滩。管家服务也很贴心，有管家买菜做饭都很方便。也可以叫管家做饭，是收费的。整体体验不错。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <div class="evaluate">
+                                <img src="__TMPL__/public/assets/images/profile_photo.png" alt="用户头像"
+                                    class="evaluate-img">
+                                <p class="evaluate-txt1">李大大</p>
+                                <p class="evaluate-txt2">公众号用户留言</p>
+                                <div class="evaluate-address">
+                                    <img src="__TMPL__/public/assets/images/local_icon.png" alt="地标"
+                                        class="evaluate-address-img">
+                                    <p class="evaluate-txt3">四线山房别墅 | 国内 · 赣州</p>
+                                </div>
+                                <div class="evaluate-words">
+                                    <img src="__TMPL__/public/assets/images/comma_icon.png" />
+                                    <p>
+                                        特别舒适的一次度假.
+                                        别墅面积巨大，视野特别的好，面对大海。很大的绿色草地院子，然后一直延伸到沙滩。管家服务也很贴心，有管家买菜做饭都很方便。也可以叫管家做饭，是收费的。整体体验不错。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mui-slider-indicator">
+                        <div class="mui-indicator mui-active"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 俱乐部地址 -->
+            <div class="partner club-width">
+                <div class="partner-logo">
+                    <div class="partner-logo-cnt">
+                        <img src="__TMPL__/public/assets/images/LOGO.png" class="partner-logo-cnt-img" />
+                        <span class="partner-logo-cnt-txt">虔心荟度假俱乐部</span>
+                    </div>
+                    <div class="partner-address">
+                        地址：中国·广州 珠江新城合景国际金融广场
+                    </div>
+                    <div class="partner-phone">
+                        管家热线：<a href="tel:400-990-8830" style="color:#E6B854">400-990-8830</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- 主题 -->
+        <div class="theme" onclick="javascript:window.location.href='/scenery'">
+            <div class="theme-area-cnt-name">
+                <image src='__TMPL__/public/assets/images/theme2.png' class="theme-area-cnt-img"></image>
+                <div class="theme-area-cnt-txt">
+                    <span class="theme-area-cnt-txt1"></span>
+                    <div class="theme-area-cnt-txt2">
+                        <span>海岛线</span>
+                        <span class="theme-area-cnt-span">Island line</span>
+                    </div>
+                    <span class="theme-area-cnt-txt3">118个房源</span>
+                </div>
+            </div>
+            <div class="theme-area-cnt-name">
+                <image src='__TMPL__/public/assets/images/theme3.png' class="theme-area-cnt-img"></image>
+                <div class="theme-area-cnt-txt">
+                    <span class="theme-area-cnt-txt1"></span>
+                    <div class="theme-area-cnt-txt2">
+                        <span>家庭</span>
+                        <span class="theme-area-cnt-span">Family</span>
+                    </div>
+                    <span class="theme-area-cnt-txt3">118个房源</span>
+                </div>
+            </div>
+
+            <div class="theme-area-cnt-name">
+                <image src='__TMPL__/public/assets/images/theme1.png' class="theme-area-cnt-img"></image>
+                <div class="theme-area-cnt-txt">
+                    <span class="theme-area-cnt-txt1"></span>
+                    <div class="theme-area-cnt-txt2">
+                        <span>生态观光</span>
+                        <span class="theme-area-cnt-span">Ecological tourism</span>
+                    </div>
+                    <span class="theme-area-cnt-txt3">118个房源</span>
+                </div>
+            </div>
+
+            <div class="theme-area-cnt-name">
+                <image src='__TMPL__/public/assets/images/theme4.png' class="theme-area-cnt-img"></image>
+                <div class="theme-area-cnt-txt">
+                    <span class="theme-area-cnt-txt1"></span>
+                    <div class="theme-area-cnt-txt2">
+                        <span>温泉</span>
+                        <span class="theme-area-cnt-span">Hot spring</span>
+                    </div>
+                    <span class="theme-area-cnt-txt3">118个房源</span>
+                </div>
+            </div>
+            <!-- 俱乐部地址 -->
+            <div class="partner club-width">
+                <div class="partner-logo">
+                    <div class="partner-logo-cnt">
+                        <img src="__TMPL__/public/assets/images/LOGO.png" class="partner-logo-cnt-img" />
+                        <span class="partner-logo-cnt-txt">虔心荟度假俱乐部</span>
+                    </div>
+                    <div class="partner-address">
+                        地址：中国·广州 珠江新城合景国际金融广场
+                    </div>
+                    <div class="partner-phone">
+                        管家热线：<a href="tel:400-990-8830" style="color:#E6B854">400-990-8830</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

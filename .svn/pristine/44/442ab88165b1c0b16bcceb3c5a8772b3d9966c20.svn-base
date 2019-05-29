@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>酒店详情</title>
+    <meta name="description" content="酒店详情-虔心荟" />
+    <meta name="Keywords" content="酒店详情-虔心荟" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="__TMPL__/public/assets/css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/person.css?4-7" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/youxian.css?4-4" />
+    <script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+    <script src="__TMPL__/public/assets/js/holiday.js?4-8-1"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .mui-bar {
+        box-shadow: 0 0 0px #fff;
+    }
+    .holiday-body,
+    body {
+        background: #fff;
+    }
+</style>
+
+<body>
+    <script src="__TMPL__/public/assets/js/mui.min.js"></script>
+    <script type="text/javascript">
+        mui.init()
+    </script>
+    <div class="mui-content holiday-body">
+        <!-- 轮播 -->
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img
+                            src="__TMPL__/public/assets/images/detail_four_5.jpg" /></a></div>
+                <div class="mui-slider-item"><a href="#"><img
+                            src="__TMPL__/public/assets/images/detail_four_1.jpg" /></a>
+                </div>
+                <div class="mui-slider-item"><a href="#"><img
+                            src="__TMPL__/public/assets/images/detail_four_2.jpg" /></a>
+                </div>
+                <div class="mui-slider-item"><a href="#"><img
+                            src="__TMPL__/public/assets/images/detail_four_3.jpg" /></a>
+                </div>
+                <div class="mui-slider-item"><a href="#"><img
+                            src="__TMPL__/public/assets/images/detail_four_4.jpg" /></a>
+                </div>
+                <div class="mui-slider-item"><a href="#"><img
+                            src="__TMPL__/public/assets/images/detail_four_5.jpg" /></a>
+                </div>
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img
+                            src="__TMPL__/public/assets/images/detail_four_1.jpg" /></a></div>
+            </div>
+            <div class="mui-slider-indicator">
+                <div class="mui-indicator mui-active"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+            </div>
+        </div>
+        <div class="holiday-detail-title">
+            <div class="scenery-area-title">
+                爱丽丝公寓
+            </div>
+            <div class="evaluate-address" style="margin-top:0;">
+                <img src="__TMPL__/public/assets/images/map_icon.png" alt="地标" class="evaluate-address-img">
+                <p class="evaluate-txt3" style="color:#999;">广东省佛山市高明美的·鹭湖森林度假区（国家5A级旅游景区）内</p>
+            </div>
+        </div>
+        <!-- banner -->
+        <div class="holiday-banner" onclick="javascript:window.location.href='/free'">
+            <image src='__TMPL__/public/assets/images/hotel_banner.png' class="holiday-banner-img"></image>
+        </div>
+        <!-- 关于酒店 -->
+        <!--概况-->
+        <div class="nav_middle">
+            <div id="slider" class="mui-slider hotel-nav">
+                <div id="sliderSegmentedControl"
+                    class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+
+                    <div case="key" class="mui-control-item key_btn mui-active">
+                        房型
+                    </div>
+                    <div case="gai" class="mui-control-item gai_btn">
+                        酒店概览
+                    </div>
+                    <div case="case" class="mui-control-item case_btn">
+                        酒店评价
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--关键信息-->
+        <div class="key" id="key" style="width:92%;margin: 0 auto 1.5rem">
+            <div class="hotel">
+                <div class="room">
+                    <div class="room-bed">
+                        <img src="__TMPL__/public/assets/images/detail_four_bed4.jpg" class="room-img" />
+                    </div>
+                    <div class="room-cnt">
+                        <div class="room-title">园景房</div>
+                        <div class="room-detail">
+                            <div class="room-area">
+                                <span class="room-area-txt1">面积：</span>
+                                <span class="room-area-txt">48㎡</span>
+                            </div>
+                            <div class="room-area">
+                                <span class="room-area-txt1">床型：</span>
+                                <span class="room-area-txt">大床/双床</span>
+                            </div>
+                        </div>
+                        <div class="room-remark">备注：最多2人入住，含双早+带阳台</div>
+                    </div>
+                </div>
+                <div class="scenery-area-price">
+                    <div class="scenery-area-comment">
+                        <div class="scenery-area-price-btn" onclick="javascript:window.location.href='/free'">
+                            参与计划即可每年免费入住<span class="scenery-day">1</span>晚</div>
+                        <div class="scenery-area-price-sanjiao"></div>
+                    </div>
+                    <div>
+                        <p class="scenery-area-price-num">￥788.00 </p>
+                        <p class="scenery-area-price-txt">参考价</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="room">
+                    <div class="room-bed">
+                        <img src="__TMPL__/public/assets/images/detail_four_bed1.jpg" class="room-img" />
+                    </div>
+                    <div class="room-cnt">
+                        <div class="room-title">湖景房</div>
+                        <div class="room-detail">
+                            <div class="room-area">
+                                <span class="room-area-txt1">面积：</span>
+                                <span class="room-area-txt">48㎡</span>
+                            </div>
+                            <div class="room-area">
+                                <span class="room-area-txt1">床型：</span>
+                                <span class="room-area-txt">大床/双床</span>
+                            </div>
+                        </div>
+                        <div class="room-remark">备注：最多2人入住，含双早+私家泡池</div>
+                    </div>
+                </div>
+                <div class="scenery-area-price">
+                    <div class="scenery-area-comment">
+                        <div class="scenery-area-price-btn" onclick="javascript:window.location.href='/free'">
+                            参与计划即可每年免费入住<span class="scenery-day">1</span>晚</div>
+                        <div class="scenery-area-price-sanjiao"></div>
+                    </div>
+                    <div>
+                        <p class="scenery-area-price-num">￥888.00 </p>
+                        <p class="scenery-area-price-txt">参考价</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="room">
+                    <div class="room-bed">
+                        <img src="__TMPL__/public/assets/images/detail_four_bed2.jpg" class="room-img" />
+                    </div>
+                    <div class="room-cnt">
+                        <div class="room-title">湖景套房（二房）</div>
+                        <div class="room-detail">
+                            <div class="room-area">
+                                <span class="room-area-txt1">面积：</span>
+                                <span class="room-area-txt">60㎡</span>
+                            </div>
+                            <div class="room-area">
+                                <span class="room-area-txt1">床型：</span>
+                                <span class="room-area-txt">大床</span>
+                            </div>
+                        </div>
+                        <div class="room-remark">备注：最多4人入住，含双早+带阳台+面对白鹭湖生态保护区</div>
+                    </div>
+                </div>
+                <div class="scenery-area-price">
+                    <div class="scenery-area-comment">
+                        <div class="scenery-area-price-btn" onclick="javascript:window.location.href='/free'">
+                            参与计划即可每年免费入住<span class="scenery-day">1</span>晚</div>
+                        <div class="scenery-area-price-sanjiao"></div>
+                    </div>
+                    <div>
+                        <p class="scenery-area-price-num">￥1238.00 </p>
+                        <p class="scenery-area-price-txt">参考价</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hotel">
+                <div class="room">
+                    <div class="room-bed">
+                        <img src="__TMPL__/public/assets/images/detail_four_bed3.jpg" class="room-img" />
+                    </div>
+                    <div class="room-cnt">
+                        <div class="room-title">山景房</div>
+                        <div class="room-detail">
+                            <div class="room-area">
+                                <span class="room-area-txt1">面积：</span>
+                                <span class="room-area-txt">48㎡</span>
+                            </div>
+                            <div class="room-area">
+                                <span class="room-area-txt1">床型：</span>
+                                <span class="room-area-txt">大床/双床</span>
+                            </div>
+                        </div>
+                        <div class="room-remark">备注：最多2人入住，含双早+带阳台</div>
+                    </div>
+                </div>
+                <div class="scenery-area-price">
+                    <div class="scenery-area-comment">
+                        <div class="scenery-area-price-btn" onclick="javascript:window.location.href='/free'">
+                            参与计划即可每年免费入住<span class="scenery-day">1</span>晚</div>
+                        <div class="scenery-area-price-sanjiao"></div>
+                    </div>
+                    <div>
+                        <p class="scenery-area-price-num">￥1238.00 </p>
+                        <p class="scenery-area-price-txt">参考价</p>
+                    </div>
+                </div>
+            </div>
+            <div class="use-tips">
+                参考价说明：因度假地订房火爆、节假日等因素。订房价格有所波动。最终以专属管家为您订房的信息为准。
+            </div>
+        </div>
+
+        <!-- banner -->
+        <div class="holiday-banner">
+            <image src='__TMPL__/public/assets/images/service_banner.png' class="holiday-banner-img"></image>
+        </div>
+        <!--景区内容-->
+        <div class="detail_scene" id="gai" style="width: 92%;margin:0 auto;">
+            <div class="hotel-score">
+                酒店简介
+            </div>
+            <p class="detail_scene_p">
+                安纳希童话酒店，位于佛山高明美的·鹭湖森林度假区（国家5A级旅游景区）内，以法国安纳希小镇为建筑蓝本，欧陆人文风情的建筑风格完美融入得天独厚的鹭林湖山资源之中。
+            </p>
+            <img src="__TMPL__/public/assets/images/detail_four_2.jpg" />
+
+
+            <p class="detail_scene_p">
+                街角的咖啡店、湖景餐厅、各类特色美食、手信店、精品超市遍布其中，一座欧洲小镇就此呈现。安纳希小镇内拥有一大片温泉区，分为船屋温泉、无边温泉、草屋温泉三大主题。温泉区有清水池，清澈见底，水气升腾；加料池，有加玫瑰花的、人参的、当归的等等；还有波波池、鱼疗池、矿盐浴等。
+            </p>
+            <img src="__TMPL__/public/assets/images/detail_four_3.jpg" />
+            <img src="__TMPL__/public/assets/images/detail_four_4.jpg" />
+            <!--内容-->
+        </div>
+        <!--返利方案-->
+        <div class="key" id="case" style="padding-bottom: 7rem;width: 92%;margin:0 auto;">
+            <div class="hotel-score">
+                综合热度
+            </div>
+            <div>
+                <img src="__TMPL__/public/assets/images/five_star.png" class="scenery-area-star" />
+                <span class="five_star">5.0</span>
+            </div>
+            <nav class="mui-bar mui-bar-tab">
+                <div class="detail_nav_block">
+                    <div class="detail_nav_block_layout">
+                        <div class="detail_nav_block-bottom" onclick="javascript:window.location.href='/index'">
+                            <img src="__TMPL__/public/assets/images/family_icon.png" />
+                            <span>去首页</span>
+                        </div>
+
+                        <div class="talk detail_nav_block-bottom">
+                            <img src="__TMPL__/public/assets/images/steward_icon.png" />
+                            <span>咨询管家</span>
+                        </div>
+                        <!-- <div class="online detail_nav_block-bottom">
+                                            <img src="__TMPL__/public/assets/images/zixun_icon.png" />
+                                            <span>在线客服</span>
+                                        </div> -->
+                    </div>
+
+                    <div class="btn_block detail_nav_block-bottom" style="width:40%;">
+                        <button class="to_plan"> 提交订房需求</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--弹窗  -->
+        <div class="mask"></div>
+        <div class="booking-pop">
+            <div class="booking-layout">
+                <div class="booking-pop-img">
+                    <img src="__TMPL__/public/assets/images/booking_process.png" />
+                </div>
+                <div class="booking-pop-tel">400-990-8830</div>
+                <div class="booking-pop-hotLine">专家管家订房热线</div>
+                <div class="booking-pop-rightNow"><a href="tel:400-990-8830" style="color:#fff;">立即拨打</a></div>
+                <div class="booking-pop-wxUnm">
+                    <p>或添加管家微信订房：</p>
+                    <p> WTYX3399（点击复制）</p>
+                </div>
+                <div class="booking-pop-cansel">取消</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.booking-pop').hide();
+            $('.talk,.online,.btn_block').click(function () {
+                $('.mask').show();
+                $('.booking-pop').show();
+            });
+            $('.booking-pop-cansel').click(function () {
+                $('.mask').hide();
+                $('.booking-pop').hide();
+            });
+                var navH = $("#slider").offset().top;
+                $(document).scroll(function () {
+                    var scroH = $(document).scrollTop();
+                    var oKey = $('#key').offset().top - 200;
+                    var oCase = $('#case').offset().top - 200;
+                    var oGai = $('#gai').offset().top - 200;
+                    if (scroH >= navH) {
+                        $("#slider").css({
+                            "position": "fixed",
+                            "top": 0,
+                            "background": "#fff"
+                        });
+                    } else if (scroH < navH) {
+                        $("#slider").css({
+                            "position": "static"
+                        });
+                    }
+                    if (scroH >= oGai && scroH > oKey) {
+                    $(".key_btn").removeClass("mui-active");
+                    $('.case_btn').removeClass('mui-active');
+                    $('.gai_btn').addClass('mui-active');
+                }
+                else if (scroH >= oKey && scroH < oGai) {
+                    $(".key_btn").addClass("mui-active");
+                    $('.case_btn').removeClass('mui-active');
+                    $('.gai_btn').removeClass('mui-active');
+                }
+                else if (scroH >= oCase) {
+                    $(".key_btn").removeClass("mui-active");
+                    $('.case_btn').addClass('mui-active');
+                    $('.gai_btn').removeClass('mui-active');
+                }
+                })
+            $('.mui-segmented-control-inverted>div').click(function () {
+                $('html, body').animate({
+                    scrollTop: $('#' + $(this).attr('case')).offset().top - 80
+                }, 1000);
+            })
+
+        });
+    </script>
+</body>
+
+</html>

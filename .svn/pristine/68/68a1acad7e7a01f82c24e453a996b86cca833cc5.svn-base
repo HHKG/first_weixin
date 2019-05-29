@@ -1,0 +1,16 @@
+$('.document').ready(function(){
+   $('.theme').hide();
+    $('.title').eq(0).click(function(){
+      $('.title').eq(1).removeClass('holiday-active');
+       $(this).addClass('holiday-active');
+       $('.holiday').show();
+       $('.theme').hide();
+    });
+    $('.title').eq(1).click(function(){
+      $('.title').eq(0).removeClass('holiday-active');
+       $(this).addClass('holiday-active');
+       $('.holiday').hide();
+       $('.theme').show();
+    });
+
+});

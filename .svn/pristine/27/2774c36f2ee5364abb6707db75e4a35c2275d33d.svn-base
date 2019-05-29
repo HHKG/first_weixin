@@ -1,0 +1,165 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:49:"themes/admin_simpleboot/admin\bill\bill_list.html";i:1552895207;s:65:"D:\code\qxh\qxh\public\themes\admin_simpleboot\public\header.html";i:1535858920;}*/ ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- HTML5 shim for IE8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+
+    <link href="/themes/admin_simpleboot/public/assets/themes/<?php echo cmf_get_admin_style(); ?>/bootstrap.min.css" rel="stylesheet">
+    <link href="/themes/admin_simpleboot/public/assets/simpleboot3/css/simplebootadmin.css" rel="stylesheet">
+    <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        form .input-order {
+            margin-bottom: 0px;
+            padding: 0 2px;
+            width: 42px;
+            font-size: 12px;
+        }
+
+        form .input-order:focus {
+            outline: none;
+        }
+
+        .table-actions {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 0px;
+        }
+
+        .table-list {
+            margin-bottom: 0px;
+        }
+
+        .form-required {
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        //全局变量
+        var GV = {
+            ROOT: "/",
+            WEB_ROOT: "/",
+            JS_ROOT: "static/js/",
+            APP: '<?php echo \think\Request::instance()->module(); ?>'/*当前应用名*/
+        };
+    </script>
+    <script src="/themes/admin_simpleboot/public/assets/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/js/wind.js"></script>
+    <script src="/themes/admin_simpleboot/public/assets/js/bootstrap.min.js"></script>
+    <script>
+        Wind.css('artDialog');
+        Wind.css('layer');
+        $(function () {
+            $("[data-toggle='tooltip']").tooltip({
+                container:'body',
+                html:true,
+            });
+            $("li.dropdown").hover(function () {
+                $(this).addClass("open");
+            }, function () {
+                $(this).removeClass("open");
+            });
+        });
+    </script>
+    <?php if(APP_DEBUG): ?>
+        <style>
+            #think_page_trace_open {
+                z-index: 9999;
+            }
+        </style>
+    <?php endif; ?>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <!--<ul class="nav nav-tabs">-->
+        <!--<li class="active"><a href="javascript:;">账单列表</a></li>-->
+        <!--<li><a href="<?php echo url('Member/index'); ?>">会员列表</a></li>-->
+    <!--</ul>-->
+    <form class="well form-inline margin-top-20" method="post" action="<?php echo url('bill/bill_list'); ?>">
+        订单号:
+        <input type="text" class="form-control" name="ordersn" style="width: 200px;"
+               value="<?php echo (isset($ordersn) && ($ordersn !== '')?$ordersn:''); ?>" placeholder="请输入订单编号">
+        用户编号:
+        <input type="text" class="form-control" name="userid" style="width: 200px;"
+               value="<?php echo (isset($userid) && ($userid !== '')?$userid:''); ?>" placeholder="请输入订单号">
+        账单月:
+        <input type="text" class="form-control js-bootstrap-date" name="bill_time"
+               value="<?php echo (isset($bill_time) && ($bill_time !== '')?$bill_time:''); ?>"
+               style="width: 140px;" autocomplete="off">
+        结算月:
+        <input type="text" class="form-control js-bootstrap-date" name="set_time"
+               value="<?php echo (isset($set_time) && ($set_time !== '')?$set_time:''); ?>"
+               style="width: 140px;" autocomplete="off"> &nbsp; &nbsp;
+
+        计划名称:
+        <input type="text" class="form-control" name="project" style="width: 200px;"
+               value="<?php echo (isset($project) && ($project !== '')?$project:''); ?>" placeholder="请输入项目名称">
+        方案的名称:
+        <input type="text" class="form-control" name="plan" style="width: 200px;"
+               value="<?php echo (isset($plan) && ($plan !== '')?$plan:''); ?>" placeholder="请输入方案的名称">
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <input type="hidden"  value="<?php echo (isset($plancode) && ($plancode !== '')?$plancode:''); ?>"/>
+        <a class="btn btn-danger" href="<?php echo url('bill/bill_list'); ?>">全部账单</a>
+    </form>
+    <form class="js-ajax-form" action="" method="post">
+        <table class="table table-hover table-bordered table-list">
+            <thead>
+            <tr>
+                <th >创建时间</th>
+                <th >状态</th>
+                <th >订单编号</th>
+                <th>方案总金额</th>
+                <th >计划名称</th>
+                <th >方案的名称</th>
+                <th >预估账单金额</th>
+                <th >账单比例</th>
+                <th >所属账单时间</th>
+                <th >账单总期数</th>
+                <th >当前期数</th>
+                <th >结算时间</th>
+            </tr>
+            </thead>
+            <?php if(is_array($bills) || $bills instanceof \think\Collection || $bills instanceof \think\Paginator): if( count($bills)==0 ) : echo "" ;else: foreach($bills as $key=>$vo): ?>
+                <tr>
+                    <td><b><?php echo $vo['E_CreateDate']; ?></b></td>
+                    <td><b><?php echo $vo['E_State']==1?'未结算':'已结算'; ?></b></td>
+                    <td><?php echo $vo['E_OrderSn']; ?></td>
+                    <td><?php echo $vo['E_PlanPrice']; ?></td>
+                    <td><?php echo $vo['E_ProjectName']; ?></td>
+                    <td><?php echo $vo['E_PlanName']; ?></td>
+                    <td><?php echo $vo['E_BillPrice']; ?></td>
+                    <td><?php echo $vo['E_Scale']; ?></td>
+                    <td><?php echo $vo['E_BillDate']; ?>-<?php echo $vo['E_BillDay']; ?></td>
+                    <td><?php echo $vo['E_SumPeriods']; ?></td>
+                    <td><?php echo $vo['E_Periids']; ?></td>
+                    <td><?php echo $vo['E_SettlementDate']; ?>-<?php echo $vo['E_SettlementDay']; ?></td>
+                </tr>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+        </table>
+
+        <ul class="pagination"><?php echo (isset($page) && ($page !== '')?$page:''); ?></ul>
+    </form>
+</div>
+<script src="/static/js/admin.js"></script>
+<script>
+
+    function reloadPage(win) {
+        win.location.reload();
+    }
+
+
+</script>
+</body>
+</html>

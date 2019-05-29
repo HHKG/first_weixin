@@ -1,0 +1,208 @@
+<include file="public@header"/>
+<style type="text/css">
+    .pic-list li {
+        margin-bottom: 5px;
+
+    }
+
+    .col-md-9 {
+        width: 70%;
+    }
+
+    .col-md-3 {
+        width: 30%;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="{:url('Project/index')}">项目列表</a></li>
+        <li class="active"><a >修改方案</a></li>
+    </ul>
+    <form action="{:url('Project/edit_plan_post')}" method="post" class="form-horizontal js-ajax-form margin-top-20">
+        <div class="row">
+            <div class="col-md-9">
+                <table class="table table-bordered">
+                    <tr>
+                        <th width="100">方案名称<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" name="E_Title" type="text" style=";" required value="<?php echo $plan['E_Title'];?>"
+                                   placeholder="请填入方案名称"/>
+                            <input type="hidden" name="E_Code" value="<?php echo $plan['E_Code'];?>">
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>方案类型<span class="form-required">*</span></th>
+                        <td>
+                            <input type="radio" name="E_Try" value="0" <?php echo $plan['E_Try']==0? 'checked':'';?>>真实方案
+                            <input type="radio" name="E_Try" value="1" <?php echo $plan['E_Try']==1? 'checked':'';?>>模拟方案
+                            <input type="radio" name="E_Try" value="2" <?php echo $plan['E_Try']==2? 'checked':'';?>>体验方案
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>是否默认方案<span class="form-required">*</span></th>
+                        <td>
+                            <select name="E_Isdefault">
+                                <option value="1" <?php echo $plan['E_Isdefault']==1? 'selected':'';?>>是</option>
+                                <option value="2" <?php echo $plan['E_Isdefault']==2? 'selected':'';?>>否</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>状态<span class="form-required">*</span></th>
+                        <td>
+                            <select name="E_Status">
+
+                                <option value="1" <?php echo $plan['E_Status']==1? 'selected':'';?>>可购买</option>
+                                <option value="2" <?php echo $plan['E_Status']==2? 'selected':'';?>>不可购买</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>周期<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="number" required name="E_Cycle" value="<?php echo $plan['E_Cycle'];?>"
+                                   placeholder="周期">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>返券周期<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="number" required name="E_CouponCycle" value="<?php echo $plan['E_CouponCycle'];?>"
+                                   placeholder="返券周期（月份）"><span>单位是月</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>账单周期<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="number" required name="E_BillCycle" value="<?php echo $plan['E_BillCycle'];?>"
+                                    placeholder="账单周期"><span>单位是月</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>结算周期<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="number" required name="E_SettlementCycle" value="<?php echo $plan['E_SettlementCycle'];?>"
+                                   placeholder="结算周期"><span>单位是月</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>方案价值<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_Value" value="<?php echo $plan['E_Value'];?>"
+                                   onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="方案价值">
+                            <span>单位是分</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>参与费<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="number" required name="E_Money" value="<?php echo $plan['E_Money'];?>"
+                                  placeholder="参与费">   <span>单位是分</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>每人可参与份数<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="number" required name="E_CanBuy" value="<?php echo $plan['E_CanBuy'];?>"
+                                   placeholder="可购买份数">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>参与总人数<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="number" required name="E_Total" value="<?php echo $plan['E_Total'];?>"
+                                    placeholder="入籍总人数">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>参与初始人数<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="number" required name="E_AreadyWeights"
+                                   value="<?php echo $plan['E_AreadyWeights'];?>"     placeholder="入籍初始人数">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>返利比例（每月）<span class="form-required">*</span></th>
+                        <td>
+                            <!--<input class="form-control" type="text" required name="E_Scale"-->
+                            <!--onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="返利比例">-->
+                            <a class="btn btn-warning" href="javascript:parent.openIframeDialog('<?php echo url('Project/scale',array('plan'=> $plan['E_Code'],'project'=>$project_code,'update'=>1)); ?>','修改返现比例',{width:'600px',height:'800px'})">修改返现比例</a>
+                            <span>单位是‰</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>返利比例（每年预估）<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="number" required name="E_Scale" value="<?php echo $plan['E_Scale'];?>"
+                                 placeholder="返券比例">
+                            <span>单位是%</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>返券比例<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="number" required name="E_Coupon"  value="<?php echo $plan['E_Coupon'];?>"
+                                   placeholder="返券比例">
+                            <span>单位是%</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>返利权益 <span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_ScaleShow"
+                               value="<?php echo $plan['E_ScaleShow'];?>"    placeholder="返利权益">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>其他权益<span class="form-required">*</span></th>
+                        <td>
+                            <textarea name="E_Introduction" id="" cols="175" rows="10"><?php echo $plan['E_Introduction'];?></textarea>
+                            <!--<script type="text/plain" id="content"   name="E_Introduction"><?php echo $plan['E_Introduction'];?></script>-->
+                        </td>
+                    </tr>
+                </table>
+                <hook name="portal_admin_article_edit_view_main"/>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+                        <a class="btn btn-default" href="{:url('Project/index')}">{:lang('BACK')}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="__STATIC__/js/admin.js"></script>
+<script type="text/javascript">
+    //编辑器路径定义
+    var editorURL = GV.WEB_ROOT;
+</script>
+<script type="text/javascript" src="__STATIC__/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__STATIC__/js/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript">
+
+
+    $(function () {
+
+        editorcontent = new baidu.editor.ui.Editor();
+        editorcontent.render('content');
+        try {
+            editorcontent.sync();
+        } catch (err) {
+        }
+
+        $('.btn-cancel-thumbnail').click(function () {
+            $('#thumbnail-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+            $('#thumbnail').val('');
+        });
+
+    });
+</script>
+</body>
+</html>

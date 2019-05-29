@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="<?php echo $keywords;?>">
+    <meta name="description" content="<?php echo $description;?>">
+    <title>填写资料-虔心荟</title>
+    <taglib name="app\portal\taglib\Portal" />
+    <include file="public@function" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link href="__TMPL__/public/assets/css/mui.min.css?1-25-1" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/person.css?1-25-1" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/data_once.css?1-25-1" rel="stylesheet" />
+    <link href="__TMPL__/public/assets/css/youxian.css?1-25-1" rel="stylesheet" />
+    <link href="__TMPL__/public/assets/css/youxian_pay.css?1-25-1" rel="stylesheet" />
+    <script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+    <script src="__TMPL__/public/assets/js/jquery.select.js"></script>
+    <script src="__TMPL__/public/assets/js/mui.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?0b4f18f629a5a8177aab940c3f165a6c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<style type="text/css">
+    .mui-checkbox input[type="checkbox"],
+    .mui-radio input[type="radio"] {
+        left: 0px !important;
+        top: -4px !important;
+    }
+</style>
+<body>
+<div class="mui-content">
+    <div class="register_progress" style="height:6rem;">
+        <div class="progress_line_block">
+            <div class="progress_line_one"></div>
+            <div class="progress_line"></div>
+        </div>
+        <div class="progress_block">
+            <div>
+                <img src="__TMPL__/public/assets/images/small_check_icon.png" width="45%" />
+                <p>填写手机号</p>
+            </div>
+            <div>
+                <img src="__TMPL__/public/assets/images/small_check_icon.png" width="45%" />
+                <p>填写资料</p>
+            </div>
+            <div>
+                <img src="__TMPL__/public/assets/images/small_check_gray_icon.png" width="45%" />
+                <p>注册成功</p>
+            </div>
+        </div>
+    </div>
+    <!--1-->
+    <div class="questions">
+        <?php foreach($list as $k=>$v):?>
+        <div class="block_height question" question="<?php echo $v['E_Title'];?>">
+            <div class="block_one ">
+                <p>
+                    <?php echo $k+1 .".";?><span class="">
+                            <?php echo $v['E_Title'];?></span></p>
+            </div>
+            <div class="block_select ">
+                <select class="select" name="state">
+                    <?php foreach(unserialize($v['E_Answer']) as $key=>$vo):?>
+                    <option value="<?php echo $vo;?>">
+                        <?php echo $vo;?>
+                    </option>
+                    <?php endforeach;?>
+                </select>
+                <div class="allow_dowm">
+                    <img src="__TMPL__/public/assets/images/drop_down_icon.png" style="width:1.5rem;height:0.8rem;" />
+                </div>
+            </div>
+        </div>
+        <?php endforeach?>
+    </div>
+    <div>
+        <div class="order_protocol">
+            <div class="mui-input-row mui-checkbox mui-left order_check" style="background:#fff;">
+                <span class="order_agree">我已阅读并且同意</span>
+                <input name="checkbox" id="input" value="register" type="checkbox">
+            </div>
+            <div id="agree" class="sign_protocol">《虔心荟会员注册与服务协议》</div>
+        </div>
+    </div>
+    <div class="login_btn">
+        <button type="button" class="mui-btn-block" id="btn" onclick=" return register()">确认</button>
+    </div>
+    <!--弹窗-->
+    <div class="protocol">
+        <div class="protocol_content">
+            <!-- 协议内容 -->
+        </div>
+        <div class="protocol_btn">
+            <button id="btn" onclick="Toorder">关闭</button>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(function () {
+        $('select.select').select();
+    });
+    var btnH=$('#btn').outerHeight();
+    var windowheight=document.documentElement.clientHeight-btnH-20;
+    $('.protocol_content').css('height', windowheight);
+    $('#agree').click(function () {
+        $('.protocol').show();
+        $('.login_btn').hide();
+        $.ajax({
+            url: "<?php echo config('interfaceurl')?>/getarticle",
+            type: 'POST',
+            dataType: 'jsonp',
+            data: {
+                article: "register",
+            },
+            success: function (data) {
+                console.log(data);
+                if (data.code == 1) {
+                    $('.artice_name').html(data.article.post_title);
+                    $('.protocol_content').html(data.article.post_content);
+                }
+
+            }
+        })
+    });
+    $('.protocol_btn').click(function () {
+        $('.protocol').hide();
+        $('.login_btn').show();
+    });
+    $('#btn').css('opacity', '0.5');
+    $('#input').click(function () {
+        var btn = true;
+        agree = $("input[name='checkbox']").is(':checked');
+        if (agree == true) {
+            $('#btn').css('opacity', '1');
+            btn = false;
+        } else {
+            $('#btn').css('opacity', '0.5');
+        }
+    });
+    // $('.sign_protocol').click(function () {
+    //     window.location.href="/article?&openid=<?php echo $openid;?>&backurl=<?php echo urlencode($backurl);?>&mobile=<?php echo $mobile;?>&mcode=<?php echo $mcode;?>&type=register";
+    // })
+</script>
+
+
+<script>
+    var item = "<?php echo $item;?>"
+    function register() {
+        // mui.toast(11);
+        var agree = $("input[name='checkbox']").is(':checked');
+        agree = agree == true ? 1: 0;
+        var question = '';
+        $(".questions .question").each(function (k, v) {
+            // $(this).length;
+            // var question=question+i;
+            var k = $(this).attr('question');
+            // var v=$(this).children('.block_select').children('.select').children('select_text').html();
+            var v = $(this).children('.block_select').children('.select').eq(1).find(".select_text").html();
+            answer = k + ':' + v;
+            question += answer + ",";
+            // console.log(question);
+        })
+
+
+        // console.log(agree);return;
+        question = question.substring(0, question.length - 1);
+
+        var atricle = $("input[name='checkbox']").val();
+        $.ajax({
+            url: "<?php echo config('interfaceurl')?>/information",
+            type: 'POST',
+            dataType: 'jsonp',
+            data: {
+                code: "<?php echo $mcode;?>",
+                mobile: "<?php echo $mobile;?>",
+                openid: "<?php echo $openid?>",
+                type: "<?php echo $type?>",
+                agree: agree,
+                question: question,
+                atricle: atricle,
+            },
+            // xhrFields:{withCredentials:true},
+            success: function (data) {
+                // console.log(data);return;
+                if (data.code == 1) {
+                    // mui.toast(data.msg);
+
+                    window.location.href = "/reg_success?back=<?php echo urlencode($back);?>&token=" + data.token + "&count=" + data.count;
+                    return true;
+
+
+                } else {
+                    // mui.toast(data.msg);
+                    return false;
+                }
+
+            }
+        })
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,449 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="keywords" content="<?php echo $keywords;?>">
+    <meta name="description" content="<?php echo $description;?>">
+    <title>分享计划详情-虔心荟</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <include file="public@header" />
+    <!-- <link href="favicon.ico" rel="shortcut icon"> -->
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/app.css?3-27" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/person.css?5-17-1" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/youxian.css?3-7" />
+    <script src="__TMPL__/public/assets/js/clipboard.min.js"></script>
+
+</head>
+<style>
+    .mui-bar {
+        box-shadow: 0 0 0px rgba(0, 0, 0, .85);
+    }
+</style>
+
+<body>
+    <script type="text/javascript">
+        mui.init()
+    </script>
+    <include file="public@pattern" />
+    <div class="mui-content detail_page">
+        <div class="img_header">
+            <img id="img_header" src="__TMPL__/public/assets/images/logo_banner.jpg" width="100%">
+            <div class="project-header-invite" onclick="javascript:window.location.href='/coupons'">
+                <img src="__TMPL__/public/assets/images/small_ticket.png" />
+                <span>邀请好友领<span style="color:#FFD644;">500</span>住房券</span>
+            </div>
+        </div>
+        <!--分享计划-->
+        <div class="big_block">
+            <!--分享计划内容-->
+            <div class="plan_contnet detail_content">
+                <div class="detail_header">
+                    <div class="detail-inner">
+                        <p class="project_name">--</p>
+                    </div>
+                    <div class="plan_datail">
+                        <div class="plan_datail_block">
+                            <div>
+                                <span class="plan_datail_span plan_price"></span>
+                                <span>元</span>
+                            </div>
+                            <div>
+                                <span>参与费</span>
+                            </div>
+                        </div>
+                        <div class="plan_datail_block">
+                            <div>
+                                <span class="plan_datail_span plan_cycle">--</span>
+                                <span>年</span>
+                            </div>
+                            <div>
+                                <span>返利期限</span>
+                            </div>
+                        </div>
+                        <div class="plan_datail_block">
+                            <div>
+                                <span class="plan_datail_span plan_scale">--</span><span
+                                    style="font-size:1.4rem;font-weight: normal;">每年</span>
+                            </div>
+                            <div>
+                                <span>预估返现</span>
+                            </div>
+                        </div>
+                        <div class="plan_datail_block">
+                            <div>
+                                <span class="plan_datail_span plan_coupon">--</span><span
+                                    style="font-size:1.4rem;font-weight: normal;"></span>每年</span>
+                            </div>
+                            <div>
+                                <span>返住房券</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan_describe">
+                        <p class="plan_des">隐匿竹海，静谧清幽，体验四闲之乐。位于江西龙南“虔心小镇”内，依山而建，林中别墅。纯生态度假，纯田园风光，返璞归真，给您最纯粹的享受。 </p>
+                    </div>
+                    <!--项目介绍-->
+                    <div class="big_block" style="width:100%;">
+                        <div class="plan_type">
+                            <div>
+                                <img src="__TMPL__/public/assets/images/small_icon1.png" width="100%" height="100%" />
+                            </div>
+                            <p>项目规模：23栋独立别墅，30间客房</p>
+                        </div>
+                        <div class="plan_type">
+                            <div>
+                                <img src="__TMPL__/public/assets/images/small_icon2.png" width="100%" height="100%" />
+                            </div>
+
+                            <p>项目优势：客源稳定，入住率高</p>
+                        </div>
+                        <div class="plan_type">
+                            <div>
+                                <img src="__TMPL__/public/assets/images/small_icon3.png" width="100%" height="100%" />
+                            </div>
+
+                            <p>景区特色：万亩有机茶园，万棵红豆杉伴生环绕</p>
+                        </div>
+                        <div class="plan_type">
+                            <div>
+                                <img src="__TMPL__/public/assets/images/small_icon4.png" width="100%" height="100%" />
+                            </div>
+
+                            <p>别墅风格：茶旅文化，古风浓郁</p>
+                        </div>
+                        <div class="plan_type">
+                            <div>
+                                <img src="__TMPL__/public/assets/images/small_icon5.png" width="100%" height="100%" />
+                            </div>
+
+                            <p>别墅景观：半山望茶园，竹海星空</p>
+                        </div>
+                        <div class="plan_type">
+                            <div>
+                                <img src="__TMPL__/public/assets/images/small_icon6.png" width="100%" height="100%" />
+                            </div>
+
+                            <p>别墅配套：山间茶吧，山泉无边泳池，360︒景观台</p>
+                        </div>
+                    </div>
+                    <!--进度-->
+                    <div class="big_progress_block">
+                        <div class="progress_inside">
+                            <div class="buy_num">
+                                <p class="buy_num_p1 buy_person">--</p>
+                                <p class="buy_num_p2">已购人数</p>
+                            </div>
+                            <div class="buy_num">
+                                <p class="buy_num_p1 has_person">--</p>
+                                <p class="buy_num_p2">仅剩名额</p>
+                            </div>
+                            <div class="buy_num">
+                                <p class="buy_num_p1 plan_last">--</p>
+                                <p class="buy_num_p2">剩余天数</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="proportion" class="mui-text-center">
+                        <p class="mui-progressbar mui-progressbar-in" data-progress="20"
+                            style="height:0.8rem;border-radius: 1.5rem;">
+                            <span style="background:#E4C165;"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--概况-->
+        <div class="nav_middle">
+            <div id="slider" class="mui-slider nav_wai">
+                <div id="sliderSegmentedControl"
+                    class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                    <div case="gai" class="mui-control-item gai_btn mui-active">
+                        概况
+                    </div>
+                    <div case="key" class="mui-control-item key_btn">
+                        关键信息
+                    </div>
+                    <div case="case" class="mui-control-item case_btn">
+                        返利方案
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--景区内容-->
+        <div class="detail_scene" id="gai">
+            <!--内容-->
+        </div>
+        <!--关键信息-->
+        <div class="key" id="key">
+            <div class="key_news_block">
+                <div>
+                    <p class="key_news_text" id="k">关键信息</p>
+                </div>
+                <div class="key_p_block">
+                    <p class="key_block_p1">计划名称</p>
+                    <p class="key_block_p2 project_abbreviation">--</p>
+                </div>
+                <div class="key_p_block">
+                    <p class="key_block_p1">计划情况</p>
+                    <p class="key_block_p2 "><span class="plan_cycle">--</span>年返利期限</p>
+                </div>
+                <div class="key_p_block">
+                    <p class="key_block_p1">计划位置</p>
+                    <p class="key_block_p2 project_address">--</p>
+                </div>
+                <div class="key_p_block">
+                    <p class="key_block_p1">计划特色</p>
+                    <p class="key_block_p2 project_characteristic">
+                        --
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--返利方案-->
+        <div class="key" id="case">
+            <div class="key_news_block">
+                <div>
+                    <p class="key_news_text" id="c">返利方案</p>
+                </div>
+                <div class="rebate_content">
+                    <div class="rebate_content_inside">
+                        <div class="rebate_header">
+                            <p class="plan_name">--</p>
+                        </div>
+                        <div class="plan_datail">
+                            <div class="plan_datail_block">
+                                <div>
+                                    <span class="plan_datail_span plan_price">--</span>
+                                    <span>元</span>
+                                </div>
+                                <div>
+                                    <span>参与费</span>
+                                </div>
+                            </div>
+                            <div class="plan_datail_block">
+                                <div>
+                                    <span class="plan_datail_span plan_cycle">--</span>
+                                    <span>年</span>
+                                </div>
+                                <div>
+                                    <span>返利期限</span>
+                                </div>
+                            </div>
+                            <div class="plan_datail_block">
+                                <div>
+                                    <span class="plan_datail_span plan_scale">--</span><span
+                                        style="font-size:1.4rem;font-weight: normal;">每年</span>
+                                </div>
+                                <div>
+                                    <span>预估返现</span>
+                                </div>
+                            </div>
+                            <div class="plan_datail_block">
+                                <div>
+                                    <span class="plan_datail_span plan_coupon">--</span><span
+                                        style="font-size:1.4rem;font-weight: normal;">每年</span>
+                                </div>
+                                <div>
+                                    <span>返住房券</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rebate_legal">
+                            <p class="plan_introduction"></p>
+                            <!--<p>其他权益：会籍福利增值，别墅度假免费住，特色天然农产品优惠购，订度假酒店，全网折上折，指定消费返积分，积分提现或换购商品，会员生日福利，会员尊享大礼包</p>-->
+                        </div>
+                        <div class="rebate_footer">
+                            <div>
+                                <p><span class="buy_person">--</span>人加入/剩余<span class="has_person">--</span>人</p>
+                                <button class="to_plan">查看更多方案</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 顾问热线弹窗 -->
+            <div class="mask"></div>
+            <div class="booking-pop">
+                <div class="booking-layout">
+                    <div class="booking-pop-img">
+                        <img src="__TMPL__/public/assets/images/flow.png" />
+                    </div>
+                    <div class="booking-pop-hotLine">专属顾问热线</div>
+                    <div class="booking-pop-tel">400-990-8830</div>
+                    <a href="tel:400-990-8830" class="booking-pop-rightNow">
+                        <div style="color:#fff;">立即拨打</div>
+                    </a>
+                    <div class="booking-pop-wxUnm">
+                        <div class="holiday-shibie">
+                            <p>长按识别二维码</p>
+                            <img src="__TMPL__/public/assets/images/wx_erweima.jpg" />
+                            <p>或添加专属顾问微信</p>
+                        </div>
+                        <div class="holiday-copy">
+                            <p>或添加专属顾问微信</p>
+                            <p data-clipboard-action="copy" data-clipboard-target="#target" id="target"
+                                data-clipboard-text="QCS138138" onclick="">QCS138138（点击复制）</p>
+                            <div class="txt-success">
+                                复制成功
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-pop-cansel">取消</div>
+                </div>
+            </div>
+            <nav class="mui-bar mui-bar-tab">
+                <div class="detail_nav_block">
+                    <div class="detail_nav_block_layout">
+                        <div class="detail_nav_block-bottom" onclick="javascript:window.location.href='/index'">
+                            <img src="__TMPL__/public/assets/images/family_icon.png" />
+                            <span>去首页</span>
+                        </div>
+
+                        <div class="detail_nav_block-bottom guwen">
+                            <img src="__TMPL__/public/assets/images/zixun_icon.png" />
+                            <span>顾问热线</span>
+                        </div>
+                        <div class="detail_nav_block-bottom" onclick="javascript:window.location.href='/calculate'">
+                            <img src="__TMPL__/public/assets/images/jisuanqi_icon.png?3-19" />
+                            <span>返利测算</span>
+                        </div>
+                    </div>
+                    <div class="btn_block" style="width:40%;">
+                        <button class="to_plan"> 立即加入</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <script src="__TMPL__/public/assets/js/mui.zoom.js"></script>
+    <script src="__TMPL__/public/assets/js/mui.previewimage.js?2-4"></script>
+    <script>
+        mui.previewImage();
+    </script>
+    <script>
+        $(document).ready(function () {
+            function isWeiXin() {
+                var ua = window.navigator.userAgent.toLowerCase();
+                if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+                    $('.holiday-shibie').show();
+                    $('.holiday-copy').hide();
+                } else {
+                    $('.holiday-copy').show();
+                    $('.holiday-shibie').hide();
+                }
+            }
+            isWeiXin();
+            // 复制文本
+            var clipboard = new Clipboard('#target');
+            clipboard.on('success', function (e) {
+                $('.txt-success').show();
+                setTimeout(function () {
+                    $('.txt-success').hide();
+                }, 1500)
+                console.log(e);
+                e.clearSelection();
+                console.log(e.clearSelection);
+            });
+            $('.guwen').click(function () {
+                $('.mask').show();
+                $('.booking-pop').show();
+            });
+            $('.booking-pop-cansel,.mask').click(function () {
+                $('.mask').hide();
+                $('.booking-pop').hide();
+            });
+        })
+        $(function () {
+            // 弹窗部分js
+            var action = 'getProjectInfo';
+            var code = "<?php echo $project;?>";
+            var sign = $.md5(action + code + pattern + randomstr + time);
+            var data = { pattern: pattern, from: from, code: code, time: time, action: action, sign: sign };
+            $.ajax({
+                url: "<?php echo $http.config('newinterfaceurl')?>/getProjectInfo",
+                type: "get",
+                dataType: "json",
+                data: data,
+                success: function (data) {
+                    // console.log(data);
+                    if (data.code == 1) {
+                        $('.project_abbreviation').html(data.project_info.E_Abbreviation);
+                        $('.project_address').html(data.project_info.E_Region);
+                        $('.project_characteristic').html(data.project_info.E_Characteristic);
+                        $('.plan_name').html(data.project_info.E_Title);
+                        $('.plan_introduction').append(data.project_info.plan_intro);
+                        $('.detail_scene').append(data.project_info.project_intro);
+                        var project_content = data.project_info.project_intro;
+                        if (data.project_info.E_PlanCode === null) {
+                            $('.detail_header').hide();
+                            $('.key_news_block').hide();
+                        } else {
+                            $('.project_name').html(data.project_info.project_name);
+                            $('.plan_price').html(data.project_info.E_Money);
+                            $('.plan_cycle').html(data.project_info.E_Cycle);
+                            $('.plan_scale').html(data.project_info.E_Scale + '%');
+                            $('.plan_coupon').html(data.project_info.E_Coupon + '%');
+                            $('.plan_des').html(data.project_info.E_Digest);
+                            $('.buy_person').html(data.project_info.Purchased);
+                            $('.has_person').html(data.project_info.Surplus);
+                            $('.plan_last').html(data.project_info.lastday);
+                            $('.to_plan').attr('onclick', "javascript:window.location.href='/plan?project=" + data.project_info.E_Code + "'");
+                            $('#img_header').attr("src", data.project_info.E_HeaderImg);
+                        }
+                        if ($('.detail_scene ').find('img').length > 0) {
+                            $('.detail_scene ').find('img').each(function () {
+                                $(this).attr('data-preview-src', '');
+                                $(this).attr('data-preview-group', 1);
+
+                            })
+                        }
+                        $('#img_header').load(function () {
+                            var navH = $("#slider").offset().top;
+                            $(document).scroll(function () {
+                                var scroH = $(document).scrollTop();
+                                var oKey = $('#key').offset().top - 200;
+                                var oCase = $('#case').offset().top - 200;
+                                var oGai = $('#gai').offset().top - 200;
+                                if (scroH >= navH) {
+                                    $("#slider").css({
+                                        "position": "fixed",
+                                        "top": 0,
+                                        "background": "#fff"
+                                    });
+                                } else if (scroH < navH) {
+                                    $("#slider").css({
+                                        "position": "static"
+                                    });
+                                }
+                                if (scroH >= oGai && scroH < oKey) {
+                                    $(".key_btn").removeClass("mui-active");
+                                    $('.case_btn').removeClass('mui-active');
+                                    $('.gai_btn').addClass('mui-active');
+                                }
+                                else if (scroH >= oKey && scroH < oCase) {
+                                    $(".key_btn").addClass("mui-active");
+                                    $('.case_btn').removeClass('mui-active');
+                                    $('.gai_btn').removeClass('mui-active');
+                                }
+                                else if (scroH >= oCase) {
+                                    $(".key_btn").removeClass("mui-active");
+                                    $('.case_btn').addClass('mui-active');
+                                    $('.gai_btn').removeClass('mui-active');
+                                }
+                            });
+                            $('.mui-segmented-control-inverted>div').click(function () {
+                                $('html, body').animate({
+                                    scrollTop: $('#' + $(this).attr('case')).offset().top - 80
+                                }, 1000);
+                            });
+                        });
+                        mui(mui('#proportion')).progressbar().setProgress(data.project_info.proportion);
+                    }
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

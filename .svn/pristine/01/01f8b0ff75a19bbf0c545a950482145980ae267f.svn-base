@@ -1,0 +1,111 @@
+$('.document').ready(function () {
+ 
+   // 度假地首页头部跳转
+   console.log($('.theme').hide(false));
+   $('.holiday-title').click(function(){
+       $('.holiday-h').find('.holiday-title').removeClass('holiday-active');
+       $(this).addClass('holiday-active');
+       if($('.theme').css.display == 'block'){
+         $('.theme').css.display == "block" ? $('.theme').css.display="none" : $('.theme').css.display="block";
+         $('.holiday,.holiday-suspend-btn').show();
+         $('.theme').hide();
+       }else{
+         $('.holiday').css.display == "block" ? $('.holiday').css.display="none" : $('.holiday').css.display="block";
+         $('.holiday,.holiday-suspend-btn').hide();
+        $('.theme').show();
+       }
+   });
+   //  免费度假攻略弹窗
+   $('.free-explain').click(function () {
+      $('.free-pop').show();
+      $('.mask').show();
+   });
+   $('.free-btn-color,.mask').click(function () {
+      $('.free-pop').hide();
+      $('.mask').hide();
+   });
+   // 地区分类点击事件
+   $('.area-name-cnt').click(function () {
+      $('.area-name').find('div').removeClass('area-name-cnt-active');
+      $(this).addClass('area-name-cnt-active');
+      if($(this).context.innerText=="国内"){
+      $('.area').find('.area-cnt').hide();
+      $('.area-cnt').eq(1).show();
+      }
+      if($(this).context.innerText=="热门"){
+         $('.area').find('.area-cnt').hide();
+         $('.area-cnt').eq(0).show();
+      }
+      if($(this).context.innerText=="泰国"){
+         $('.area').find('.area-cnt').hide();
+         $('.area-cnt').eq(2).show();
+      }
+      if($(this).context.innerText=="马来西亚"){
+         $('.area').find('.area-cnt').hide();
+         $('.area-cnt').eq(3).show();
+      }
+      if($(this).context.innerText=="日本"){
+         $('.area').find('.area-cnt').hide();
+         $('.area-cnt').eq(4).show();
+      }
+      if($(this).context.innerText=="越南"){
+         $('.area').find('.area-cnt').hide();
+         $('.area-cnt').eq(5).show();
+      }
+      if($(this).context.innerText=="新加坡"){
+         $('.area').find('.area-cnt').hide();
+         $('.area-cnt').eq(6).show();
+      }
+      if($(this).context.innerText=="美国"){
+         $('.area').find('.area-cnt').hide();
+         $('.area-cnt').eq(7).show();
+      }
+   });
+
+   // 滑动可视窗口滑动一定距离隐藏悬浮按钮
+   $(document).scroll(function(){
+      var btnH = $(document).scrollTop();
+      if(btnH>100){
+         $('.holiday-suspend-btn').addClass('animation-hide');
+         $('.holiday-suspend-btn').removeClass('animation-show');
+      }
+      if(0<btnH && btnH<100){
+         $('.holiday-suspend-btn').addClass('animation-show');
+         $('.holiday-suspend-btn').removeClass('animation-hide');
+      }
+   });
+   // 跳转地区酒店列表
+   var scenery=location.search;
+   var sceneryStr=scenery.split("?");
+   var scen_val=sceneryStr[1];
+   for(var i=0;i<6;i++){
+      $('.scenery-area').eq(i).hide();
+     if(scen_val==0){
+       $('.scenery-area').eq(0).show();
+     }
+     if(scen_val==1){
+      $('.scenery-area').eq(4).show();
+    }
+     if(1<scen_val &&scen_val<=2){
+      $('.scenery-area').eq(1).show();
+      $('.scenery-area').eq(2).show();
+      $('.scenery-area').eq(3).show();
+     }
+     if(2<scen_val &&scen_val<=3){
+      $('.scenery-area').eq(5).show();
+     }
+     if(scen_val==10){
+      $('.scenery-area').eq(1).show();
+      $('.scenery-area').eq(2).show();
+      $('.scenery-area').eq(3).show();
+      $('.scenery-area').eq(4).show();
+      $('.scenery-area').eq(5).show();
+     }
+     if(scen_val==8){
+      $('.scenery-area').eq(i).show();
+     }
+     if(scen_val==9){
+      $('.scenery-area').eq(0).show();
+     }
+   }
+});

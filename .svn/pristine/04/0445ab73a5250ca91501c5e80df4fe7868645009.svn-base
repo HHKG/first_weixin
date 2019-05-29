@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="keywords" content="<?php echo $keywords;?>">
+    <meta name="description" content="<?php echo $description;?>">
+    <title>会员登录-虔心荟</title>
+    <include file="public@header" />
+    <link href="__TMPL__/public/assets/css/person.css?3-18" rel="stylesheet" />
+    <link href="__TMPL__/public/assets/css/youxian_pay.css?3-18" rel="stylesheet" />
+</head>
+<style type="text/css">
+    html body {
+        background: #fff;
+        font-size: 1.5rem;
+    }
+
+    .mui-content {
+        background: #fff;
+    }
+
+    input[type=color],
+    input[type=date],
+    input[type=datetime-local],
+    input[type=datetime],
+    input[type=email],
+    input[type=month],
+    input[type=number],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    input[type=time],
+    input[type=url],
+    input[type=week],
+    select,
+    textarea {
+        padding: 10px 0px;
+    }
+
+    .mui-btn-block {
+        margin-top: 3rem;
+        font-size: 2rem;
+        color: #fff;
+        height: 5rem;
+        background: #f0753a;
+        border-radius: 1rem;
+    }
+</style>
+
+
+<body>
+
+    <script type="text/javascript">
+        mui.init()
+    </script>
+    <div class="mui-content">
+        <div class="code-login">
+            <p>验证码登录</p>
+        </div>
+        <div class="phone_number">
+            <input type="number" name="value" oninput="if(value.length>11)value=value.slice(0,11)"
+                value="<?php echo $mobile;?>" placeholder="请输入手机号码" id="code-8" />
+        </div>
+        <div class="code_number">
+            <input type="number" name="value" oninput="if(value.length>4)value=value.slice(0,4)" value=""
+                placeholder="请输入验证码" id="code-12" />
+            <div class="get_code">
+                <input type="button" value="获取验证码" id="btn"></input>
+            </div>
+        </div>
+        <div class="login_btn">
+            <button type="button" class="mui-btn-block" id="login-btn" onclick="Land()">登录</button>
+        </div>
+        <?php if(empty($mobile)):?>
+        <div class="register_new">
+            <button type="button" class="mui-btn-block"
+                onclick="javascript:window.location.href='/bindmobile?back=<?php echo urlencode($url);?>'">新用户注册</button>
+        </div>
+        <?php endif;?>
+        <!--<div class='weixin_text'>-->
+        <!--<span class="weixin_line"></span>-->
+        <!--<div class="login-22">-->
+        <!--<span class="login-21">微信登录</span>-->
+        <!--</div>-->
+        <!--<span class="weixin_line"></span>-->
+        <!--</div>-->
+        <!--<div class="weixin_logo">-->
+        <!--<img src="__TMPL__/public/assets/images/wechat_icon.png" width="100%" height="100%"/>-->
+        <!--</div>-->
+    </div>
+    <script type="text/javascript">
+        var reg = /^1[3456789]\d{9}$/;
+        var regcode = /^(\d{4})$/;
+        var mobile = document.getElementById('code-8');
+        var oCode = document.getElementById('code-12');
+        var wait = 60;
+        var back = "<?php echo $url;?>";
+        var phone = "<?php echo $mobile;?>";
+        var times="<?php echo $time;?>";
+        var randomstr="<?php echo $randomstr;?>";
+        function time(o) {
+            if (wait == 0) {
+                o.removeAttribute("disabled"); //不能再触发
+                o.style.cssText = "border:1px solid #3a8782;background:#fff;color:#3a8782;"
+                o.value = "重发验证码";
+                wait = 60;
+            } else {
+
+                o.setAttribute("disabled", true);
+                o.style.cssText = "border:hidden;background:#999;color:#EBEBEB;"
+                o.value = "" + wait + "s";
+                wait--;
+                setTimeout(function () {
+                    time(o)
+                },
+                    1000)
+            }
+        }
+        $(document).ready(function () {
+            $("#login-btn").css('opacity', '0.5');
+            var $inputwrapper = $('.code_number');
+            $('#code-12,#code-8').on('input propertychange', function () {
+                var result1 = $('#code-12').val();
+                var result2 = $('#code-8').val();
+                if (result1 !== '' && result2 !== '') {
+                    $("#login-btn").css('opacity', '1');
+                } else {
+                    $("#login-btn").css('opacity', '0.5');
+                }
+            });
+        })
+        document.getElementById("btn").onclick = function () {
+            var _this = this;
+            if (mobile.value == '') {
+                mui.toast('请输入手机号');
+            } else {
+                if (!reg.exec(mobile.value)) {
+                    mui.toast('手机号格式不正确');
+
+                    document.getElementById("btn").addEventListener('tap', function () {
+
+                    });
+                    return;
+                } else {
+                    sendcode(parseInt(mobile.value), _this)
+                }
+            }
+
+        }
+        if (phone != '') {
+            sendcode(phone, document.getElementById("btn"))
+        }
+        function sendcode(mobile, object) {
+            var action='sendcode';
+            var type='2';
+            var sign=$.md5(action+mobile+randomstr+times+type);
+            $.ajax({
+                url: "<?php echo config('interfaceurl')?>/sendcode",
+                type: 'GET',
+                dataType: 'json',
+                data: { type: type,number: mobile,time:times,action:action,sign:sign },
+                success: function (data) {
+
+                    if (data.code == 1) {
+
+                        time(object);
+                    } else if (data.code == -2) {
+                        mui.alert(data.msg, '提示');
+                    } else {
+                        mui.toast(data.msg)
+                    }
+
+                }
+            })
+        }
+        function Land() {
+            if (oCode.value == '' || mobile == "") {
+                return;
+            }
+            if (mobile == null || oCode == "" || !regcode.exec(oCode.value)) {
+                mui.toast('短信验证码不正确');
+                return;
+            }
+            if (mobile == null || mobile == "" || !reg.exec(mobile.value)) {
+                mui.toast('手机号格式不正确');
+                return;
+            }
+            var daction='dologin';
+            var type="<?php echo $type;?>";
+            var code=parseInt(oCode.value);
+            var mobiles= parseInt(mobile.value);
+            var openid= "<?php echo $openid;?>";
+            var dsign=$.md5(daction+code+mobiles+openid+randomstr+times+type);
+            $.ajax({
+                url: "<?php echo config('interfaceurl')?>/dologin",
+                type: 'GET',
+                dataType: 'json',
+                data: {
+                    code: code,
+                    type: type,
+                    openid: openid,
+                    mobile: mobiles,
+                    time:times,
+                    action:daction,
+                    sign:dsign
+                },
+                success: function (data) {
+                    //console.log(data);return;
+                    if (data.code == 1) {
+                        mui.toast(data.msg);
+                        if (back == '') {
+                            window.location.href = '/index?token=' + data.token+'';
+                        } else {
+                            window.location.href = back + "&token=" + data.token+'';
+                        }
+
+                        return true;
+                    } else if (data.code == -2) {
+                        mui.toast(data.msg)
+                        window.location.href = "/bindmobile?back=<?php echo urlencode($url);?>";
+                        return false;
+                    } else {
+                        mui.toast(data.msg)
+                    }
+
+                }
+            })
+        };
+    </script>
+
+</body>
+
+</html>

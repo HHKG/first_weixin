@@ -1,0 +1,209 @@
+
+.title {
+	margin: 20px 15px 10px;
+	color: #6d6d72;
+	font-size: 15px;
+}
+
+.oa-contact-cell.mui-table .mui-table-cell {
+	padding: 11px 0;
+	vertical-align: middle;
+}
+
+.oa-contact-cell {
+	position: relative;
+	margin: -11px 0;
+}
+
+.oa-contact-avatar {
+	width: 75px;
+}
+
+.oa-contact-avatar img {
+	border-radius: 50%;
+}
+
+.oa-contact-content {
+	width: 100%;
+}
+
+.oa-contact-name {
+	margin-right: 20px;
+}
+
+.oa-contact-name,
+oa-contact-position {
+	float: left;
+}
+
+.mui-bar-tab .mui-tab-item .mui-icon~.mui-tab-label {
+	font-size: 1.5rem;
+}
+
+.mui-bar-tab .mui-tab-item.mui-active {
+	color: #496966;
+}
+
+.mui-bar-tab .mui-tab-item {
+	color: #333333;
+}
+.mui-bar-tab .mui-tab-item .mui-icon~.mui-tab-label {
+	padding-top: 2rem;
+	height: 4.5rem;
+}
+.navIndex {
+	background-image: url(../images/shouye_icon.png);
+	background-size: 20%;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: 2rem;
+}
+
+.navIndex.mui-active {
+	background-image: url(../images/shouye_icon_seleted.png);
+	background-size: 20%;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: 2rem;
+}
+
+.navClub {
+	background-image: url(../images/julebu_icon.png);
+	background-size: 20%;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: 2rem;
+}
+
+.navClub.mui-active {
+	background-image: url(../images/julebu_icon_seleted.png);
+	background-size: 20%;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: 2rem;
+}
+
+.navPerson {
+	background-image: url(../images/huiyuan_icon.png);
+	background-size: 20%;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: 2rem;
+}
+
+.navPerson.mui-active {
+	background-image: url(../images/huiyuan_icon_seleted.png);
+	background-size: 20%;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: 2rem;
+}
+
+html {
+	font-size: 10px;
+}
+
+/* 填写资料页面的优先级样式*/
+html body {
+	background: #fff;
+}
+.mui-input-group {
+	position: inherit;
+}
+.mui-input-group .mui-input-row:after{
+	position: inherit;
+}
+
+.mui-content {
+	background: #fff;
+}
+.mui-btn-block {
+	margin-top: 1.5rem;
+	font-size: 2rem;
+	color: #fff;
+	height: 5rem;
+	background: #f0753a;
+	border-radius: 1rem;
+}
+.mui-input-group .mui-input-row {
+	height: 4rem;
+	font-size: 1.5rem;
+	line-height: 4.5rem;
+}
+.mui-checkbox input[type=checkbox]:before,
+.mui-radio input[type=radio]:before {
+	font-size: 2rem;
+	line-height: 2;
+	color:#3A8782;
+}
+
+
+/* a {
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+} */
+
+.mui-table-view-cell>a:not(.mui-btn) {
+	padding: 1.6rem 1.5rem;
+}
+.mui-input-group {
+	position: inherit;
+}
+.mui-input-group .mui-input-row {
+	height: 4rem;
+	font-size: 1.5rem;
+
+}
+.select_text{
+	color:#666666;
+	border-radius: 0.2rem;
+}
+.select:after{
+	display: none;
+}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+	background-image: url(../images/tixian_btn.png);
+	background-repeat: no-repeat;
+	background-size: 14%;
+	background-position-x: 50%;
+	background-position-y: 100%;
+	color: #f0753a;
+	line-height: 3rem;
+}
+
+.nav_wai {
+	height: 7rem;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #C8C8C8;
+	border-top: 1px solid #C8C8C8;
+}
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item {
+	color: #666666;
+	font-size: 1.6rem;
+}
+
+.float {
+	position: fixed;
+	top: 0px;
+}
+
+.mui-slider-indicator .mui-indicator.mui-active{
+	border-radius: 0.4rem;
+	width:1.5rem;
+	height:0.5rem;
+	background:#F5854F;
+	box-shadow:0 0 0px 0px rgba(130,130,130,.7);
+}
+.mui-slider-indicator .mui-indicator{
+	border-radius: 0.4rem;
+	width:0.5rem;
+	height:0.5rem;
+	background:#E0E0E0;
+	box-shadow:0 0 0px 0px rgba(130,130,130,.7);
+	margin: 0;
+}
+.slider_bottom{
+	padding-bottom: 1.5rem;
+}

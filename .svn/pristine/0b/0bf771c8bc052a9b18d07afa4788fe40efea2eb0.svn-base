@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <include file="public@header" />
+
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/app.css" />
+    <!--person页面的样式-->
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/person.css" />
+</head>
+
+<body>
+    <nav class="mui-bar mui-bar-tab">
+        <a class="mui-tab-item navIndex" href="<?php echo url('/index');?>">
+            <span class="mui-icon"></span>
+            <span class="mui-tab-label" style="font-size:1.2rem;">首页</span>
+        </a>
+        <a class="mui-tab-item navClub " href="#club">
+            <span class="mui-icon"></span>
+            <span class="mui-tab-label" style="font-size:1.2rem;">俱乐部</span>
+        </a>
+        <a class="mui-tab-item navPerson mui-active " href="<?php echo url('/member');?>">
+            <span class="mui-icon"></span>
+            <span class="mui-tab-label" style="font-size:1.2rem;">会员中心</span>
+        </a>
+    </nav>
+
+    <div class="mui-content">
+        <div id="index" class="mui-control-content ">
+            <div class="title">这是div模式选项卡中的第1个子页面.</div>
+            <div class="title">何谓div模式的选项卡？ 其实就是通过DIV模拟一个独立页面，通过DIV的显示、隐藏模拟不同页面的切换，典型的SPA模式；
+            </div>
+            <div class="title">
+                这种模式适合简单业务系统，因为每个选项卡内容要写在一个DIV中， 若逻辑复杂，会导致当前页面DOM结构繁杂，造成webview响应缓慢，甚至崩溃；
+                因此若系统较复杂，需要下拉刷新等操作，推荐使用webview模式的选项卡；
+            </div>
+        </div>
+        <div id="tabbar-with-chat" class="mui-control-content">
+            <div class="title">这是div模式选项卡中的第2个子页面，该页面展示一个消息列表</div>
+
+            <ul class="mui-table-view mui-table-view-chevron">
+                <li class="mui-table-view-cell">
+                    <a href="" class="mui-navigate-right">Item 1</a>
+                </li>
+            </ul>
+        </div>
+        <div id="club" class="mui-control-content">
+            <div class="title">这是div模式选项卡中的第3个子页面，该页面展示一个通讯录示例.</div>
+            <ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+                <li class="mui-table-view-cell">
+                    <div class="mui-slider-cell">
+                        <div class="oa-contact-cell mui-table">
+                            <div class="oa-contact-avatar mui-table-cell">
+                                <img src="../images/60x60.gif" />
+                            </div>
+                            <div class="oa-contact-content mui-table-cell">
+                                <div class="mui-clearfix">
+                                    <h4 class="oa-contact-name">叶文洁</h4>
+                                    <span class="oa-contact-position mui-h6">董事长</span>
+                                </div>
+                                <p class="oa-contact-email mui-h6">
+                                    yewenjie@sina.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="person_center" class="mui-control-content mui-active">
+            <!--头部-->
+            <div class="header_car">
+                <div class="header_img_block">
+                    <div class="bg_img">
+                        <img src="__TMPL__/public/assets/images/card.png" />
+                    </div>
+
+                    <div class="jiaobiao">
+                        <img src="__TMPL__/public/assets/images/jiaobiao.png" width="100%" height="100%" />
+                    </div>
+                    <div class="head_sculpture">
+                        <img class="head_img" src="__TMPL__/public/assets/images/touxiang.jpg" />
+                    </div>
+                    <div class="card_nickname">
+                        <p class="nick_name">你猜我猜不猜</p>
+                        <p class="phone_num">134***868</p>
+                    </div>
+                    <div class="card_number">
+                        <p class="card_val">96630</p>
+                        <p class="qian_val">虔心值</p>
+                    </div>
+                </div>
+            </div>
+            <!--颈部-->
+            <div class="person_neck">
+                <div>
+                    <img class="grade" src="__TMPL__/public/assets/images/gold_member.png" style="height:3rem;" />
+                </div>
+                <div>
+                    <p class="update">充值(升级会员)</p>
+                    <img src="__TMPL__/public/assets/images/right_arrow.png" />
+                </div>
+            </div>
+            <!--虔心荟banner-->
+            <div class="banner_block">
+                <img src="__TMPL__/public/assets/images/middle_banner.png" class="banner_img" />
+            </div>
+            <!--宫格(cell)-->
+            <div class="person_cell">
+                <div onclick="javascript:window.location.href='/rebate'">
+                    <img src="__TMPL__/public/assets/images/yellow_icon1.png" class="person_cell_img" />
+                    <p>参与计划返利</p>
+                </div>
+                <div>
+                    <img src="__TMPL__/public/assets/images/yellow_icon1.png" class="person_cell_img" />
+                    <p>会员权益</p>
+                </div>
+                <div onclick="javascript:window.location.href='/myorders'">
+                    <img src="__TMPL__/public/assets/images/yellow_icon1.png" class="person_cell_img" />
+                    <p>我的订单</p>
+                </div>
+            </div>
+            <!--我的钱包-->
+            <div class="person_wallet">
+                <div class="my_money">
+                    <img src="__TMPL__/public/assets/images/orange_line.png" />
+                    <img src="__TMPL__/public/assets/images/title_icon1.png" class="person_wallet_img" />
+                    <span>我的钱包</span>
+                </div>
+                <div class="person_wallet_footer">
+                    <div>
+                        <p class="p_number balance">1000.00</p>
+                        <p class="p_text">现金余额(元)</p>
+                    </div>
+                    <div>
+                        <img src="__TMPL__/public/assets/images/line.png" />
+                    </div>
+                    <div>
+                        <p class="p_number Consumption">1000.00</p>
+                        <p class="p_text">消费金余额(元)</p>
+                    </div>
+                </div>
+            </div>
+            <!--我的消费返现收入-->
+            <div class="person_wallet">
+                <div class="my_money">
+                    <img src="__TMPL__/public/assets/images/orange_line.png" />
+                    <img src="__TMPL__/public/assets/images/title_icon2.png" class="person_wallet_img" />
+                    <span>我的消费返现收入</span>
+                </div>
+                <div class="money_datail">
+                    <div>
+                        <p class="p_datail_number NowBillPrice">800.00</p>
+                        <p class="p_datail_text">本月返现(元)</p>
+                    </div>
+                    <div>
+                        <p class="p_datail_number nextbill">66.70</p>
+                        <p class="p_datail_text">下月预估收益(元)</p>
+                    </div>
+                    <div>
+                        <p class="p_datail_number NoBillPrice">1000.00</p>
+                        <p class="p_datail_text">待结算返现(元)</p>
+                    </div>
+                </div>
+                <div class="money_datail_footer">
+                    <p class="add_up">累计返现(元):</p>
+                    <p class="p_datail_number HasSettlementPrice">12800.00</p>
+                </div>
+            </div>
+            <!--我的住房券-->
+            <div class="home_coupom">
+                <div class="my_money">
+                    <img src="__TMPL__/public/assets/images/orange_line.png" />
+                    <img src="__TMPL__/public/assets/images/title_icon3.png" class="person_wallet_img" />
+                    <span>我的住房券</span>
+                </div>
+                <!--第一张-->
+                <div class="coupons">
+                    <div class="coupom_layout">
+                        <div class="coupom_block">
+                            <img src="__TMPL__/public/assets/images/consumer_coupon_not_expired.png"
+                                style="height:15rem;" />
+                        </div>
+                        <div class="coupom_news">
+                            <p class="coupom_news_num">￥1000.00</p>
+                            <p class="coupom_news_header">四闲山房别墅</p>
+                            <p class="coupom_news_time">有效期至2019-10-10</p>
+                            <p class="coupom_news_ma">码券：SXSF21090106</p>
+                        </div>
+                    </div>
+                    <!--第二张-->
+                    <div class="coupom_layout">
+                        <div class="coupom_block">
+                            <img src="__TMPL__/public/assets/images/consumer_coupon_not_expired.png"
+                                style="height:15rem;" />
+                        </div>
+                        <div class="coupom_news">
+                            <p class="coupom_news_num">￥1000.00</p>
+                            <p class="coupom_news_header">四闲山房别墅</p>
+                            <p class="coupom_news_time">有效期至2019-10-10</p>
+                            <p class="coupom_news_ma">码券：SXSF21090106</p>
+                        </div>
+                        <div class="coupom_status">
+                            <img src="__TMPL__/public/assets/images/expired_icon.png" width="100%" height="100%" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--会员权益-->
+            <div class="legal_layout">
+                <div class="my_money">
+                    <img src="__TMPL__/public/assets/images/orange_line.png" />
+                    <img src="__TMPL__/public/assets/images/title_icon4.png" class="person_wallet_img" />
+                    <span>会员权益</span>
+                </div>
+                <div class="legal_cell">
+                    <div>
+                        <img src="__TMPL__/public/assets/images/quanyi1.png" class="person_cell_img" />
+                        <p>购买虔心分享计划权益</p>
+                    </div>
+                    <div>
+                        <img src="__TMPL__/public/assets/images/quanyi2.png" class="person_cell_img" />
+                        <p>订房折扣</p>
+                    </div>
+                    <div>
+                        <img src="__TMPL__/public/assets/images/quanyi3.png" class="person_cell_img" />
+                        <p>商城购物折扣</p>
+                    </div>
+                    <div>
+                        <img src="__TMPL__/public/assets/images/quanyi4.png" class="person_cell_img" />
+                        <p>订房优先</p>
+                    </div>
+                    <div>
+                        <img src="__TMPL__/public/assets/images/quanyi5.png" class="person_cell_img" />
+                        <p>现金消费返虔币</p>
+                    </div>
+                    <div>
+                        <img src="__TMPL__/public/assets/images/quanyi6.png" class="person_cell_img" />
+                        <p>会员大礼包</p>
+                    </div>
+                    <div>
+                        <img src="__TMPL__/public/assets/images/quanyi7.png" class="person_cell_img" />
+                        <p>权益持续更新</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="__TMPL__/public/assets/js/mui.min.js"></script>
+<script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+
+<script>
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+    $(function () {
+
+        $.ajax({
+            url: "<?php echo config('interfaceurl')?>/member",
+            type: 'POST',
+            dataType: 'jsonp',
+            data: { token: "<?php echo session('token');?>" },
+            success: function (data) {
+
+                if (data.code == 1) {
+                    $('.nick_name').html(data.info.E_Name);
+                    $('.phone_num').html(data.info.E_Mobile);
+                    $('.card_val').html(parseInt(data.info.Amout));
+                    $('.head_img').attr('src', data.info.E_HeadImg);
+
+                    var grade = data.info.E_Grade;
+                    var grades =<? php echo json_encode(config('Grade'));?>;
+                    console.log(grades[grade]);
+                    $('.grade').attr('src', grades[grade]);
+                    $('.balance').html(price(parseInt(data.info.Balance)));
+                    $('.Consumption').html(price(parseInt(data.info.Consumption)));
+                    $('.NowBillPrice').html(price(data.info.NowBillPrice));
+                    $('.nextbill').html(price(data.info.nextbill));
+                    $('.NoBillPrice').html(price(data.info.NoBillPrice));
+                    $('.HasSettlementPrice').html(price(data.info.HasSettlementPrice));
+                    // $('.nick_name').html(data.info.E_Name);
+                    console.log(data.coupons.length);
+                    if (data.coupons.length > 0) {
+                        var coupon = '';
+                        $.each(data.coupons, function (k, v) {
+                            console.log(v);
+                            coupon += '<div class="coupom_layout">  <div class="coupom_block">';
+                            coupon += '<img src="' + v.E_CouponImg + '" style="height:15rem;"/>';
+                            coupon += '</div>';
+                            coupon += ' <div class="coupom_news">';
+                            coupon += ' <p class="coupom_news_num">' + price(v.E_Price) + '</p>';
+                            coupon += '<p class="coupom_news_header">' + v.E_ProjectName + '</p>';
+                            coupon += ' <p class="coupom_news_time">有效期至' + v.E_LastDate + '</p>';
+                            coupon += ' <p class="coupom_news_ma">码券：' + v.E_SN + '</p>';
+                            coupon += ' </div></div>';
+                        })
+                        $('.coupons').html(coupon);
+                    }
+                }
+            }
+        })
+    })
+
+    function price(price) {
+        return price.toLocaleString('zh-Hans-CN', {
+            style: 'currency',
+            currency: 'CNY'
+        })
+    }
+</script>
+
+</html>

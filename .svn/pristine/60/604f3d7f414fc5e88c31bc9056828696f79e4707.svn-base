@@ -1,0 +1,848 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>度假地</title>
+    <meta name="description" content="度假地-虔心荟" />
+    <meta name="Keywords" content="度假地-虔心荟" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="__TMPL__/public/assets/css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/person.css?4-7" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/app.css?4-4" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/youxian.css?4-4" />
+    <script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+    <script src="__TMPL__/public/assets/js/holiday.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #fff;
+    }
+    .holiday-body {
+        background: #fff;
+        padding-top: 5rem;
+    }
+</style>
+
+<body>
+    <script src="__TMPL__/public/assets/js/mui.min.js"></script>
+    <script type="text/javascript">
+        mui.init()
+    </script>
+    <include file="public@nav" />
+    <div class="mui-content holiday-body">
+        <div class="holiday-h">
+            <span class=" holiday-title holiday-active">度假地</span>
+            <span class="line"></span>
+            <span class="holiday-title">主题</span>
+        </div>
+        <!-- 度假地 -->
+        <div class="holiday">
+            <!-- banner -->
+            <div class="holiday-banner">
+                <image src='__TMPL__/public/assets/images/hotel_banner.png?4-8' class="holiday-banner-img"></image>
+            </div>
+            <!-- 地区房源 -->
+            <div class="area">
+                <!-- 地区名字 -->
+                <div class="area-name">
+                    <div class="area-name-cnt area-name-cnt-active">热门</div>
+                    <div class="area-name-cnt">国内</div>
+                    <div class="area-name-cnt">泰国</div>
+                    <div class="area-name-cnt">马来西亚</div>
+                    <div class="area-name-cnt">日本</div>
+                    <div class="area-name-cnt">越南</div>
+                    <div class="area-name-cnt">新加坡</div>
+                    <div class="area-name-cnt">美国</div>
+                </div>
+                <!-- 地区房源 -->
+                <div class="area-cnt">
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?0'">
+                        <image src='__TMPL__/public/assets/images/place1.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">赣州</span>
+                        </div>
+                    </div>
+
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?4'">
+                        <image src='__TMPL__/public/assets/images/sumeidao.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1" style="display: none;">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">苏梅岛</span>
+                        </div>
+                    </div>
+
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/place3.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1" style="display: none;">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">普吉岛</span>
+                        </div>
+                    </div>
+
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?1'">
+                        <image src='__TMPL__/public/assets/images/guangzhou.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">98个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">广州</span>
+                        </div>
+                    </div>
+
+
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?2'">
+                        <image src='__TMPL__/public/assets/images/place5.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">10个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">佛山</span>
+                        </div>
+                    </div>
+
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?3'">
+                        <image src='__TMPL__/public/assets/images/place6.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">10个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">惠州</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?6'">
+                        <image src='__TMPL__/public/assets/images/shenzhen.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">5个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">深圳</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?6'">
+                        <image src='__TMPL__/public/assets/images/sanya.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">5个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">三亚</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?6'">
+                        <image src='__TMPL__/public/assets/images/yunnan.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">5个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">云南</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/jilongpo.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">吉隆坡</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/bincheng.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">槟城</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/dongjing.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">东京</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/hengbin.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">横滨</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/shenhu.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">神户</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/huzhimingshi.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">胡志明市</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/jiangan.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">岘港</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/henei.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">河内</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/xinjiapo.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">新加坡</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/xiaweiyi.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">夏威夷</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/luoshanji.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">洛杉矶</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/lasijiasi.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">拉斯维加斯</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery'">
+                        <image src='__TMPL__/public/assets/images/place8.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">10个房源</span>
+                            </div>
+                            <div class="theme-area-cnt-txt2">
+                                <span>更多度假地</span>
+                                <span>敬请期待</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 国内 -->
+                <div class="area-cnt" style="display: none">
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?0'">
+                        <image src='__TMPL__/public/assets/images/place1.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">赣州</span>
+
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?1'">
+                        <image src='__TMPL__/public/assets/images/guangzhou.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">98个房源</span>
+                            </div>
+
+                            <span class="area-cnt-txt2">广州</span>
+                        </div>
+                    </div>
+
+
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?2'">
+                        <image src='__TMPL__/public/assets/images/place5.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">10个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">佛山</span>
+                        </div>
+                    </div>
+
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?3'">
+                        <image src='__TMPL__/public/assets/images/place6.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">10个房源</span>
+                            </div>
+
+                            <span class="area-cnt-txt2">惠州</span>
+                        </div>
+                    </div>
+
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?6'">
+                        <image src='__TMPL__/public/assets/images/place7.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">5个房源</span>
+                            </div>
+
+                            <span class="area-cnt-txt2">深圳</span>
+                        </div>
+                    </div>
+
+                </div>
+                <!--泰国  -->
+                <div class="area-cnt" style="display: none">
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?4'">
+                        <image src='__TMPL__/public/assets/images/place2.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">苏梅岛</span>
+                        </div>
+                    </div>
+
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/place3.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">普吉岛</span>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 马来西亚 -->
+                <div class="area-cnt" style="display: none">
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/jilongpo.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">吉隆坡</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/bincheng.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">槟城</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 日本 -->
+                <div class="area-cnt" style="display: none">
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/dongjing.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">东京</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/hengbin.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">横滨</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/shenhu.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">神户</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 越南 -->
+                <div class="area-cnt" style="display: none">
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/huzhimingshi.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">胡志明市</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/jiangan.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">岘港</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/henei.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">河内</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 新加坡 -->
+                <div class="area-cnt" style="display: none">
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/xinjiapo.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">新加坡</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 美国 -->
+                <div class="area-cnt" style="display: none">
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/xiaweiyi.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">夏威夷</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/luoshanji.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">洛杉矶</span>
+                        </div>
+                    </div>
+                    <div class="area-cnt-name" onclick="javascript:window.location.href='/scenery?5'">
+                        <image src='__TMPL__/public/assets/images/lasijiasi.png' class="area-cnt-img"></image>
+                        <div class="area-cnt-txt">
+                            <div class="area-cnt-txt1">
+                                <span class="area-cnt-txt3">21个房源</span>
+                            </div>
+                            <span class="area-cnt-txt2">拉斯维加斯</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- banner -->
+            <div class="holiday-banner  service_banner">
+                <image src='__TMPL__/public/assets/images/service_banner.png' class="holiday-banner-img"></image>
+            </div>
+            <!-- 免费度假 -->
+            <div class="pay-myself free-position">
+                <img src="__TMPL__/public/assets/images/free_holiday_title.png" class="free-h-img1" />
+                <img src="__TMPL__/public/assets/images/free_holiday_flow.png" class="free-h-img3" />
+                <img src="__TMPL__/public/assets/images/free_holiday_flow2.png" class="free-h-img3" />
+                <img src="__TMPL__/public/assets/images/free_holiday_map.png" class="free-h-img2" />
+                <div class="free-explain">
+                    <a class="free-a">什么是分享计划？</a>
+                </div>
+                <!-- <div class="free-sanjiao">
+                    <div class="free-small-sanjiao"></div>
+                </div> -->
+                <!-- <div class="free-h-txt">
+                    <p> 免费度假，迈向旅享人</p>
+                    <p>收获快乐与财富</p>
+                </div> -->
+                <!-- 弹窗 -->
+                <div class="mask"></div>
+                <div class="free-pop">
+                    <div class="free-pop-title">
+                        什么是分享计划
+                    </div>
+                    <div class="free-pop-cnt">
+                        <p>
+                            虔心分享计划是虔心荟特别策划的会员专属权益，即通过甄选全球优质别墅/酒店，与之建立联盟合作关系，赋予会员独一无二的消费特权。
+                        </p>
+                        <p>
+                            会员可通过参与计划成为别墅/酒店合伙人，与别墅/酒店分利润，最大限度地实现会籍保值、升值、长赢。
+                        </p>
+                        <p>
+                            目的就是让您用最少的支出，收获最多的快乐与财富！
+                        </p>
+                    </div>
+                    <div class="booking-pop-cansel free-btn-color">确定</div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+            <!-- 四大保障 -->
+            <div class="index-ensure">
+                <div class="index-ensure-cnt">
+                    <div class="index-ensure-cnt-title">
+                        <img src="__TMPL__/public/assets/images/card_icon1.png" />
+                        <span>专属管家</span>
+                    </div>
+                    <p>
+                        专属管家服务，为您的度假提供全程贴心服务。
+                    </p>
+                </div>
+                <div class="index-ensure-cnt">
+                    <div class="index-ensure-cnt-title">
+                        <img src="__TMPL__/public/assets/images/card_icon2.png" />
+                        <span>尊享特权</span>
+                    </div>
+                    <p>
+                        订房优先、订房折扣、延迟退房、购物优惠及免费住房券。
+                    </p>
+                </div>
+                <div class="index-ensure-cnt">
+                    <div class="index-ensure-cnt-title">
+                        <img src="__TMPL__/public/assets/images/card_icon3.png" />
+                        <span>个性化</span>
+                    </div>
+                    <p>
+                        更大、更私密空间， 能够满足您不同场景下的个性化需求。
+                    </p>
+                </div>
+                <div class="index-ensure-cnt">
+                    <div class="index-ensure-cnt-title">
+                        <img src="__TMPL__/public/assets/images/card_icon4.png" />
+                        <span>品质</span>
+                    </div>
+                    <p>
+                        尊享奢华住宿。体验专人定期现场检查，保证无与伦比的住宿品质。
+                    </p>
+                </div>
+            </div>
+            <!-- 精彩评价 -->
+            <div class="holiday-ensure">
+                <div class="holiday-ensure-h">
+                    精彩评价
+                </div>
+                <!-- 轮播 -->
+                <div class="mui-slider holiday-slider" style="margin-top:1rem;">
+                    <div class="mui-slider-group mui-slider-loop">
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <div class="evaluate">
+                                    <div style="width:4rem;height:4rem;">
+                                <img src="__TMPL__/public/assets/images/profile_photo6.png" alt="用户头像"
+                                    class="evaluate-img">
+                                    </div>
+                                <p class="evaluate-txt1">年轻人</p>
+                                <p class="evaluate-txt2">公众号用户留言</p>
+                                <div class="evaluate-address">
+                                    <img src="__TMPL__/public/assets/images/local_icon.png" alt="地标"
+                                        class="evaluate-address-img">
+                                    <p class="evaluate-txt3">欢乐颂海滨别墅 | 泰国，苏梅岛</p>
+                                </div>
+                                <div class="evaluate-words">
+                                    <img src="__TMPL__/public/assets/images/comma_icon.png" />
+                                    <p>
+                                        别墅位置稍微偏了一些，门口的小路还在修缮中，但是美景无敌～静谧的私家海滩完全无人打扰，无边际泳池随时可以放松身心。很荣幸成为会员，订房有很大折扣，很划算哈，下次出行一定会再找虔心荟度假俱乐部。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mui-slider-item">
+                            <div class="evaluate">
+                                <div style="width:4rem;height:4rem;">
+                                        <img src="__TMPL__/public/assets/images/profile_photo1.png" alt="用户头像"
+                                        class="evaluate-img">
+                                </div>
+                                <p class="evaluate-txt1">李大大</p>
+                                <p class="evaluate-txt2">公众号用户留言</p>
+                                <div class="evaluate-address">
+                                    <img src="__TMPL__/public/assets/images/local_icon.png" alt="地标"
+                                        class="evaluate-address-img">
+                                    <p class="evaluate-txt3">四线山房别墅 | 国内，赣州</p>
+                                </div>
+                                <div class="evaluate-words">
+                                    <img src="__TMPL__/public/assets/images/comma_icon.png" />
+                                    <p>
+                                        氧离子充足，和家人度假、放松心情的绝佳之处，既返朴归真又高档别致的别墅。此次度假，体验虔心荟会员特权及专属管家服务，实现了免费度假，省心省力又省钱，大赞哈！
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mui-slider-item">
+                            <div class="evaluate">
+                                    <div style="width:4rem;height:4rem;">
+                                <img src="__TMPL__/public/assets/images/profile_photo2.png" alt="用户头像"
+                                    class="evaluate-img">
+                                    </div>
+                                <p class="evaluate-txt1">爱生活</p>
+                                <p class="evaluate-txt2">公众号用户留言</p>
+                                <div class="evaluate-address">
+                                    <img src="__TMPL__/public/assets/images/local_icon.png" alt="地标"
+                                        class="evaluate-address-img">
+                                    <p class="evaluate-txt3">嘉西纳别墅 | 泰国，苏梅岛</p>
+                                </div>
+                                <div class="evaluate-words">
+                                    <img src="__TMPL__/public/assets/images/comma_icon.png" />
+                                    <p>
+                                        参与虔心荟的分享计划，用住房券、计划返现实现第一次真正的免费度假。特别舒适的一次度假.
+                                        别墅面积巨大，是也特别的好，面对大海。很大的绿色草地院子，然后一直延伸到沙滩。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mui-slider-item">
+                            <div class="evaluate">
+                                    <div style="width:4rem;height:4rem;">
+                                <img src="__TMPL__/public/assets/images/profile_photo3.png" alt="用户头像"
+                                    class="evaluate-img">
+                                    </div>
+                                <p class="evaluate-txt1">一笑而过</p>
+                                <p class="evaluate-txt2">公众号用户留言</p>
+                                <div class="evaluate-address">
+                                    <img src="__TMPL__/public/assets/images/local_icon.png" alt="地标"
+                                        class="evaluate-address-img">
+                                    <p class="evaluate-txt3">奇玛拉-克蕾别墅 | 泰国，普吉岛</p>
+                                </div>
+                                <div class="evaluate-words">
+                                    <img src="__TMPL__/public/assets/images/comma_icon.png" />
+                                    <p>
+                                        很棒、很安静、很私密。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mui-slider-item">
+                            <div class="evaluate">
+                                    <div style="width:4rem;height:4rem;">
+                                <img src="__TMPL__/public/assets/images/profile_photo4.png" alt="用户头像"
+                                    class="evaluate-img">
+                                    </div>
+                                <p class="evaluate-txt1">草莓姐姐</p>
+                                <p class="evaluate-txt2">公众号用户留言</p>
+                                <div class="evaluate-address">
+                                    <img src="__TMPL__/public/assets/images/local_icon.png" alt="地标"
+                                        class="evaluate-address-img">
+                                    <p class="evaluate-txt3">欢乐颂海滨别墅 | 泰国，普吉岛</p>
+                                </div>
+                                <div class="evaluate-words">
+                                    <img src="__TMPL__/public/assets/images/comma_icon.png" />
+                                    <p>
+                                        感谢管家分享私人定制服务的入住体验，早餐满满一大桌，出门就是洁白的沙滩，号称是普吉最好的沙滩区域 ，蓝天配泳池， 蓝的可以哈哈哈。最后，感谢管家很热心帮忙。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mui-slider-item">
+                            <div class="evaluate">
+                                <div style="width:4rem;height:4rem;">
+                                <img src="__TMPL__/public/assets/images/profile_photo5.png" alt="用户头像"
+                                    class="evaluate-img">
+                            </div>
+                                <p class="evaluate-txt1">周先生</p>
+                                <p class="evaluate-txt2">公众号用户留言</p>
+                                <div class="evaluate-address">
+                                    <img src="__TMPL__/public/assets/images/local_icon.png" alt="地标"
+                                        class="evaluate-address-img">
+                                    <p class="evaluate-txt3">四线山房别墅 | 国内，赣州 </p>
+                                </div>
+                                <div class="evaluate-words">
+                                    <img src="__TMPL__/public/assets/images/comma_icon.png" />
+                                    <p>
+                                        加入虔心荟度假俱乐部一段时间了，再一次使用住房券免费订房。别墅很漂亮，每天泡在别墅里也是不错的选择，值得一提的是，别墅管家做的饭出乎意料的好吃。管家的服务很赞，很贴心。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mui-slider-item">
+                            <div class="evaluate">
+                                    <div style="width:4rem;height:4rem;">
+                                <img src="__TMPL__/public/assets/images/profile_photo6.png" alt="用户头像"
+                                    class="evaluate-img">
+                                    </div>
+                                <p class="evaluate-txt1">年轻人</p>
+                                <p class="evaluate-txt2">公众号用户留言</p>
+                                <div class="evaluate-address">
+                                    <img src="__TMPL__/public/assets/images/local_icon.png" alt="地标"
+                                        class="evaluate-address-img">
+                                    <p class="evaluate-txt3">欢乐颂海滨别墅 | 泰国，苏梅岛</p>
+                                </div>
+                                <div class="evaluate-words">
+                                    <img src="__TMPL__/public/assets/images/comma_icon.png" />
+                                    <p>
+                                        别墅位置稍微偏了一些，门口的小路还在修缮中，但是美景无敌～静谧的私家海滩完全无人打扰，无边际泳池随时可以放松身心。很荣幸成为会员，订房有很大折扣，很划算哈，下次出行一定会再找虔心荟度假俱乐部。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <div class="evaluate">
+                                    <div style="width:4rem;height:4rem;">
+                                <img src="__TMPL__/public/assets/images/profile_photo1.png" alt="用户头像"
+                                    class="evaluate-img">
+                                    </div>
+                                <p class="evaluate-txt1">李大大</p>
+                                <p class="evaluate-txt2">公众号用户留言</p>
+                                <div class="evaluate-address">
+                                    <img src="__TMPL__/public/assets/images/local_icon.png" alt="地标"
+                                        class="evaluate-address-img">
+                                    <p class="evaluate-txt3">四线山房别墅 | 国内 · 赣州</p>
+                                </div>
+                                <div class="evaluate-words">
+                                    <img src="__TMPL__/public/assets/images/comma_icon.png" />
+                                    <p>
+                                        氧离子充足，和家人度假、放松心情的绝佳之处，既返朴归真又高档别致的别墅。此次度假，体验虔心荟会员特权及专属管家服务，实现了免费度假，省心省力又省钱，大赞哈！
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mui-slider-indicator">
+                        <div class="mui-indicator mui-active"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 俱乐部地址 -->
+            <div class="partner club-width">
+                <div class="partner-logo">
+                    <div class="partner-logo-cnt">
+                        <img src="__TMPL__/public/assets/images/LOGO.png" class="partner-logo-cnt-img" />
+                        <span class="partner-logo-cnt-txt">虔心荟度假俱乐部</span>
+                    </div>
+                    <div class="partner-address">
+                        地址：中国·广州 珠江新城合景国际金融广场
+                    </div>
+                    <div class="partner-phone">
+                        管家热线：<a href="tel:400-990-8830" style="color:#E6B854">400-990-8830</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- 主题 -->
+        <div class="theme">
+            <div class="theme-area-cnt-name" onclick="javascript:window.location.href='/scenery?10'">
+                <image src='__TMPL__/public/assets/images/theme4.png' class="theme-area-cnt-img"></image>
+                <div class="theme-area-cnt-txt">
+                    <div class="area-cnt-txt1">
+                        <span class="area-cnt-txt3">6个房源</span>
+                    </div>
+                    <div class="theme-area-cnt-txt2">
+                        <span>温泉</span>
+                        <span class="theme-area-cnt-span">Hot spring</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="theme-area-cnt-name" onclick="javascript:window.location.href='/scenery?8'">
+                <image src='__TMPL__/public/assets/images/theme3.png' class="theme-area-cnt-img"></image>
+                <div class="theme-area-cnt-txt">
+                    <div class="area-cnt-txt1">
+                        <span class="area-cnt-txt3">5个房源</span>
+                    </div>
+                    <div class="theme-area-cnt-txt2">
+                        <span>家庭</span>
+                        <span class="theme-area-cnt-span">Family</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="theme-area-cnt-name" onclick="javascript:window.location.href='/scenery?9'">
+                <image src='__TMPL__/public/assets/images/theme1.png' class="theme-area-cnt-img"></image>
+                <div class="theme-area-cnt-txt">
+                    <div class="area-cnt-txt1">
+                        <span class="area-cnt-txt3">已上线</span>
+                    </div>
+                    <div class="theme-area-cnt-txt2">
+                        <span>生态观光</span>
+                        <span class="theme-area-cnt-span">Ecological tourism</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="theme-area-cnt-name" onclick="javascript:window.location.href='/scenery?7'">
+                <image src='__TMPL__/public/assets/images/theme2.png' class="theme-area-cnt-img"></image>
+                <div class="theme-area-cnt-txt">
+                    <div class="area-cnt-txt1">
+                        <span class="area-cnt-txt3">待开放</span>
+                    </div>
+                    <div class="theme-area-cnt-txt2">
+                        <span>海岛线</span>
+                        <span class="theme-area-cnt-span">Island line</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 俱乐部地址 -->
+            <div class="partner club-width">
+                <div class="partner-logo">
+                    <div class="partner-logo-cnt">
+                        <img src="__TMPL__/public/assets/images/LOGO.png" class="partner-logo-cnt-img" />
+                        <span class="partner-logo-cnt-txt">虔心荟度假俱乐部</span>
+                    </div>
+                    <div class="partner-address">
+                        地址：中国·广州 珠江新城合景国际金融广场
+                    </div>
+                    <div class="partner-phone">
+                        管家热线：<a href="tel:400-990-8830" style="color:#E6B854">400-990-8830</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 悬浮按钮 -->
+        <div class="holiday-suspend-btn" onclick="javascript:window.location.href='/free'">
+            <img src="__TMPL__/public/assets/images/free_holiday_mark.png?4-8" />
+        </div>
+    </div>
+    <script>
+        var gallery = mui('.mui-slider');
+        gallery.slider({
+            interval: 3000
+        });
+    </script>
+</body>
+
+</html>

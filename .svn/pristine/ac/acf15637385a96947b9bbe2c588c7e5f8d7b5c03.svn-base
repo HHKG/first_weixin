@@ -1,0 +1,62 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">优惠券列表</a></li>
+        <li><a href="{:url('Coupon/add')}">增加优惠券</a></li>
+    </ul>
+
+    <form class="js-ajax-form" action="" method="post">
+
+        <table class="table table-hover table-bordered table-list">
+            <thead>
+            <tr>
+                <th >ID</th>
+                <th>名称</th>
+                <th >优惠券金额</th>
+                <th >优惠券类型</th>
+                <th >是否能叠加</th>
+                <th >可使用金额</th>
+                <th >发送方式</th>
+                <th >总数量</th>
+                <th >发送数量</th>
+                <th >有效天数</th>
+                <th >优惠券图片</th>
+                <th >操作</th>
+            </tr>
+            </thead>
+           <?php foreach($coupons as $vo):?>
+                <tr>
+                    <td><b><?php echo $vo['id'];?></b></td>
+                    <td><b><?php echo $vo['E_Name'];?></b></td>
+                    <td><b><?php echo $vo['E_Money'];?></b></td>
+                    <td><b><?php echo $vo['E_Type'];?></b></td>
+                    <td><b><?php echo $vo['E_IsSuperposition']==1?"可叠加":'不可叠加';?></b></td>
+                    <td><b><?php echo $vo['E_CanUseMoney'];?></b></td>
+                    <td><b><?php echo $vo['E_SendType'];?></b></td>
+                    <td><b><?php echo $vo['E_Amount'];?></b></td>
+                    <td><b><?php echo $vo['E_Send'];?></b></td>
+                    <td><b><?php echo $vo['E_LastDay'];?></b></td>
+                    <td>
+                        <?php if ($vo['E_CouponImg']):?>
+
+                        <a href="javascript:parent.imagePreviewDialog('{:cmf_get_image_preview_url($vo.E_CouponImg )}');">
+                            <i class="fa fa-photo fa-fw"></i>
+                        </a>
+                        <else/>
+                        <i class="fa fa-close fa-fw"></i>
+                    <?php endif;?></td>
+                    <td>
+                        <a href="{:url('coupon/edit',array('id'=>$vo['id']))}">{:lang('EDIT')}</a>
+                        <a href="{:url('coupon/delete',array('id'=>$vo['id']))}" class="js-ajax-delete">{:lang('DELETE')}</a>
+                    </td>
+                </tr>
+            <?php endforeach;?>
+        </table>
+        <ul class="pagination">{$page|default=''}</ul>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

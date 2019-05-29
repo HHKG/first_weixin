@@ -1,0 +1,26 @@
+<nav class="mui-bar mui-bar-tab index_nav">
+    <a class="index" href="index">
+      <empty name="index" >
+          <img src="__TMPL__/public/assets/images/shouye_icon.png" />
+          <else />
+          <img src="__TMPL__/public/assets/images/shouye_icon_seleted.png" />
+          </empty>
+        <span>首页</span>
+    </a>
+    <a class="index" href="/club">
+        <empty name="club">
+            <img src="__TMPL__/public/assets/images/julebu_icon.png" />
+            <else />
+            <img src="__TMPL__/public/assets/images/julebu_icon_seleted.png" />
+        </empty>
+        <span>俱乐部</span>
+    </a>
+    <a class="index" href="/member">
+        <empty name="member">
+            <img src="__TMPL__/public/assets/images/huiyuan_icon.png" />
+            <else />
+            <img src="__TMPL__/public/assets/images/huiyuan_icon_seleted.png" />
+        </empty>
+        <span>会员中心</span>
+    </a>
+</nav>

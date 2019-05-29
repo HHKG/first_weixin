@@ -1,0 +1,168 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:48:"themes/admin_simpleboot/admin\project\scale.html";i:1551680628;s:65:"D:\code\qxh\qxh\public\themes\admin_simpleboot\public\header.html";i:1535858920;}*/ ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- HTML5 shim for IE8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+
+    <link href="/themes/admin_simpleboot/public/assets/themes/<?php echo cmf_get_admin_style(); ?>/bootstrap.min.css" rel="stylesheet">
+    <link href="/themes/admin_simpleboot/public/assets/simpleboot3/css/simplebootadmin.css" rel="stylesheet">
+    <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        form .input-order {
+            margin-bottom: 0px;
+            padding: 0 2px;
+            width: 42px;
+            font-size: 12px;
+        }
+
+        form .input-order:focus {
+            outline: none;
+        }
+
+        .table-actions {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 0px;
+        }
+
+        .table-list {
+            margin-bottom: 0px;
+        }
+
+        .form-required {
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        //全局变量
+        var GV = {
+            ROOT: "/",
+            WEB_ROOT: "/",
+            JS_ROOT: "static/js/",
+            APP: '<?php echo \think\Request::instance()->module(); ?>'/*当前应用名*/
+        };
+    </script>
+    <script src="/themes/admin_simpleboot/public/assets/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/js/wind.js"></script>
+    <script src="/themes/admin_simpleboot/public/assets/js/bootstrap.min.js"></script>
+    <script>
+        Wind.css('artDialog');
+        Wind.css('layer');
+        $(function () {
+            $("[data-toggle='tooltip']").tooltip({
+                container:'body',
+                html:true,
+            });
+            $("li.dropdown").hover(function () {
+                $(this).addClass("open");
+            }, function () {
+                $(this).removeClass("open");
+            });
+        });
+    </script>
+    <?php if(APP_DEBUG): ?>
+        <style>
+            #think_page_trace_open {
+                z-index: 9999;
+            }
+        </style>
+    <?php endif; ?>
+</head>
+<body>
+    <div style="text-align: center">
+		<h1>年份：<?php echo $year;?></h1>
+	</div>
+	<div class="wrap">
+		<form method="post" class="form-horizontal js-ajax-form" action="<?php echo url('project/scale_post'); ?>">
+            <input type="hidden" class="form-control"  name="project" value="<?php echo $project;?>">
+            <input type="hidden" class="form-control"  name="plan" value="<?php echo $plan;?>">
+			<input type="hidden" name="update" value="1">
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                1月份：<input type="number" <?php echo  date('m')>01?'readonly':''?> class="form-control "  value="<?php echo  isset($info)?$info['E_Jan']:''?>" name="E_Jan" >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                2月份：<input type="number" <?php echo date('m')>02?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_Feb']:''?>"   name="E_Feb"  >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                3月份：<input type="number"  <?php echo  date('m')>03?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_March']:''?>"   name="E_March">
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                4月份：<input type="number" <?php echo  date('m')>04?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_April']:''?>"   name="E_April" >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+					4月份：<input type="number" <?php echo  date('m')>04?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_April']:''?>"   name="E_April" >
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                5月份：<input type="number"  <?php echo  date('m')>05?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_May']:''?>"   name="E_May" >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                6月份：<input type="number" <?php echo  date('m')>06?'readonly':''?> class="form-control"  value="<?php echo  isset($info)?$info['E_June']:''?>"  name="E_June" >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                7月份：<input type="number" <?php echo  date('m')>07?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_July']:''?>"   name="E_July" >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                8月份：<input type="number" <?php echo  date('m')>'08'?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_August']:''?>"   name="E_August"  >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                9月份：<input type="number"  <?php echo  date('m')>'09'?'readonly':''?> class="form-control"  value="<?php echo  isset($info)?$info['E_Sept']:''?>"  name="E_Sept" >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                10月份：<input type="number"  <?php echo  date('m')>10?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_Oct']:''?>"   name="E_Oct"  >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                11月份：<input type="number" <?php echo  date('m')>11?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_Nov']:''?>"  name="E_Nov"  >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                12月份：<input type="number"  class="form-control"  value="<?php echo  isset($info)?$info['E_Dec']:''?>"   name="E_Dec"  >
+            </div>
+			</div>
+
+            <div style="text-align: center" class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button  type="submit" class="btn btn-primary ">保存</button>
+                </div>
+            </div>
+		</form>
+	</div>
+	<script src="/static/js/admin.js"></script>
+</body>
+</html>

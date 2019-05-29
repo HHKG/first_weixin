@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>虔心荟</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <include file="public@header"/>
+</head>
+<body>
+<div class="am-g  myapp-member ">
+	 <div class="am-u-sm-11 am-u-sm-centered centered myapp-member-card ">
+	 	     
+         <div class="am-g myapp-member-name">
+         <div class="myapp-member-name1"><img class="am-circle myapp-member-pic" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80"/></div>
+         <div  class="myapp-member-name2"><p><span class="member-name">虔心荟</span><br><span class="member-type"></span></p></div>
+	    </div>
+	     <div class="am-g myapp-member-cardnum" cardnum="1010 2599 8233"></div>
+     </div>
+     
+
+   <ul class="am-avg-sm-3 am-u-sm-11 am-u-sm-centered myzhanghu">
+  <li><p class="am-g yuee  animateNumbe  am-text-center" >0</p><p class="am-g yueename  am-text-center" >账户余额</p></li>
+ <li><p class="am-g yuee  animateNumbe2   am-text-center" >0</p><p class="am-g yueename  am-text-center" >住房消费劵</p></li>
+  <li><p class="am-g yuee animateNumbe3 am-text-center" >0</p><p class="am-g yueename  am-text-center" >待结算返现</p></li>
+ 
+</ul>
+</div>
+
+
+<script type="text/javascript">
+$(function () {
+    var decimal_places = 2;
+    var decimal_factor = decimal_places === 0 ? 1 : Math.pow(10, decimal_places);
+    var token="<?php echo $token;?>"
+    $.ajax({
+        type:'GET',
+        url:'http://www.iqianclub.com/interface/public/index.php/speed/member',
+        dataType:'jsonp',
+        xhrFields:{withCredentials:true},
+        data:{token:token},
+        success:function (data) {
+            // console.log(data);
+            if (data.code=='1'){
+                $('.member-type').html(data.member_info.gradename);
+                $('.member-name').html(data.member_info.E_Name);
+                $('.myapp-member-pic').attr('src',data.member_info.E_HeadImg);
+
+                $('.myapp-member-cardnum').html(data.member_info.E_CardNumber.toString().replace(/(.{4})/g,'$1&nbsp;&nbsp;'));
+                $('.animateNumbe').animateNumber(
+                    {
+                        number: data.member_info.E_Balance * decimal_factor,
+                        numberStep: function(now, tween) {
+                            var floored_number = Math.floor(now) / decimal_factor,
+                                target = $(tween.elem);
+
+                            if (decimal_places > 0) {
+                                // force decimal places even if they are 0
+                                floored_number = floored_number.toFixed(decimal_places);
+
+                                // replace '.' separator with ','
+                                floored_number = floored_number.toString().replace('.', '.');
+                            }
+                            target.text(floored_number);
+                        }
+                    },
+                    1000
+                );
+                $('.animateNumbe2').animateNumber({ number: data.member_info.E_HouseCoupon });
+                $('.animateNumbe3').animateNumber(
+                    {
+                        number: data.member_info.E_Rebate * decimal_factor,
+                        numberStep: function(now, tween) {
+                            var floored_number = Math.floor(now) / decimal_factor,
+                                target = $(tween.elem);
+                            if (decimal_places > 0) {
+                                // force decimal places even if they are 0
+                                floored_number = floored_number.toFixed(decimal_places);
+                                // replace '.' separator with ','
+                                floored_number = floored_number.toString().replace('.', '.');
+                            }
+                            target.text(floored_number);
+                        }
+                    },
+                    1000
+                );
+            }
+        }
+    })
+})
+</script>
+</body>
+</html>

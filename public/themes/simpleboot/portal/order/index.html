@@ -1,0 +1,182 @@
+<html style="font-size: 54.8px;">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0;" name="viewport">
+    <title>qianclub</title>
+    <link href="__TMPL__/public/assets/css/index.css?2-1" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/app_index.css?2-1" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+    <div class="main jiaruhuiji" style="height: 731px;">
+        <div class="van-nav-bar van-hairline--bottom" style="z-index: 1;">
+            <div class="van-nav-bar__left"><i class="van-icon van-icon-arrow-left van-nav-bar__arrow"><!----><!----></i>
+                <!----></div>
+            <div class="van-ellipsis van-nav-bar__title">加入会籍</div>
+            <div class="van-nav-bar__right"><!----></div>
+        </div>
+        <div class="title_name">
+            已选方案
+        </div>
+        <div class="bgf">
+            <table class="copies">
+                <tr>
+                    <td>￥<span class="money">0.01</span>/份</td>
+                    <td >(限购<span class="canbuy">5</span>份)</td>
+                </tr>
+                <tr class="border_bottom">
+                    <td colspan="2" class="title">四闲山房别墅·权益方案一</td>
+                </tr>
+                <tr class="newpadding">
+                    <td>选择认购份数</td>
+                    <td>
+                        <div class="van-stepper">
+                            <button class="van-stepper__minus van-stepper__minus--disabled"></button>
+                            <input type="number" class="van-stepper__input" value="1">
+                            <button class="van-stepper__plus"></button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="title_name">
+            用户名
+        </div>
+        <div class="bgf">
+            <div class="new_cell_group van-cell-group van-hairline--top-bottom">
+                <div class="van-cell van-field">
+                    <div class="van-cell__value van-cell__value--alone">
+                        <div class="van-field__body">
+                            <input type="text" placeholder="请输入用户名" disabled="disabled" class="van-field__control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="title_name">
+            支付方式
+        </div>
+        <div class="new_radio_group van-radio-group">
+            <div class="van-cell-group van-hairline--top-bottom">
+                <div class="van-cell van-cell--clickable"><!---->
+                    <div class="van-cell__title"><span>微信支付</span><!----></div>
+                    <div class="van-cell__value">
+                        <div class="van-radio"><span class="van-radio__input"><input type="radio"
+                                                                                     class="van-radio__control"
+                                                                                     value="weixin"><i
+                                class="van-icon van-icon-checked"><!----><!----></i></span><!----></div>
+                    </div><!----></div>
+            </div>
+        </div>
+        <div class="bar_pay van-submit-bar">
+            <div class="van-submit-bar__bar">
+                <div class="van-submit-bar__text"><span>合计：</span>¥<span class="van-submit-bar__price"> 0.01</span>
+                </div>
+                <button class="van-button van-button--danger van-button--large van-button--square dis"><span
+                      disabled=""  class="van-button__text" >
+      立即支付
+    </span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+<script>
+    $(function () {
+        $
+        $.ajax({
+            url: 'http://t3.iqianclub.com/car',
+            type: 'POST',
+            dataType: 'jsonp',
+            data: {
+                code: "<?php echo $_GET['code'];?>",
+                token: "<?php echo session('tokens');?>"
+            },
+            header: {token: "<?php echo session('tokens');?>"},
+            xhrFields: {withCredentials: true},
+            success: function (data) {
+                if (data.code == 1) {
+                    $('.van-field__control').val(data.member_info.E_Name);
+                    $('.money').html(data.plan_info.E_Money);
+                    $('.canbuy').html(data.plan_info.E_CanBuy);
+                    $('.title').html(data.member_info.E_Title);
+                    $('.van-submit-bar__price').html(' ' +data.plan_info.E_Money)
+                }
+                ////console.log(data);
+            }
+        })
+        $('.van-stepper__minus').click(function () {
+            var number = $('.van-stepper__input').val();
+            if (number == 1) return;
+            $('.van-stepper__input').val(number - 1);
+            var price=parseInt($('.money').html())
+            $('.van-submit-bar__price').html(price*(number-1))
+        })
+        $('.van-stepper__plus').click(function () {
+            var number = parseInt($('.van-stepper__input').val());
+            var canbuy=$('.canbuy').html();
+            // ////console.log(typeof  number)
+            if (number >=canbuy) return;
+            $('.van-stepper__input').val(number+1);
+            var price=parseInt($('.money').html());;
+            // ////console.log(price)
+            $('.van-submit-bar__price').html( price*(number+1));
+        })
+        $('.van-button').click(function () {
+            // ////console.log(11)
+            $(this).attr('disabled',true);
+            var number = parseInt($('.van-stepper__input').val());
+            var code="<?php echo $_GET['code'];?>";
+            var price=parseInt( $('.van-submit-bar__price').html( ));
+            $.ajax({
+                url:'http://t3.iqianclub.com/createorder',
+                type:'POST',
+                dataType:'jsonp',
+                data:{num:number,code:code,price:price,token:"<?php echo session('tokens');?>"},
+                success:function (data) {
+                    ////console.log(data);
+                    if (data.code==1){
+                        WeixinJSBridge.invoke(
+                            'getBrandWCPayRequest',
+                            data.info,
+                            function(res){
+                                if (res.err_msg == 'get_brand_wcpay_request:ok') {
+                                    $.ajax({
+                                        type: 'GET',
+                                        url : 'http://t3.iqianclub.com/getpaystate.html',
+                                        dataType: 'jsonp',
+                                        xhrFields:{withCredentials:true},
+                                        data:{sn:data.sn},
+                                        success:function(datas){
+                                            if (datas.code=1){
+                                                if(datas.state=='支付成功'){
+                                                    alert('支付成功！');
+                                                    // alert('http://www.iqianclub.com/qxh/public/index.php/?token='+token);
+                                                    window.location.href='/portal/order/paysuccess/'+data.sn;
+                                                }else{
+                                                    alert('支付失败！');
+                                                    $(this).attr('disabled',false);
+                                                }
+
+                                            }
+                                        }})
+
+                                } else {
+
+                                    //alert('启动微信支付失败, 请检查你的支付参数. 详细错误为: ' + res.err_msg);
+                                    //history.go(-1);
+                                }
+                            }
+                        );
+                    }else {
+                        alert(data.msg);
+                        $(this).attr('disabled',false);
+                    }
+                }
+            })
+        })
+    })
+</script>

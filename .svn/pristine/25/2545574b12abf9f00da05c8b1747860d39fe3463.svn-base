@@ -1,0 +1,383 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:47:"themes/admin_simpleboot/admin\project\edit.html";i:1551680628;s:65:"D:\code\qxh\qxh\public\themes\admin_simpleboot\public\header.html";i:1535858920;}*/ ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- HTML5 shim for IE8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+
+    <link href="/themes/admin_simpleboot/public/assets/themes/<?php echo cmf_get_admin_style(); ?>/bootstrap.min.css" rel="stylesheet">
+    <link href="/themes/admin_simpleboot/public/assets/simpleboot3/css/simplebootadmin.css" rel="stylesheet">
+    <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        form .input-order {
+            margin-bottom: 0px;
+            padding: 0 2px;
+            width: 42px;
+            font-size: 12px;
+        }
+
+        form .input-order:focus {
+            outline: none;
+        }
+
+        .table-actions {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 0px;
+        }
+
+        .table-list {
+            margin-bottom: 0px;
+        }
+
+        .form-required {
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        //全局变量
+        var GV = {
+            ROOT: "/",
+            WEB_ROOT: "/",
+            JS_ROOT: "static/js/",
+            APP: '<?php echo \think\Request::instance()->module(); ?>'/*当前应用名*/
+        };
+    </script>
+    <script src="/themes/admin_simpleboot/public/assets/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/js/wind.js"></script>
+    <script src="/themes/admin_simpleboot/public/assets/js/bootstrap.min.js"></script>
+    <script>
+        Wind.css('artDialog');
+        Wind.css('layer');
+        $(function () {
+            $("[data-toggle='tooltip']").tooltip({
+                container:'body',
+                html:true,
+            });
+            $("li.dropdown").hover(function () {
+                $(this).addClass("open");
+            }, function () {
+                $(this).removeClass("open");
+            });
+        });
+    </script>
+    <?php if(APP_DEBUG): ?>
+        <style>
+            #think_page_trace_open {
+                z-index: 9999;
+            }
+        </style>
+    <?php endif; ?>
+<style type="text/css">
+    .pic-list li {
+        margin-bottom: 5px;
+
+    }
+
+    .col-md-9 {
+        width: 70%;
+    }
+
+    .col-md-3 {
+        width: 30%;
+    }
+</style>
+<script type="text/html" id="photos-item-tpl">
+    <li id="saved-image{id}">
+        <input id="photo-{id}" type="hidden" name="photo_urls[]" value="{filepath}">
+        <input class="form-control" id="photo-{id}-name" type="text" name="photo_names[]" value="{name}"
+               style="width: 200px;" title="图片名称">
+        <img id="photo-{id}-preview" src="{url}" style="height:36px;width: 36px;"
+             onclick="imagePreviewDialog(this.src);">
+        <a href="javascript:uploadOneImage('图片上传','#photo-{id}','project');">替换</a>
+        <a href="javascript:(function(){$('#saved-image{id}').remove();})();">移除</a>
+    </li>
+</script>
+<script type="text/html" id="files-item-tpl">
+    <li id="saved-file{id}">
+        <input id="file-{id}" type="hidden" name="file_urls[]" value="{filepath}">
+        <input class="form-control" id="file-{id}-name" type="text" name="file_names[]" value="{name}"
+               style="width: 200px;" title="文件名称">
+        <a id="file-{id}-preview" href="{preview_url}" target="_blank">下载</a>
+        <a href="javascript:uploadOne('文件上传','#file-{id}','file');">替换</a>
+        <a href="javascript:(function(){$('#saved-file{id}').remove();})();">移除</a>
+    </li>
+</script>
+<script type="text/html" id="open_files-item-tpl">
+    <li id="saved-open_files{id}">
+        <input id="open_files-{id}" type="hidden" name="file_urls[]" value="{filepath}">
+        <input class="form-control" id="open_files-{id}-name" type="text" name="open_files_names[]" value="{name}"
+               style="width: 200px;" title="文件名称">
+        <a id="open_files-{id}-preview" href="{preview_url}" target="_blank">下载</a>
+        <a href="javascript:uploadOne('文件上传','#open_files-{id}','file');">替换</a>
+        <a href="javascript:(function(){$('#saved-open_files{id}').remove();})();">移除</a>
+    </li>
+</script>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="<?php echo url('Project/index'); ?>">项目列表</a></li>
+        <li class="active"><a href="<?php echo url('Project/add'); ?>">添加项目</a></li>
+    </ul>
+    <form action="<?php echo url('Project/editPost'); ?>" method="post" class="form-horizontal js-ajax-form margin-top-20">
+        <div class="row">
+            <div class="col-md-9">
+                <table class="table table-bordered">
+                    <tr>
+                        <th width="100">项目名称<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" name="E_Name" type="text" style=";" required
+                                   value="<?php echo $project['E_Name'];?>"/>
+                            <input class="form-control" name="E_Code" type="hidden" style=";" required
+                                   value="<?php echo $project['E_Code'];?>"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">项目简称<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" name="E_Abbreviation" type="text" style="" required
+                                   value="<?php echo $project['E_Abbreviation'];?>"
+                                   placeholder="请填入项目名称"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">项目类型<span class="form-required">*</span></th>
+                        <td>
+                            <select name="E_Type">
+                                <option value="0">请选择项目类别</option>
+                                <?php foreach($type as $v):?>
+                                <option <?php echo $project['E_Type']==$v['id']? 'selected':''; ?> value="<?php echo $v['id'];?>" >
+                                  <?php echo $v['E_Name'];?>
+                                </option>
+                                <?php endforeach;?>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>项目状态<span class="form-required">*</span></th>
+                        <td>
+                            <select name="E_Status">
+                                <option value="1"
+                                <?php echo $project['E_Status']==1? 'selected':''; ?>>待上线</option>
+                                <option value="2"
+                                <?php echo $project['E_Status']==2? 'selected':''; ?>>未上线</option>
+                                <option value="3"
+                                <?php echo $project['E_Status']==3? 'selected':''; ?>>认购中</option>
+                                <option value="4"
+                                <?php echo $project['E_Status']==4? 'selected':''; ?>>已结束</option>
+                            </select>
+                            <input class="form-control" type="text" name="E_StatusInfo" value="" placeholder="状态说明">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>认购结束时间<span class="form-required">*</span></th>
+                        <td>
+                            <input type="text" class="form-control js-bootstrap-date" name="E_EndTime"
+                                   value="<?php echo date('Y-m-d',$project['E_EndTime']);?>"
+                                   style="width: 140px;" autocomplete="off" placeholder="认购结束时间">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>位置<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_Region"
+                                   value="<?php echo $project['E_Region'];?>"
+                                   placeholder="位置">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>地址<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_Address"
+                                   value="<?php echo $project['E_Address'];?>"
+                                   placeholder="请输入地址">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>项目品牌<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_Brand"
+                                   value="<?php echo $project['E_Brand'];?>"
+                                   placeholder="请输入项目品牌">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>计划标签<span class="form-required">*</span></th>
+                        <td>
+                            <?php foreach($tag as $k=>$v):?>
+                            <div>
+                                <div style="text-align: center;white-space:nowrap;float: left;height: 34px;">
+                                    <input type="hidden" name="tagimg[]" id="tagimg<?php echo $k;?>" value="<?php echo $v['E_TagImg'];?>">
+                                    <a href="javascript:uploadOneImage('图片上传','#tagimg<?php echo $k;?>','project');">
+                                        <img src="<?php echo  '/upload/'.$v['E_TagImg'];?>" id="tagimg<?php echo $k;?>-preview" style="height: 34px;"/>
+                                    </a>
+                                </div>
+                                <input class="form-control" type="text" required name="tagname[]" value="<?php echo $v['E_TagName'];?>" style="width: 20%;float: left;">
+                                <input class="form-control" type="text" required name="tag[]"value="<?php echo $v['E_Tag'];?>" style="width: 50%;">
+                            </div>
+                            <?php endforeach;?>
+                            <button type="button" onclick="addtag(this)">增加标签</button>
+                            <button type="button" onclick="deltag(this)">删除最后的标签</button>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th>项目情况<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_Situation"
+                                   value="<?php echo $project['E_Situation'];?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>项目特色</th>
+                        <td>
+                            <input class="form-control" type="text" name="E_Characteristic" maxlength="150"
+                                   value="<?php echo $project['E_Characteristic'];?>"
+                                   placeholder="项目特色">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>项目的简介<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" required name="E_Digest" required maxlength="200"
+                                   value="<?php echo $project['E_Digest'];?>"
+                                   placeholder="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>项目的介绍<span class="form-required">*</span></th>
+                        <td>
+                            <script type="text/plain" id="content"
+                                    name="E_Introduction"><?php echo $project['E_Introduction'];?></script>
+
+                        </td>
+                    </tr>
+
+                </table>
+                <?php 
+    \think\Hook::listen('portal_admin_article_edit_view_main',$temp5c9043e13c6d1,null,false);
+ ?>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary js-ajax-submit"><?php echo lang('ADD'); ?></button>
+                        <a class="btn btn-default" href="<?php echo url('Project/index'); ?>"><?php echo lang('BACK'); ?></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <table class="table table-bordered">
+
+                    <tr>
+                        <th><b>主图片<span class="form-required">*</span></b></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="text-align: center;">
+                                <input type="hidden" name="E_HeaderImg" id="thumbnail"
+                                       value="<?php echo $project['E_HeaderImg'];?>">
+                                <a href="javascript:uploadOneImage('图片上传','#thumbnail','project',this.with=300);">
+                                    <img src="<?php echo '/upload/'.$project['E_HeaderImg'];?>"
+                                         id="thumbnail-preview"
+                                         width="135" style="cursor: pointer"/>
+                                </a>
+                                <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片">
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <?php 
+    \think\Hook::listen('portal_admin_article_edit_view_right_sidebar',$temp5c9043e13c6d1,null,false);
+ ?>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="/static/js/admin.js"></script>
+<script type="text/javascript">
+    //编辑器路径定义
+    var editorURL = GV.WEB_ROOT;
+</script>
+<script type="text/javascript" src="/static/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="/static/js/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript">
+    function addtag(obj) {
+        var x=100;
+        var y=1;
+        var num=parseInt(Math.random()*(x-y+1)+y);
+        var str='';
+        str+='<div>';
+        str+='<div style="text-align: center;white-space:nowrap;float: left;height: 34px;">';
+        str+='<input type="hidden" name="tagimg[]" id="tagimg'+num+'" value=""> ';
+        str+='<a href="javascript:uploadOneImage(\'图片上传\',\'#tagimg'+ num +'\',\'project\');">  ';
+        str+='<img src="/themes/admin_simpleboot/public/assets/images/default-thumbnail.png" id="tagimg'+ num +'-preview" style="height: 34px;"/>  ';
+        str+='</a> ';
+        str+=' </div>';
+        str+='  <input class="form-control" type="text" required name="tagname[]" placeholder="标签名称" style="width: 20%;float: left;">';
+        str+='  <input class="form-control" type="text" required name="tag[]" placeholder="标签内容" style="width: 50%;"> ';
+        str+='  </div> ';
+        $(obj).before().before(str)
+    }
+    function deltag(obj) {
+        console.log($(obj).prev().prev()[0].remove());
+        // alert(1);
+        // $(obj).before(' <div> <input class="form-control" type="text" required name="tag[]" placeholder=""></div>')
+    }
+
+
+    $(function () {
+
+        editorcontent = new baidu.editor.ui.Editor();
+        editorcontent.render('content');
+        try {
+            editorcontent.sync();
+        } catch (err) {
+        }
+
+        $('.btn-cancel-thumbnail').click(function () {
+            $('#thumbnail-preview').attr('src', '/themes/admin_simpleboot/public/assets/images/default-thumbnail.png');
+            $('#thumbnail').val('');
+        });
+
+    });
+
+    function doSelectType() {
+        var Id = $('#js-categories-id-input').val();
+        openIframeLayer("<?php echo url('Project/select'); ?>?id=" + Id, '请选择类型', {
+            area: ['700px', '400px'],
+            btn: ['确定', '取消'],
+            yes: function (index, layero) {
+                //do something
+
+                var iframeWin = window[layero.find('iframe')[0]['name']];
+                var selectedCategories = iframeWin.confirm();
+                if (selectedCategories.selectedCategoriesId.length == 0) {
+                    layer.msg('请选择类型');
+                    return;
+                }
+                $('#js-categories-id-input').val(selectedCategories.selectedCategoriesId.join(','));
+                $('#js-categories-name-input').val(selectedCategories.selectedCategoriesName.join(' '));
+                //console.log(layer.getFrameIndex(index));
+                layer.close(index); //如果设定了yes回调，需进行手工关闭
+            }
+        });
+    }
+</script>
+</body>
+</html>

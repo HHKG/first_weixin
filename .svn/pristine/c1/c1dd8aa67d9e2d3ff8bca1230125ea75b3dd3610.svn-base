@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="keywords" content="<?php echo $keywords;?>">
+    <meta name="description" content="<?php echo $description;?>">
+    <title>支付成功-虔心荟</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <include file="public@header"/>
+    <link href="__TMPL__/public/assets/css/person.css" rel="stylesheet"  />
+</head>
+<style type="text/css">
+
+    body{
+        background:#fff;
+    }
+</style>
+<body>
+
+<script type="text/javascript">
+    mui.init()
+</script>
+<div class="mui-content" style="background:#fff;">
+    <div class="finish_page"></div>
+    <div class="finish_header">
+        <p class="finish_tip">订单支付完成</p>
+    </div>
+    <div class="finish_content">
+        <div class="finish_middle">
+            <span class="finish_left">参与计划方案：</span>
+            <span class="finish_right plan_title">--</span>
+        </div>
+        <div class="finish_middle">
+            <span class="finish_left">支付金额：</span>
+            <span class="finish_right plan_money">--</span>
+        </div>
+        <div class="finish_middle">
+            <span class="finish_left">支付方式：</span>
+            <span class="finish_right paytype">--</span>
+        </div>
+        <div class="finish_middle">
+            <span class="finish_left">返现账单日：</span>
+            <span class="finish_right plan_day">--</span>
+        </div>
+        <div class="finish_middle">
+            <span class="finish_left">消费券发放日：</span>
+            <span class="finish_right coupon">--</span>
+        </div>
+
+    </div>
+    <div class="button_block">
+        <div class="finish_button btn">
+            <button class="btn_1" onclick="javascript:window.location.href='/myorder'">查看订单</button>
+            <button onclick="javascript:window.location.href='/member'">会员中心</button>
+        </div>
+    </div>
+</div>
+<!-- 首单弹窗 -->
+<div class="shoudan">
+    <div class="mask" style="display: block"></div>
+    <div class="shoudan_pop">
+        < img src="__TMPL__/public/assets/images/shoudan_tanchuan.png" class="shoudan_img" />
+        < img src="__TMPL__/public/assets/images/shoudan_close_icon.png" class="shoudan_close" />
+    </div>
+</div>
+</html>
+<script>
+    $(function () {
+        // mui.max=90;
+        var time="<?php echo $time;?>";
+        var action='getpaystate';
+        var randomstr="<?php echo $randomstr;?>";
+        var   sn= "<?php echo $sn;?>";
+        var sign=$.md5(action+randomstr+sn+time);
+        var datas={sn:sn,time:time,action:action, sign:sign};
+        $.ajax({
+            url: "<?php echo config('interfaceurl')?>/getpaystate",
+            type: 'POST',
+            dataType: 'json',
+            headers:{token:"<?php echo session('token');?>" },
+            data: datas,
+            success: function (data) {
+                //console.log(data);
+                if (data.code == 1) {
+                    if (data.data.first==1){
+                        $('.shoudan').show();
+                    }
+                    $('.plan_title').html(data.data.E_PlanName);
+                    $('.plan_money').html(price(data.data.E_OrderPrice));
+                    if (data.data.E_PayType==1){
+                        $('.paytype').html('消费金支付');
+                    }else if (data.data.E_PayType==2){
+                        $('.paytype').html('余额支付');
+                    } else{
+                        $('.paytype').html('微信支付');
+                    }
+
+                    $('.plan_day').html('每月'+data.data.E_BillDay+'日');
+                    $('.coupon').html(data.data.E_CouponTime);
+
+                }
+
+            }
+        })
+        $('.shoudan_close').click(function () {
+            $('.shoudan').hide();
+        });
+        $('.mask').click(function () {
+            $('.shoudan').hide();
+        })
+    })
+    function price(price) {
+        // //console.log(price);
+        price=parseFloat(price);
+        // //console.log(price);
+        return price.toLocaleString('zh-Hans-CN', {
+            style: 'currency',
+            currency: 'CNY',
+            useGrouping:true
+        })
+    }
+</script>

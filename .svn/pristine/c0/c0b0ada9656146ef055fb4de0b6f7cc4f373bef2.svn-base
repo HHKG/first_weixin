@@ -1,0 +1,58 @@
+<include file="public@header"/>
+<style type="text/css">
+    .pic-list li {
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="{:url('question/index')}">问题列表</a></li>
+        <li class="active"><a href="{:url('question/add')}">添加问题</a></li>
+    </ul>
+    <form action="{:url('question/add_Post')}" method="post" class="form-horizontal js-ajax-form margin-top-20">
+        <div class="row">
+            <div class="col-md-9">
+                <table class="table table-bordered">
+                    <tr>
+                        <th width="100">标题<span class="form-required">*</span></th>
+                        <td>
+                            <input class="form-control" type="text" name="E_Title"
+                                   id="title" required value="" placeholder="请输入标题"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>答案1</th>
+                        <td><input class="form-control" type="text" name="answer1" id="" value=""
+                                   required placeholder=""></td>
+                    </tr>
+                    <tr>
+                        <th>答案1</th>
+                        <td><input class="form-control" type="text" name="answer2" id="source" value=""
+                                   required  placeholder=""></td>
+                    </tr>
+
+                    <tr>
+                        <th>答案1</th>
+                        <td><input class="form-control" type="text" name="answer3" value=""
+                                   required   placeholder=""></td>
+                    </tr>
+                </table>
+                <hook name="portal_admin_new_edit_view_main"/>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+                        <a class="btn btn-default" href="{:url('question/index')}">{:lang('BACK')}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="__STATIC__/js/admin.js"></script>
+<script type="text/javascript" src="__STATIC__/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__STATIC__/js/ueditor/ueditor.all.min.js"></script>
+
+</body>
+</html>

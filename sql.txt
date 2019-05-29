@@ -1,0 +1,196 @@
+房间信息
+create table qxh_Hotel_Home(
+id mediumint auto_increment ,
+E_CreateUser varchar(20) not null default '' comment '创建者',
+E_CreateDate int not null default 0 comment '创建时间',
+E_UpdateUser varchar(20) not null default '' comment '修改者',
+E_UpdateDate int not null default 0 comment '修改时间',
+E_Code varchar(30) not null comment '房间编号',
+E_Name varchar(30) not null default '' comment '房间名称',
+E_Num  int not null comment '房间编号',
+E_Type tinyint not null comment '房间类型',
+E_State tinyint not null default 0 comment '房间状态',
+E_Url VARCHAR(255) not null default '' comment '房间图片',
+E_Price int not null default 0 comment '房间价格',
+E_Des text not null default '' comment '房间说明',
+E_HotelCode VARCHAR(30) not null default '' comment '酒店的code',
+primary key(id)
+)ENGINE=myisam default charset=utf8
+
+房间类型
+create table qxh_Hotel_Home_Type(
+id tinyint not null auto_increment,
+E_CreateUser varchar(20) not null default '' comment '创建者',
+E_CreateDate int not null default 0 comment '创建时间',
+E_UpdateUser varchar(20) not null default '' comment '修改者',
+E_UpdateDate int not null default 0 comment '修改时间',
+E_Name varchar(10) not null default '' comment '类型的名称',
+primary key(id)
+)ENGINE=MYISAM DEFAULT CHARSET=UTF8
+
+房间图片集
+create table qxh_Hotel_Home_img(
+id mediumint not null auto_increment,
+E_CreateUser varchar(20) not null default '' comment '创建者',
+E_CreateDate int not null default 0 comment '创建时间',
+E_UpdateUser varchar(20) not null default '' comment '修改者',
+E_UpdateDate int not null default 0 comment '修改时间',
+E_HotelCode varchar(30) not null comment '房间的code',
+E_Url varchar(250) not null comment '房间的图片',
+primary key(id)
+)engine=myisam default charset=utf8;
+
+
+create table qxh_holiday_Country(
+id mediumint auto_increment,
+E_CreateDate int not null default 0 comment '创建时间',
+E_CreateUser varchar(15) not null default '' comment '创建者',
+E_UpdateDate int not null default 0 comment '修改时间',
+E_UpdateUser varchar(15) not null default '' comment '修改者',
+E_Name varchar(10) not null  comment '国家名称',
+E_IsShow tinyint not null default 0 comment '是否显示 0 否 ，1是',
+E_IsDelete tinyint not null default 0 comment '是否删除 0 否 ，1是',
+primary key(id)
+)engine MYISAM default charset utf8
+
+
+create table qxh_holiday_city(
+id mediumint auto_increment,
+E_CreateDate int not null default 0 comment '创建时间',
+E_CreateUser varchar(15) not null default '' comment '创建者',
+E_UpdateDate int not null default 0 comment '修改时间',
+E_UpdateUser varchar(15) not null default '' comment '修改者',
+E_Name varchar(10) not null  comment '城市名称',
+E_Country tinyint not null comment '所属国家',
+E_Img varchar(255) not null default '' comment '图片',
+E_IsShow tinyint not null default 0 comment '是否显示 0 否 ，1是',
+E_IsDelete tinyint not null default 0 comment '是否删除 0 否 ，1是',
+primary key(id),
+index country(E_Country)
+)engine MYISAM default charset utf8
+
+create table qxh_holiday_hotel(
+id mediumint auto_increment,
+E_CreateDate int not null default 0 comment '创建时间',
+E_CreateUser varchar(15) not null default '' comment '创建者',
+E_UpdateDate int not null default 0 comment '修改时间',
+E_UpdateUser varchar(15) not null default '' comment '修改者',
+E_Country tinyint not null comment '所属国家',
+E_City tinyint not null comment '所属城市',
+E_Project varchar(30) not null default '' comment '所属方案',
+E_Type tinyint not null null default 0 comment '0酒店1别墅',
+E_Theme varchar(30) not null default '' comment '所属主题',
+E_Region varchar(20) not null default '' comment '区域',
+E_Name varchar(50) not null  comment '度假区名称',
+E_Abbreviation varchar(15) not null default '' comment '简称',
+E_Grade tinyint not null default 0 comment '等级',
+E_HadLiveWeights smallint not null default 0 comment '入住砝码',
+E_CommentWeights smallint not null default 0 comment '评论砝码',
+E_Price smallint not null default 0 comment '参考价',
+E_Img varchar(255) not null default '' comment '图片',
+E_Introduce text not null  comment '介绍',
+E_Housewear VARCHAR(10) not null default '' comment '别墅居室',
+E_Shower varchar(5) not null default '' comment '别墅浴室',
+E_Swimming varchar(5) not null default '' comment '别墅泳池',
+E_NumberOfPeople tinyint not null default 0 comment '别墅居住人数',
+E_IsShow tinyint not null default 0 comment '是否显示 0 否 ，1是',
+E_IsDelete tinyint not null default 0 comment '是否删除 0 否 ，1是',
+primary key(id),
+index country(E_Country),
+index city(E_City),
+index project(E_Project)
+)engine MYISAM default charset utf8
+
+
+
+
+create table qxh_holiday_hotel_room(
+id tinyint auto_increment,
+E_CreateDate int not null default 0 comment '创建时间',
+E_CreateUser varchar(15) not null default '' comment '创建者',
+E_UpdateDate int not null default 0 comment '修改时间',
+E_UpdateUser varchar(15) not null default '' comment '修改者',
+E_Hotel tinyint not null default 0 comment '所属酒店',
+E_Name varchar(50) not null  comment '房间名称',
+E_Size smallint  not null default 0 comment '尺寸',
+E_BedType varchar(10) not null default '' comment '床型',
+E_Remark varchar(40) not null default ''comment '备注',
+E_Price smallint not null default 0 comment '参考价',
+E_Img varchar(255) not null default '' comment '图片',
+E_IsShow tinyint not null default 0 comment '是否显示 0 否 ，1是',
+E_IsDelete tinyint not null default 0 comment '是否删除 0 否 ，1是',
+primary key(id),
+index hotel(E_Hotel)
+)engine MYISAM default charset utf8
+
+create table qxh_holiday_hotel_img(
+id tinyint auto_increment,
+E_CreateDate int not null default 0 comment '创建时间',
+E_CreateUser varchar(15) not null default '' comment '创建者',
+E_UpdateDate int not null default 0 comment '修改时间',
+E_UpdateUser varchar(15) not null default '' comment '修改者',
+E_Hotel tinyint not null comment '所属酒店',
+E_Title varchar(30) not null default '' comment '图片标题',
+E_img varchar(255) not null default '' comment '图片路径',
+E_IsShow tinyint not null default 0 comment '是否显示',
+primary key(id),
+index hotel(E_Hotel)
+)engine MYISAM default charset utf8
+
+
+create table qxh_holiday_hotel_room_img(
+id tinyint auto_increment,
+E_CreateDate int not null default 0 comment '创建时间',
+E_CreateUser varchar(15) not null default '' comment '创建者',
+E_UpdateDate int not null default 0 comment '修改时间',
+E_UpdateUser varchar(15) not null default '' comment '修改者',
+E_room tinyint not null comment '所属房间',
+E_Title varchar(30) not null default '' comment '图片标题',
+E_img varchar(255) not null default '' comment '图片路径',
+E_IsShow tinyint not null default 0 comment '是否显示',
+primary key(id),
+index room(E_room)
+)engine MYISAM default charset utf8
+
+create table qxh_activity(
+id tinyint auto_increment,
+E_CreateDate int not null default 0 comment '创建时间',
+E_CreateUser varchar(15) not null default '' comment '创建者',
+E_UpdateDate int not null default 0 comment '修改时间',
+E_UpdateUser varchar(15) not null default '' comment '修改者',
+E_Title varchar(15) not null default '' comment '标题',
+E_Name varchar(50) not null default '' comment '名字',
+E_Img varchar(255) not null default '' comment '图片',
+E_Explain varchar(50) not null default '' comment'说明',
+E_Weights  smallint not null default 0 comment'参与砝码',
+E_Join smallint not null default 0 comment '参加人数',
+E_StartDate int not null default 0 comment '开始时间',
+E_EndDate int not null default 0 comment '结束时间',
+E_Terminal varchar(15) not null default '' comment '终端',
+primary key(id)
+)ENGINE MYISAM default charset utf8
+
+
+CREATE TABLE `qxh_share_info` (
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `E_CreateDate` int(11) NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `E_CreateUser` varchar(15) NOT NULL DEFAULT '' COMMENT '创建者',
+  `E_UpdateDate` int(11) NOT NULL DEFAULT '0' COMMENT '修改时间',
+  `E_UpdateUser` varchar(15) NOT NULL DEFAULT '' COMMENT '修改者',
+  `E_Name` varchar(50) NOT NULL DEFAULT '' COMMENT '名字',
+  `E_Img` varchar(255) NOT NULL DEFAULT '' COMMENT '图片',
+  `E_Explain` varchar(100) NOT NULL DEFAULT '' COMMENT '说明',
+  `E_Remark` varchar(100) NOT NULL DEFAULT '' COMMENT '备注',
+  `E_Url` varchar(255) NOT NULL COMMENT '分享链接',
+  `E_ActivityID` varchar(15) NOT NULL DEFAULT '0',
+  `E_From` varchar(15) NOT NULL DEFAULT ' ' comment '来源',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+
+create table qxh_record(
+id tinyint auto_increment,
+E_Date date not null  comment '日期',
+E_UserID mediumint not null default 0 comment '用户id',
+E_Road text not null  comment'访问地址',
+primary key(id)
+)ENGINE MYISAM default charset utf8

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8" />
+    <title>sdafdsaf </title>
+    <include file="public@head"/>
+</head>
+<body>
+<div class="userInfo"></div>
+</body>
+
+<script type="text/javascript">
+    $(function () {
+        console.log(11);
+    })
+    var url = "https://api.qxh.com/indexs";
+    $.ajax({
+        type:'get',
+        url:url,
+        dataType:'json',
+        data:{a: "getUserInfo"},
+        headers:{token:'fdasfdasfdsafdsaf'},
+        // xhrFields:withCredentials:true,
+        success:function(data){
+            console.log(data);
+            $(".userInfo").text("Id:" + data.uid + " Name:" + data.name);
+        }
+        }
+    )
+</script>
+</html>

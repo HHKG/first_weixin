@@ -1,0 +1,82 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">方案列表</a></li>
+        <li><a href="{:url('Member/index')}">会员列表</a></li>
+    </ul>
+    <form class="well form-inline margin-top-20" method="post" action="{:url('Member/plan')}">
+
+        时间:
+        <input type="text" class="form-control js-bootstrap-date" name="start_time"
+               value="{$start_time|default=''}"
+               style="width: 140px;" autocomplete="off">-
+        <input type="text" class="form-control js-bootstrap-date" name="end_time"
+               value="{$end_time|default=''}"
+               style="width: 140px;" autocomplete="off"> &nbsp; &nbsp;
+
+        计划名称:
+        <input type="text" class="form-control" name="project" style="width: 200px;"
+               value="{$project|default=''}" placeholder="请输入项目名称">
+        方案的名称:
+        <input type="text" class="form-control" name="plan" style="width: 200px;"
+               value="{$plan|default=''}" placeholder="请输入方案的名称">
+        <input type="hidden" name="user" value="{$user}">
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('Member/plan',['user'=>$user])}">清空</a>
+    </form>
+    <form class="js-ajax-form" action="" method="post">
+        <table class="table table-hover table-bordered table-list">
+            <thead>
+            <tr>
+                <th >创建时间</th>
+                <th >订单编号</th>
+                <th >项目的总价值</th>
+                <th >方案购买数量</th>
+                <th >计划名称</th>
+                <th >方案的名称</th>
+                <th >返券周期(月)</th>
+                <th >返券时间</th>
+                <th >返券比例（%）</th>
+                <th >账单总期数</th>
+                <th >账单已出期数</th>
+                <th >状态</th>
+                <th >操作</th>
+            </tr>
+            </thead>
+            <foreach name="coupons" item="vo">
+                <tr>
+                    <td><b>{$vo.E_CreateTime}</b></td>
+                    <td>{$vo.E_OrderSn}</td>
+                    <td>{$vo.E_Value}</td>
+                    <td>{$vo.E_BuyNum}</td>
+                    <td>{$vo.E_ProjectName}</td>
+                    <td>{$vo.E_PlanName}</td>
+                    <td>{$vo.E_CouponCycle}</td>
+                    <td>{$vo.E_CouponTime}</td>
+                    <td>{$vo.E_Scale}</td>
+                    <td>{$vo.E_SumPeriods}</td>
+                    <td>{$vo.E_AreadlyPeriids}</td>
+                    <td>{$vo.E_State==1?'返券中':'返券完成'}</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm js-articles-copy " href="{:url('Member/house_list',['user'=>$user,'ordersn'=>$vo.E_OrderSn])}">房卷</a>
+                    </td>
+                </tr>
+            </foreach>
+        </table>
+
+        <ul class="pagination">{$page|default=''}</ul>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script>
+
+    function reloadPage(win) {
+        win.location.reload();
+    }
+
+
+</script>
+</body>
+</html>

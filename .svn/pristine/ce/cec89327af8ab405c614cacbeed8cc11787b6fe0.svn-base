@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <include file="public@header" />
+    <title>我的邀请</title>
+    <meta name="keywords" content="我的邀请" />
+    <meta name="description" content=我的邀请 />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/mui.min.css?2019.5.11" />
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/person.css?2019.5.11" />
+    <script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+    <script src="__TMPL__/public/assets/js/jquery.md5.js"></script>
+</head>
+<style>
+    body,
+    .myinvite-body {
+        background-color: #FAFAFA;
+    }
+</style>
+
+<body>
+    <div class="mui-content myinvite-body">
+        <!-- 有数据状态 -->
+        <div class="myinvite-block">
+            <div class="myinvite-all">共<span></span>位</div>
+            <div class="myinvite-cnt-list-data">
+
+            </div>
+        </div>
+        <!-- 无数据状态 -->
+        <dsiv class="myinvite-none">
+            <div class="myinvite-noneDate">
+                <img src="__TMPL__/public/assets/images/zhanweitu.png" />
+                <span>暂无好友参与活动，快快邀请好友哦~</span>
+            </div>
+        </dsiv>
+
+        <!-- 邀请好友按钮 -->
+        <div class="myinvite-btn">
+            立即邀请好友领500元住房券
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var maction = 'myinvitemember';
+            var msign = $.md5(maction + randomstr + time);
+            var token = "<?php echo session('token');?>";
+            $.ajax({
+                url: "<?php echo config('interfaceurl')?>/myinvitemember",
+                type: 'POST',
+                dataType: 'json',
+                headers: { token: "<?php echo session('token');?>" },
+                data: {
+                    from: from,
+                    time: time,
+                    action: maction,
+                    sign: msign,
+                    token: token
+                },
+                success: function (data) {
+                    if (data.invites.length > 0) {
+                        console.log(data);
+                        console.log(data.count);
+                        $('.myinvite-all>span').text(data.count);
+                        var invite = '';
+                        $.each(data.invites, function (k, v) {
+                            invite += '<div class="myinvite-cnt-list">'
+                            invite += '<div class="myinvite-person-cnt">'
+                            invite += ' <img class="myinvite-person-logo" src="' + v.E_HeadImg + '" />'
+                            invite += '<span class="myinvite-person-name">' + v.E_Name + '</span>'
+                            invite += '</div>'
+                            invite += '<span class="myinvite-plan-status">' + v.join + '</span>'
+                            invite += ' </div>';
+                        })
+                    } else {
+                        $('.myinvite-none').show();
+                        $('.myinvite-block').hide();
+                    }
+                    $('.myinvite-cnt-list-data').html(invite);
+                }
+            })
+        })
+        $('.myinvite-btn').click(function () {
+            var saction = 'shareinfo';
+            var url="<?php echo  GetAllURL();?>";
+            var ssign = $.md5(saction  + pattern + randomstr +'1' + time+url);
+            $.ajax({
+                url:"<?php echo $http.config('newinterfaceurl')?>/shareinfo",
+                dataType:'json',
+                type:'get',
+                data: {
+                    pattern: pattern,
+                    share: '1',
+                    from: from,
+                    time: time,
+                    action: saction,
+                    sign: ssign,
+                    url:url
+                },
+                success:function(res){
+                    var resdata=res.param;
+                    console.log(res);
+                    wx.config({
+                        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                        appId:resdata.appid, // 必填，公众号的唯一标识
+                        timestamp: resdata.timestamp, // 必填，生成签名的时间戳
+                        nonceStr: resdata.noncestr, // 必填，生成签名的随机串
+                        signature: resdata.sign,// 必填，签名
+                        jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'] // 必填，需要使用的JS接口列表
+                    });
+                    wx.ready(function(){
+                        wx.onMenuShareTimeline({
+                            title: res.data.E_Name, // 分享标题
+                            link: res.data.E_Url+'&incode='+"{$Think.get.incode}", // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                            imgUrl: res.data.E_Img, // 分享图标
+                            success: function () {
+                                // 用户点击了分享后执行的回调函数
+                            },
+                        })
+                        wx.onMenuShareAppMessage({
+                            title: res.data.E_Name, // 分享标题
+                            desc: '', // 分享描述
+                            link: res.data.E_Url+'&incode='+"{$Think.get.incode}",//接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                            imgUrl:res.data.E_Img, // 分享图标
+                            type: '', // 分享类型,music、video或link，不填默认为link
+                            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                            success: function () {
+                                // 用户点击了分享后执行的回调函数
+                            }
+                        });
+                        // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+                    });
+                    wx.error(function(res){
+                        console.log(res)
+                        // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+                    });
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

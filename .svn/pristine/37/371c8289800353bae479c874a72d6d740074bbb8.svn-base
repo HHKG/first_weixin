@@ -1,0 +1,86 @@
+<?php
+// +----------------------------------------------------------------------
+// | ThinkCMF [ WE CAN DO IT MORE SIMPLE ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2013-2018 http://www.thinkcmf.com All rights reserved.
+// +----------------------------------------------------------------------
+// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+// +----------------------------------------------------------------------
+// | Author: 老猫 <thinkcmf@126.com>
+// +----------------------------------------------------------------------
+namespace app\portal\controller;
+
+use cmf\controller\HomeBaseController;
+use redis\Redis;
+use think\Request;
+use workerman\Worker;
+
+class TextController
+{
+
+
+    public function index(){
+        dump(memory_get_usage());
+        for ($i=0;$i<100;$i++){
+            $a='text'.$i;
+            $$a='hello';
+//            dump($a);
+//            dump($$a);
+        }
+        dump(memory_get_usage());
+        for ($i=0;$i<100;$i++){
+            $a='text'.$i;
+            unset($$a);
+        }
+        dump(memory_get_usage());
+//        dump(memory_get_usage());
+//       $a='sfdadfdsafdsafdsafdsafsdafds';
+//        xdebug_debug_zval('a');
+//        dump(memory_get_usage());
+//        unset($a);
+//        dump(memory_get_usage());
+//        $b=1.11;
+//        xdebug_debug_zval('b');
+//        $a=array('meaning'=>'life','number'=>42);
+//        $a['life']=$a['meaning'];
+//        unset($a['meaning'],$a['number']);
+//        xdebug_debug_zval('a');
+////        $a=array('one');
+//        $a[]=&$a;
+//        unset($a[1]);
+//        xdebug_debug_zval('a');
+//        $a=array('meaing'=>'life','number'=>22);
+//        $a['life']=$a['meaing'];
+//        unset($a['meaing'],$a['number']);
+//        xdebug_debug_zval('a');
+//        $a='new string';
+//        $c=$b=$a;
+//        $d='d';
+//        xdebug_debug_zval('a');
+//       unset($a);
+//       xdebug_debug_zval('c');
+//        vendor('workerman.Autoloader');
+//        $socker=new Worker("websocket://0.0.0.0:2000");
+//        //多少条线程
+//        $socker->count=4;
+//        $socker->onMessage=function ($connection,$data){
+//           $connection->send('hello'.$data);
+//        };
+//        Worker::runAll();
+//        dump($_SERVER);
+//        dump(HandleMobile('13112316334'));
+//        $a=111;
+//        $b=222;
+//        dump($a);
+//        session('tokens','465489467986416876');
+        //dump(session('tokens'));die;
+//        dump($_SERVER);
+//        $request=Request::instance();
+//     dump($request->param());
+
+//        echo 1222;
+//       return $this->fetch();
+
+    }
+
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="<?php echo $keywords;?>">
+    <meta name="description" content="<?php echo $description;?>">
+    <title><?php echo $title;?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <include file="public@header"/>
+    <link href="__TMPL__/public/assets/css/person.css" rel="stylesheet"  />
+</head>
+<body>
+<div class="mui-content">
+    <div class="protocol">
+
+        <!--放协议内容区-->
+        <div class="protocol_content">
+        </div>
+        <div class="protocol_btn">
+            <button id="btn" onclick="Toorder">我已阅读</button>
+        </div>
+    </div>
+</div>
+<script>
+    var backurl="<?php echo $back;?>"
+    $('#btn').click(function(){
+        window.location.href="/data?pen=<?php echo $openid;?>&mobile=<?php echo $mobile;?>&code=<?php echo $code;?>";
+    });
+    $(function () {
+        console.log('fdasfsda');
+        $.ajax({
+            url: "<?php echo $http.config('newinterfaceurl')?>/getarticle",
+            type: 'POST',
+            dataType: 'jsonp',
+            data: {
+                article: "<?php echo $type;?>",
+                token: "<?php echo session('token');?>"},
+            success: function (data) {
+                console.log(data)
+                if (data.code==1){
+                    $('.artice_name').html(data.article.post_title);
+                    $('.protocol_content').html(data.article.post_content);
+                }
+
+            }
+        })
+    })
+</script>
+</body>

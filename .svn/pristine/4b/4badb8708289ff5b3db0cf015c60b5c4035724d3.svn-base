@@ -1,0 +1,53 @@
+
+.mui-table-view-radio .mui-table-view-cell .mui-navigate-right::after {
+	content: '\e472'!important;
+	background:#EFEFF4;
+	border-radius: 50%;
+	color:#EFEFF4;
+	font-size: 23px;
+}
+.mui-table-view-radio .mui-table-view-cell.mui-selected .mui-navigate-right:after{
+	background:#F68751;
+	border-radius: 50%;
+	color:#fff;
+}
+
+.mui-checkbox input[type="checkbox"]::before,
+.mui-radio input[type="radio"]::before {
+	font-size: 2rem;
+}
+
+.mui-checkbox input[type="checkbox"]:checked::before,
+.mui-radio input[type="radio"]:checked::before {
+	color: #3A8782;
+}
+
+a:active {
+	color: #4D4D4D;
+}
+.mui-table-view::before{
+	height:0px;
+}
+.mui-input-group::before{
+	height:0px;
+}
+.mui-input-group::after{
+	height:0px;
+}
+.mui-table-view::after{
+	height:0px;
+}
+.mui-numbox .mui-input-numbox, .mui-numbox .mui-numbox-input{
+	border-left:0!important;
+	border-right:0!important;
+}
+.mui-numbox{
+	border:hidden;
+}
+.mui-checkbox input[type="checkbox"], .mui-radio input[type="radio"]{
+	top:4px;
+}
+
+html{
+  font-size: 10px!important;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <include file="public@header"/>
+    <title>消费金明细-虔心荟</title>
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/consume_datail.css?1-20-1"/>
+    <link href="__TMPL__/public/assets/css/youxian_pay.css?1-20-2" rel="stylesheet"  />
+   <link href="__TMPL__/public/assets/css/null_page.css?1-20-2" rel="stylesheet"  />
+</head>
+<style>
+    body{
+        background:#fff;
+    }
+</style>
+<body>
+<include file="public@pattern" />
+<div class="mui-content">
+    <div class="consume_list">
+     
+
+    </div>
+</div>
+</body>
+
+
+<script>
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+    $(function () {
+
+        var action='getconsumption';
+
+        var sign=$.md5(action+pattern+randomstr+time);
+        $.ajax({
+            url: "<?php echo $http.config('newinterfaceurl')?>/getconsumption",
+            type: 'POST',
+            dataType: 'json',
+            headers:{token:"<?php echo session('token');?>" },
+            data: {  pattern:pattern,from:from,time:time,action:action,sign:sign },
+            success: function (data) {
+                if (data.code == 1) {
+                    var consumption='';
+                    if (data.consumption.length > 0) {
+
+                        $.each(data.consumption, function (k, v) {
+                            consumption+=' <div class="jian_consume_list_block">';
+                            consumption+=' <div>';
+                            consumption+='<span class="consume_list_span1">';
+                            if (v.E_Type==1){
+                                consumption+='消费金充值';
+                            } else if(v.E_Type==2) {
+                                consumption+='认购计划支付';
+                            }else{
+                                consumption+='住房消费';
+                            }
+                            consumption+=' </span>';
+                            consumption+=' <span class="consume_list_span2">'+ v.createtime+'</span>';
+                            consumption+=' </div>';
+                            consumption+=' <div>';
+                            consumption+='  <span class="consume_list_span3">';
+                            if (v.E_State==1){
+                                consumption+='+';
+                            } else{
+                                consumption+='-';
+                            }
+                            consumption+=  + v.E_Money +'</span>';
+                            consumption+='  </div>';
+                            consumption+='  </div>';
+                        })
+                      
+                    }
+                    else{
+                       consumption+=' <div class="banben-gb">';
+                        consumption+='<div class="banben-gb-img"></div><div class="banben-cnt-tips"><p>暂无相关记录</p></div>';
+                        consumption+=' </div>';
+                    }
+                    $('.consume_list').html(consumption);
+                }
+            }
+        })
+    })
+</script>
+
+</html>

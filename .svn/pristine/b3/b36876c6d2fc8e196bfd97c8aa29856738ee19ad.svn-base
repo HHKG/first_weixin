@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="注册会员">
+    <meta name="description" content="注册会员">
+    <title>注册会员</title>
+
+    <include file="public@header" />
+    <link href="__TMPL__/public/assets/css/youxian_pay.css?1-21-2" rel="stylesheet" />
+</head>
+<style type="text/css">
+    html body {
+        background: #fff;
+    }
+    .mui-content {
+        background: #fff;
+    }
+
+    input[type=color],
+    input[type=date],
+    input[type=datetime-local],
+    input[type=datetime],
+    input[type=email],
+    input[type=month],
+    input[type=number],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    input[type=time],
+    input[type=url],
+    input[type=week],
+    select,
+    textarea {
+        padding: 10px 0px;
+    }
+
+    .mui-btn-block {
+        margin-top: 3rem;
+        font-size: 2rem;
+        color: #fff;
+        height: 5rem;
+        background: #f0753a;
+        border-radius: 1rem;
+    }
+</style>
+
+<body>
+
+    <div class="mui-content">
+        <div class="code-login">
+            <p>验证码登录</p>
+        </div>
+        <div class="phone_number">
+            <input type="text" name="value" value="" placeholder="请输入手机号码" id="code-8" />
+        </div>
+        <div class="code_number">
+            <input type="text" name="value" value="" placeholder="请输入验证码" id="code-12" />
+            <div class="get_code">
+                <input type="button" value="获取验证码" id="btn"></input>
+            </div>
+        </div>
+        <div class="login_btn">
+            <button type="button" class="mui-btn-block">登录</button>
+        </div>
+        <div class="register_new">
+            <button type="button" class="mui-btn-block">新用户注册</button>
+        </div>
+        <?php if(!isset($openid)):?>
+        <div class='weixin_text'>
+            <span class="weixin_line"></span>
+            <div class="login-22">
+                <span class="login-21">微信登录</span>
+            </div>
+            <span class="weixin_line"></span>
+        </div>
+
+        <div class="weixin_logo">
+            <img src="__TMPL__/public/assets/images/wechat_icon.png" width="100%" height="100%" />
+        </div>
+        <?php endif;?>
+    </div>
+    <script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        var reg = /^(((13[0-9]{1})|(14[0-9]{1})|(17[0]{1})|(15[0-3]{1})|(15[5-9]{1})|(18[0-9]{1}))+\d{8})$/;
+        var mobile = document.getElementById('code-8');
+        var oCode = document.getElementById('code-12');
+        var wait = 60;
+        function time(o) {
+            if (wait == 0) {
+                o.removeAttribute("disabled");//不能再触发
+                o.style.cssText = "border:1px solid #3a8782;background:#fff;color:#3a8782;"
+                o.value = "重发验证码";
+                wait = 60;
+            } else {
+
+                o.setAttribute("disabled", true);
+                o.style.cssText = "border:hidden;background:#999;color:#EBEBEB;"
+                o.value = "" + wait + "s";
+                wait--;
+                setTimeout(function () {
+                    time(o)
+                },
+                    1000)
+            }
+        }
+        document.getElementById("btn").onclick = function () {
+            if (!reg.exec(mobile.value)) {
+                mui.confirm('请输入手机号', '请重新输入', new Array('重新输入'));
+            }
+            else {
+                $.ajax({
+                    url: "<?php echo config('interfaceurl')?>/sendcode",
+                    type: 'GET',
+                    dataType: 'jsonp',
+                    data: {
+                        type: 3,
+                        number: parseInt(mobile.value)
+                    },
+                    success: function (data) {
+                        if (data.code == 1) {
+
+                        } else {
+
+                        }
+
+                    }
+                })
+
+
+                // mui.ajax("<?php echo config('interfaceurl')?>/sendcode",{
+                //     data:{
+                //         type:3,
+                //         number:parseInt(mobile.value)
+                //     },
+                //     dataType:'json',//服务器返回json格式数据
+                //     type:'get',//HTTP请求类型
+                //     crossDomain:true,
+                //     // xhrFields:{withCredentials:true},
+                //     timeout:10000,//超时时间设置为10秒；
+                //     headers:{'Content-Type':'multipart/form-data'},
+                //     success:function(data){
+                //         //服务器返回响应，根据响应结果，分析是否登录成功；
+                //         //console.log(data);
+                //         // console.log(number);
+                //         if (data.code=='1'){
+                //             time(this);
+                //             mui.toast('发送成功');
+                //
+                //
+                //         } else{
+                //             mui.toast(data.msg);
+                //             return ;
+                //         }
+                //
+                //     },
+                //     error:function(xhr,type,errorThrown){
+                //         //异常处理；
+                //         console.log(type);
+                //     }
+                // });
+            }
+        }
+    </script>
+</body>
+
+</html>

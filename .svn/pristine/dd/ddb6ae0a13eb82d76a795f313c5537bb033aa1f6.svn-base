@@ -1,0 +1,1680 @@
+---------------------------------------------------------------
+[ 2019-02-20T11:59:30+08:00 ] 0.0.0.0 GET /admin/index/index.html
+[ info ] localhost:81/admin/index/index.html [运行时间：0.085000s][吞吐率：11.76req/s] [内存消耗：1,852.41kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.008000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.002000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.006000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-20T11:59:30+08:00 ] 0.0.0.0 GET /admin/public/login.html
+[ info ] localhost:81/admin/public/login.html [运行时间：0.046000s][吞吐率：21.74req/s] [内存消耗：2,057.14kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ D:\code\qxh\qxh\app\admin\controller\PublicController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-20T11:59:30+08:00 ] 0.0.0.0 GET /captcha/new.html?height=32&width=150&font_size=18
+[ info ] localhost:81/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.050000s][吞吐率：20.00req/s] [内存消耗：1,557.80kb] [文件加载：48]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/public/login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.003000s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ D:\code\qxh\qxh\simplewind\cmf\controller\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-20T11:59:31+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:81/favicon.ico [运行时间：0.057000s][吞吐率：17.54req/s] [内存消耗：1,543.26kb] [文件加载：51]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/public/login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-20T11:59:38+08:00 ] 0.0.0.0 POST /confirmation
+[ info ] localhost:81/confirmation [运行时间：0.124000s][吞吐率：8.06req/s] [内存消耗：2,551.82kb] [文件加载：68]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'dologin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/public/login.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost:81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '66',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+  'captcha' => 'rkub',
+  '_captcha_id' => '',
+  'redirect' => '',
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\PublicController->doLogin[ D:\code\qxh\qxh\app\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_role_user` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT `role_id` FROM `qxh_role_user` `a` INNER JOIN `qxh_role` `b` ON `a`.`role_id`=`b`.`id` WHERE  `user_id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user_token` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user_token` WHERE  `user_id` = '1'  AND `device_type` = 'web' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `qxh_user`  SET `user_type`=1,`sex`=0,`birthday`=0,`last_login_time`=1550635178,`score`=0,`coin`=0,`balance`=0,`create_time`=1542244446,`user_status`=1,`user_login`='admin',`user_pass`='###bb8ffa680683adddb35c5e089ebd700e',`user_nickname`='admin',`user_email`='admin@admin.com',`user_url`='',`avatar`='',`signature`='',`last_login_ip`='0.0.0.0',`user_activation_key`='',`mobile`='',`more`=NULL  WHERE  `id` = 1 [ RunTime:0.004000s ]
+---------------------------------------------------------------
+[ 2019-02-20T11:59:40+08:00 ] 0.0.0.0 GET /admin/index/index.html
+[ info ] localhost:81/admin/index/index.html [运行时间：0.264000s][吞吐率：3.79req/s] [内存消耗：3,364.62kb] [文件加载：79]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/public/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.007000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\IndexController->index[ D:\code\qxh\qxh\app\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\index\index.html [ array (
+  0 => 'admin',
+  1 => 'menus',
+  2 => 'menus_js_var',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.018000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_admin_menu` [ RunTime:0.024000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 0  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 6  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 71  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 15  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 95  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 29  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 78  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 7  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 61  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 75  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 93  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 159  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 179  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 110  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 49  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 50  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 111  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 153  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 154  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 157  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 1  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 2  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 42  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 121  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 122  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 132  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 140  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 146  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 169  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 171  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 172  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 173  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 177  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 180  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 181  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 182  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 183  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 184  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 194  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 197  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 200  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 195  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 196  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 198  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 199  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` ORDER BY `app` ASC,`controller` ASC,`action` ASC [ RunTime:0.004000s ]
+---------------------------------------------------------------
+[ 2019-02-20T11:59:41+08:00 ] 0.0.0.0 GET /admin/main/index.html
+[ info ] localhost:81/admin/main/index.html [运行时间：0.195000s][吞吐率：5.13req/s] [内存消耗：2,700.52kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'main',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.034000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.004000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\MainController->index[ D:\code\qxh\qxh\app\admin\controller\MainController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\main\index.html [ array (
+  0 => 'admin',
+  1 => 'dashboard_widgets',
+  2 => 'dashboard_widget_plugins',
+  3 => 'has_smtp_setting',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.024000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.016000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'admin_dashboard_widgets' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'smtp_setting' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-02-20T12:00:20+08:00 ] 0.0.0.0 GET /Admin/project/index.html
+[ info ] localhost:81/Admin/project/index.html [运行时间：0.166000s][吞吐率：6.02req/s] [内存消耗：3,775.23kb] [文件加载：91]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.006000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'project',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.003000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ProjectController->index[ D:\code\qxh\qxh\app\admin\controller\ProjectController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\project\index.html [ array (
+  0 => 'admin',
+  1 => 'start_time',
+  2 => 'end_time',
+  3 => 'keyword',
+  4 => 'address',
+  5 => 'type',
+  6 => 'status',
+  7 => 'plan',
+  8 => 'projects',
+  9 => 'page',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `qxh_project` WHERE  (  E_IsDelete=0  ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_project` WHERE  (  E_IsDelete=0  ) ORDER BY `E_Create_time` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'storage' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project_plan` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT `E_ProjectCode`,`E_Code`,`E_Title` FROM `qxh_project_plan` WHERE  `E_ProjectCode` IN ('yawsY8GbgtaH3c304qT2','MZJBQKj3NmPolKOv8qbj') [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-02-20T12:00:22+08:00 ] 0.0.0.0 GET /admin/project/edit/code/yawsY8GbgtaH3c304qT2.html
+[ info ] localhost:81/admin/project/edit/code/yawsY8GbgtaH3c304qT2.html [运行时间：0.159000s][吞吐率：6.29req/s] [内存消耗：3,678.42kb] [文件加载：87]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'project',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/Admin/project/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+  'code' => 'yawsY8GbgtaH3c304qT2',
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.004000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ProjectController->edit[ D:\code\qxh\qxh\app\admin\controller\ProjectController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\project\edit.html [ array (
+  0 => 'admin',
+  1 => 'project',
+  2 => 'type',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.018000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project` [ RunTime:0.017000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_project` WHERE  `E_Code` = 'yawsY8GbgtaH3c304qT2' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project_type` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_project_type` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'storage' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-02-20T12:00:22+08:00 ] 0.0.0.0 GET /upload/admin/20190125/bcb968884b3bb7e8eeec7d0b2f561456.png
+[ info ] localhost:81/upload/admin/20190125/bcb968884b3bb7e8eeec7d0b2f561456.png [运行时间：0.034000s][吞吐率：29.41req/s] [内存消耗：1,543.61kb] [文件加载：51]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'upload',
+    1 => 'admin',
+    2 => '20190125',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/project/edit/code/yawsY8GbgtaH3c304qT2.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.003000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-20T12:00:22+08:00 ] 0.0.0.0 GET /user/Ueditor/upload?action=config&&noCache=1550635222905
+[ info ] localhost:81/user/Ueditor/upload?action=config&&noCache=1550635222905 [运行时间：0.077000s][吞吐率：12.99req/s] [内存消耗：2,434.34kb] [文件加载：62]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/project/edit/code/yawsY8GbgtaH3c304qT2.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1550635222905',
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\user\controller\UeditorController->upload[ D:\code\qxh\qxh\app\user\controller\UeditorController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'upload_setting' LIMIT 1 [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2019-02-20T12:00:24+08:00 ] 0.0.0.0 GET /Admin/project/index.html
+[ info ] localhost:81/Admin/project/index.html [运行时间：0.148000s][吞吐率：6.76req/s] [内存消耗：3,775.09kb] [文件加载：91]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'project',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; refersh_time=0; admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.003000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ProjectController->index[ D:\code\qxh\qxh\app\admin\controller\ProjectController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\project\index.html [ array (
+  0 => 'admin',
+  1 => 'start_time',
+  2 => 'end_time',
+  3 => 'keyword',
+  4 => 'address',
+  5 => 'type',
+  6 => 'status',
+  7 => 'plan',
+  8 => 'projects',
+  9 => 'page',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `qxh_project` WHERE  (  E_IsDelete=0  ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_project` WHERE  (  E_IsDelete=0  ) ORDER BY `E_Create_time` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.016000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'storage' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project_plan` [ RunTime:0.017000s ]
+[ sql ] [ SQL ] SELECT `E_ProjectCode`,`E_Code`,`E_Title` FROM `qxh_project_plan` WHERE  `E_ProjectCode` IN ('yawsY8GbgtaH3c304qT2','MZJBQKj3NmPolKOv8qbj') [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-02-20T12:00:25+08:00 ] 0.0.0.0 GET /admin/project/add.html
+[ info ] localhost:81/admin/project/add.html [运行时间：0.091000s][吞吐率：10.99req/s] [内存消耗：2,781.81kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'project',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/Admin/project/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.003000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ProjectController->add[ D:\code\qxh\qxh\app\admin\controller\ProjectController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\project\add.html [ array (
+  0 => 'admin',
+  1 => 'type',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project_type` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_project_type` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-02-20T12:00:25+08:00 ] 0.0.0.0 GET /user/Ueditor/upload?action=config&&noCache=1550635225580
+[ info ] localhost:81/user/Ueditor/upload?action=config&&noCache=1550635225580 [运行时间：0.155000s][吞吐率：6.45req/s] [内存消耗：2,434.23kb] [文件加载：62]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/project/add.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1550635225580',
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\user\controller\UeditorController->upload[ D:\code\qxh\qxh\app\user\controller\UeditorController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'upload_setting' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-02-20T12:00:57+08:00 ] 0.0.0.0 GET /admin/project/add.html
+[ info ] localhost:81/admin/project/add.html [运行时间：0.091200s][吞吐率：10.96req/s] [内存消耗：2,782.04kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.016600s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'project',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/Admin/project/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.002000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ProjectController->add[ D:\code\qxh\qxh\app\admin\controller\ProjectController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\project\add.html [ array (
+  0 => 'admin',
+  1 => 'type',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project_type` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_project_type` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-02-20T12:00:57+08:00 ] 0.0.0.0 GET /user/Ueditor/upload?action=config&&noCache=1550635257494
+[ info ] localhost:81/user/Ueditor/upload?action=config&&noCache=1550635257494 [运行时间：0.065000s][吞吐率：15.38req/s] [内存消耗：2,434.23kb] [文件加载：62]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/project/add.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1550635257494',
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\user\controller\UeditorController->upload[ D:\code\qxh\qxh\app\user\controller\UeditorController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'upload_setting' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-02-20T13:39:22+08:00 ] 0.0.0.0 GET /admin/project/add.html
+[ info ] localhost:81/admin/project/add.html [运行时间：0.282000s][吞吐率：3.55req/s] [内存消耗：2,781.97kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.009000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'project',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/Admin/project/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.007000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.005000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ProjectController->add[ D:\code\qxh\qxh\app\admin\controller\ProjectController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\project\add.html [ array (
+  0 => 'admin',
+  1 => 'type',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.056000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.072000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project_type` [ RunTime:0.016000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_project_type` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-02-20T13:39:23+08:00 ] 0.0.0.0 GET /user/Ueditor/upload?action=config&&noCache=1550641163058
+[ info ] localhost:81/user/Ueditor/upload?action=config&&noCache=1550641163058 [运行时间：0.080000s][吞吐率：12.50req/s] [内存消耗：2,434.20kb] [文件加载：62]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/project/add.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1550641163058',
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\user\controller\UeditorController->upload[ D:\code\qxh\qxh\app\user\controller\UeditorController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.019000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'upload_setting' LIMIT 1 [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2019-02-20T13:39:52+08:00 ] 0.0.0.0 GET /admin/project/add.html
+[ info ] localhost:81/admin/project/add.html [运行时间：0.110200s][吞吐率：9.07req/s] [内存消耗：2,781.91kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'project',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/Admin/project/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.002000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ProjectController->add[ D:\code\qxh\qxh\app\admin\controller\ProjectController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\project\add.html [ array (
+  0 => 'admin',
+  1 => 'type',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project_type` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_project_type` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-02-20T13:39:53+08:00 ] 0.0.0.0 GET /user/Ueditor/upload?action=config&&noCache=1550641192982
+[ info ] localhost:81/user/Ueditor/upload?action=config&&noCache=1550641192982 [运行时间：0.069000s][吞吐率：14.49req/s] [内存消耗：2,434.23kb] [文件加载：62]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/project/add.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1550641192982',
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\user\controller\UeditorController->upload[ D:\code\qxh\qxh\app\user\controller\UeditorController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.024000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'upload_setting' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-02-20T13:40:50+08:00 ] 0.0.0.0 GET /admin/project/add.html
+[ info ] localhost:81/admin/project/add.html [运行时间：0.125600s][吞吐率：7.96req/s] [内存消耗：2,781.92kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'project',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/Admin/project/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.004000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ProjectController->add[ D:\code\qxh\qxh\app\admin\controller\ProjectController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\project\add.html [ array (
+  0 => 'admin',
+  1 => 'type',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project_type` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_project_type` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-02-20T13:40:50+08:00 ] 0.0.0.0 GET /user/Ueditor/upload?action=config&&noCache=1550641250496
+[ info ] localhost:81/user/Ueditor/upload?action=config&&noCache=1550641250496 [运行时间：0.066000s][吞吐率：15.15req/s] [内存消耗：2,434.23kb] [文件加载：62]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/project/add.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1550641250496',
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\user\controller\UeditorController->upload[ D:\code\qxh\qxh\app\user\controller\UeditorController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'upload_setting' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-02-20T13:41:58+08:00 ] 0.0.0.0 GET /Admin/project/index.html
+[ info ] localhost:81/Admin/project/index.html [运行时间：0.180000s][吞吐率：5.56req/s] [内存消耗：3,775.09kb] [文件加载：91]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'project',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; refersh_time=0; admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.003000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ProjectController->index[ D:\code\qxh\qxh\app\admin\controller\ProjectController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\project\index.html [ array (
+  0 => 'admin',
+  1 => 'start_time',
+  2 => 'end_time',
+  3 => 'keyword',
+  4 => 'address',
+  5 => 'type',
+  6 => 'status',
+  7 => 'plan',
+  8 => 'projects',
+  9 => 'page',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project` [ RunTime:0.016000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `qxh_project` WHERE  (  E_IsDelete=0  ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_project` WHERE  (  E_IsDelete=0  ) ORDER BY `E_Create_time` DESC LIMIT 0,10 [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'storage' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project_plan` [ RunTime:0.019000s ]
+[ sql ] [ SQL ] SELECT `E_ProjectCode`,`E_Code`,`E_Title` FROM `qxh_project_plan` WHERE  `E_ProjectCode` IN ('yawsY8GbgtaH3c304qT2','MZJBQKj3NmPolKOv8qbj') [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2019-02-20T13:42:00+08:00 ] 0.0.0.0 GET /admin/project/edit/code/yawsY8GbgtaH3c304qT2.html
+[ info ] localhost:81/admin/project/edit/code/yawsY8GbgtaH3c304qT2.html [运行时间：0.137600s][吞吐率：7.27req/s] [内存消耗：3,678.90kb] [文件加载：87]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'project',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/Admin/project/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+  'code' => 'yawsY8GbgtaH3c304qT2',
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.003000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ProjectController->edit[ D:\code\qxh\qxh\app\admin\controller\ProjectController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\project\edit.html [ array (
+  0 => 'admin',
+  1 => 'project',
+  2 => 'type',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_project` WHERE  `E_Code` = 'yawsY8GbgtaH3c304qT2' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project_type` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_project_type` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'storage' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-02-20T13:42:00+08:00 ] 0.0.0.0 GET /upload/admin/20190125/bcb968884b3bb7e8eeec7d0b2f561456.png
+[ info ] localhost:81/upload/admin/20190125/bcb968884b3bb7e8eeec7d0b2f561456.png [运行时间：0.043000s][吞吐率：23.26req/s] [内存消耗：1,543.61kb] [文件加载：51]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'upload',
+    1 => 'admin',
+    2 => '20190125',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/project/edit/code/yawsY8GbgtaH3c304qT2.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-20T13:42:00+08:00 ] 0.0.0.0 GET /user/Ueditor/upload?action=config&&noCache=1550641320347
+[ info ] localhost:81/user/Ueditor/upload?action=config&&noCache=1550641320347 [运行时间：0.062000s][吞吐率：16.13req/s] [内存消耗：2,434.34kb] [文件加载：62]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/project/edit/code/yawsY8GbgtaH3c304qT2.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1550641320347',
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\user\controller\UeditorController->upload[ D:\code\qxh\qxh\app\user\controller\UeditorController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'upload_setting' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-02-20T13:42:10+08:00 ] 0.0.0.0 GET /Admin/project/index.html
+[ info ] localhost:81/Admin/project/index.html [运行时间：0.133000s][吞吐率：7.52req/s] [内存消耗：3,775.09kb] [文件加载：91]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'project',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; refersh_time=0; admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.002000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ProjectController->index[ D:\code\qxh\qxh\app\admin\controller\ProjectController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\project\index.html [ array (
+  0 => 'admin',
+  1 => 'start_time',
+  2 => 'end_time',
+  3 => 'keyword',
+  4 => 'address',
+  5 => 'type',
+  6 => 'status',
+  7 => 'plan',
+  8 => 'projects',
+  9 => 'page',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `qxh_project` WHERE  (  E_IsDelete=0  ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_project` WHERE  (  E_IsDelete=0  ) ORDER BY `E_Create_time` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.016000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'storage' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_project_plan` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `E_ProjectCode`,`E_Code`,`E_Title` FROM `qxh_project_plan` WHERE  `E_ProjectCode` IN ('yawsY8GbgtaH3c304qT2','MZJBQKj3NmPolKOv8qbj') [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-02-20T14:15:09+08:00 ] 0.0.0.0 GET /admin/index/index.html
+[ info ] localhost:81/admin/index/index.html [运行时间：0.383000s][吞吐率：2.61req/s] [内存消耗：3,364.70kb] [文件加载：79]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.011000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.011000s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\IndexController->index[ D:\code\qxh\qxh\app\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\index\index.html [ array (
+  0 => 'admin',
+  1 => 'menus',
+  2 => 'menus_js_var',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.016000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_admin_menu` [ RunTime:0.023000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 0  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 6  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.016000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 71  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 15  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 95  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 29  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 78  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 7  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 61  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 75  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 93  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 159  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 179  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 110  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 49  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 50  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 111  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 153  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 154  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 157  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 1  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 2  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 42  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 121  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 122  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 132  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 140  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 146  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 169  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 171  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 172  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 173  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 177  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 180  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 181  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 182  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 183  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 184  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 194  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 197  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 200  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 195  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 196  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 198  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` WHERE  `parent_id` = 199  AND `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_admin_menu` ORDER BY `app` ASC,`controller` ASC,`action` ASC [ RunTime:0.010000s ]
+---------------------------------------------------------------
+[ 2019-02-20T14:15:09+08:00 ] 0.0.0.0 GET /admin/main/index.html
+[ info ] localhost:81/admin/main/index.html [运行时间：0.105000s][吞吐率：9.52req/s] [内存消耗：2,700.59kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'main',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; admin_username=admin; PHPSESSID=l2msulc3ca39tohlov4mr8jmv4',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:81/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost:81',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitAppHookBehavior @module_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/speed\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\code\qxh\qxh\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.007000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\MainController->index[ D:\code\qxh\qxh\app\admin\controller\MainController.php ]
+[ info ] [ VIEW ] themes/admin_simpleboot/admin\main\index.html [ array (
+  0 => 'admin',
+  1 => 'dashboard_widgets',
+  2 => 'dashboard_widget_plugins',
+  3 => 'has_smtp_setting',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=qxh;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_user` [ RunTime:0.017000s ]
+[ sql ] [ SQL ] SELECT * FROM `qxh_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `qxh_option` [ RunTime:0.017000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'admin_dashboard_widgets' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `qxh_option` WHERE  `option_name` = 'smtp_setting' LIMIT 1 [ RunTime:0.000000s ]

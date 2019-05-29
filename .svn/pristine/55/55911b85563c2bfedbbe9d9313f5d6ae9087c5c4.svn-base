@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>俱乐部</title>
+	<meta name="description" content="消费金明细-虔心荟" />
+	<meta name="Keywords" content="消费金明细-虔心荟" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="__TMPL__/public/assets/css/mui.min.css?3-30" rel="stylesheet" />
+	<link href="__TMPL__/public/assets/css/person.css?3-30-3" rel="stylesheet" />
+	<link href="__TMPL__/public/assets/css/app.css?3-30" rel="stylesheet" />
+	<!--统计 -->
+	<script>
+		var _hmt = _hmt || [];
+		(function () {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?0b4f18f629a5a8177aab940c3f165a6c";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</head>
+<style type="text/css">
+	body {
+		background: #FCE8C5;
+
+	}
+</style>
+
+<body>
+	<script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+	<script src="__TMPL__/public/assets/js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+	</script>
+
+
+	<include file="public@nav" />
+
+	<!--头部banner区域-->
+	<div class="club-h-banner">
+		<img src="__TMPL__/public/assets/images/club_banner.png" width="100%" height="100%" />
+	</div>
+	<div class="mui-content club-b">
+		<!--虔心俱乐部简介-->
+		<div class="club-cnt-introduce">
+			<div class="club-cnt-img1">
+				<img src="__TMPL__/public/assets/images/photo10.png" width="49%" height="49%" />
+				<img src="__TMPL__/public/assets/images/photo20.png" width="49%" height="49%" />
+			</div>
+			<div class="club-cnt-img1">
+				<img src="__TMPL__/public/assets/images/photo30.png" width="49%" height="49%" />
+				<img src="__TMPL__/public/assets/images/photo40.png" width="49%" height="49%" />
+			</div>
+			<div class="club-cnt-txt">
+				<p>
+					虔心荟度假俱乐部，位于广州CBD。成立初衷是将追求自由人生的人荟聚在一起，秉持“分享美好生活”的愿景理念，与热爱生活的您，共同探索美好广阔世界。
+				</p>
+			</div>
+			<div class="club-cnt-img2">
+				<img src="__TMPL__/public/assets/images/club_photo3.png" width="100%" height="100%" />
+			</div>
+			<div class="club-cnt-txt">
+				<p>
+					通过独创设计的会籍长赢消费返利机制和积分奖励计划，赋予您独一无二的会员特权，真正实现免费度假。为您在亚洲及世界度假目的地提供专属体验，让您不再被生活束缚，实现自由人生。
+				</p>
+			</div>
+			<div class="club-cnt-img2">
+				<img src="__TMPL__/public/assets/images/club_photo4.png" width="100%" height="100%" />
+			</div>
+			<div class="club-cnt-txt">
+				<p>
+					虔诚打造独一无二的度假俱乐部,建设全球忠诚度的会员体系,致力为会员提供 私享、自由、品质、个性化的度假体验。
+				</p>
+			</div>
+		</div>
+		<!--虔心荟的优惠介绍-->
+		<div class="club-share-img">
+			<img src="__TMPL__/public/assets/images/club_gainiantu.png" width="100%" />
+		</div>
+		<!--虔心荟实现您人生的需求-->
+		<div class="club-need">
+			<div class="club-need-h">
+				<img src="__TMPL__/public/assets/images/club_title2.png" width="100%" height="100%" />
+			</div>
+			<div class="club-need-shegli">
+				<img src="__TMPL__/public/assets/images/club_demand_5.png" width="100%" height="100%" />
+			</div>
+			<div class="club-need-other">
+				<img src="__TMPL__/public/assets/images/club_demand_4.png" width="100%" height="100%" />
+			</div>
+			<div class="club-need-other">
+				<img src="__TMPL__/public/assets/images/club_demand_3.png" width="100%" height="100%" />
+			</div>
+			<div class="club-need-other">
+				<img src="__TMPL__/public/assets/images/club_demand_2.png" width="100%" height="100%" />
+			</div>
+			<div class="club-need-other">
+				<img src="__TMPL__/public/assets/images/club_demand_1.png" width="100%" height="100%" />
+			</div>
+		</div>
+		<!--加入虔心荟-->
+		<div class="club-bottom club-width">
+			<div class="club-bottom-h">
+				<img src="__TMPL__/public/assets/images/club_title3.png" width="100%" height="100%" />
+			</div>
+			<div class="club-bottom-plan">
+				<div>
+					<img src="__TMPL__/public/assets/images/club_process_photo.png" width="100%" height="100%" />
+				</div>
+				<div class="club-bottom-line">
+					<img src="__TMPL__/public/assets/images/club_huanguan_line .png" width="100%" height="100%" />
+				</div>
+				<div class="club-bottom-word">
+					<img src="__TMPL__/public/assets/images/club_key_word_icon.png" width="100%" height="100%" />
+				</div>
+			</div>
+		</div>
+		<!-- 俱乐部地址 -->
+		<div class="partner club-width">
+			<div class="partner-logo">
+				<div class="partner-logo-cnt">
+					<img src="__TMPL__/public/assets/images/LOGO.png" class="partner-logo-cnt-img" />
+					<span class="partner-logo-cnt-txt">虔心荟度假俱乐部</span>
+				</div>
+				<div class="partner-address">
+					地址：中国·广州 珠江新城合景国际金融广场
+				</div>
+				<div class="partner-phone">
+					管家热线：<a href="tel:400-990-8830" style="color:#E6B854">400-990-8830</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <!--<li class="active"><a href="javascript:;">所有新闻</a></li>-->
+        <!--<li><a href="{:url('AdminNew/add')}">添加新闻</a></li>-->
+    </ul>
+    <form class="well form-inline margin-top-20" method="post" action="{:url('AdminNew/index')}">
+        时间:
+        <input type="text" class="form-control js-bootstrap-datetime" name="start_time"
+               value="{$start_time|default=''}"
+               style="width: 140px;" autocomplete="off">-
+        <input type="text" class="form-control js-bootstrap-datetime" name="end_time"
+               value="{$end_time|default=''}"
+               style="width: 140px;" autocomplete="off"> &nbsp; &nbsp;
+        关键字:
+        <input type="text" class="form-control" name="keyword" style="width: 200px;"
+               value="{$keyword|default=''}" placeholder="请输入关键字...">
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('AdminNew/index')}">清空</a>
+    </form>
+    <form class="js-ajax-form" action="" method="post">
+        <div class="table-actions">
+
+            <button class="btn btn-danger btn-sm js-ajax-submit" type="submit"
+                    data-action="{:url('AdminNew/delete')}" data-subcheck="true" data-msg="您确定删除吗？">
+                {:lang('DELETE')}
+            </button>
+        </div>
+        <table class="table table-hover table-bordered table-list">
+            <thead>
+            <tr>
+
+                <th width="160">缩略</th>
+                <th width="130">发布时间</th>
+                <th width="130">更新时间</th>
+                <th width="90">操作</th>
+            </tr>
+            </thead>
+            <?php foreach($coupon as $vo):?>
+                <tr>
+
+                    <td><b>{$vo.id}</b></td>
+                    <td><b>{$vo.E_Name}</b></td>
+                    <td> <notempty name="vo.E_CouponImg">
+                        <a href="javascript:parent.imagePreviewDialog('{:cmf_get_image_preview_url($vo.E_CouponImg)}');">
+                            <i class="fa fa-photo fa-fw"></i>
+                        </a>
+                        <else/>
+                        <i class="fa fa-close fa-fw"></i>
+                    </notempty></td>
+                    <td>
+                        <a href="{:url('AdminNew/edit',array('id'=>$vo['id']))}">{:lang('EDIT')}</a>
+                        <a href="{:url('AdminNew/delete',array('id'=>$vo['id']))}" class="js-ajax-delete">{:lang('DELETE')}</a>
+                    </td>
+                </tr>
+      <?php endforeach;?>
+        </table>
+
+        <ul class="pagination">{$page|default=''}</ul>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script>
+
+    function reloadPage(win) {
+        win.location.reload();
+    }
+
+
+</script>
+</body>
+</html>

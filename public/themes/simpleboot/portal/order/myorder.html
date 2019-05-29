@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="keywords" content="<?php echo $keywords;?>">
+    <meta name="description" content="<?php echo $description;?>">
+    <title>我的订单-虔心荟</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <include file="public@header" />
+    <link href="__TMPL__/public/assets/css/person.css" rel="stylesheet" />
+    <link href="__TMPL__/public/assets/css/youxian_pay.css" rel="stylesheet" />
+    <link href="__TMPL__/public/assets/css/null_page.css" rel="stylesheet" />
+</head>
+<style type="text/css">
+    body {
+        background: #fff;
+    }
+</style>
+
+<body>
+<script type="text/javascript">
+    mui.init()
+</script>
+<include file="public@pattern" />
+<div class="mui-content" style="background:#fff;">
+    <div class="order"></div>
+
+    <!--支付弹窗（引用订单页面的支付方式模块）-->
+    <div class="order_pop" id="pop_up" style="display: none;">
+        <div class="pop_header">
+            <h5 class="mui-content-padded order_choice">选择支付方式</h5>
+            <img src="__TMPL__/public/assets/images/close_icon.png" id="quit" />
+        </div>
+        <ul class="mui-table-view mui-table-view-radio">
+            <if condition="$Think.session.pattern eq 0">
+            <li paytype="3" class="mui-table-view-cell mui-selected">
+                <div class="order_pay_way">
+                    <img src="__TMPL__/public/assets/images/wechat_icon.png" />
+                    <a class="mui-navigate-right order_pay_text">
+                        微信支付
+                    </a>
+                </div>
+            </li>
+            </if>
+            <li paytype="1" class="mui-table-view-cell <if condition="$Think.session.pattern eq 1">mui-selected</if>">
+                <div class="order_pay_way">
+                    <img src="__TMPL__/public/assets/images/xiaofeijin_icon.png">
+                    <a class="mui-navigate-right order_pay_text">
+                        消费金（余额 <span class="Consumption">--</span>）
+                    </a>
+                </div>
+            </li>
+            <li paytype="2" class="mui-table-view-cell">
+                <div class="order_pay_way">
+                    <img src="__TMPL__/public/assets/images/yuer_icon.png">
+                    <a class="mui-navigate-right order_pay_text">
+                        现金余额（余额 <span class="Balance">--</span>）
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <div class="pop_header-bottom"></div>
+        <div class="order_footer" style="background:#fff;">
+            <div>
+                <span class="order_sum">合计金额：</span>
+                <span class="sum_money">--</span>
+            </div>
+            <div>
+                <button class="payagain" data="" sn="">确认支付</button>
+            </div>
+        </div>
+    </div>
+    <div class="mask" id="mask" style="display: none"></div>
+</div>
+</body>
+
+</html>
+
+<script>
+
+    $(function () {
+        // mui.max=90;
+        var action='myorders';
+        var sign=$.md5(action+pattern+randomstr+time);
+        var datas={pattern:pattern,from:from,time:time,action:action, sign:sign};
+        $.ajax({
+            url: "<?php echo $http.config('newinterfaceurl')?>/myorders",
+            type: 'POST',
+            dataType: 'json',
+            headers:{token:"<?php echo session('token');?>" },
+            data: datas,
+            success: function (data) {
+                //console.log(data);
+                if (data.code == 1) {
+                    var order = '';
+                    if (data.orders.length > 0) {
+                        $.each(data.orders, function (k, v) {
+                            order += ' <div class="my_block">';
+                            order += ' <div class="my_header">';
+                            order += '  <span>订单编号：' + v.E_OrderSn + '</span>';
+                            order += '    <span class="my_span2">'
+                            if (v.E_PayState == 1) {
+                                order += '等待付款';
+                            } else {
+                                order += '交易成功';
+                            }
+                            order += '</span>';
+                            order += '   </div>';
+
+                            order += ' <div class="my_middle">';
+                            order += '<div class="my_middle_1">';
+                            order += '   <img src="__TMPL__/public/assets/images/img.png" />';
+                            order += '  <div class="my_middle_2">';
+                            order += '   <span>' + v.E_ProjectName + '</span>';
+                            order += '  <span class="my_middle_span">' + v.E_PlanName + '</span>';
+                            order += '   </div>';
+                            order += '   </div>';
+
+                            order += '     <div class="my_middle_3">';
+                            order += '    <p>' + price(v.E_Money) + '</p>';
+                            order += '   <p class="my_middle_p">' + v.E_BuyNum + '份</p>';
+                            order += '   </div>';
+                            order += '   </div>';
+                            order += '  <div class="my_sum">';
+                            order += '  <span>合计：' + price(v.E_Price) + '</span>';
+                            order += '   </div>';
+                            order += '   <div class="my_footer">';
+                            order += '     <p>下单时间：' + v.E_Paytime + '</p>';
+                            if (v.E_PayState != 2) {
+                                order += ' <button class="submit_pay" prices="' + v.E_Price + '" sn="' + v.E_OrderSn + '"  data="">立即支付</button>'
+                            }
+                            order += '      </div>';
+                            order += '      </div>';
+                        })
+                    } else {
+                        order += ' <div class="null_order-gb">';
+                        order += ' <div class="null_order-gb-img"></div><div class="banben-cnt-tips"><p>暂无相关记录</p></div><div class="num_rebate-btn"><button onclick="javascript:window.location.href=\'/project?project=MZJBQKj3NmPolKOv8qbj\'" jump="jump">立即参与分享计划</button></div>';
+                        order += ' </div>';
+                    }
+                    $('.order').html(order)
+                    $('.Consumption').html(price(data.wallet.E_Consumption));
+                    $('.Balance').html(price(data.wallet.E_Balance));
+                    $('.Balance').attr('bal', data.wallet.E_Balance);
+                    $('.Consumption').attr('con', data.wallet.Consumption);
+                }
+                //console.log(data);
+            }
+        })
+
+        $('.order').on('click', 'button', function () {
+            // mui.toast('aa')
+            var jump = $(this).attr('jump');
+            if(jump=='jump'){
+                return;
+            }
+            var data = $(this).attr('data');
+            var sn = $(this).attr('sn');
+            var prices = $(this).attr('prices');
+            $('.payagain').attr('data', data);
+            $('.payagain').attr('sn', sn);
+            $('.payagain').attr('prices', prices);
+            $('.sum_money').html(prices);
+
+            $('#pop_up').show();
+            $('#mask').show();
+
+        })
+        $('#quit').click(function () {
+            $('#pop_up').hide();
+            $('#mask').hide();
+        });
+        $('#mask').click(function () {
+            $('#pop_up').hide();
+            $('#mask').hide();
+        });
+        $('.payagain').click(function () {
+            var sn = $(this).attr('sn');
+            var prices = $(this).attr('prices');
+            var paytype = $('.mui-selected').attr('paytype');
+            // //console.log(paytype);
+            // //console.log(sn);
+            if (paytype == 1) {
+                // //console.log(prices);
+                // //console.log($('.Consumption').attr('con'));
+                if (prices > $('.Consumption').attr('con')) { mui.toast('消费金不足'); return; }
+            }
+            // //console.log($('.Consumption').attr('con'));
+            // //console.log($('.Balance').attr('bal'));
+            // return ;
+            if (paytype == 2) {
+                if (prices > $('.Balance').attr('bal')) { mui.toast('现金余额不足'); return; }
+            }
+            if (paytype != 3) {
+                var action='myorders';
+                var again='1';
+                var randomstr="<?php echo $randomstr;?>";
+                var csign=$.md5(action+again+pattern+paytype+randomstr+sn+time);
+                $.ajax({
+                    url: "<?php echo $http.config('newinterfaceurl')?>/confirmpay",
+                    type: 'POST',
+                    dataType: 'json',
+                    headers:{token:"<?php echo session('token');?>" },
+                    data: {pattern:pattern,from:from,time:time, again:again,sn: sn,action:action,paytype: paytype, sign:csign},
+                    success: function (data) {
+                        if (data.code == 1) {
+                            window.location.href = '/paysuccess?sn=' + sn;
+                        } else {
+                            mui.toast(data.msg);
+                        }
+                    }
+                })
+            }
+            else {
+                var data = $(this).attr('data');
+                // //console.log(data);
+
+                // if (data == '') {
+                    var action='getwxinfo';
+                    var again='1';
+                     var randomstr="<?php echo $randomstr;?>";
+                    var wsign=$.md5(action+again+randomstr+sn+time);
+                    $.ajax({
+                        url: "<?php echo $http.config('newinterfaceurl')?>/getwxinfo",
+                        type: 'POST',
+                        dataType: 'json',
+                        headers:{token:"<?php echo session('token');?>" },
+                        data: {from:from,time:time, again:again,sn: sn,action:action, sign:wsign},
+                        success: function (data) {
+
+                            if (data.code == 1) {
+                                // //console.log(data.info);return;
+                                // var info=data.info;
+                                WeixinJSBridge.invoke(
+                                    'getBrandWCPayRequest',
+                                    data.info,
+                                    function (res) {
+                                        if (res.err_msg == 'get_brand_wcpay_request:ok') {
+                                            var action='getpaystate';
+                                            var psign=$.md5(action+again+randomstr+sn+time);
+                                            $.ajax({
+                                                type: 'GET',
+                                                url: "<?php echo $http.config('newinterfaceurl')?>/getpaystate",
+                                                dataType: 'json',
+                                                headers:{token:"<?php echo session('token');?>" },
+                                                data: {from:from,time:time, again:again,sn: sn,action:action, sign:psign},
+                                                success: function (datas) {
+                                                    alert(datas.code);
+                                                    if (datas.code = 1) {
+                                                        mui.toast('支付成功！');
+                                                        // mui.toast('http://www.iqianclub.com/qxh/public/index.php/?token='+token);
+                                                        window.location.href = 'paysuccess?sn=' + data.sn;
+                                                    } else {
+                                                        mui.toast('支付失败！');
+                                                        $(this).attr('disabled', false);
+                                                    }
+                                                }
+                                            })
+                                        } else {
+                                            //mui.toast('启动微信支付失败, 请检查你的支付参数. 详细错误为: ' + res.err_msg);
+                                            //history.go(-1);
+                                        }
+                                    }
+                                );
+                            } else {
+                                mui.toast(data.msg);
+                            }
+                            //console.log(data);
+                        }
+                    })
+                // }
+                // else {
+                //     info = JSON.parse(data)
+                //     WeixinJSBridge.invoke(
+                //         'getBrandWCPayRequest',
+                //         info,
+                //         function (res) {
+                //             if (res.err_msg == 'get_brand_wcpay_request:ok') {
+                //                 $.ajax({
+                //                     type: 'GET',
+                //                     url: "<?php echo $http.config('newinterfaceurl')?>/getpaystate",
+                //                     dataType: 'jsonp',
+                //                     xhrFields: { withCredentials: true },
+                //                     data: { sn: data.sn },
+                //                     success: function (datas) {
+                //                         if (datas.code = 1) {
+                //                             mui.toast('支付成功！');
+                //                             // mui.toast('http://www.iqianclub.com/qxh/public/index.php/?token='+token);
+                //                             window.location.href = 'paysuccess?sn=' + sn;
+                //                         } else {
+                //                             mui.toast('支付失败！');
+                //                             $(this).attr('disabled', false);
+                //                         }
+                //                     }
+                //                 })
+                //             } else {
+                //                 //mui.toast('启动微信支付失败, 请检查你的支付参数. 详细错误为: ' + res.err_msg);
+                //                 //history.go(-1);
+                //             }
+                //         }
+                //     );
+                //
+                // }
+            }
+
+        })
+    })
+
+    function price(price) {
+        // //console.log(price);
+        price = parseFloat(price);
+        console.log(price);
+        return price.toLocaleString('zh-Hans-CN', {
+            style: 'currency',
+            currency: 'CNY',
+            useGrouping: true
+        })
+    }
+
+</script>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="<?php echo $keywords;?>">
+    <meta name="description" content="<?php echo $description;?>">
+    <title>实名认证-虔心荟</title>
+
+    <include file="public@header" />
+    <link href="__TMPL__/public/assets/css/person.css?2-2" rel="stylesheet">
+</head>
+
+<body>
+    <div class="mui-content">
+        <div class="bind_tips">
+            <p>为了让您正常享受会员权益以及使用申请提现等相关功能，请您务必完成认证。</p>
+        </div>
+        <form class="mui-input-group">
+            <div class="mui-input-row" style="height:5rem;">
+                <label class="bind_name" >姓名</label>
+                <input class="bind_input" id="truename" type="text" name="truename" placeholder="请输入您的姓名">
+            </div>
+            <div class="mui-input-row" style="height:5rem;">
+                <label class="bind_name">身份证号</label>
+                <input class="bind_input" id="authentication" type="text" name="idcard" placeholder="请输入您的身份证号码">
+            </div>
+
+        </form>
+        <div class="bind_btn">
+            <button onclick="Land()" id="authentication-btn" disabled="disabled">确认</button>
+        </div>
+
+    </div>
+</body>
+<script>
+    $(function () {
+        $("#authentication-btn").css('opacity', '0.5');
+        $('#name,#authentication').on('input propertychange', function () {
+            var truename = $('#name').val();
+            var authentication = $('#authentication').val();
+            if (truename !=='' && authentication!=='') {
+                $("#authentication-btn").css('opacity', '1');
+                $("#authentication-btn").attr('disabled',false);
+            } else {
+                $("#authentication-btn").css('opacity', '0.5');
+                $("#authentication-btn").attr('disabled',true);
+            }
+        });
+    })
+    function Land() {
+        var name = $("input[name='truename']").val();
+        var idcard = $("input[name='idcard']").val();
+        //console.log(name);
+        //console.log(idcard);
+        if (name == '' || idcard == '') {
+            return false;
+        }
+        $.ajax({
+            url: "<?php echo config('interfaceurl')?>/realName",
+            type: 'POST',
+            dataType: 'jsonp',
+            data: {
+                name: name,
+                cardnumber: idcard,
+                token: "<?php echo session('token');?>"
+            },
+            success: function (data) {
+                if (data.code == 1) {
+                    mui.toast('实名认证成功');
+                    window.location.href = '/cash';
+                } else {
+                    mui.toast(data.msg);
+                }
+            }
+        })
+    }
+</script>
+</body>
+
+</html>

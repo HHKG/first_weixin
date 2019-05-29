@@ -1,0 +1,114 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <!--<li class="active"><a href="javascript:;">所有新闻</a></li>-->
+        <!--<li><a href="{:url('AdminNew/add')}">添加新闻</a></li>-->
+    </ul>
+    <form class="well form-inline margin-top-20" method="post" action="{:url('order/index')}">
+        时间:
+        <input type="text" class="form-control js-bootstrap-date" name="start_time"
+               value="{$start_time|default=''}"
+               style="width: 140px;" autocomplete="off">-
+        <input type="text" class="form-control js-bootstrap-date" name="end_time"
+               value="{$end_time|default=''}"
+               style="width: 140px;" autocomplete="off"> &nbsp; &nbsp;
+        手机号:
+        <input type="text" class="form-control" name="mobile" style="width: 200px;"
+               value="{$mobile|default=''}" placeholder="请输入手机号">
+        订单号:
+        <input type="text" class="form-control" name="ordersn" style="width: 200px;"
+               value="{$ordersn|default=''}" placeholder="请输入订单号">
+        用户编号:
+        <input type="text" class="form-control" name="userid" style="width: 200px;"
+               value="{$userid|default=''}" placeholder="请输入订单号">
+        支付状态:
+        <select name="status" >
+            {$status|default='<option value="0" selected>请选择</option>'}
+            <option value="1" {$status==1?'selected':''}>未支付</option>
+            <option value="2" {$status==2?'selected':''}>已支付</option>
+            <option value="3" {$status==3?'selected':''}>已过期</option>
+            <option value="4" {$status==4?'selected':''}>已取消</option>
+            <option value="5" {$status==5?'selected':''}>已删除</option>
+        </select>
+        <input type="hidden" name="page" value="{$_GET['page']|default=1}">
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <!--<input type="submit"  name="ToEXcel"  class="btn btn-primary" value="导出"/>-->
+        <a class="btn btn-danger" href="{:url('order/index')}">清空</a>
+    </form>
+    <form class="js-ajax-form" action="" method="post">
+
+        <table class="table table-hover table-bordered table-list">
+            <thead>
+            <tr>
+                <th >用户昵称</th>
+                <th >用户手机</th>
+                <th >订单编号</th>
+                <th >下单日期</th>
+                <th >支付日期</th>
+                <th >支付状态</th>
+                <th >支付方式</th>
+                <th >商品价格</th>
+                <th >优惠价格</th>
+                <th >订单价格</th>
+                <th >项目名称</th>
+                <th >方案名称</th>
+                <th >备注</th>
+            </tr>
+            </thead>
+            <?php foreach($list as $vo):?>
+                <tr>
+                    <td><b><?php echo  $vo['E_Name']; ?></b></td>
+                    <td><b><?php echo  HandleMobile($vo['E_Mobile']); ?></b></td>
+                    <td><b><?php echo  $vo['E_OrderSn']; ?></b></td>
+                    <td><b><?php echo  $vo['E_CreateDate']; ?></b></td>
+                    <td><b><?php echo  $vo['E_Paytime']=='1970-01-01 08:00:00'?'':$vo['E_Paytime']; ?></b></td>
+                    <?php if($vo['E_PayState']==1):?>
+                    <td><b>未支付</b></td>
+                    <?php elseif($vo['E_PayState']==2):?>
+                    <td><b>已支付</b></td>
+                    <?php elseif($vo['E_PayState']==3):?>
+                    <td><b>已过期</b></td>
+                    <?php elseif($vo['E_PayState']==4):?>
+                    <td><b>已取消</b></td>
+                    <?php elseif($vo['E_PayState']==5):?>
+                    <td><b>已删除</b>
+                    </td>
+                    <?php endif;?>
+                    <?php if($vo['E_PayType']>0):?>
+                        <td>
+                           <?php echo config('paytype')[$vo['E_PayType']];?>
+                        </td>
+                        <?php else:?>
+                        <td><b></b></td>
+                        <?php endif;?>
+                    <td><b><?php echo  $vo['E_Money']; ?></b></td>
+                    <td><b><?php echo  $vo['E_DiscountPrice']; ?></b></td>
+                    <td><b><?php echo  $vo['E_OrderPrice']; ?></b></td>
+                    <td><b><?php echo  $vo['E_ProjectName']; ?></b></td>
+                    <td><b><?php echo  $vo['E_PlanName']; ?></b></td>
+                    <td>
+                        <?php echo  $vo['E_Commet']; ?>
+                        <?php if(session('ADMIN_ID')==1):?>
+                        <a class="btn btn-warning" href="javascript:parent.openIframeDialog('<?php echo url('order/remark',array('sn'=> $vo['E_OrderSn'],'remark'=>$vo['E_Commet'])); ?>','添加备注',{width:'400px',height:'400px'})">添加</a>
+                        <?php endif;?>
+                    </td>
+                </tr>
+      <?php endforeach;?>
+        </table>
+
+        <ul class="pagination">{$page|default=''}</ul>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script>
+
+    function reloadPage(win) {
+        win.location.reload();
+    }
+
+
+</script>
+</body>
+</html>

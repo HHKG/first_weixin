@@ -1,0 +1,45 @@
+<?php
+/**
+ * 配置文件
+ */
+//
+return [
+    // 数据库类型
+    'type'     => 'mysql',
+    // 服务器地址
+    'hostname' => '47.75.201.113',
+    // 数据库名
+    'database' => 'iqianclubtext',
+    // 用户名
+    'username' => 'iqianclubtext',
+    // 密码
+    'password' => 'hbBzr6RZCMJcRH56',
+    // 端口
+    'hostport' => '3388',
+    // 数据库编码默认采用utf8
+    'charset'  => 'utf8mb4',
+    // 数据库表前缀
+    'prefix'   => 'qxh_',
+    "authcode" => 'vG7kZ0fG7ZVzcPJMUH',
+    //#COOKIE_PREFIX#
+];
+//return [
+//    // 数据库类型
+//'type'     => 'mysql',
+//    // 服务器地址
+//'hostname' => '127.0.0.1',
+//    // 数据库名
+//'database' => 'gwtset',
+//    // 用户名
+//'username' => 'gwtsgwtsetet',
+//    // 密码
+//'password' => '22xAYdBpR7CpfP7b',
+//    // 端口
+//'hostport' => '39001',
+//    // 数据库编码默认采用utf8
+//'charset'  => 'utf8mb4',
+//    // 数据库表前缀
+//'prefix'   => 'qxh_',
+//"authcode" => 'vG7kZ0fG7ZVzcPJMUH',
+//    //#COOKIE_PREFIX#
+//];

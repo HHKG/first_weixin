@@ -1,0 +1,92 @@
+		.case_name {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 92%;
+			margin: 1.5rem auto 0rem;
+			box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.2);
+			background:#fff;
+			padding:1.5rem 0rem;
+		}
+		html{
+			font-size: 10px;
+		}
+		.case_name_header {
+			display: flex;
+			justify-content: space-between;
+			padding: 0 1rem;
+		}
+		.case-title{
+			display: flex;
+			justify-content: flex-start;
+			margin:1rem 1rem 0rem 1rem;
+		}
+		
+		.case_name_plan {
+			font-size: 1.6rem;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			max-width: 92%;
+		}
+		.case_name_money{
+			display: flex;
+			justify-content:space-between;
+			align-items: center;
+		}
+		.f-color{
+			color:#333!important;
+		}
+		.case_name_money-btn{
+	    white-space: nowrap;
+		border:1px solid #F06B4B;
+		color:#F06B4B;
+		border-radius: 1rem;
+		font-size: 1rem;
+		padding:0rem 0.5rem;
+		line-height: 1.5rem;
+		height:1.5rem;
+		}
+		.case_name_num {
+			text-align:end;
+			font-size: 2rem;
+			overflow: hidden;
+			margin-right:0.5rem;
+		}
+		
+		.case_name_datail {
+			display: flex;
+			justify-content: space-between;
+			padding:0.8rem 1rem 0rem 1rem;
+		}
+		
+		.case_name_datail div {
+			display: flex;
+			flex-direction: column;
+			width:50%;
+		}
+		.case_name_join {
+			font-size: 4rem;
+			color: #666666;
+			line-height: 2rem;
+		}
+		
+		.case_name_join span {
+			font-size: 1.4rem;
+			color: #666666;
+			line-height: 2rem;
+		}
+		
+		.balance_wei {
+			font-size: 1.4rem;
+			color: #faa24e;
+		}
+		.balance_yi{
+			font-size: 1.4rem;
+			color: #333333;
+		}
+		
+		.already_balance {
+			font-size: 2rem;
+			font-weight: bold;
+		}

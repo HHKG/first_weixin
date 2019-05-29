@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="">
+
+</head>
+
+<body class="body-white">
+
+
+<div class="container tc-main">
+
+
+</div>
+<a href="http://www.iqianclub.com/qxh/public/index.php/member"><i class="fa fa-eye"></i><h1>个人中心</h1></a><br>
+<a href="http://www.iqianclub.com/qxh/public/index.php/myorder"><i class="fa fa-eye"></i><h1>订单中心</h1></a>
+</body>
+</html>
+
+
+<script src="__TMPL__/public/assets/js/jquery-1.10.2.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    var sn="<?php echo $sn;?>"
+    var token="<?php echo cookie('token');?>"
+    $(function () {
+
+
+        $.ajax({
+            type: 'GET',
+            url : 'http://www.iqianclub.com/interface/public/index.php/speed/order/resultorder',
+            // url : 'http://localhost:82/speed/order/car',
+            dataType: 'jsonp',
+            xhrFields:{withCredentials:true},
+            data:{token:token,sn:sn},
+            success:function(data){
+                    alert('成功');
+                console.log(data);
+                var str='';
+                if (data.code=1){
+                    str+='支付类型是:'+data.info.E_PayChannel+'<br>';
+                    str+='价格:'+(data.info.E_PayPrice)/100+'</span><br>';
+                    str+='状态:'
+                            if (data.info.E_PayState==1){
+                                str+='失败'
+                            }else{
+                                str+='成功'
+                            }
+                }
+                    $(".tc-main").html(str);
+
+            },
+
+        })
+
+    })
+
+
+</script>

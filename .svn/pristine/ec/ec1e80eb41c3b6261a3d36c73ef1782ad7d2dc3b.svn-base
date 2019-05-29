@@ -1,0 +1,32 @@
+$('.document').ready(function () {
+   // 度假地首页头部跳转
+   console.log($('.theme').hide(false));
+   $('.holiday-title').click(function(){
+       $('.holiday-h').find('.holiday-title').removeClass('holiday-active');
+       $(this).addClass('holiday-active');
+       if($('.theme').css.display == 'block'){
+         $('.theme').css.display == "block" ? $('.theme').css.display="none" : $('.theme').css.display="block";
+         $('.holiday,.holiday-suspend-btn').show();
+         $('.theme').hide();
+       }else{
+         $('.holiday').css.display == "block" ? $('.holiday').css.display="none" : $('.holiday').css.display="block";
+         $('.holiday,.holiday-suspend-btn').hide();
+        $('.theme').show();
+       }
+   });
+   //  免费度假攻略弹窗
+   $('.free-explain').click(function () {
+      $('.free-pop').show();
+      $('.mask').show();
+   });
+   $('.free-btn-color').click(function () {
+      $('.free-pop').hide();
+      $('.mask').hide();
+   });
+   // 地区分类点击事件
+   $('.area-name-cnt').click(function () {
+      $('.area-name').find('div').removeClass('area-name-cnt-active');
+      $(this).addClass('area-name-cnt-active');
+   });
+
+});

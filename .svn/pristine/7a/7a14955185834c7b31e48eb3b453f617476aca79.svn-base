@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <include file="public@header" />
+    <title>虔心荟</title>
+    <meta name="keywords" content="虔心荟" />
+    <meta name="description" content="虔心荟" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/person.css" />
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/mui.min.css">
+    <script src="__TMPL__/public/assets/js/jquery.md5.js"></script>
+    <script>
+        (function(r,d,s,l){var meteor=r.meteor=r.meteor||[];meteor.methods=["track","off","on"];meteor.factory=function(method){return function(){
+        var args=Array.prototype.slice.call(arguments);args.unshift(method);meteor.push(args);return meteor}};for(var i=0;i<meteor.methods.length;i++){
+        var key=meteor.methods[i];meteor[key]=meteor.factory(key)}meteor.load=function(){var js,fjs=d.getElementsByTagName(s)[0];js=d.createElement(s);
+        js.src="https://analytics.snssdk.com/meteor.js/v1/"+l+"/sdk";fjs.parentNode.insertBefore(js,fjs)};meteor.load();if(meteor.invoked){return}
+        meteor.invoked=true;meteor.track("pageview")})(window,document,"script","107729955267");
+      </script>
+</head>
+<style>
+    input::placeholder {
+        color: #fff;
+        font-size: 1.6rem;
+    }
+</style>
+
+<body>
+    <div class="mui-content">
+        <div class="guide-h">
+            <img src="/upload/ad/guide-image_01.jpg" style="width:100%;" />
+            <div class="guide-cnt">
+                <div class="guide-input-cnt">
+                    <img src="/upload/ad/guide-phone_icon.png" />
+                    <input class="guide-input" oninput="if(value.length>11)value=value.slice(0,11)" value="" id="code-8"
+                        type="number" placeholder="请输入手机号" value="">
+                </div>
+                <div class="guide-input-cnt">
+                    <img src="/upload/ad/guide-password_icon.png" />
+                    <input class="guide-input" oninput="if(value.length>4)value=value.slice(0,4)" id="code-12"
+                        type="number" placeholder="请输入验证码" value="">
+                    <button id="btn">获取验证码</button>
+                </div>
+                <button id="login-btn" onclick="return Land()" disabled="true" class="guide-register">注册</button>
+            </div>
+        </div>
+        <div>
+            <img src="/upload/ad/guide-image_02.jpg" style="width:100%;margin-top:-0.5rem;" />
+            <img src="/upload/ad/guide-image_03.jpg" style="width:100%;margin-top:-0.5rem;" />
+            <img src="/upload/ad/guide-image_04.jpg" style="width:100%;margin-top:-0.5rem;" />
+            <img src="/upload/ad/guide-image_05.jpg" style="width:100%;margin-top:-0.5rem;" />
+            <img src="/upload/ad/guide-image_06.jpg" style="width:100%;margin-top:-0.5rem;" />
+        </div>
+    </div>
+    <script type="text/javascript">
+        var reg = /^1[3456789]\d{9}$/;
+        var regcode = /^(\d{4})$/;
+        var mobile = document.getElementById('code-8');
+        var oCode = document.getElementById('code-12');
+        var wait = 60;
+        var times = "<?php echo $time;?>";
+        $(function () {
+            var $inputwrapper = $('.code_number');
+            $('#code-12,#code-8').on('input propertychange', function () {
+                var result1 = $('#code-12').val();
+                var result2 = $('#code-8').val();
+                if (result1 !== '' && result2 !== '') {
+                    $("#login-btn").css('opacity', '1');
+                    $("#login-btn").attr('disabled', false);
+                } else {
+                    $("#login-btn").css('opacity', '0.5');
+                    $("#login-btn").attr('disabled', true);
+                }
+            });
+        })
+        function time(o) {
+            if (wait == 0) {
+                document.getElementById("btn").removeAttribute("disabled"); //不能再触发
+                document.getElementById("btn").style.cssText = "border:1px solid #3a8782;background:#fff;color:#3a8782;"
+                document.getElementById("btn").innerText = "重发验证码";
+                wait = 60;
+            } else {
+                document.getElementById("btn").setAttribute("disabled", true);
+                document.getElementById("btn").style.cssText = "border:hidden;background:#999;color:#EBEBEB;"
+                document.getElementById("btn").innerText = "" + wait + "s";
+                wait--;
+                setTimeout(function () {
+                    time(wait);
+                },
+                    1000)
+            }
+        }
+        document.getElementById("btn").onclick = function () {
+            var _this = this;
+            if (mobile.value == '') {
+                mui.toast('请输入手机号');
+            } else {
+                if (!reg.exec(mobile.value)) {
+                    mui.toast('手机号格式不正确');
+                    return;
+                } else {
+                    sendcode(parseInt(mobile.value), _this)
+                }
+            }
+        }
+        // 向后台请求验证码
+        function sendcode(mobile, object) {
+            var action = 'sendcode';
+            var type = "1";
+            var from = "<?php echo $from;?>";
+            var number = parseInt(mobile);
+            // var source = 'web|tt/login2';
+            var sign = $.md5(action + number + randomstr + times + type);
+            meteor.track('form', {convert_id: 1634285464708104 });
+            $.ajax({
+                url: "<?php echo $http.config('newinterfaceurl')?>/sendcode",
+                type: 'GET',
+                dataType: 'json',
+                data: { from: from, type: type, number: number, time: times, action: action, sign: sign },
+                success: function (data) {
+                    
+                    if (data.code == 1) {
+                        mui.toast('验证码发送成功');
+                        time(object);
+                    } else if (data.code == -2) {
+                        mui.alert(data.msg, '提示');
+                    } else if(data.code==-3) {
+                        console.log(data)
+                        window.location.href = "/login";
+                    }
+                }
+            })
+        }
+        // 注册手机号
+        function Land() {
+            if (oCode == "" || mobile == "") {
+                return;
+            }
+            if (oCode.value == null || oCode == "" || !regcode.exec(oCode.value)) {
+                mui.toast('短信验证码不正确');
+                return;
+            }
+            if (mobile == null || mobile == "" || !reg.exec(mobile.value)) {
+                mui.toast('手机号格式不正确');
+                return;
+            }
+            var iaction = 'inspectcode';
+            var code = parseInt(oCode.value);
+            var number = parseInt(mobile.value);
+            var isign = $.md5(iaction + code + number + randomstr + times);
+            var source = "{$Think.get.source}";
+            meteor.track('form', {convert_id: 1634285500294152 });
+            $.ajax({
+                url: "<?php echo $http.config('newinterfaceurl')?>/inspectcode",
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    from: from,
+                    code: code,
+                    mobile: number,
+                    time: times,
+                    action: iaction,
+                    sign: isign
+                },
+                // xhrFields:{withCredentials:true},
+                success: function (data) {
+                    if (data.code == 1) {
+                        mui.toast(data.msg);
+                        t = register(number, code, source);
+                        return true;
+                    } else {
+                        mui.toast(data.msg);
+                        // return false;
+                    }
+                }
+            })
+        };
+        function register(mobile, code, source) {
+            // mui.toast(11);
+            var agree = 1;
+            var question = "1:1,2:2,3:3";
+            var code = code;
+            var atricle = "register";
+            var mobile = mobile;
+            var type = 2;
+            var action = 'information';
+            var from = "web";
+            var back = "http://m.iqianclub.com/member";
+            var source = source;
+            var randomstr = "<?php echo $randomstr;?>";
+            var sign = $.md5(action + agree + atricle + code + mobile + question + source + randomstr + times + type);
+            $.ajax({
+                url: "<?php echo $http.config('newinterfaceurl')?>/information",
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    code: code,
+                    mobile: mobile,
+                    type: type,
+                    agree: agree,
+                    from: from,
+                    question: question,
+                    time: times,
+                    atricle: atricle,
+                    source: source,
+                    action: action,
+                    sign: sign
+                },
+                // xhrFields:{withCredentials:true},
+                success: function (data) {
+                    // console.log(data);return;
+                    if (data.code == 1) {
+                        console.log(data);
+                            window.location.href = "/project?back=<?php echo urlencode($backurl);?>&token=" + data.token + "&count=" + data.count +"&project="+'MZJBQKj3NmPolKOv8qbj';
+                    } else {
+                        return false;
+                    }
+
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>

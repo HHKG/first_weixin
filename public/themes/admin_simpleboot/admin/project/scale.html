@@ -1,0 +1,87 @@
+<include file="public@header" />
+</head>
+<body>
+    <div style="text-align: center">
+		<h1>年份：<?php echo $year;?></h1>
+	</div>
+	<div class="wrap">
+		<form method="post" class="form-horizontal js-ajax-form" action="{:url('project/scale_post')}">
+            <input type="hidden" class="form-control"  name="project" value="<?php echo $project;?>">
+            <input type="hidden" class="form-control"  name="plan" value="<?php echo $plan;?>">
+			<input type="hidden" name="update" value="1">
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                1月份：<input type="number" <?php echo  date('m')>01?'readonly':''?> class="form-control "  value="<?php echo  isset($info)?$info['E_Jan']:''?>" name="E_Jan" >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                2月份：<input type="number" <?php echo date('m')>02?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_Feb']:''?>"   name="E_Feb"  >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                3月份：<input type="number"  <?php echo  date('m')>03?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_March']:''?>"   name="E_March">
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                4月份：<input type="number" <?php echo  date('m')>04?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_April']:''?>"   name="E_April" >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+					4月份：<input type="number" <?php echo  date('m')>04?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_April']:''?>"   name="E_April" >
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                5月份：<input type="number"  <?php echo  date('m')>05?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_May']:''?>"   name="E_May" >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                6月份：<input type="number" <?php echo  date('m')>06?'readonly':''?> class="form-control"  value="<?php echo  isset($info)?$info['E_June']:''?>"  name="E_June" >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                7月份：<input type="number" <?php echo  date('m')>07?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_July']:''?>"   name="E_July" >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                8月份：<input type="number" <?php echo  date('m')>'08'?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_August']:''?>"   name="E_August"  >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                9月份：<input type="number"  <?php echo  date('m')>'09'?'readonly':''?> class="form-control"  value="<?php echo  isset($info)?$info['E_Sept']:''?>"  name="E_Sept" >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                10月份：<input type="number"  <?php echo  date('m')>10?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_Oct']:''?>"   name="E_Oct"  >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                11月份：<input type="number" <?php echo  date('m')>11?'readonly':''?> class="form-control" value="<?php echo  isset($info)?$info['E_Nov']:''?>"  name="E_Nov"  >
+            </div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-5 col-sm-8">
+                12月份：<input type="number"  class="form-control"  value="<?php echo  isset($info)?$info['E_Dec']:''?>"   name="E_Dec"  >
+            </div>
+			</div>
+
+            <div style="text-align: center" class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button  type="submit" class="btn btn-primary ">保存</button>
+                </div>
+            </div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

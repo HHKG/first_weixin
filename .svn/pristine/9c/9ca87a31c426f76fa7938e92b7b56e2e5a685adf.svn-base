@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="keywords" content="<?php echo $keywords;?>">
+    <meta name="description" content="<?php echo $description;?>">
+    <title>订单支付-虔心荟</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <include file="public@header" />
+    <link href="__TMPL__/public/assets/css/person.css?2-1" rel="stylesheet" />
+    <link href="__TMPL__/public/assets/css/youxian_pay.css?2-1" rel="stylesheet" />
+</head>
+<style type="text/css">
+    html {
+        font-size: 10px;
+    }
+
+    .mui-table-view::before {
+        height: 0px;
+    }
+
+    .mui-table-view::after {
+        height: 0px;
+    }
+
+    .mui-checkbox input[type="checkbox"]:checked::before,
+    .mui-radio input[type="radio"]:checked::before {
+        color: #3A8782;
+    }
+
+    .mui-checkbox input[type="checkbox"]::before,
+    .mui-radio input[type="radio"]::before {
+        font-size: 2.5rem;
+    }
+</style>
+<script type="text/javascript">
+    mui.init()
+</script>
+
+<body>
+<include file="public@pattern" />
+    <div class="mui-content" style="margin-bottom: 7rem;;">
+        <!--第一块-->
+        <div>
+            <h5 class="mui-content-padded order_choice">已选方案</h5>
+            <div class="mui-table-view order_view">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell car-li">
+                        <div class="mui-input-row" style="height:8rem;">
+                            <div class="order_top">
+                                <div>
+                                    <p style="margin:0!important;height:2rem;"><span class="order_share">--</span><span>/份</span></p>
+                                    <input type="hidden" class="money" disabled="disabled">
+                                    <span style="font-size: 1.6rem;color:#666;padding:0.5rem 0rem;">四闲山房别墅</span>
+                                    <span class="order_case">--</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mui-table-view-cell car-li">
+                        <div class="mui-input-row" style="height:4.5rem;">
+                            <label class="order_buy">选择认购份数</label>
+                            <div class="mui-numbox order_numbox" data-numbox-min="1" data-numbox-max="9">
+                                <button class="mui-btn mui-btn-numbox-minus order_minus reduce" type="button">-</button>
+                                <input class="mui-input-numbox order_number" type="number" value="1" />
+                                <button class="mui-btn mui-btn-numbox-plus order_minus plus" type="button">+</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--第二块-->
+        <div>
+            <h5 class="mui-content-padded order_choice">用户名</h5>
+            <ul class="mui-table-view" style="border:hidden;">
+                <li class="mui-table-view-cell order_cell member_info">
+                    小小白 &nbsp;&nbsp;13888888888
+                </li>
+            </ul>
+            <ul class="mui-table-view" style="margin-top: 2rem;border:hidden;">
+                <li class="mui-table-view-cell order_cell">
+                    <div class="order_pay">
+                        <span class="order_pay_num">应付金额</span>
+                        <span class="order_allNum actual">--</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--第三块-->
+        <div>
+            <h5 class="mui-content-padded order_choice">支付方式</h5>
+            <ul class="mui-table-view mui-table-view-radio">
+               <if condition="$Request.session.pattern eq 0">
+                <li paytyppe="3" class="mui-table-view-cell order_means mui-selected">
+                    <div class="order_pay_way">
+                        <img src="__TMPL__/public/assets/images/wechat_icon.png" />
+                        <a class="mui-navigate-right order_pay_text">
+                            微信支付
+                        </a>
+                    </div>
+                </li>
+               </if>
+                <li paytyppe="1" money="" class="mui-table-view-cell order_means  <if condition="$Request.session.pattern eq 0 ">mui-selected</if>">
+                    <div class="order_pay_way">
+                        <img src="__TMPL__/public/assets/images/xiaofeijin_icon.png">
+                        <a class="mui-navigate-right order_pay_text">
+                            消费金(<span class="E_Consumption">--</span>)
+                        </a>
+                    </div>
+                </li>
+                <li paytyppe="2" money="" class="mui-table-view-cell  order_means">
+                    <div class="order_pay_way">
+                        <img src="__TMPL__/public/assets/images/yuer_icon.png">
+                        <a class="mui-navigate-right order_pay_text">
+                            余额(<span class="E_Balance">--</span>)
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <div class="mui-content-padded">
+                <p id="info"></p>
+            </div>
+        </div>
+        <!--第四模块-->
+        <!--<div>-->
+        <!--<div class="order_protocol">-->
+        <!--<div class="mui-input-row mui-checkbox mui-left order_check">-->
+        <!--<label class="order_agree">我已阅读并且同意<a>《会员注册协议》</a></label>-->
+        <!--<input name="checkbox" value="" type="checkbox">-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <nav class="mui-bar mui-bar-tab order_tab order_nav" style="height:5rem;background:#fff;">
+            <div class="order_footer">
+                <div>
+                    <span class="order_sum">合计金额：</span>
+                    <span class="sum_money actual">￥10000.00</span>
+                </div>
+                <div>
+                    <button class="submit_buy">确认支付</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>
+<script>
+    $(function () {
+
+        var action='car';
+        var code= "<?php echo $_GET['plan'];?>";
+        var sign=$.md5(action+code+pattern+randomstr+time);
+        var datas={pattern:pattern,from:from,code:code,time:time,action:action, sign:sign};
+        $.ajax({
+            url: "<?php echo $http.config('newinterfaceurl')?>/car",
+            type: 'POST',
+            dataType: 'json',
+            headers:{token:"<?php echo session('token');?>" },
+            data: datas,
+            success: function (data) {
+                if (data.code === '9201') {
+                    if ("<?php echo cmf_is_wechat(); ?>") {
+                        window.location.href = "/login?back=<?php echo urlencode(GetAllURL());?>";
+                    } else {
+                        window.location.href = "/login?back=<?php echo urlencode(GetAllURL());?>";
+                    }
+
+
+                } else if (data.code == 1) {
+                    $('.order_share').html(price(data.plan.E_Money));
+                    $('.order_case').html(data.plan.E_Title);
+                    $('.actual').html(price(data.plan.E_Money));
+                    $('.money').val(data.plan.E_Money);
+                    $('.member_info').html(data.member.E_Mobile + '  (' + data.member.E_Name + ')');
+                    // $('.order_share').html(data.plan.E_Money);
+                    $('.E_Balance').html(data.wallet.E_Balance);
+                    $('.E_Consumption').html(data.wallet.E_Consumption);
+                    $('.order_numbox').attr('data-numbox-max', data.plan.E_CanBuy);
+                    mui('.mui-numbox').numbox().setOption('max', data.plan.E_CanBuy)
+                }
+
+            }
+        })
+        $("input[type='number']").change(function () {
+            var number = $(this).val();
+            var prices = parseFloat($('.money').val());
+            var canbuy = $('.min_buy').html();
+            if (number > canbuy || number < 0) {
+                return;
+            }
+            var amount = prices * number;
+            // alert(number);
+
+            $('.actual').html(price(amount));
+        })
+
+        // $('.reduce').click(function () {
+        //     var number = $("input[type='number']").val();
+        //     console.log(number); return;
+        //     if (number == 1) return;
+        //     $('.van-stepper__input').val(number - 1);
+        //     var price=parseInt($('.money').html())
+        //     $('.actual').html(price*(number-1))
+        // })
+        // $('.plus').click(function () {
+        //     var number = parseInt($('.van-stepper__input').val());
+        //     var canbuy=$('.min_buy').html();
+        //     // console.log(typeof  number)
+        //     if (number >=canbuy) return;
+        //     $('.plus').val(number+1);
+        //     var price=parseInt($('.money').val());;
+        //     // console.log(price)
+        //     $('.actual').html( price*(number+1));
+        // })
+        $('.submit_buy').click(function () {
+            var number = $(this).val();
+            var canbuy = $('.min_buy').html();
+            // 2019/1/23增加的判断
+            if (number > canbuy) {
+                mui.toast('您购买的份数已超额');
+                return;
+            } else if (number < 0) {
+                mui.toast('请选择购买份数');
+                return;
+            }
+            // $(this).attr('disabled',true);
+            var agree = $("input[name='checkbox']").is(':checked');
+
+            // if(agree==true){
+            //     agree=1;
+            // }else{
+            //     mui.toast('请勾选协议');return;
+            // }
+
+            var number = parseInt($("input[type='number']").val());
+            var code = "<?php echo $_GET['plan'];?>";
+            var price = parseFloat($('.money').val());
+            var paytype = $('.mui-selected').attr("paytyppe");
+            // console.log(paytype)
+            if (paytype == 1) {
+                if (price > $('.E_Consumption').html()) { mui.toast('消费金不足'); return; }
+            }
+            if (paytype == 2) {
+                if (price > $('.E_Balance').html()) { mui.toast('现金余额不足'); return; }
+            }
+            var caction='createplanorder';
+            var psign=$.md5(caction+agree+code+number+pattern+paytype+price+randomstr+time);
+            // {"action":"car","agree":"false","code":"Z3b5WRHcTgLeHPRrD9sj","num":"1","paytype":"3","price":"0.01","randomstr":"e04d5e149ec7f13436f7004e5529d304","time":"1553678223"
+            var datas={pattern:pattern,from:from,agree: agree, num: number, paytype: paytype, code: code, price: price,time:time,action:caction, sign:psign};
+            // console.log($('.money').val( ));return;
+            $.ajax({
+                url: "<?php echo $http.config('newinterfaceurl')?>/createplanorder",
+                type: 'POST',
+                dataType: 'json',
+                headers:{token:"<?php echo session('token');?>" },
+                data: datas,
+                success: function (data) {
+
+                    if (data.code == 1) {
+                        if (paytype == 3) {
+                            WeixinJSBridge.invoke(
+                                'getBrandWCPayRequest',
+                                data.info,
+                                function (res) {
+                                    if (res.err_msg == 'get_brand_wcpay_request:ok') {
+                                        var saction='getpaystate';
+                                        var ssign=$.md5(saction+randomstr+pattern+data.sn +time);
+                                        var datas={pattern:pattern,from:from,time:time,action:action,sn:data.sn,sign:ssign};
+                                        $.ajax({
+                                            url: "<?php echo $http.config('newinterfaceurl')?>/getpaystate",
+                                            type: 'POST',
+                                            dataType: 'json',
+                                            headers:{token:"<?php echo session('token');?>" },
+                                            data: datas,
+                                            success: function (datas) {
+                                                if (datas.code = 1) {
+                                                    // mui.toast('支付成功！');
+                                                    // mui.toast('http://www.iqianclub.com/qxh/public/index.php/?token='+token);
+                                                    window.location.href = 'paysuccess?sn=' + data.sn;
+                                                } else {
+                                                    mui.toast('支付失败！');
+                                                    $(this).attr('disabled', false);
+                                                }
+                                            }
+                                        })
+                                    } else {
+                                        // mui.toast('启动微信支付失败, 请检查你的支付参数. 详细错误为: ' + res.err_msg);
+                                        // history.go(-1);
+                                    }
+                                }
+                            );
+                        }
+                        else {
+                            mui.alert('确认支付', '提示', function () {
+                                var aaction='confirmpay';
+                                var asign=$.md5(aaction+pattern+paytype+randomstr+data.sn +time);
+                                $.ajax({
+                                    url: "<?php echo $http.config('newinterfaceurl')?>/confirmpay",
+                                    type: 'POST',
+                                    dataType: 'json',
+                                    headers:{token:"<?php echo session('token');?>" },
+                                    data: {pattern:pattern,from:from,time:time,action:aaction,paytype: paytype,sn:data.sn,sign:asign},
+                                    success: function (data) {
+                                        if (data.code == 1) {
+                                            window.location.href = 'paysuccess?sn=' + data.sn;
+                                        } else {
+                                            mui.toast(data.msg);
+                                        }
+                                    }
+                                })
+                            });
+                        }
+                    } else {
+                        mui.toast(data.msg);
+                        $(this).attr('disabled', false);
+                    }
+                }
+            })
+        })
+    })
+    // 这个变量这样表不了，直接拿到数据后。在加载一次
+    function price(price) {
+        // console.log(price);
+        price = parseFloat(price);
+        // console.log(price);
+        return price.toLocaleString('zh-Hans-CN', {
+            style: 'currency',
+            currency: 'CNY',
+            useGrouping: true
+        })
+    }
+</script>

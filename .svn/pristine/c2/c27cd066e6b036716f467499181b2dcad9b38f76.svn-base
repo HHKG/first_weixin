@@ -1,0 +1,35 @@
+<style>
+    .pattern{
+        width: 6rem;
+        height: 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        bottom: 50%;
+        right: 1%;
+        z-index: 11;
+        justify-content: center;
+    }
+</style>
+
+<if condition="$Think.session.pattern eq 1">
+<div class="pattern"><button onclick="checkPatterns()">真实方案</button></div>
+</if>
+
+<script>
+    
+    function checkPatterns() {
+        var search=location.search;
+        if (search==''){
+            window.location.href=window.location.href+'?Pattern=2';
+        }else{
+            window.location.href=window.location.href+'&Pattern=2';
+        }
+
+
+    }
+
+
+</script>

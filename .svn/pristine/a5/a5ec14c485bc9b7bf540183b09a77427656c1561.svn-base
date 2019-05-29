@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>生态风光</title>
+    <meta name="description" content="生态风光-虔心荟" />
+    <meta name="Keywords" content="生态风光-虔心荟" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="__TMPL__/public/assets/css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/person.css?4-10-5" />
+
+    <script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+    <script src="__TMPL__/public/assets/js/holiday.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .holiday-body,
+    body {
+        background: #fff;
+    }
+</style>
+
+<body>
+    <script src="__TMPL__/public/assets/js/mui.min.js"></script>
+    <script type="text/javascript">
+        mui.init()
+    </script>
+    <div class="mui-content scenery-body">
+        <!-- banner -->
+        <div class="holiday-banner" onclick="javascript:window.location.href='/free'">
+            <image src='__TMPL__/public/assets/images/hotel_banner.png?4-8' class="holiday-banner-img"></image>
+        </div>
+        <div class="scenery-cnt">
+            <div class="scenery-area">
+                <div class="scenery-area-h"  onclick="javascript:window.location.href='/detail'">
+                    <img src="__TMPL__/public/assets/images/plan_photo1.png" class="scenery-area-img" />
+                    <span class="scenery-area-txt">国内 | 赣州 | 虔心小镇</span>
+                </div>
+                <div class="scenery-area-title"  onclick="javascript:window.location.href='/detail'">
+                    四闲山房独立栋别墅
+                </div>
+                <div class="scenery-area-commentCount">
+                    <img src="__TMPL__/public/assets/images/five_star.png" class="scenery-area-star" />
+                    <span class="scenery-area-comment-txt">112 住过 | 18 评论</span>
+                </div>
+                <div class="scenery-area-price">
+                    <div class="scenery-area-comment">
+                        <div class="scenery-area-price-btn" onclick="javascript:window.location.href='/free'">
+                            参与计划即可每年免费入住<span class="scenery-day">2</span>晚</div>
+                        <div class="scenery-area-price-sanjiao"></div>
+                    </div>
+                    <div>
+                        <p class="scenery-area-price-num">￥490.00 </p>
+                        <p class="scenery-area-price-txt">参考价</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scenery-area">
+                <div class="scenery-area-h"  onclick="javascript:window.location.href='/detail_two'">
+                    <img src="__TMPL__/public/assets/images/plane_photo2.png" class="scenery-area-img" />
+                    <span class="scenery-area-txt">国内 | 佛山 | 美的鹭湖森林度假区</span>
+                </div>
+                <div class="scenery-area-title"  onclick="javascript:window.location.href='/detail_two'">
+                    佛山“法国小镇”半山温泉酒店
+                </div>
+                <div class="scenery-area-commentCount">
+                    <img src="__TMPL__/public/assets/images/five_star.png" class="scenery-area-star" />
+                    <span class="scenery-area-comment-txt">88 住过 | 12 评论</span>
+                </div>
+                <div class="scenery-area-price">
+                    <div class="scenery-area-comment">
+                        <div class="scenery-area-price-btn" onclick="javascript:window.location.href='/free'">
+                            参与计划即可每年免费入住<span class="scenery-day">1</span>晚</div>
+                        <div class="scenery-area-price-sanjiao"></div>
+                    </div>
+                    <div>
+                        <p class="scenery-area-price-num">￥1400.00 </p>
+                        <p class="scenery-area-price-txt">参考价</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scenery-area">
+                <div class="scenery-area-h"  onclick="javascript:window.location.href='/detail_three'">
+                    <img src="__TMPL__/public/assets/images/detail_three_1.jpg" class="scenery-area-img" />
+                    <span class="scenery-area-txt">国内 | 佛山 | 美的鹭湖森林度假区</span>
+                </div>
+                <div class="scenery-area-title"  onclick="javascript:window.location.href='/detail_three'">
+                    佛山“法国小镇”安纳希童话酒店
+                </div>
+                <div class="scenery-area-commentCount">
+                    <img src="__TMPL__/public/assets/images/five_star.png" class="scenery-area-star" />
+                    <span class="scenery-area-comment-txt">45 住过 | 8 评论</span>
+                </div>
+                <div class="scenery-area-price">
+                    <div class="scenery-area-comment">
+                        <div class="scenery-area-price-btn" onclick="javascript:window.location.href='/free'">
+                            参与计划即可每年免费入住<span class="scenery-day">1</span>晚</div>
+                        <div class="scenery-area-price-sanjiao"></div>
+                    </div>
+                    <div>
+                        <p class="scenery-area-price-num">￥950.00 </p>
+                        <p class="scenery-area-price-txt">参考价</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scenery-area">
+                <div class="scenery-area-h"  onclick="javascript:window.location.href='/detail_four'">
+                    <img src="__TMPL__/public/assets/images/detail_four_3.jpg" class="scenery-area-img" />
+                    <span class="scenery-area-txt">国内 | 佛山 | 美的鹭湖森林度假区</span>
+                </div>
+                <div class="scenery-area-title"  onclick="javascript:window.location.href='/detail_four'">
+                    佛山“法国小镇”爱丽丝公寓
+                </div>
+                <div class="scenery-area-commentCount">
+                    <img src="__TMPL__/public/assets/images/five_star.png" class="scenery-area-star" />
+                    <span class="scenery-area-comment-txt">64 住过 | 7 评论</span>
+                </div>
+                <div class="scenery-area-price">
+                    <div class="scenery-area-comment">
+                        <div class="scenery-area-price-btn" onclick="javascript:window.location.href='/free'">
+                            参与计划即可每年免费入住<span class="scenery-day">1</span>晚</div>
+                        <div class="scenery-area-price-sanjiao"></div>
+                    </div>
+                    <div>
+                        <p class="scenery-area-price-num">￥688.00 </p>
+                        <p class="scenery-area-price-txt">参考价</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scenery-area">
+                <div class="scenery-area-h"  onclick="javascript:window.location.href='/detail_five'">
+                    <img src="__TMPL__/public/assets/images/detail_five_2.jpg" class="scenery-area-img" />
+                    <span class="scenery-area-txt">国内 | 从化 | 圣托利温泉庄园</span>
+                </div>
+                <div class="scenery-area-title"  onclick="javascript:window.location.href='/detail_five'">
+                    从化“小希腊”温泉庄园别墅
+                </div>
+                <div class="scenery-area-commentCount">
+                    <img src="__TMPL__/public/assets/images/five_star.png" class="scenery-area-star" />
+                    <span class="scenery-area-comment-txt">69 住过 | 15 评论</span>
+                </div>
+                <div class="scenery-area-price">
+                    <div class="scenery-area-comment">
+                        <div class="scenery-area-price-btn" onclick="javascript:window.location.href='/free'">
+                            参与计划即可每年免费入住<span class="scenery-day">1</span>晚</div>
+                        <div class="scenery-area-price-sanjiao"></div>
+                    </div>
+                    <div>
+                        <p class="scenery-area-price-num">￥800.00 </p>
+                        <p class="scenery-area-price-txt">参考价</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scenery-area">
+                <div class="scenery-area-h"  onclick="javascript:window.location.href='/detail_six'">
+                    <img src="__TMPL__/public/assets/images/detail_six_1.jpg" class="scenery-area-img" />
+                    <span class="scenery-area-txt"> 国内 | 惠州 </span>
+                </div>
+                <div class="scenery-area-title"  onclick="javascript:window.location.href='/detail_six'">
+                    惠州“小箱根”温泉山庄别墅酒店
+                </div>
+                <div class="scenery-area-commentCount">
+                    <img src="__TMPL__/public/assets/images/five_star.png" class="scenery-area-star" />
+                    <span class="scenery-area-comment-txt">38 住过 | 4 评论</span>
+                </div>
+                <div class="scenery-area-price">
+                    <div class="scenery-area-comment">
+                        <div class="scenery-area-price-btn" onclick="javascript:window.location.href='/free'">
+                            参与计划即可每年免费入住<span class="scenery-day">1</span>晚</div>
+                    </div>
+                    <div>
+                        <p class="scenery-area-price-num">￥880.00 </p>
+                        <p class="scenery-area-price-txt">参考价</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 提示 -->
+            <div class="use-tips">
+                参考价说明：因度假地订房火爆或节假日等因素，订房价格有所波动，最终以专属管家为您订房的信息为准。
+            </div>
+            <!-- 俱乐部地址 -->
+            <div class="partner club-width">
+                <div class="partner-logo">
+                    <div class="partner-logo-cnt">
+                        <img src="__TMPL__/public/assets/images/LOGO.png" class="partner-logo-cnt-img" />
+                        <span class="partner-logo-cnt-txt">虔心荟度假俱乐部</span>
+                    </div>
+                    <div class="partner-address">
+                        地址：中国·广州 珠江新城合景国际金融广场
+                    </div>
+                    <div class="partner-phone">
+                        管家热线：<a href="tel:400-990-8830" style="color:#E6B854">400-990-8830</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

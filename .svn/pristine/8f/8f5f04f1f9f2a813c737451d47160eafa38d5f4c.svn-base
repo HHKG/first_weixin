@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="">
+    <include file="public@head"/>
+
+
+</head>
+<!--<script>-->
+    <!--var list;-->
+    <!--$.ajax({-->
+        <!--url: "http://api.iqianclub.com/api/member",-->
+        <!--dataType: "jsonp",-->
+        <!--data: {-->
+                    <!--code:'MZJBQKj3NmPolKOv8qbj'-->
+                <!--},-->
+        <!--jsonp: "callback",-->
+        <!--cache: false,-->
+        <!--success: function (data) {-->
+            <!--console.log(data)-->
+        <!--}-->
+    <!--})-->
+
+
+    <!--function allFunc(data){-->
+        <!--list=data;-->
+        <!--console.log(data);-->
+        <!--return list;-->
+    <!--}-->
+<!--</script>-->
+<body class="body-white">
+<include file="public@nav"/>
+
+<div class="container tc-main">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+
+
+            <div class="tab-content">
+                <h2 class="text-center">发送验证码</h2>
+                <form class="js-ajax-form" action="" method="post">
+                    <div class="form-group">
+                        <input type="text" name="username" id="number" placeholder="手机号码" class="form-control">
+                        <input type="text" name="username" id="type" placeholder="发送类型" class="form-control">
+                    </div>
+                    <input type="button" onclick="getcode()" value="发送验证码">
+                </form>
+                <div class="tab-content">
+                    <h2 class="text-center">登录</h2>
+                    <form class="js-ajax-form" action="" method="post">
+                        <div class="form-group">
+                            <input type="text" name="username" id="mobile" placeholder="手机号码" class="form-control">
+                            <input type="text" name="username" id="pwd" placeholder="密码" class="form-control">
+                            <input type="text" name="username" id="code" placeholder="验证码" class="form-control">
+                            <input type="text" name="username" id="sendtype" placeholder="发送类型" class="form-control">
+                        </div>
+                        <input type="button" onclick="login()" value="确定">
+                    </form>
+
+                </div>
+                <div class="tab-content">
+                    <h2 class="text-center">修改信息</h2>
+                    <form class="js-ajax-form" action="" method="post">
+                        <div class="form-group">
+
+                            <input type="text" name="username" id="m_pwd" placeholder="密码" class="form-control">
+                            <input type="text" name="username" id="m_againpwd" placeholder="第二次密码" class="form-control">
+                            <input type="text" name="username" id="m_email" placeholder="邮箱" class="form-control">
+                            <input type="text" name="username" id="m_name" placeholder="昵称" class="form-control">
+                            <input type="text" name="username" id="m_type" placeholder="类型" class="form-control">
+
+                        </div>
+                        <input type="button" onclick="updateinfo()" value="更新信息">
+                    </form>
+
+                </div>
+                <h2 class="text-center">获取信息</h2>
+                <input type="button" onclick="getcode()" value="获取订单">
+
+            </div>
+        </div>
+        <input type="button" onclick="onBridgeReady()" value="支付">
+
+    </div>
+
+</body>
+</html>
+<script>
+
+$(function(){
+   $.ajax({
+            url: "<?php echo config('interfaceurl')?>/text",
+            type: 'POST',
+            dataType: 'json',
+      		headers: {cookie : 'fdsafdsafdasfdsafdsafds' },
+   			  xhrFields: {
+      	   		 withCredentials: true
+     		  },
+        
+         
+            success: function (data) {
+                console.log(data);
+           
+            }
+        })
+})
+</script>
+
+<script src="__TMPL__/public/assets/js/jquery-1.10.2.min.js"></script>
+<script>
+      
+</script>

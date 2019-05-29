@@ -1,0 +1,1491 @@
+body{
+  font-size:0.28rem;
+  padding:0;
+  margin:0;
+  color:#333333;
+  background:#ffffff;
+}
+p,ul,li,a,h4{
+	margin:0;
+	padding:0;
+	text-decoration:none;
+}
+button.yellow{
+	background:#e6c46a;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	border:none;
+	font-size:0.3rem;
+}
+button{
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	border:none;
+}
+.main{
+	width:100%;
+	margin-top:0.8rem;
+}
+.content{
+	width:94%;
+	margin:0 auto;
+	padding-left:3%;
+	padding-right:3%;
+}
+.content_title_h3{
+	margin:0;
+	width:100%;
+	font-weight:normal;
+	font-size:0.36rem;
+	color:#333333;
+	text-align:center;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	padding-top:0.6rem;
+}
+.content_title_h3 .icon_left{
+	width:0.92rem;
+	height:0.14rem;
+	background:url(../images/icon_left.png) no-repeat;
+	background-size:0.92rem 0.14rem;
+	margin-right:0.15rem;
+}
+.content_title_h3 .icon_right{
+	width:0.92rem;
+	height:0.14rem;
+	background:url(../images/icon_right.png) no-repeat;
+	background-size:0.92rem 0.14rem;
+	margin-left:0.15rem;
+}
+.bgh{
+	background:#fafafa;
+}
+.hrbgh{
+	background:#fafafa;
+	width:100%;
+	height:0.3rem;
+	border:none;
+}
+/*登录开始*/
+.login>img{
+   width:5rem;
+   height:1.82rem;
+   display:block;
+   margin:0 auto;
+   padding-top:0.5rem;
+}
+.login input{
+	border:1px solid #cccccc;
+	height:0.8rem;
+	padding:0 0 0 0.6rem;
+	line-height:0.8rem;
+	-webkit-border-radius:0.8rem;
+	-moz-border-radius:0.8rem;
+	border-radius:0.8rem;
+}
+.login p:{
+	position:relative;
+	width:100%;
+}
+.login p:nth-child(1),.login p:nth-child(2){
+	margin-top:0.4rem;
+}
+.login p:nth-child(1) input{
+	width:calc( 100% - 0.65rem);
+   background:url(../images/me_icon.png) no-repeat 0.2rem center;
+   background-size:15px;
+}
+
+.login p:nth-child(2) input{
+	width:60%;
+	background:url(../images/suo_icon.png) no-repeat 0.2rem center;
+   background-size:15px;
+}
+.login p:nth-child(2) button{
+	width:25%;
+	margin-left:3.5%;
+	color:#ffffff;
+	font-size:0.24rem;
+	height:0.8rem;
+	border-radius:0.8rem;
+	background:#e6b854;
+	border:none;
+}
+.login .login_input{
+	width:90%;
+	margin:0 auto;
+}
+.login .login_button{
+	padding-top:0.4rem;
+}
+.login .login_button button{
+    width:100%;
+    height:0.8rem;
+	padding:0;
+	line-height:0.8rem;
+	-webkit-border-radius:0.8rem;
+	-moz-border-radius:0.8rem;
+	border-radius:0.8rem;
+	background:#e6b854;
+	color:#ffffff;
+	font-size:0.32rem;
+}
+.login .login_agree_zi{
+	text-align:center;
+	height:0.8rem;
+	line-height:0.8rem;
+	color:#bbbbbb;
+	font-size:0.24rem;
+}
+.login .third_paty{
+	position:relative;
+	height:0.6rem;
+
+}
+.login .third_paty hr{
+	position:absolute;
+	height:1px solid #cccccc;
+	border:1px solid #cccccc;
+	width:100%;
+	left:0;
+	top:0.14rem;
+}
+.login .third_paty span{
+	width:2rem;
+	text-align:center;
+	background: #ffffff;
+	height:0.6rem;
+	line-height:0.6rem;
+	color:#cccccc;
+	display:block;
+	left:50%;
+	position:absolute;
+	margin-left:-1rem;
+
+}
+/*登录结束*/
+/*头部*/
+.top{
+	width:100%;
+	height:0.8rem;
+	line-height:0.8rem;
+	text-align:center;
+	font-size:0.4rem;
+	font-weight:normal;
+	padding:0;
+	margin:0;
+	background:#f2f2f2;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:999999;
+}
+/*banner开始*/
+.banner{
+	width:100%;
+}
+.banner img{
+	width:100%;
+	height:auto;
+	display:block;
+}
+/*banner结束*/
+/*会籍卡开始*/
+.card{
+	width:100%;
+	height:0.86rem;
+	background:#000000;
+}
+.card table{
+	width:94%;
+	margin:0 auto;
+	color:#ecc36a;
+	height:0.86rem;
+}
+
+.card table tr td:nth-child(1){
+	text-align:left;
+}
+.card table tr td:nth-child(1) span{
+	padding-right:0.2rem;
+	border-right:1px solid #ecc36a;
+	margin-right:0.2rem;
+	font-size:0.3rem;
+}
+.card table tr td:nth-child(2){
+	text-align:right;
+	font-size:0.24rem;
+}
+.card table tr td:nth-child(2) .progress{
+	width:2.4rem;
+	height:0.12rem;
+	background:#ffffff;
+	-webkit-border-radius:0.5rem;
+	border-radius:0.5rem;
+	-moz-border-radius:0.5rem;
+	position:relative;
+	float:right;
+	margin-top:0.1rem;
+}
+.card table tr td:nth-child(2) .progress span{
+	width:80%;
+	height:0.12rem;
+	background:#ecc36a;
+	-webkit-border-radius:0.5rem;
+	border-radius:0.5rem;
+	-moz-border-radius:0.5rem;
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+
+}
+/*会籍卡结束*/
+/*加入虔心荟的六大理由开始*/
+.content_reason{
+	width:100%;
+}
+.content_reason .reason_table tr td{
+	padding:0.4rem 0.2rem 0 0.2rem;
+}
+.content_reason .reason_table tr td img{
+	display:block;
+	margin:0 auto;
+	width:0.96rem;
+	height:0.96rem;
+}
+.content_reason .reason_table tr td p{
+	display:block;
+	width:100%;
+
+}
+.content_reason .reason_table tr td p{
+	color:#333333;
+	text-align:center;
+	font-size:0.24rem;
+	color:#666666;
+}
+.content_reason .reason_table tr td p.reason_table_title{
+	font-size:0.32rem;
+	padding:0.26rem 0;
+}
+
+/*加入虔心荟的六大理由结束*/
+/*虔心荟会籍正式对外开放开始*/
+.opensrc_middle{
+	margin:0.5rem 0 0.48rem 0;
+	width:100%;
+	height:auto;
+}
+.photo_content{
+	-webkit-box-shadow:0px 6px 18px  rgba(0, 0, 0, 0.06);
+	-moz-box-shadow:0px 6px 18px  rgba(0, 0, 0, 0.06);
+	box-shadow:0px 6px 18px  rgba(0, 0, 0, 0.06);
+}
+.photo_content img{
+   width:100%;
+   height:auto;
+}
+.photo_content h3{
+	/*margin:0.3rem 0.4rem;*/
+	width:92%;
+	margin:0.3rem auto;
+	font-size:0.32rem;
+	color:#333333;
+	line-height:0.48rem;
+}
+.photo_content table.onetable{
+	width:92%;
+	background:#fff9eb;
+	margin:0 auto;
+	
+}
+
+.photo_content table.onetable tr td{
+	padding:0.15rem 0;
+	text-align:center;
+	border-right:1px solid #ffffff;
+	width:25%;
+}
+
+.photo_content table.onetable tr:nth-child(1) td{
+	font-size:0.32rem;
+	color:#333333;
+
+}
+.photo_content table.onetable tr:nth-child(2) td{
+	padding-top:0;
+	font-size:0.24rem;
+	color:#666666;
+}
+.photo_content p{
+	width:92%;
+	margin:0 auto;
+	font-size:0.28rem;
+	line-height:0.48rem;
+	color:#333333;
+}
+.photo_content .photo_p{
+	margin:0.2rem 0;
+}
+.photo_content dl{
+	width:95%;
+	font-size:0.24rem;
+	color:#666666;
+	margin-left:4%;
+}
+.photo_content dl dd{
+	padding-left:0.45rem;
+	margin:0;
+	/*height:0.5rem;*/
+	line-height:0.5rem;
+}
+.photo_content dl dd:nth-child(1){
+	background:url(../images/small_icon1.png) no-repeat 0 center;
+	background-size:0.28rem;
+}
+.photo_content dl dd:nth-child(2){
+	background:url(../images/small_icon2.png) no-repeat 0 center;
+	background-size:0.3rem 0.24rem;
+}
+.photo_content dl dd:nth-child(3){
+	background:url(../images/small_icon3.png) no-repeat 0 center;
+	background-size:0.26rem 0.23rem;
+}
+.photo_content dl dd:nth-child(4){
+	background:url(../images/small_icon4.png) no-repeat 0 center;
+	background-size:0.31rem 0.27rem;
+}
+.photo_content dl dd:nth-child(5){
+	background:url(../images/small_icon5.png) no-repeat 0 center;
+	background-size:0.29rem 0.28rem;
+}
+.photo_content dl dd:nth-child(6){
+	background:url(../images/small_icon6.png) no-repeat 0 center;
+	background-size:0.28rem 0.3rem;
+}
+.photo_content table.twotable{
+	margin:0.25rem auto 0;
+	width:92%;
+}
+.photo_content table.twotable tr{
+	color:#333333;
+}
+.photo_content table.twotable tr td{
+	padding-bottom:0.15rem;
+	width:50%;
+}
+.photo_content table.twotable tr td:nth-child(1){
+	text-align:left;
+}
+.photo_content table.twotable tr td:nth-child(2){
+	text-align:right;
+}
+.photo_content table.twotable tr td>div{
+	width:100%;
+	height:0.12rem;
+	-webkit-border-radius:0.5rem;
+	-moz-border-radius:0.5rem;
+	border-radius:0.5rem;
+	background:#e6e6e6;
+	position:relative;
+}
+.photo_content table.twotable tr td>div>span{
+   width:60%;
+	height:0.12rem;
+	-webkit-border-radius:0.5rem;
+	-moz-border-radius:0.5rem;
+	border-radius:0.5rem;
+	background:#e7b956;
+	position:absolute;
+}
+.photo_content table.twotable tr td button{
+	height:0.88rem;
+	margin:0.5rem 0;
+	border:none;
+	font-size:0.3rem;
+	color:#333333;
+	-webkit-border-radius:5px;
+    border-radius:5px;
+    width:98%;
+}
+.photo_content table.twotable tr td:nth-child(1) button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#ffffff;
+    border:1px solid #333333;
+}
+.photo_content table.twotable tr td:nth-child(1) img{
+	width:0.32rem;
+	height:0.45rem;
+	margin-right:0.2rem;
+}
+.photo_content table.twotable tr td:nth-child(2) button{
+	text-align:center;
+	background:#e7b956;
+
+}
+/*虔心荟会籍正式对外开放结束*/
+/*会员说开始*/
+.member_speak{
+	height:auto;
+	margin-top:0.3rem;
+}
+.member_speak img{
+	width:100%;
+	height:auto;
+}
+/*会员说结束*/
+/*虔心荟会籍卡·你的特权身份证开始*/
+.identity{
+	color:#333333;
+	font-size:0.32rem;
+}
+.identity img{
+   display:block;
+   margin:0 auto;
+}
+.identity img:nth-child(1){
+	width:3.33rem;
+	height:2.12rem;
+	margin:0.5rem auto;
+}
+.identity img:nth-child(2){
+	width:3.85rem;
+	height:0.57rem;
+	margin-bottom:0.2rem;
+}
+.identity p{
+	text-align:center;
+	line-height:0.6rem;
+	
+}
+
+.identity button{
+	width:2.9rem;
+	height:0.88rem;
+	margin:0.3rem auto;
+	display:block;
+	
+}
+/*虔心荟会籍卡·你的特权身份证结束*/
+/*会员权益开始*/
+.equity img{
+   display:block;
+   width:0.96rem;
+   height:0.96rem;
+   margin:0.3rem auto 0.1rem;
+}
+.equity p{
+	padding:0 0.15rem;
+	line-height:0.5rem;
+	color:#4d4d4d;
+	text-align:center;
+}
+.equity .van-row .van-col{
+   height:2.3rem;
+}
+.equity .van-row .van-col:nth-child(1),.equity .van-row .van-col:nth-child(2),.equity .van-row .van-col:nth-child(3){
+	height:auto;
+}
+/*会员权益结束*/
+/*近期热门预告开始*/
+.recent{
+	margin-bottom:1.4rem;
+}
+.recent .van-row{
+	margin:0.4rem 0 0.15rem 0;
+}
+.recent .van-row .van-col:nth-child(1){
+	margin-bottom:0.12rem;
+}
+.recent .van-row .van-col{
+	position:relative;
+}
+.recent .van-row .van-col img{
+    width:100%;
+    height:auto;
+}
+.recent .van-row .van-col span{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	font-size:0.32rem;
+	color:#ffffff;
+}
+/*近期热门预告结束*/
+/*联系客服*/
+.relation{
+	width:100%;
+	background:#f2f2f1;
+	height:1.2rem;
+	position:fixed;
+	bottom:0;
+	left:0;
+	z-index:999;
+}
+.relation table{
+	width:94%;
+	margin:0 auto;
+	padding-top:0.2rem;
+}
+
+.relation table tr td{
+	text-align:center;
+	font-size:0.32rem;
+	padding:0;
+}
+.relation table tr td:nth-child(1){
+	width:40%;
+}
+.relation table tr td:nth-child(2){
+	width:60%;
+}
+.relation table tr td a{
+	width:98%;
+	height:0.8rem;
+	border-radius:5px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background:#ffffff;
+	
+	color:#666666;
+}
+.relation table tr td a img{
+	width:0.36rem;
+	height:0.38rem;
+	margin-right:0.1rem;
+}
+.relation table tr td button{
+	width:96%;
+	float:right;
+	height:0.8rem;
+	color:#ffffff;
+}
+/*虔心荟商品详情部分*/
+.detail_banner img{
+	width:100%;
+	border-radius:0;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+}
+.detail img{
+   width:100%;
+   height:auto;
+}
+.detail h3{
+	/*margin:0.3rem 0.4rem;*/
+	width:92%;
+	margin:0.3rem auto;
+	font-size:0.32rem;
+	color:#333333;
+	line-height:0.48rem;
+}
+.detail table.onetable{
+	width:92%;
+	background:#fff9eb;
+	margin:0 auto;
+	
+}
+
+.detail table.onetable tr td{
+	padding:0.15rem 0;
+	text-align:center;
+	border-right:1px solid #ffffff;
+	width:25%;
+}
+
+.detail table.onetable tr:nth-child(1) td{
+	font-size:0.32rem;
+	color:#333333;
+
+}
+.detail table.onetable tr:nth-child(2) td{
+	padding-top:0;
+	font-size:0.24rem;
+	color:#666666;
+}
+.detail p{
+	width:92%;
+	margin:0 auto;
+	font-size:0.28rem;
+	line-height:0.48rem;
+	color:#333333;
+}
+.detail .photo_p{
+	margin:0.2rem 0;
+}
+.detail dl{
+	width:95%;
+	font-size:0.24rem;
+	color:#666666;
+	margin-left:4%;
+}
+.detail dl dd{
+	padding-left:0.45rem;
+	margin:0;
+	/*height:0.5rem;*/
+	line-height:0.5rem;
+}
+.detail dl dd:nth-child(1){
+	background:url(../images/small_icon1.png) no-repeat 0 center;
+	background-size:0.28rem;
+}
+.detail dl dd:nth-child(2){
+	background:url(../images/small_icon2.png) no-repeat 0 center;
+	background-size:0.3rem 0.24rem;
+}
+.detail dl dd:nth-child(3){
+	background:url(../images/small_icon3.png) no-repeat 0 center;
+	background-size:0.26rem 0.23rem;
+}
+.detail dl dd:nth-child(4){
+	background:url(../images/small_icon4.png) no-repeat 0 center;
+	background-size:0.31rem 0.27rem;
+}
+.detail dl dd:nth-child(5){
+	background:url(../images/small_icon5.png) no-repeat 0 center;
+	background-size:0.29rem 0.28rem;
+}
+.detail dl dd:nth-child(6){
+	background:url(../images/small_icon6.png) no-repeat 0 center;
+	background-size:0.28rem 0.3rem;
+}
+
+
+table.detail_twotable{
+	margin:0.25rem auto 0;
+	width:92%;
+}
+table.detail_twotable tr{
+	color:#333333;
+}
+table.detail_twotable tr td{
+	padding-bottom:0.1rem;
+	width:50%;
+}
+table.detail_twotable tr td{
+	width:33.3%;
+}
+table.detail_twotable tr.detail_twotable_number td:nth-child(1),table.detail_twotable tr.detail_twotable_name td:nth-child(1){
+	text-align:left;
+}
+table.detail_twotable tr.detail_twotable_number td:nth-child(2),table.detail_twotable tr.detail_twotable_name td:nth-child(2){
+	text-align:center;
+}
+table.detail_twotable tr.detail_twotable_number td:nth-child(3),table.detail_twotable tr.detail_twotable_name td:nth-child(3){
+	text-align:right
+}
+table.detail_twotable tr.detail_twotable_name td{
+	color:#999999;
+}
+table.detail_twotable tr td>div{
+	width:100%;
+	height:0.12rem;
+	-webkit-border-radius:0.5rem;
+	-moz-border-radius:0.5rem;
+	border-radius:0.5rem;
+	background:#e6e6e6;
+	position:relative;
+}
+table.detail_twotable tr td>div>span{
+   width:80%;
+	height:0.12rem;
+	-webkit-border-radius:0.5rem;
+	-moz-border-radius:0.5rem;
+	border-radius:0.5rem;
+	background:#e7b956;
+	position:absolute;
+}
+table.detail_twotable tr td button{
+	height:0.88rem;
+	/*line-height:0.88rem;*/
+	margin:0.5rem auto;
+	border:none;
+	font-size:0.3rem;
+	color:#333333;
+	-webkit-border-radius:5px;
+    border-radius:5px;
+    width:3.1rem;
+
+
+}
+
+table.detail_twotable tr td:nth-child(1) button.onetable_detail{
+     background:url(../images/jisuanqi_icon.png) no-repeat 0.5rem center;
+	padding-left:0.5rem;
+	background-size:0.32rem 0.45rem;
+}
+table.detail_twotable tr td:nth-child(1) button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#ffffff;
+    border:1px solid #333333;
+    
+
+}
+table.detail_twotable tr td:nth-child(1) img{
+	width:0.32rem;
+	height:0.45rem;
+	margin-right:0.2rem;
+}
+table.detail_twotable tr.two_button td button{
+	display:inline-block;
+	float:left;
+	 display:flex;
+    justify-content:center;
+    align-items:center;
+}
+table.detail_twotable tr.two_button td button:nth-child(1){
+	float:left;
+	background:url(../images/jisuanqi_icon.png) no-repeat 0.5rem center;
+	padding-left:0.5rem;
+	background-size:0.32rem 0.45rem;
+
+}
+table.detail_twotable tr.two_button td button:nth-child(2){
+	float:right;
+	text-align:center;
+}
+/*
+.detail table.detail_twotable{
+	margin:0.25rem auto 0;
+	width:92%;
+}
+.detail table.detail_twotable tr{
+	color:#333333;
+}
+.detail table.detail_twotable tr td{
+	padding-bottom:0.1rem;
+	width:50%;
+}
+.detail table.detail_twotable tr td{
+	width:33.3%;
+}
+.detail table.detail_twotable tr.detail_twotable_number td:nth-child(1),.detail table.detail_twotable tr.detail_twotable_name td:nth-child(1){
+	text-align:left;
+}
+.detail table.detail_twotable tr.detail_twotable_number td:nth-child(2),.detail table.detail_twotable tr.detail_twotable_name td:nth-child(2){
+	text-align:center;
+}
+.detail table.detail_twotable tr.detail_twotable_number td:nth-child(3),.detail table.detail_twotable tr.detail_twotable_name td:nth-child(3){
+	text-align:right
+}
+.detail table.detail_twotable tr.detail_twotable_name td{
+	color:#999999;
+}
+.detail table.detail_twotable tr td>div{
+	width:100%;
+	height:0.12rem;
+	-webkit-border-radius:0.5rem;
+	-moz-border-radius:0.5rem;
+	border-radius:0.5rem;
+	background:#e6e6e6;
+	position:relative;
+}
+.detail table.detail_twotable tr td>div>span{
+   width:80%;
+	height:0.12rem;
+	-webkit-border-radius:0.5rem;
+	-moz-border-radius:0.5rem;
+	border-radius:0.5rem;
+	background:#e7b956;
+	position:absolute;
+}
+.detail table.detail_twotable tr td button{
+	height:0.88rem;
+	margin:0.5rem auto;
+	border:none;
+	font-size:0.3rem;
+	color:#333333;
+	-webkit-border-radius:5px;
+    border-radius:5px;
+    width:3.1rem;
+
+}
+.detail table.detail_twotable tr td:nth-child(1) button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#ffffff;
+    border:1px solid #333333;
+}
+.detail table.detail_twotable tr td:nth-child(1) img{
+	width:0.32rem;
+	height:0.45rem;
+	margin-right:0.2rem;
+}*/
+/*加入流程开始*/
+.title_h4{
+	font-size:0.36rem;
+	height:1.12rem;
+	line-height:1.12rem;
+	font-weight:normal;
+
+}
+/*加入流程结束*/
+.enter_div{
+	height:0.48rem;
+	width:5.8rem;
+	display:block;
+	clear:both;
+	margin:0 auto;
+}
+.enter_div  img{
+	width:0.48rem;
+	height:0.48rem;
+	display:inline-block;
+	float:left;
+}
+.enter_div hr{
+	width:1rem;
+	height:1px;
+	background:#e7b956;
+	border:none;
+	display:inline-block;
+	float:left;
+	margin:0.24rem 0.14rem;
+}
+.enter_div_name{
+	width:7.1rem;
+	height:0.8rem;
+	display:block;
+	clear:both;
+	margin:0 auto 0.4rem;
+}
+.enter_div_name span{
+	display:inline-block;
+	float:left;
+	width:25%;
+	height:0.8rem;
+	text-align:center;
+	line-height:0.8rem;
+}
+/*项目和权益开始*/
+.project_equity{
+	margin-bottom:1.21rem;
+}
+.project_equity .van-tabs__line{
+   background-color:#333333;
+   width:14px !important;
+   left:10%;
+   bottom:24px;
+}
+.project_equity .project_equity_title_center{
+	padding:0.4rem;
+	text-align:center;
+	font-size:0.3rem;
+	color:#333333;
+	line-height:0.56rem;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.project_equity  .van-tabs--line,.project_equity  .van-tabs__content{
+	border-top:1px solid #e0e0e0;
+}
+
+.project_equity .project_equity_title_left{
+	padding:0.4rem;
+	font-size:0.3rem;
+	color:#333333;
+	line-height:0.56rem;
+	text-align:justify;
+}
+.project_equity .van-tabs--line .van-tabs__wrap{
+	width:200px;
+	margin:0 auto;
+}
+.project_equity img{
+	width:100%;
+}
+.project_equity .project_survey_table{
+	width:100%;
+}
+.project_equity .project_survey_table tr td{
+   padding:0.3rem 0;
+   border-top:1px solid #f0f0f0;
+   font-size:0.3rem;
+}
+.project_equity .project_survey_table tr td:nth-child(1){
+  color:#999999;
+  width:1.55rem;
+  height:0.42rem;
+  display: flex;
+  justify-content:flex-start;
+}
+.project_equity .project_survey_table tr td:nth-child(2){
+	text-align:justify;
+	line-height:0.6rem;
+	word-wrap:break-word;
+	word-break:break-all;
+}
+.project_equity .project_equity_otherprofit{
+	text-align:justify;
+	line-height:0.6rem;
+	padding:0.3rem 0;
+
+}
+.project_equity  .people_number{
+	font-size:0.24rem;
+	color:#333333;
+	padding:0.15rem 0;
+	margin:0.15rem auto;
+	border-top:1px dotted #333333;
+}
+/*项目和权益结束*/
+/*我要算一算页面开始*/
+.main .van-nav-bar .van-icon{
+	color:#333333;
+}
+.main .van-nav-bar__title{
+	font-size:0.4rem;
+	height:0.8rem;
+}
+.main .van-nav-bar{
+   height:0.8rem;
+   line-height:0.8rem;
+   background:#f2f2f2;
+   position:fixed;
+   top:0;
+   left:0;
+   width:100%;
+   z-index:999999 !important;
+}
+.start_budget{
+	display:block;
+	width:100%;
+	height:0.88rem;
+	font-size:0.3rem;
+	margin:0.47rem 0;
+}
+.math dl,.math dl dd{
+	width:100%;
+	margin:0;
+	padding:0;
+}
+.math dl dd{
+    height:1.05rem;
+    border-bottom:1px solid #f0f0f0;
+    position:relative;
+}
+.math dl dd .van-cell,.van-cell{
+	font-size:0.28rem !important;
+}
+.math dl dd .van-cell,.math dl dd .van-cell__title,.math dl dd .van-cell__value{
+	margin:0;
+	padding:0;
+	height:1.04rem;
+	line-height:1.04rem;
+}
+.math dl dd .van-cell__left-icon,.math dl dd .van-cell__right-icon{
+	height:1.04rem;
+	line-height:1.04rem;
+}
+.math dl dd select{
+	height:1.04rem;
+	line-height:1.04rem;
+	border:none;
+	width:65%;
+	background:#ffffff;
+	text-align:right;
+	position:absolute;
+	top:0;
+	right:0;
+	opacity:0;
+	filter:(opacity=0);
+}
+.math dl dd .van-field{
+	height:1.04rem;
+	line-height:1.04rem;
+	border:none;
+	width:65%;
+	background:#ffffff;
+	text-align:right;
+	position:absolute;
+	top:0;
+	right:20px;
+	
+}
+.math dl dd .van-field .van-field__control{
+	text-align:right;
+}
+.math dl dd .return_ticket .van-cell__value{
+   margin-right:20px;
+}
+.math  table,.math  table tr{
+	width:100%;
+	font-size:0.3rem;
+}
+.math  table,.math  table tr th,.math  table tr td{
+   border:1px solid #e0e0e0;
+   margin:0;
+}
+.math  table tr th,.math  table tr td{
+	padding:0.25rem 0.3rem;
+	text-align:center;
+}
+.math  table tr th,.math  table tr td:nth-child(1){
+	background:#fafafa;
+}
+/*我要算一算页面结束*/
+/*加入会籍开始*/
+.jiaruhuiji{
+	background:#fafafa;
+}
+.title_name{
+	width:94%;
+	margin:0 auto;
+	padding:0.4rem 0 0.15rem 0;
+	color:#999999;
+}
+.bgf{
+	background:#ffffff;
+	width:100%;
+}
+table.copies{
+	width:94%;
+	background:#ffffff;
+	margin:0 auto;
+	padding:0.2rem 0 0 0;
+	color:#4d4d4d;
+}
+
+table.copies tr td{
+	padding:0.12rem 0;
+}
+table.copies tr td span{
+	font-size:0.36rem;
+	color:#e7b956;
+}
+table.copies tr.border_bottom td{
+	border-bottom:1px solid #f0f0f0;
+	padding-bottom:0.34rem;
+}
+table.copies tr td:nth-child(2){
+	text-align:right;
+}
+table.copies tr.newpadding td{
+	padding:0.25rem 0;
+	font-size:0.32rem;
+}
+.new_cell_group{
+	width:94%;
+	margin:0 auto;
+
+}
+.new_cell_group .van-cell{
+   padding:0.22rem 0;
+   line-height:0.45rem;
+}
+.new_radio_group{
+  margin-bottom:1.25rem;
+}
+.new_radio_group .van-cell{
+	font-size:0.32rem;
+	line-height:0.45rem;
+	padding-top:0.3rem !important;
+	padding-bottom:0.3rem !important;
+}
+.new_radio_group .van-cell .van-cell__title{
+	padding-left:0.7rem;
+}
+.new_radio_group .van-cell:nth-child(1) .van-cell__title{
+	background:url('../images/join/wechat_icon.png') no-repeat 0 center;
+	background-size:0.48rem;
+}
+.new_radio_group .van-cell:nth-child(2) .van-cell__title{
+	background:url('../images/join/aiipay_icon.png') no-repeat 0 center;
+	background-size:0.48rem;
+}
+.van-radio .van-icon-checked{
+	color:#e7b956 !important;
+}
+/*加入会籍结束*/
+/*付款底部开始*/
+.bar_pay .van-submit-bar__bar{
+   height:1.2rem;
+}
+.bar_pay  .van-button{
+	width:3rem !important;
+	height:1.2rem;
+	font-size:0.36rem;
+	background:#e8c873;
+	border:none;
+}
+.bar_pay .van-submit-bar__text{
+	text-align:center;
+	font-size:0.28rem;
+}
+.bar_pay .van-submit-bar__price{
+	font-size:0.36rem;
+	color:#e8c873;
+}
+/*付款底部结束*/
+/*支付成功开始*/
+.pay_success{
+   background:#f2f2f2;
+}
+.pay_success .success_icon{
+	height:3.2rem;
+	width:100%;
+	
+	
+}
+.pay_success .success_icon img{
+   width:1.28rem;
+   height:1.28rem;
+   margin:0 auto;
+   padding:0.7rem 0 0.3rem 0;
+   display:block;
+}
+.pay_success .success_icon p{
+	width:100%;
+	text-align:center;
+	font-size:0.32rem;
+
+}
+.pay_success .van-cell{
+	line-height:0.4rem;
+	padding-top:0.39rem;
+	padding-bottom:0.39rem;
+}
+.pay_success .van-cell .van-cell__title{
+	color:#666666;
+}
+.pay_success .hint{
+	padding:0.56rem 0;
+	margin-bottom:1.28rem;
+}
+.pay_success .hint p:nth-child(1){
+    height:0.56rem;
+    line-height:0.56rem;
+    padding-left:0.5rem;
+    background:url('../images/tips_icon.png') no-repeat 0 center;
+    background-size:0.32rem;
+}
+.pay_success .hint p:nth-child(2){
+	line-height:0.5rem;
+	color:#666666;
+}
+.pay_success .van-row{
+	/*padding-top:2rem;
+
+	padding-bottom:0.5rem;*/
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	padding-top:0.2rem;
+	padding-bottom:0.2rem;
+	background:#ffffff;
+}
+.pay_success .van-row button{
+	height:0.88rem;
+	font-size:0.3rem;
+	width:88%;
+	margin: 0 auto;
+	display:block;
+}
+.pay_success .van-row .van-col:nth-child(2) button{
+	background-color:#ffffff;
+	border:1px solid #333333;
+}
+
+/*支付成功结束*/
+/*个人中心开始*/
+.personal .portrait{
+   padding:0.4rem 0;
+}
+.personal .portrait table{
+	width:7.1rem;
+	height:3.5rem;
+	margin:0;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	background:url('../images/club_card.png') no-repeat;
+	background-size:7.1rem 3.5rem;
+	padding:0.5rem 0;
+}
+.personal .portrait table img{
+    width:1.18rem;
+    height:1.18rem;
+    border-radius:1.18rem;
+	-webkit-border-radius:1.18rem;
+	-moz-border-radius:1.18rem;
+
+}
+.personal .portrait table tr td{
+	padding:0.18rem;
+	font-size:0.30rem;
+	color:#ffffff;
+}
+
+.personal .portrait table tr:nth-child(2) td{
+	text-align:right;
+	padding-right:0.4rem;
+	font-size:0.28rem;
+
+}
+.personal .portrait table tr td strong{
+	font-size:0.36rem;
+}
+.personal .portrait .portrait_img{
+	width:1.18rem;
+	
+}
+.personal .portrait .portrait_left,.personal .portrait .portrait_img{
+   padding-left:0.5rem;
+   color:#ffefc4;
+}
+.personal .personal_money{
+	margin-bottom:0.5rem;
+}
+.personal .personal_money .van-col p{
+   text-align:center;
+   width:100%;
+} 
+.personal .personal_money .van-col{
+	border-right:1px dotted #ededed;
+}
+.personal .personal_money .van-col:last-child{
+	border-right:none;
+}
+.personal .personal_money .van-col p:nth-child(1){
+	height:0.5rem;
+	line-height:0.5rem;
+	font-size:0.36rem;
+	color:#e3b654;
+}
+.personal .personal_money .van-col p:nth-child(2){
+	height:0.5rem;
+	line-height:0.5rem;
+}
+.personal .consume_conpon dd,.personal .consume_conpon dl{
+	padding:0;
+	margin:0;
+}
+.personal .consume_conpon dl{
+	margin-bottom:0.3rem;
+}
+
+.personal .consume_conpon dd{
+	height:2.1rem;
+	width:100%;
+	position:relative;
+	margin-top:0.26rem;
+}
+.personal .consume_conpon dd i{
+	width:0.24rem;
+	height:0.24rem;
+	-webkit-border-radius:0.25rem;
+	-moz-border-radius:0.25rem;
+	border-radius:0.25rem;
+	background:#ffffff;
+	position:absolute;
+	left:2.655rem;
+	border:1px solid rgba(0, 0, 0, 0.12);
+	
+}
+.personal .consume_conpon dd i.circle_top{
+	top:-0.12rem;
+	box-shadow: 0px 0px 3px 
+		rgba(0, 0, 0, 0.12)
+}
+.personal .consume_conpon dd i.circle_top_f{
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	border-radius:0;
+	top:-0.24rem;
+	left:2.64rem;
+	width:0.3rem;
+	border:none;
+}
+.personal .consume_conpon dd i.circle_bottom{
+	bottom:-0.12rem;
+	box-shadow: 0px 0px 3px 
+		rgba(0, 0, 0, 0.12)
+}
+.personal .consume_conpon dd i.circle_bottom_f{
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	border-radius:0;
+	bottom:-0.24rem;
+	left:2.64rem;
+	width:0.3rem;
+	border:none;
+}
+.personal .consume_conpon dd img{
+	width:2.8rem;
+	height:2.1rem;
+
+
+}
+.personal .consume_conpon dd img,.personal .consume_conpon dd span{
+    display:inline-block;
+    float:left;
+}
+.personal .consume_conpon dd span{
+    width:calc( 100% - 3.1rem);
+    padding-left:0.3rem;
+    height:2.1rem;
+    box-shadow: 0px 0px 6px 
+		rgba(0, 0, 0, 0.12)
+}
+.personal .consume_conpon dd span.havepast{
+	background:url('../images/past.png') no-repeat right top;
+	background-size:1.19rem 1.13rem;
+}
+.personal .consume_conpon dd span p:nth-child(1){
+   color:#e3b654;
+   font-size:0.4rem;
+   height:0.56rem;
+   line-height:0.56rem;
+   margin-top:0.3rem;
+}
+.personal .consume_conpon dd span p:nth-child(2){
+	height:0.4rem;
+	line-height:0.4rem;
+}
+.personal .consume_conpon dd span p:nth-child(3){
+	height:0.35rem;
+	line-height:0.35rem;
+	color:#666666;
+	font-size:0.24rem;
+}
+.personal .van-cell{
+	line-height:0.45rem;
+	padding:0.35rem;
+	font-size:0.32rem !important;
+}
+/*个人中心结束*/
+/*我的订单开始*/
+.myorder,.cash{
+	background:#fafafa;
+}
+.myorderlist,.cashbacklist{
+	width:92%;
+	padding-left:4%;
+	padding-right:4%;
+	margin:0 auto 0.3rem;
+	background:#ffffff;
+}
+.myorderlist table tr,.myorderlist table{
+	width:100%;
+}
+.myorderlist table tr td{
+	height:0.9rem;
+}
+.myorderlist table tr td:nth-child(1){
+	color:#666666;
+	text-align:left;
+	white-space:normal;
+	word-break:break-all; 
+	word-wrap:break-word; 
+	width:70%;
+}
+.myorderlist table tr td:nth-child(2){
+	text-align:right;
+}
+.myorderlist table tr td button{
+	width:2.2rem;
+	height:0.76rem;
+	margin-bottom:0.25rem;
+}
+.myorderlist table tr td span{
+	color:#e3b654;
+}
+.myorderlist .myorderlist_content{
+	padding:0.3rem 0;
+	border-top:1px solid #e0e0e0;
+	border-bottom:1px solid #e0e0e0;
+	height:2rem;
+}
+.myorderlist .myorderlist_content img{
+	width:2rem;
+	height:2rem;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	display:inline-block;
+	float:left;
+}
+.myorderlist .myorderlist_content  span{
+	display:inline-block;
+	float:left;
+	margin-left:0.26rem;
+	width:calc( 100% - 2.27rem);
+	height:1.6rem;
+	padding:0.2rem 0 0 0;
+}
+.myorderlist .myorderlist_content  span p:nth-child(1),.myorderlist .myorderlist_content  span p:nth-child(3){
+	font-size:0.32rem;
+	height:0.45rem;
+	line-height:0.45rem;
+}
+.myorderlist .myorderlist_content  span p:nth-child(1){
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.myorderlist .myorderlist_content  span p:nth-child(2){
+	color:#808080;
+	line-height:0.4rem;
+	margin-top:0.1rem;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.myorderlist .myorderlist_content  span p:nth-child(3){
+	margin-top:0.2rem;
+}
+.myorder .pay_way .van-actionsheet__header{
+	text-align:left;
+	padding-left:0.3rem;
+}
+/*我的订单结束*/
+/*返现记录开始*/
+.cash .budget_backmoney{
+	color:#666666;
+	height:0.5rem;
+	line-height:0.4rem;
+	padding-top:0.6rem;
+	text-align:center;
+}
+.cash .cashback_nun{
+	font-size:0.44rem;
+	height:0.7rem;
+	line-height:.7rem;
+	text-align:center;
+	width:100%;
+}
+.cash table{
+	padding:0.6rem 0;
+}
+.cash table,.cash table tr{
+   width:100%;
+}
+.cash table tr td{
+	padding:0.1rem;
+}
+.cash table tr td:nth-child(1){
+	color:#999999;
+	width:1rem;
+	text-align:right;
+}
+.cash table tr td span{
+	color:#e7b956;
+}
+/*返现记录结束*/

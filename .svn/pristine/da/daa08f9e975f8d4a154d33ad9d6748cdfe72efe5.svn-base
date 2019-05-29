@@ -1,0 +1,342 @@
+<?php
+// +----------------------------------------------------------------------
+// | ThinkCMF [ WE CAN DO IT MORE SIMPLE ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2013-2018 http://www.thinkcmf.com All rights reserved.
+// +----------------------------------------------------------------------
+// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+// +----------------------------------------------------------------------
+// | Author: 老猫 <thinkcmf@126.com>
+// +----------------------------------------------------------------------
+namespace app\portal\controller;
+
+use app\portal\model\NewModel;
+use cmf\controller\HomeBaseController;
+use app\portal\model\PortalCategoryModel;
+use cmf\lib\wx\Wx;
+use think\Db;
+
+class LoginController extends HomeBaseController
+{
+    public function _initialize()
+    {
+
+        parent::_initialize();
+    }
+    public function guide()
+    {
+        $token=$this->request->param('token')?$this->request->param('token'):'';
+        if(!empty($token)){
+            session('token',$token);
+        }
+        // if (session('token')){
+
+        //     // $this->redirect('/index');
+        //     // exit();
+        // }
+
+        // dump($this->request->routeInfo()['rule'][0]);die;
+
+        if (cmf_is_wechat() ){
+            $wxcode=session('wxcode');
+            //   dump($wxcode);
+            if(empty($wxcode)){
+                $this->islogin();
+            }
+        }
+
+        //  $openid=$this->request->param('openid')?$this->request->param('openid'):'';
+//        if (empty($openid)){
+//            header('location:./404.html');
+//            exit();
+//        }
+//        dump($this->request->param());
+//        dump($_REQUEST);
+//        die;
+        //$this->assign('openid',$openid );
+        $url = $this->request->param('back')?$this->request->param('back'):'';
+        //  dump($this->request->param());die;
+        $this->assign('url', $url);
+        $this->assign('type',cmf_is_wechat()?3:1 );
+        $this->assign('back', $this->request->param('back')?$this->request->param('back'):'');
+        $this->assign('description', '注册会员');
+        $this->assign('keywords', '虞心荟');
+        $this->assign('title', '填写手机号-虔心荟');
+
+//        $back=$this->request->param();
+//        dump($back);die;
+
+        return $this->fetch();
+    }
+    public function bindmobile()
+    {
+        $token=$this->request->param('token')?$this->request->param('token'):'';
+        if(!empty($token)){
+            session('token',$token);
+        }
+        if (session('token')){
+
+            // $this->redirect('/index');
+            // exit();
+        }
+
+        // dump($this->request->routeInfo()['rule'][0]);die;
+
+        if (cmf_is_wechat() ){
+            $wxcode=session('wxcode');
+            //   dump($wxcode);
+            if(empty($wxcode)){
+                $this->islogin();
+            }
+        }
+
+        //  $openid=$this->request->param('openid')?$this->request->param('openid'):'';
+//        if (empty($openid)){
+//            header('location:./404.html');
+//            exit();
+//        }
+//        dump($this->request->param());
+//        dump($_REQUEST);
+//        die;
+        //$this->assign('openid',$openid );
+        $this->assign('type',cmf_is_wechat()?3:1 );
+        $this->assign('back', $this->request->param('back')?$this->request->param('back'):'');
+        $this->assign('description', '注册会员');
+        $this->assign('keywords', '虞心荟');
+        $this->assign('title', '填写手机号-虔心荟');
+
+//        $back=$this->request->param();
+//        dump($back);die;
+
+        return $this->fetch();
+    }
+//http://t3.iqianclub.com/data/pen/oPmFPv37zpwUNrQ3Lh7B_TeFeyd0/back/http%253A%252F%252Ft3.iqianclub.com%252Fplan%253Fproject%253Dfasdfsdafdsa%2526code%253D081mWT2f2eaYtH0Rn64f2Wu83f2mWT2O%2526state%253Dqxhweixin/mobile/13825360314/code/5985
+    public function data(){
+        //ump($this->request);die;
+        if (session('token')){
+//            dump(session('token'));die;
+            $this->redirect('/index');
+            exit();
+        }
+//        dump($this->request->param());die;
+        $mobile=$this->request->param('mobile');
+        $code=$this->request->param('mcode');
+        if (empty($mobile) || empty($code)){
+            header('location:./404.html');
+            exit();
+        }
+        $wxcode=session('wxcode');
+        if (cmf_is_wechat() ){
+            $wxcode=session('wxcode');
+            //   dump($wxcode);
+            if(empty($wxcode)){
+                $this->islogin();
+            }
+        }
+        $list=Db::name('question')->where(['E_IsDelete'=>1])->select();
+//        dump($list);die;
+        if(cmf_is_wechat()){
+            $type=1;
+        }else{
+            $type=2;
+        }
+        $this->assign('list',$list);
+        $this->assign('type',$type);
+        $this->assign('incode',session('incode')?session('incode'):'');
+        $this->assign('mobile', $this->request->param('mobile'));
+        $this->assign('mcode', $this->request->param('mcode'));
+        $this->assign('back',GetAllURL());
+        $this->assign('openid', $wxcode?$wxcode:'');
+        $this->assign('backurl', $this->request->param('back'));
+        $this->assign('description', '注册会员');
+        $this->assign('keywords', '虞心荟');
+        $this->assign('title', '填写资料-虔心荟');
+        $this->assign('item',cmf_is_wechat());
+        return $this->fetch();
+    }
+    public function reg_success(){
+//        if (session('token')){
+////            dump(session('token'));die;
+//            $this->redirect('/index');
+//            exit();
+//        }
+        $token=$this->request->param('token');
+        if (empty($token)){
+            header('location:./404.html');
+        }else{
+            session('token',$token);
+        }
+        $back=$this->request->param('back')?$this->request->param('back'):'';
+        $this->assign('back',$back);
+        $this->assign('count',$this->request->param('count'));
+        $this->assign('description', '注册会员');
+        $this->assign('keywords', '虞心荟');
+        $this->assign('title', '注册成功-虔心荟');
+        return $this->fetch();
+    }
+
+    public function index()
+    {
+        //  dump($this->request);die;
+
+//        dump();die;
+        if (!cmf_is_wechat() && session('token')){
+
+            $find=Db::name('member_token')->where(['token'=>session('token')])->value('expire_time');
+//              dump( $find);die;
+            if($find!=0 && $find>time()){
+                $this->redirect('/index');
+                exit();
+            }
+
+        }
+        //
+        $param= $this->request->param();
+        if (cmf_is_wechat() && count($param)==0){
+            $this->redirect('/member');
+            exit();
+        }
+
+        $wxcode=session('wxcode');
+        if (cmf_is_wechat() ){
+
+
+            //  dump($wxcode);die;again=1&
+            $again=$this->request->param('again')?$this->request->param('again'):'';
+            if(empty($wxcode) || $again==1){
+                session('token',null);
+                $this->islogin();
+                die;
+            }else{
+                if($this->isregister($wxcode)){
+                    $this->islogin();
+                }
+            }
+            if (session('token')){
+//            dump(session('token'));die;
+                $this->redirect('/index');
+                exit();
+            }
+        }
+
+        $mobile = $this->request->param('mobile')?$this->request->param('mobile'):'';
+        $url = $this->request->param('back')?$this->request->param('back'):'';
+        //  dump($this->request->param());die;
+        $this->assign('url', $url);
+        $this->assign('mobile', $mobile);
+        $this->assign('openid', $wxcode?$wxcode:'');
+        $this->assign('type', cmf_is_wechat()?3:1);
+        $this->assign('description', '注册登录');
+        $this->assign('keywords', '虞心荟');
+        $this->assign('title', '会员登录-虔心荟');
+        return $this->fetch();
+    }
+
+
+
+    public function wxlogin()
+    {
+        $wx = new Wx();
+        $wx->getcode();
+    }
+
+    public function welogincallback()
+    {
+        $param = $this->request->param();
+        $wx = new Wx();
+        $res = $wx->getuserinfo($param);
+//        $res['openid'] = '7EDE8Dg4F6469416476410F';
+//        $res['nickname'] = '00';
+//        $res['sex'] = '1';
+//        $res['province'] = '广西';
+//        $res['city'] = '广州';
+//        $res['country'] = '中国';
+//        $res['headimgurl'] = "http://thirdwx.qlogo.cn/mmopen/g3MonUZtNHkdmzicIlibx6iaFqAc56vxLSUfpb6n5WKSYVY0ChQKkiaJSgQ1dZuTOgvLLrhJbERQQ4eMsv84eavHiaiceqxibJxCfHe/46";
+//        $res['unionid'] = 'FCC5C85BED6E6ABC35419FE368A00727';
+        if (empty($res)) goto end;
+        $where = ['E_OpenID' => $res['openid'], 'E_Type' => 'wx'];
+        $otherlogin = Db::name('member_other_login');
+        $find = $otherlogin->alias('a')->where($where)->field('E_HeadImg,E_Nickname,E_Sex,E_Country,E_Province,E_City,E_UserCode')->find();
+        if (!$find) {
+            $data['E_HeadImg'] = $res['headimgurl'];
+            $data['E_Province'] = $res['province'];
+            $data['E_Nickname'] = $res['nickname'];
+            $data['E_Country'] = $res['country'];
+            $data['E_OpenID'] = $res['openid'];
+            $data['E_UID'] = $res['unionid'];
+            $data['E_City'] = $res['city'];
+            $data['E_CreateTime'] = time();
+            $data['E_Sex'] = $res['sex'];
+            $data['E_Type'] = 'wx';
+            $otherlogin->insert($data);
+
+            if (!$otherlogin->getLastInsID()) goto end;
+        }
+        session('openid', $res['openid']);
+        session('name', $res['nickname']);
+        $this->assign('userinfo', $res);
+        return true;
+//        $this->success('授权成功！');
+        end:
+        $this->error('授权失败！');
+        return false;
+
+    }
+
+    public function checklogin()
+    {
+        dump($_SERVER);
+        die;
+        $param = $this->request->param();
+        $param['mobile'] = '13112316334';
+        $param['pwd'] = '123456';
+        $param['type'] = 'pwd';
+        if ($param['type'] == 'mobile') {
+            $result = $this->checkedmobilecode($param['mobile'], $param['code']);
+        } elseif ($param['type'] == 'pwd') {
+            $result = $this->checkpwd($param);
+        } else {
+            $this->error('非法操作！', cmf_url('login/login'));
+        }
+        if ($result['code'] == 0) {
+            $this->success('登录成！', cmf_url());
+        }
+    }
+
+    public function checkpwd($param)
+    {
+        $re['msg'] = '验证成功！';
+        $re['code'] = 0;
+
+        if (!preg_match('/^1[3,9]\d{9}$/', $param['mobile']) || !$param['pwd']) {
+            $re['msg'] = '请传入正确的手机号或密码！';
+            $re['code'] = 1;
+            goto  end;
+        }
+
+        $mem = Db::name('member');
+        $where = ['E_Mobile' => $param['mobile'], 'E_State' => 1];
+        $field = 'E_PWDMD5,E_Name,E_Sex,E_UserCode,E_Mobile';
+        $find = $mem->where($where)->field($field)->find();
+        if (!$find) {
+            $re['msg'] = '用户不存在！';
+            $re['code'] = 1;
+            goto end;
+        }
+        if (cmf_encryption($param['pwd']) != $find['E_PWDMD5']) {
+            $re['msg'] = '密码不正确！';
+            $re['code'] = 1;
+            goto end;
+        }
+        session('member', $find);
+        end:
+        return $re;
+    }
+
+    public function logout()
+    {
+        session('token', null);
+        session('member', '');
+        $this->redirect('/index');
+    }
+}

@@ -1,0 +1,86 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+
+    <form class="well form-inline margin-top-20" method="post" action="{:url('Member/plans')}">
+
+        时间:
+        <input type="text" class="form-control js-bootstrap-date" name="start_time"
+               value="{$start_time|default=''}"
+               style="width: 140px;" autocomplete="off">-
+        <input type="text" class="form-control js-bootstrap-date" name="end_time"
+               value="{$end_time|default=''}"
+               style="width: 140px;" autocomplete="off"> &nbsp; &nbsp;
+
+        计划名称:
+        <input type="text" class="form-control" name="project" style="width: 200px;"
+               value="{$project|default=''}" placeholder="请输入项目名称">
+        方案的名称:
+        <input type="text" class="form-control" name="plan" style="width: 200px;"
+               value="{$plan|default=''}" placeholder="请输入方案的名称">
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('Member/plans')}">清空</a>
+    </form>
+    <form class="js-ajax-form" action="" method="post">
+        <table class="table table-hover table-bordered table-list">
+            <thead>
+            <tr>
+                <th >创建时间</th>
+                <th >用户名称</th>
+                <th >用户手机</th>
+                <th >订单编号</th>
+                <th>方案总金额</th>
+                <th >项目的总价值</th>
+                <th >方案购买数量</th>
+                <th >计划名称</th>
+                <th >方案的名称</th>
+                <th >周期（年）</th>
+                <th >账单周期(月)</th>
+                <th >账单日</th>
+                <th >结算周期(月)</th>
+                <th >结算日</th>
+                <th >返利比例</th>
+                <th >账单总期数</th>
+                <th >账单已出期数</th>
+                <th >操作</th>
+            </tr>
+            </thead>
+            <foreach name="plans" item="vo">
+                <tr>
+                    <td><b>{$vo.E_CreateTime}</b></td>
+                    <td>{$vo.E_TrueName?$vo.E_TrueName:$vo.E_Name}</td>
+                    <td>{$vo.E_Mobile}</td>
+                    <td>{$vo.E_OrderSn}</td>
+                    <td>{$vo.E_PlanPrice}</td>
+                    <td>{$vo.E_Value}</td>
+                    <td>{$vo.E_BuyNum}</td>
+                    <td>{$vo.E_ProjectName}</td>
+                    <td>{$vo.E_PlanName}</td>
+                    <td>{$vo.E_Cycle}</td>
+                    <td>{$vo.E_BillCycle}</td>
+                    <td>{$vo.E_BillDay}</td>
+                    <td>{$vo.E_SettlementCycle}</td>
+                    <td>{$vo.E_SettlementDay}</td>
+                    <td>{$vo.E_Scale}</td>
+                    <td>{$vo.E_SumPeriods}</td>
+                    <td>{$vo.E_AreadlyPeriids}</td>
+                    <td>{$vo.E_AreadlyPeriids}</td>
+                </tr>
+            </foreach>
+        </table>
+
+        <ul class="pagination">{$page|default=''}</ul>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script>
+
+    function reloadPage(win) {
+        win.location.reload();
+    }
+
+
+</script>
+</body>
+</html>

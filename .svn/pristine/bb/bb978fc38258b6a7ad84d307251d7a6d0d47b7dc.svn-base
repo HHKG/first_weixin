@@ -1,0 +1,689 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>返利算一算-虔心荟</title>
+	<meta name="keywords" content="<?php echo $keywords;?>">
+	<meta name="description" content="<?php echo $description;?>">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="__TMPL__/public/assets/css/mui.min.css?2-4" rel="stylesheet" />
+	<link href="__TMPL__/public/assets/css/person.css?2-4" rel="stylesheet" />
+	<link href="__TMPL__/public/assets/css/data_once.css?2-18" rel="stylesheet" />
+	<script src="__TMPL__/public/assets/js/jquery.min.js?2-4" type="text/javascript" charset="utf-8"></script>
+	<script src="__TMPL__/public/assets/js/jquery.select.js?2-4"></script>
+</head>
+<style>
+	body {
+		background: #FCE8C5;
+	}
+</style>
+
+<body>
+	<script src="__TMPL__/public/assets/js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+	</script>
+	<div class="mui-content cnt-body">
+		<!--标题-->
+		<div class="calculator-title" style="position: relative;">
+			<span>四闲山房别墅</span>
+		</div>
+		<!--参与计划-->
+		<div class="calculator-join">
+			<div class="calculator-join-title">
+				<img src="__TMPL__/public/assets/images/cal_join_title_left.png" />
+				<div>
+					<p>参与计划
+						<p class="calculator-join-money">10</p>
+						<p>万</p>
+					</p>
+				</div>
+				<img src="__TMPL__/public/assets/images/cal_join_title_right.png" />
+			</div>
+			<div class="calculator-rebate">
+				<div class="calculator-rebate-scale">
+					<img src="__TMPL__/public/assets/images/cal_join_icon1.png" />
+					<span style="white-space: nowrap;">预估年返利<span id="rebate_money">8%</span></span>
+				</div>
+				<div class="calculator-rebate-scale">
+					<img src="__TMPL__/public/assets/images/cal_join_icon2.png" />
+					<span style="white-space: nowrap;">固定年返券<span id="rebate_conpom">12%</span></span>
+				</div>
+				<div class="calculator-rebate-scale">
+					<img src="__TMPL__/public/assets/images/cal_join_icon3.png" />
+					<span style="white-space: nowrap;">持续<span class="rebate-time">30</span>年</span>
+				</div>
+			</div>
+		</div>
+		<!--返利时间和算法-->
+		<div class="calculator-rebate-time" style="width:100%;overflow: hidden;">
+			<!--第一年-->
+			<div class="calculator-rebate-time-one cal-slide">
+				<div class="calculator-rebate-time-year">
+					<span class="calculator-year-num">1</span>
+					<span class="calculator-year-txt">第&nbsp;&nbsp;&nbsp;&nbsp;年</span>
+				</div>
+				<div class="calculator-rebate-cash">
+					<span class="calculator-cash-num">8000</span>
+					<img src="__TMPL__/public/assets/images/cal_xianjin_icon.png" class="calculator-cash-img" />
+				</div>
+				<div class="calculator-jia">
+					<img src="__TMPL__/public/assets/images/cal_jia.png" />
+				</div>
+				<div class="calculator-rebate-cash">
+					<span class="calculator-cash-num">12000</span>
+					<img src="__TMPL__/public/assets/images/cal_zhufangquan_icon.png" class="calculator-conpom-img" />
+				</div>
+				<div class="calculator-jia">
+					<img src="__TMPL__/public/assets/images/cal_deng.png" />
+				</div>
+				<div class="calculator-rebate-cash">
+					<span class="calculator-cash-num">20000</span>
+					<img src="__TMPL__/public/assets/images/cal_chuqianguan_icon.png" class="cal_chuqianguan" />
+				</div>
+			</div>
+			<!--第5年-->
+			<div class="calculator-rebate-time-one cal-slide">
+				<div class="calculator-rebate-time-year">
+					<span class="calculator-year-num">5</span>
+					<span class="calculator-year-txt">第&nbsp;&nbsp;&nbsp;&nbsp;年</span>
+				</div>
+				<div class="calculator-rebate-cash">
+					<span class="calculator-cash-num">40000</span>
+					<img src="__TMPL__/public/assets/images/cal_xianjin_icon.png" class="calculator-cash-img" />
+				</div>
+				<div class="calculator-jia">
+					<img src="__TMPL__/public/assets/images/cal_jia.png" />
+				</div>
+				<div class="calculator-rebate-cash">
+					<span class="calculator-cash-num">60000</span>
+					<img src="__TMPL__/public/assets/images/cal_zhufangquan_icon.png" class="calculator-conpom-img" />
+				</div>
+				<div class="calculator-jia">
+					<img src="__TMPL__/public/assets/images/cal_deng.png" />
+				</div>
+				<div class="calculator-rebate-cash">
+					<span class="calculator-cash-num">100000</span>
+					<img src="__TMPL__/public/assets/images/cal_chuqianguan_icon.png" class="cal_chuqianguan" />
+				</div>
+			</div>
+			<!--第10年-->
+			<div class="calculator-rebate-time-one cal-slide">
+				<div class="calculator-rebate-time-year">
+					<span class="calculator-year-num">10</span>
+					<span class="calculator-year-txt">第&nbsp;&nbsp;&nbsp;&nbsp;年</span>
+				</div>
+				<div class="calculator-rebate-cash">
+					<span class="calculator-cash-num">80000</span>
+					<img src="__TMPL__/public/assets/images/cal_xianjin_icon.png" class="calculator-cash-img" />
+				</div>
+				<div class="calculator-jia">
+					<img src="__TMPL__/public/assets/images/cal_jia.png" />
+				</div>
+				<div class="calculator-rebate-cash">
+					<span class="calculator-cash-num">120000</span>
+					<img src="__TMPL__/public/assets/images/cal_zhufangquan_icon.png" class="calculator-conpom-img" />
+				</div>
+				<div class="calculator-jia">
+					<img src="__TMPL__/public/assets/images/cal_deng.png" />
+				</div>
+				<div class="calculator-rebate-cash">
+					<span class="calculator-cash-num">200000</span>
+					<img src="__TMPL__/public/assets/images/cal_chuqianguan_icon.png" class="cal_chuqianguan" />
+				</div>
+			</div>
+			<!--第15年-->
+			<div class="calculator-rebate-time-one cal-slide">
+				<div class="calculator-rebate-time-year">
+					<span class="calculator-year-num">15</span>
+					<span class="calculator-year-txt">第&nbsp;&nbsp;&nbsp;&nbsp;年</span>
+				</div>
+				<div class="calculator-rebate-cash">
+					<span class="calculator-cash-num">120000</span>
+					<img src="__TMPL__/public/assets/images/cal_xianjin_icon.png" class="calculator-cash-img" />
+				</div>
+				<div class="calculator-jia">
+					<img src="__TMPL__/public/assets/images/cal_jia.png" />
+				</div>
+				<div class="calculator-rebate-cash">
+					<span class="calculator-cash-num">180000</span>
+					<img src="__TMPL__/public/assets/images/cal_zhufangquan_icon.png" class="calculator-conpom-img" />
+				</div>
+				<div class="calculator-jia">
+					<img src="__TMPL__/public/assets/images/cal_deng.png" />
+				</div>
+				<div class="calculator-rebate-cash">
+					<span class="calculator-cash-num">3000000</span>
+					<img src="__TMPL__/public/assets/images/cal_chuqianguan_icon.png" class="cal_chuqianguan" />
+				</div>
+			</div>
+			<!--第30年-->
+			<div class="calculator-rebate-time-one cal-position cal-slide">
+				<div class="calculator-rebate-time-year">
+					<span class="calculator-year-num">30</span>
+					<span class="calculator-year-txt">第&nbsp;&nbsp;&nbsp;&nbsp;年</span>
+				</div>
+				<div class="calculator-rebate-cash">
+					<span class="calculator-cash-num">240000</span>
+					<img src="__TMPL__/public/assets/images/cal_xianjin_icon.png" class="calculator-cash-img" />
+				</div>
+				<div class="calculator-jia">
+					<img src="__TMPL__/public/assets/images/cal_jia.png" />
+				</div>
+				<div class="calculator-rebate-cash">
+					<span class="calculator-cash-num">360000</span>
+					<img src="__TMPL__/public/assets/images/cal_zhufangquan_icon.png" class="calculator-conpom-img" />
+				</div>
+				<div class="calculator-jia">
+					<img src="__TMPL__/public/assets/images/cal_deng.png" />
+				</div>
+				<div class="calculator-rebate-cash">
+					<span class="calculator-cash-num">600000</span>
+					<img src="__TMPL__/public/assets/images/cal_chuqianguan_icon.png" class="cal_chuqianguan" />
+				</div>
+				<div class="cal-jiaobiao">
+					<img src="__TMPL__/public/assets/images/cal-jiaobiao.png" style="width:2.8rem;" />
+				</div>
+			</div>
+		</div>
+		<!--会员升级-->
+		<div class="cal-update cal-slide">
+			<div class="calculator-join-title">
+				<img src="__TMPL__/public/assets/images/cal_join_title_left.png" />
+				<div>
+					<p>会员升级</p>
+				</div>
+				<img src="__TMPL__/public/assets/images/cal_join_title_right.png" />
+			</div>
+
+			<div class="cal-join-cnt">
+				<div class="cal-join-cnt-left">
+					<img src="__TMPL__/public/assets/images/cal_silver_member_icon.png" class="cal-join-cnt-left-img" />
+					<div class="cal-update-name">
+						<p id="sliver">白银会员</p>
+					</div>
+				</div>
+				<div class="cal-join-cnt-middle">
+					<img src="__TMPL__/public/assets/images/cal_jiantou_right.png" class='cal-join-cnt-middle-img' />
+				</div>
+				<div class="cal-join-cnt-right">
+					<div class="cal-join-cnt-right-inside">
+						<img src="__TMPL__/public/assets/images/cal_gold_member_icon.png"
+							class="cal-join-cnt-left-img" />
+						<div class="cal-update-name">
+							<p id="glod">铂金会员</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!--弹窗-->
+		<div class="mask"></div>
+		<div class="cal-select">
+			<!--1-->
+			<div class="block_height">
+				<div class="block_one">
+					<p class="cal-rebate-scale">您想参与计划金额</p>
+				</div>
+				<div class="block_select">
+					<select class="select" name="state" data-value="2">
+						<option value="0">1万</option>
+						<option value="1">5万</option>
+						<option value="2">10万</option>
+						<option value="3">20万</option>
+					</select>
+					<div class="allow_dowm">
+						<img src="__TMPL__/public/assets/images/drop_down_icon.png" />
+					</div>
+				</div>
+			</div>
+			<!--2-->
+			<div class="block_height">
+				<div class="block_one">
+					<p class="cal-rebate-scale">预估每年返现比例</p>
+				</div>
+				<div class="block_select">
+					<select class="select" name="state" data-value="1">
+						<option value="0">6%</option>
+						<option value="1">8%</option>
+						<option value="2">10%</option>
+					</select>
+					<div class="allow_dowm">
+						<img src="__TMPL__/public/assets/images/drop_down_icon.png" />
+					</div>
+				</div>
+			</div>
+			<!--3-->
+			<div class="block_height">
+
+				<div class="block_one">
+					<p class="cal-rebate-scale">固定每年返券比例</p>
+				</div>
+				<div class="cal-rebate-conpom" style="display: none;">
+					10%
+				</div>
+				<div class="cal-rebate-conpom" style="display:none;">
+					11%
+				</div>
+				<div class="cal-rebate-conpom" style="display: block;">
+					12%
+				</div>
+				<div class="cal-rebate-conpom" style="display: none;">
+					13%
+				</div>
+				<!-- <div class="cal-rebate-conpom" style="display: none;">
+					14%
+				</div> -->
+			</div>
+			<div class="cal-btn">
+				<button id="submit">马上测算</button>
+			</div>
+		</div>
+	</div>
+	<nav class="cal-nav">
+		<p class="cal-nav-p">选择其他方案算一算</p>
+	</nav>
+	<script>
+		$(function () {
+			$('select.select').select();
+		});
+		$(document).ready(function () {
+			//获取数据
+			$.ajax({
+				url: "<?php echo config('interfaceurl')?>/getcountinfo",
+				type: 'POST',
+				dataType: 'jsonp',
+				data: {
+					token: "<?php echo session('token');?>"
+				},
+				success: function (data) {
+					if (data.code === '9201') {
+                        if ("<?php echo cmf_is_wechat(); ?>") {
+                            window.location.href = "/login?again=1&back=<?php echo urlencode(GetAllURL());?>";
+                        } else {
+                            window.location.href = "/login?again=1&back=<?php echo urlencode(GetAllURL());?>";
+                        }
+					}
+					var plan_money = $('.calculator-join-money').text();
+					console.log(data);
+					console.log(data.data.E_ConsumptionAmout);
+					if (data.code == 1) {
+						for (var i = 0; i < $(".calculator-rebate-time-one").length; i++) {
+							(function (i) {
+								setTimeout(function () {
+									$(".cal-slide").eq(i).animate({ margin: '0.8rem 0px 0px 4%' }, 500)
+								}, i * 100);
+							})(i)
+						}
+						if (data.data.E_Grade == 1) {
+							$(".cal-join-cnt-left-img").eq(0).attr("src", "__TMPL__/public/assets/images/cal_silver_member_icon.png");
+							$("#sliver").text('白银会员');
+							if (plan_money == 10) {
+								$('.cal-update').show();
+								$('.cal-update').animate({ margin: '1.5rem 0px 6.5rem 4%' }, 1000);
+								$('html, body').animate({
+									scrollTop: $('.cal-update').offset().top
+								}, 3000);
+								$(".cal-join-cnt-left-img").eq(1).attr("src", "__TMPL__/public/assets/images/cal_pink_diamond_icon.png");
+								$("#glod").text('钻石会员');
+							}
+						}
+						if (data.data.E_Grade == 2) {
+							$(".cal-join-cnt-left-img").eq(0).attr("src", "__TMPL__/public/assets/images/cal_gold_member_icon.png");
+							$("#sliver").text('铂金会员');
+							$('.cal-update').show();
+							$('.cal-update').animate({ margin: '1.5rem 0px 6.5rem 4%' }, 1000);
+							$('html, body').animate({
+								scrollTop: $('.cal-update').offset().top
+							}, 3000);
+							$(".cal-join-cnt-left-img").eq(1).attr("src", "__TMPL__/public/assets/images/cal_pink_diamond_icon.png");
+							$("#glod").text('钻石会员');
+						}
+						if (data.data.E_Grade == 3) {
+							$('.cal-update').hide();
+						}
+						//马上测算
+						for (var i = 0; i < $('.select_text').length; i++) {
+							if (i == 0) {
+								$('.select_text').eq(0).on('DOMNodeInserted', function () {
+									var txt = parseInt($('.select_text').eq(0).text());
+									console.log(txt);
+									if (txt == 1) {
+										var d = Number(parseFloat($('.cal-rebate-conpom').eq(0).text())) * 0.01;
+										$(".cal-rebate-conpom").eq(0).show();
+										$(".cal-rebate-conpom").eq(1).hide();
+										$(".cal-rebate-conpom").eq(2).hide();
+										$(".cal-rebate-conpom").eq(3).hide();
+										// $(".cal-rebate-conpom").eq(4).hide();
+										$('#rebate_money').text($('.cur').eq(1).text());
+										$('#rebate_conpom').text($('.cal-rebate-conpom').eq(0).text());
+									}
+									if (txt == 5) {
+										var d = Number(parseFloat($('.cal-rebate-conpom').eq(1).text())) * 0.01;
+										$(".cal-rebate-conpom").eq(0).hide();
+										$(".cal-rebate-conpom").eq(1).show();
+										$(".cal-rebate-conpom").eq(2).hide();
+										$(".cal-rebate-conpom").eq(3).hide();
+										// $(".cal-rebate-conpom").eq(4).hide();
+										$('#rebate_money').text($('.cur').eq(1).text());
+										$('#rebate_conpom').text($('.cal-rebate-conpom').eq(1).text());
+									}
+									if (txt == 10) {
+										var d = Number(parseFloat($('.cal-rebate-conpom').eq(2).text())) * 0.01;
+										$(".cal-rebate-conpom").eq(0).hide();
+										$(".cal-rebate-conpom").eq(1).hide();
+										$(".cal-rebate-conpom").eq(2).show();
+										$(".cal-rebate-conpom").eq(3).hide();
+										// $(".cal-rebate-conpom").eq(4).hide();
+										$('#rebate_money').text($('.cur').eq(1).text());
+										$('#rebate_conpom').text($('.cal-rebate-conpom').eq(2).text());
+									}
+									if (txt == 20) {
+										var d = Number(parseFloat($('.cal-rebate-conpom').eq(3).text())) * 0.01;
+										$(".cal-rebate-conpom").eq(0).hide();
+										$(".cal-rebate-conpom").eq(1).hide();
+										$(".cal-rebate-conpom").eq(2).hide();
+										$(".cal-rebate-conpom").eq(3).show();
+										$('#rebate_money').text($('.cur').eq(1).text());
+										$('#rebate_conpom').text($('.cal-rebate-conpom').eq(3).text());
+									}
+									$('#submit').one("click", function () {
+										var b = parseInt($('.cur').eq(0).text());
+										var c = Number(parseFloat($('.cur').eq(1).text())) * 0.01;
+										var money = $('.calculator-join-money').text(b);
+										$('.mask').hide();
+										$('.cal-btn').hide();
+										$('.cal-select').hide();
+										for (var i = 0; i < $(".calculator-rebate-time-one").length; i++) {
+											(function (i) {
+												setTimeout(function () {
+													$(".cal-slide").eq(i).animate({ margin: '0.8rem 0px 0px 4%' }, 500)
+												}, i * 100);
+											})(i)
+										}
+										if (b == b) {
+											for (var i = 0; i < $('.calculator-cash-num').length; i++) {
+												if (i == 0) {
+													var f = Number(10000) * Number(c) * Number(b);
+													var e = Number(10000) * Number(d) * Number(b);
+													$('.calculator-cash-num').eq(i).text(f);
+													$('.calculator-cash-num').eq(i + 1).text(e);
+													var a = f + e;
+													$('.calculator-cash-num').eq(i + 2).text(a);
+												} else if (i == 3) {
+													var f = Number(10000) * Number(c) * Number(5) * Number(b);
+													var e = Number(10000) * Number(d) * Number(5) * Number(b);
+													$('.calculator-cash-num').eq(i).text(f);
+													$('.calculator-cash-num').eq(i + 1).text(e);
+													var a = f + e;
+													$('.calculator-cash-num').eq(i + 2).text(a);
+												} else if (i == 6) {
+													var f = Number(10000) * Number(c) * Number(10) * Number(b);
+													var e = Number(10000) * Number(d) * Number(10) * Number(b);
+													$('.calculator-cash-num').eq(i).text(f);
+													$('.calculator-cash-num').eq(i + 1).text(e);
+													var a = f + e;
+													$('.calculator-cash-num').eq(i + 2).text(a);
+												} else if (i == 9) {
+													var f = Number(10000) * Number(c) * Number(15) * Number(b);
+													var e = Number(10000) * Number(d) * Number(15) * Number(b);
+													$('.calculator-cash-num').eq(i).text(f);
+													$('.calculator-cash-num').eq(i + 1).text(e);
+													var a = f + e;
+													$('.calculator-cash-num').eq(i + 2).text(a);
+												} else if (i == 12) {
+													var f = Number(10000) * Number(c) * Number(30) * Number(b);
+													var e = Number(10000) * Number(d) * Number(30) * Number(b);
+													$('.calculator-cash-num').eq(i).text(f);
+													$('.calculator-cash-num').eq(i + 1).text(e);
+													var a = f + e;
+													$('.calculator-cash-num').eq(i + 2).text(a);
+												}
+											}
+										}
+										//获取数据
+										$.ajax({
+											type: 'GET',
+											data: { plan_money: $('.calculator-join-money').text() * 1000000, E_ConsumptionAmout: data.data.E_ConsumptionAmout * 100, memgrade: $('#sliver').text(), grade: data.data.E_Grade, token: "<?php echo session('token');?>" },
+											dataType: 'jsonp',
+											url: "<?php echo config('interfaceurl')?>/reckonandreckon",
+											success: function (data) {
+												console.log(data);
+												if (data.memgrade = 1) {
+													$('.cal-update').show();
+													$(".cal-join-cnt-left-img").eq(0).attr("src", "__TMPL__/public/assets/images/cal_silver_member_icon.png");
+													$("#sliver").text('白银会员');
+													if (data.grade.id == 2) {
+														console.log(data.grade);
+														$('.cal-update').show();
+														$('.cal-update').animate({ margin: '1.5rem 0px 6.5rem 4%' }, 1000);
+														$('html, body').animate({
+															scrollTop: $('.cal-update').offset().top
+														}, 3000);
+														$(".cal-join-cnt-left-img").eq(1).attr("src", "__TMPL__/public/assets/images/cal_gold_member_icon.png");
+														$("#glod").text('铂金会员');
+													}
+													if (data.grade.id == 3) {
+														console.log(data.grade);
+														$('.cal-update').show();
+														$('.cal-update').animate({ margin: '1.5rem 0px 6.5rem 4%' }, 1000);
+														$('html, body').animate({
+															scrollTop: $('.cal-update').offset().top
+														}, 3000);
+														$(".cal-join-cnt-left-img").eq(1).attr("src", "__TMPL__/public/assets/images/cal_pink_diamond_icon.png");
+														$("#glod").text('钻石会员');
+													}
+													if (data.grade.id == 4) {
+														console.log(data.grade);
+														$('.cal-update').show();
+														$('.cal-update').animate({ margin: '1.5rem 0px 6.5rem 4%' }, 1000);
+														$('html, body').animate({
+															scrollTop: $('.cal-update').offset().top
+														}, 3000);
+														$(".cal-join-cnt-left-img").eq(1).attr("src", "__TMPL__/public/assets/images/cal_black_gold_icon.png");
+														$("#glod").text('黑金会员');
+													}
+													if (data.grade.id == 5) {
+														$('.cal-update').show();
+														$('.cal-update').animate({ margin: '1.5rem 0px 6.5rem 4%' }, 1000);
+														$('html, body').animate({
+															scrollTop: $('.cal-update').offset().top
+														}, 3000);
+														$(".cal-join-cnt-left-img").eq(1).attr("src", "__TMPL__/public/assets/images/cal_black_diamond_icon.png");
+														$("#glod").text('黑钻会员');
+													}
+												}
+												else if (data.memgrade == 2) {
+													$(".cal-join-cnt-left-img").eq(0).attr("src", "__TMPL__/public/assets/images/cal_gold_member_icon.png");
+													$("#sliver").text('铂金会员');
+													if (data.grade == 2) {
+														$('.cal-update').hide();
+													}
+													if (data.grade == 3) {
+														$('.cal-update').show();
+														$('.cal-update').animate({ margin: '1.5rem 0px 6.5rem 4%' }, 1000);
+														$('html, body').animate({
+															scrollTop: $('.cal-update').offset().top
+														}, 3000);
+														$(".cal-join-cnt-left-img").eq(1).attr("src", "__TMPL__/public/assets/images/cal_pink_diamond_icon.png");
+														$("#glod").text('钻石会员');
+													}
+													if (data.grade == 4) {
+														$('.cal-update').show();
+														$('.cal-update').animate({ margin: '1.5rem 0px 6.5rem 4%' }, 1000);
+														$('html, body').animate({
+															scrollTop: $('.cal-update').offset().top
+														}, 3000);
+														$(".cal-join-cnt-left-img").eq(1).attr("src", "__TMPL__/public/assets/images/cal_black_gold_icon.png");
+														$("#glod").text('黑金会员');
+													}
+													if (data.grade == 5) {
+														$('.cal-update').show();
+														$('.cal-update').animate({ margin: '1.5rem 0px 6.5rem 4%' }, 1000);
+														$('html, body').animate({
+															scrollTop: $('.cal-update').offset().top
+														}, 3000);
+														$(".cal-join-cnt-left-img").eq(1).attr("src", "__TMPL__/public/assets/images/cal_black_diamond_icon.png");
+														$("#glod").text('黑钻会员');
+													}
+												}
+												else if (data.memgrade == 3) {
+													$(".cal-join-cnt-left-img").eq(1).attr("src", "__TMPL__/public/assets/images/cal_pink_diamond_icon.png");
+													$("#glod").text('钻石会员');
+													if (data.grade == 2) {
+														$('.cal-update').hide();
+													}
+													if (data.grade == 3) {
+														$('.cal-update').hide();
+													}
+													if (data.grade == 4) {
+														$('.cal-update').show();
+														$('.cal-update').animate({ margin: '1.5rem 0px 6.5rem 4%' }, 1000);
+														$('html, body').animate({
+															scrollTop: $('.cal-update').offset().top
+														}, 3000);
+														$(".cal-join-cnt-left-img").eq(1).attr("src", "__TMPL__/public/assets/images/cal_black_gold_icon.png");
+														$("#glod").text('黑金会员');
+													}
+													if (data.grade == 5) {
+														$('.cal-update').show();
+														$('.cal-update').animate({ margin: '1.5rem 0px 6.5rem 4%' }, 1000);
+														$('html, body').animate({
+															scrollTop: $('.cal-update').offset().top
+														}, 3000);
+														$(".cal-join-cnt-left-img").eq(1).attr("src", "__TMPL__/public/assets/images/cal_black_diamond_icon.png");
+														$("#glod").text('黑钻会员');
+													}
+												}
+												else if (data.memgrade = 4) {
+													$(".cal-join-cnt-left-img").eq(1).attr("src", "__TMPL__/public/assets/images/cal_black_gold_icon.png");
+													$("#glod").text('黑金会员');
+													if (data.grade == 4) {
+														$('.cal-update').hide();
+													}
+													if (data.grade == 5) {
+														$('.cal-update').show();
+														$('.cal-update').animate({ margin: '1.5rem 0px 6.5rem 4%' }, 1000);
+														$('html, body').animate({
+															scrollTop: $('.cal-update').offset().top
+														}, 3000);
+														$(".cal-join-cnt-left-img").eq(1).attr("src", "__TMPL__/public/assets/images/cal_black_diamond_icon.png");
+														$("#glod").text('黑钻会员');
+													}
+												}
+												else if (data.memgrade = 5) {
+													$('.cal-update').hide();
+												}
+												else if (data.memgrade = data.grade) {
+													$('.cal-update').hide();
+												}
+											}
+										});
+
+									});
+								});
+							}
+							if (i == 1) {
+								$('.select_text').eq(1).on('DOMNodeInserted', function () {
+									var txt = parseInt($('.select_text').eq(1).text());
+									console.log(txt);
+									if (txt == 6) {
+										var d = Number(parseFloat($('.cal-rebate-conpom').eq(0).text())) * 0.01;
+										$('#rebate_money').text($('.cur').eq(1).text());
+										// $('#rebate_conpom').text($('.cal-rebate-conpom').eq(0).text());
+									}
+									if (txt == 8) {
+										var d = Number(parseFloat($('.cal-rebate-conpom').eq(1).text())) * 0.01;
+										$('#rebate_money').text($('.cur').eq(1).text());
+										// $('#rebate_conpom').text($('.cal-rebate-conpom').eq(1).text());
+									}
+									if (txt == 10) {
+										var d = Number(parseFloat($('.cal-rebate-conpom').eq(2).text())) * 0.01;
+										$('#rebate_money').text($('.cur').eq(1).text());
+										// $('#rebate_conpom').text($('.cal-rebate-conpom').eq(2).text());
+									}
+									$('#submit').click(function () {
+										var b = parseInt($('.cur').eq(1).text());
+										var c = Number(parseFloat($('.cur').eq(1).text())) * 0.01;
+										var money = $('.calculator-join-money').text(b);
+										$('.mask').hide();
+										$('.cal-btn').hide();
+										$('.cal-select').hide();
+										if (b == b) {
+											for (var i = 0; i < $('.calculator-cash-num').length; i++) {
+												if (i == 0) {
+													var f = Number(10000) * Number(c) * Number(b);
+													var e = Number(10000) * Number(d) * Number(b);
+													$('.calculator-cash-num').eq(i).text(f);
+													$('.calculator-cash-num').eq(i + 1).text(e);
+													var a = f + e;
+													$('.calculator-cash-num').eq(i + 2).text(a);
+												} else if (i == 3) {
+													var f = Number(10000) * Number(c) * Number(5) * Number(b);
+													var e = Number(10000) * Number(d) * Number(5) * Number(b);
+													$('.calculator-cash-num').eq(i).text(f);
+													$('.calculator-cash-num').eq(i + 1).text(e);
+													var a = f + e;
+													$('.calculator-cash-num').eq(i + 2).text(a);
+												} else if (i == 6) {
+													var f = Number(10000) * Number(c) * Number(10) * Number(b);
+													var e = Number(10000) * Number(d) * Number(10) * Number(b);
+													$('.calculator-cash-num').eq(i).text(f);
+													$('.calculator-cash-num').eq(i + 1).text(e);
+													var a = f + e;
+													$('.calculator-cash-num').eq(i + 2).text(a);
+												} else if (i == 9) {
+													var f = Number(10000) * Number(c) * Number(15) * Number(b);
+													var e = Number(10000) * Number(d) * Number(15) * Number(b);
+													$('.calculator-cash-num').eq(i).text(f);
+													$('.calculator-cash-num').eq(i + 1).text(e);
+													var a = f + e;
+													$('.calculator-cash-num').eq(i + 2).text(a);
+												} else if (i == 12) {
+													var f = Number(10000) * Number(c) * Number(30) * Number(b);
+													var e = Number(10000) * Number(d) * Number(30) * Number(b);
+													$('.calculator-cash-num').eq(i).text(f);
+													$('.calculator-cash-num').eq(i + 1).text(e);
+													var a = f + e;
+													$('.calculator-cash-num').eq(i + 2).text(a);
+												}
+											}
+										}
+									});
+								});
+							}
+						}
+						//弹窗开始
+						$('.cal-nav').click(function () {
+							$('.mask').show();
+							$('.cal-btn').show();
+							$('.cal-select').show();
+							$(".calculator-rebate-time-one").css('margin-left', '100%');
+							$(".cal-update").css('margin-left', '100%');
+						});
+						$('#submit').click(function () {
+							$('.mask').hide();
+							$('.cal-btn').hide();
+							$('.cal-select').hide();
+							for (var i = 0; i < $(".calculator-rebate-time-one").length; i++) {
+								(function (i) {
+									setTimeout(function () {
+										$(".cal-slide").eq(i).animate({ margin: '0.8rem 0px 0px 4%' }, 500)
+									}, i * 100);
+								})(i)
+							}
+							$('.cal-update').show();
+							$('.cal-update').animate({ margin: '1.5rem 0px 6.5rem 4%' }, 1000);
+						});
+						//弹窗结束
+					}
+				}
+			})
+		});
+	</script>
+</body>
+
+</html>
